@@ -8,12 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		2E1851BD1F13F2750094F732 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1851BC1F13F2750094F732 /* AppDelegate.swift */; };
-		2E1851BF1F13F2750094F732 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1851BE1F13F2750094F732 /* ViewController.swift */; };
-		2E1851C21F13F2750094F732 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E1851C01F13F2750094F732 /* Main.storyboard */; };
 		2E1851C41F13F2750094F732 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E1851C31F13F2750094F732 /* Assets.xcassets */; };
-		2E1851C71F13F2750094F732 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E1851C51F13F2750094F732 /* LaunchScreen.storyboard */; };
 		2E1851D21F13F2750094F732 /* LaurenWeissApp2017Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1851D11F13F2750094F732 /* LaurenWeissApp2017Tests.swift */; };
 		2E1851DD1F13F2750094F732 /* LaurenWeissApp2017UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1851DC1F13F2750094F732 /* LaurenWeissApp2017UITests.swift */; };
+		2E1851ED1F15356C0094F732 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E1851EC1F15356C0094F732 /* Login.storyboard */; };
+		2E1851F01F1536F70094F732 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1851EF1F1536F70094F732 /* LoginViewController.swift */; };
+		2EFFB7141F153ABB006BB041 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EFFB7131F153ABB006BB041 /* LaunchScreen.storyboard */; };
+		2EFFB7161F153ACC006BB041 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EFFB7151F153ACC006BB041 /* Main.storyboard */; };
+		2EFFB7181F153AD2006BB041 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2EFFB7171F153AD2006BB041 /* GoogleService-Info.plist */; };
+		2EFFB71A1F153D5D006BB041 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFFB7191F153D5D006BB041 /* ViewController.swift */; };
+		2EFFB71D1F15482E006BB041 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFFB71C1F15482E006BB041 /* User.swift */; };
+		2EFFB71F1F1549CA006BB041 /* CreateUsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFFB71E1F1549CA006BB041 /* CreateUsernameViewController.swift */; };
+		2EFFB7211F154C72006BB041 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFFB7201F154C72006BB041 /* UserService.swift */; };
+		2EFFB7231F1551DE006BB041 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFFB7221F1551DE006BB041 /* Constants.swift */; };
+		2EFFB7251F155E69006BB041 /* Storyboard+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFFB7241F155E69006BB041 /* Storyboard+Utility.swift */; };
+		3017B2E1C24C0A5565DCE7A8 /* Pods_LaurenWeissApp2017.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98FC2CE630CEA8F99B3E8745 /* Pods_LaurenWeissApp2017.framework */; };
+		847A64F8EA616ED3DA6CC767 /* Pods_LaurenWeissApp2017UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FE3DDAA52C5EDE7B1A39A8A /* Pods_LaurenWeissApp2017UITests.framework */; };
+		EDD7B80B725A7902BB446DB5 /* Pods_LaurenWeissApp2017Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EABEF6E21D47AD5B1DD4751D /* Pods_LaurenWeissApp2017Tests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,19 +45,36 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0FE3DDAA52C5EDE7B1A39A8A /* Pods_LaurenWeissApp2017UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LaurenWeissApp2017UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E1851B91F13F2750094F732 /* LaurenWeissApp2017.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LaurenWeissApp2017.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E1851BC1F13F2750094F732 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2E1851BE1F13F2750094F732 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		2E1851C11F13F2750094F732 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2E1851C31F13F2750094F732 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		2E1851C61F13F2750094F732 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		2E1851C81F13F2750094F732 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E1851CD1F13F2750094F732 /* LaurenWeissApp2017Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LaurenWeissApp2017Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E1851D11F13F2750094F732 /* LaurenWeissApp2017Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaurenWeissApp2017Tests.swift; sourceTree = "<group>"; };
 		2E1851D31F13F2750094F732 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E1851D81F13F2750094F732 /* LaurenWeissApp2017UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LaurenWeissApp2017UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E1851DC1F13F2750094F732 /* LaurenWeissApp2017UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaurenWeissApp2017UITests.swift; sourceTree = "<group>"; };
 		2E1851DE1F13F2750094F732 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E1851EC1F15356C0094F732 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		2E1851EF1F1536F70094F732 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		2EFFB7111F153AA6006BB041 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2EFFB7131F153ABB006BB041 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2EFFB7151F153ACC006BB041 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		2EFFB7171F153AD2006BB041 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2EFFB7191F153D5D006BB041 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2EFFB71C1F15482E006BB041 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		2EFFB71E1F1549CA006BB041 /* CreateUsernameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateUsernameViewController.swift; sourceTree = "<group>"; };
+		2EFFB7201F154C72006BB041 /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		2EFFB7221F1551DE006BB041 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		2EFFB7241F155E69006BB041 /* Storyboard+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Storyboard+Utility.swift"; sourceTree = "<group>"; };
+		56250601EED005B62EB6EE75 /* Pods-LaurenWeissApp2017UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaurenWeissApp2017UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LaurenWeissApp2017UITests/Pods-LaurenWeissApp2017UITests.release.xcconfig"; sourceTree = "<group>"; };
+		5FE6CE1AF1DB6ED6C42E8285 /* Pods-LaurenWeissApp2017UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaurenWeissApp2017UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LaurenWeissApp2017UITests/Pods-LaurenWeissApp2017UITests.debug.xcconfig"; sourceTree = "<group>"; };
+		85F605AAF7FA19D6E053B755 /* Pods-LaurenWeissApp2017.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaurenWeissApp2017.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LaurenWeissApp2017/Pods-LaurenWeissApp2017.debug.xcconfig"; sourceTree = "<group>"; };
+		93AF17942945B7038E94F6E5 /* Pods-LaurenWeissApp2017Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaurenWeissApp2017Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LaurenWeissApp2017Tests/Pods-LaurenWeissApp2017Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		98FC2CE630CEA8F99B3E8745 /* Pods_LaurenWeissApp2017.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LaurenWeissApp2017.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB14AE49CE75289008ACF788 /* Pods-LaurenWeissApp2017.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaurenWeissApp2017.release.xcconfig"; path = "Pods/Target Support Files/Pods-LaurenWeissApp2017/Pods-LaurenWeissApp2017.release.xcconfig"; sourceTree = "<group>"; };
+		EABEF6E21D47AD5B1DD4751D /* Pods_LaurenWeissApp2017Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LaurenWeissApp2017Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE2141B30DED3ED534606304 /* Pods-LaurenWeissApp2017Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaurenWeissApp2017Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LaurenWeissApp2017Tests/Pods-LaurenWeissApp2017Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3017B2E1C24C0A5565DCE7A8 /* Pods_LaurenWeissApp2017.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDD7B80B725A7902BB446DB5 /* Pods_LaurenWeissApp2017Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				847A64F8EA616ED3DA6CC767 /* Pods_LaurenWeissApp2017UITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +112,8 @@
 				2E1851D01F13F2750094F732 /* LaurenWeissApp2017Tests */,
 				2E1851DB1F13F2750094F732 /* LaurenWeissApp2017UITests */,
 				2E1851BA1F13F2750094F732 /* Products */,
+				B45B6C8EC76008385F42D1C5 /* Pods */,
+				D938B19B445CEA42E9FD2AF6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,11 +131,12 @@
 			isa = PBXGroup;
 			children = (
 				2E1851BC1F13F2750094F732 /* AppDelegate.swift */,
-				2E1851BE1F13F2750094F732 /* ViewController.swift */,
-				2E1851C01F13F2750094F732 /* Main.storyboard */,
+				2EFFB70E1F153731006BB041 /* Supporting Files */,
+				2E1851EE1F1535850094F732 /* Storyboards */,
+				2EFFB7261F155E72006BB041 /* Extensions */,
+				2EFFB71B1F154821006BB041 /* Models */,
+				2EFFB70D1F153718006BB041 /* View Controllers */,
 				2E1851C31F13F2750094F732 /* Assets.xcassets */,
-				2E1851C51F13F2750094F732 /* LaunchScreen.storyboard */,
-				2E1851C81F13F2750094F732 /* Info.plist */,
 			);
 			path = LaurenWeissApp2017;
 			sourceTree = "<group>";
@@ -125,6 +159,76 @@
 			path = LaurenWeissApp2017UITests;
 			sourceTree = "<group>";
 		};
+		2E1851EE1F1535850094F732 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				2EFFB7131F153ABB006BB041 /* LaunchScreen.storyboard */,
+				2E1851EC1F15356C0094F732 /* Login.storyboard */,
+				2EFFB7151F153ACC006BB041 /* Main.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		2EFFB70D1F153718006BB041 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2EFFB71E1F1549CA006BB041 /* CreateUsernameViewController.swift */,
+				2E1851EF1F1536F70094F732 /* LoginViewController.swift */,
+				2EFFB7191F153D5D006BB041 /* ViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		2EFFB70E1F153731006BB041 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2EFFB7171F153AD2006BB041 /* GoogleService-Info.plist */,
+				2EFFB7111F153AA6006BB041 /* Info.plist */,
+				2EFFB7201F154C72006BB041 /* UserService.swift */,
+				2EFFB7221F1551DE006BB041 /* Constants.swift */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2EFFB71B1F154821006BB041 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2EFFB71C1F15482E006BB041 /* User.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		2EFFB7261F155E72006BB041 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2EFFB7241F155E69006BB041 /* Storyboard+Utility.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		B45B6C8EC76008385F42D1C5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				85F605AAF7FA19D6E053B755 /* Pods-LaurenWeissApp2017.debug.xcconfig */,
+				AB14AE49CE75289008ACF788 /* Pods-LaurenWeissApp2017.release.xcconfig */,
+				93AF17942945B7038E94F6E5 /* Pods-LaurenWeissApp2017Tests.debug.xcconfig */,
+				EE2141B30DED3ED534606304 /* Pods-LaurenWeissApp2017Tests.release.xcconfig */,
+				5FE6CE1AF1DB6ED6C42E8285 /* Pods-LaurenWeissApp2017UITests.debug.xcconfig */,
+				56250601EED005B62EB6EE75 /* Pods-LaurenWeissApp2017UITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D938B19B445CEA42E9FD2AF6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				98FC2CE630CEA8F99B3E8745 /* Pods_LaurenWeissApp2017.framework */,
+				EABEF6E21D47AD5B1DD4751D /* Pods_LaurenWeissApp2017Tests.framework */,
+				0FE3DDAA52C5EDE7B1A39A8A /* Pods_LaurenWeissApp2017UITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +236,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2E1851E11F13F2750094F732 /* Build configuration list for PBXNativeTarget "LaurenWeissApp2017" */;
 			buildPhases = (
+				73BFD0EB74EE207BBB6381E5 /* [CP] Check Pods Manifest.lock */,
 				2E1851B51F13F2750094F732 /* Sources */,
 				2E1851B61F13F2750094F732 /* Frameworks */,
 				2E1851B71F13F2750094F732 /* Resources */,
+				CE09BEA5AE86F719BCC5052C /* [CP] Embed Pods Frameworks */,
+				243AC77629B223809B3015E5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +256,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2E1851E41F13F2750094F732 /* Build configuration list for PBXNativeTarget "LaurenWeissApp2017Tests" */;
 			buildPhases = (
+				13CFEE1B7EB414B9183C128A /* [CP] Check Pods Manifest.lock */,
 				2E1851C91F13F2750094F732 /* Sources */,
 				2E1851CA1F13F2750094F732 /* Frameworks */,
 				2E1851CB1F13F2750094F732 /* Resources */,
+				1308F2F8A369AACD2193B284 /* [CP] Embed Pods Frameworks */,
+				06B87D95D3C30298E3D18FEA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +277,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2E1851E71F13F2750094F732 /* Build configuration list for PBXNativeTarget "LaurenWeissApp2017UITests" */;
 			buildPhases = (
+				F4E61ACD06BB22804D832C21 /* [CP] Check Pods Manifest.lock */,
 				2E1851D41F13F2750094F732 /* Sources */,
 				2E1851D51F13F2750094F732 /* Frameworks */,
 				2E1851D61F13F2750094F732 /* Resources */,
+				2B2A0E93C86C0A5CB179519D /* [CP] Embed Pods Frameworks */,
+				61F69AFB86717F04BFC0637D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -232,9 +345,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E1851C71F13F2750094F732 /* LaunchScreen.storyboard in Resources */,
 				2E1851C41F13F2750094F732 /* Assets.xcassets in Resources */,
-				2E1851C21F13F2750094F732 /* Main.storyboard in Resources */,
+				2EFFB7161F153ACC006BB041 /* Main.storyboard in Resources */,
+				2EFFB7141F153ABB006BB041 /* LaunchScreen.storyboard in Resources */,
+				2E1851ED1F15356C0094F732 /* Login.storyboard in Resources */,
+				2EFFB7181F153AD2006BB041 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,12 +369,156 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		06B87D95D3C30298E3D18FEA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LaurenWeissApp2017Tests/Pods-LaurenWeissApp2017Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1308F2F8A369AACD2193B284 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LaurenWeissApp2017Tests/Pods-LaurenWeissApp2017Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		13CFEE1B7EB414B9183C128A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		243AC77629B223809B3015E5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LaurenWeissApp2017/Pods-LaurenWeissApp2017-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2B2A0E93C86C0A5CB179519D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LaurenWeissApp2017UITests/Pods-LaurenWeissApp2017UITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		61F69AFB86717F04BFC0637D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LaurenWeissApp2017UITests/Pods-LaurenWeissApp2017UITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		73BFD0EB74EE207BBB6381E5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CE09BEA5AE86F719BCC5052C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LaurenWeissApp2017/Pods-LaurenWeissApp2017-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F4E61ACD06BB22804D832C21 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2E1851B51F13F2750094F732 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E1851BF1F13F2750094F732 /* ViewController.swift in Sources */,
+				2EFFB71D1F15482E006BB041 /* User.swift in Sources */,
+				2EFFB71A1F153D5D006BB041 /* ViewController.swift in Sources */,
+				2EFFB7211F154C72006BB041 /* UserService.swift in Sources */,
+				2EFFB7251F155E69006BB041 /* Storyboard+Utility.swift in Sources */,
+				2E1851F01F1536F70094F732 /* LoginViewController.swift in Sources */,
+				2EFFB7231F1551DE006BB041 /* Constants.swift in Sources */,
+				2EFFB71F1F1549CA006BB041 /* CreateUsernameViewController.swift in Sources */,
 				2E1851BD1F13F2750094F732 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,25 +553,6 @@
 			targetProxy = 2E1851D91F13F2750094F732 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		2E1851C01F13F2750094F732 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2E1851C11F13F2750094F732 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		2E1851C51F13F2750094F732 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2E1851C61F13F2750094F732 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		2E1851DF1F13F2750094F732 /* Debug */ = {
@@ -412,6 +652,7 @@
 		};
 		2E1851E21F13F2750094F732 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85F605AAF7FA19D6E053B755 /* Pods-LaurenWeissApp2017.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LaurenWeissApp2017/Info.plist;
@@ -424,6 +665,7 @@
 		};
 		2E1851E31F13F2750094F732 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB14AE49CE75289008ACF788 /* Pods-LaurenWeissApp2017.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LaurenWeissApp2017/Info.plist;
@@ -436,6 +678,7 @@
 		};
 		2E1851E51F13F2750094F732 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93AF17942945B7038E94F6E5 /* Pods-LaurenWeissApp2017Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -450,6 +693,7 @@
 		};
 		2E1851E61F13F2750094F732 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE2141B30DED3ED534606304 /* Pods-LaurenWeissApp2017Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -464,6 +708,7 @@
 		};
 		2E1851E81F13F2750094F732 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5FE6CE1AF1DB6ED6C42E8285 /* Pods-LaurenWeissApp2017UITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = LaurenWeissApp2017UITests/Info.plist;
@@ -477,6 +722,7 @@
 		};
 		2E1851E91F13F2750094F732 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56250601EED005B62EB6EE75 /* Pods-LaurenWeissApp2017UITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = LaurenWeissApp2017UITests/Info.plist;
@@ -507,6 +753,7 @@
 				2E1851E31F13F2750094F732 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2E1851E41F13F2750094F732 /* Build configuration list for PBXNativeTarget "LaurenWeissApp2017Tests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +762,7 @@
 				2E1851E61F13F2750094F732 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2E1851E71F13F2750094F732 /* Build configuration list for PBXNativeTarget "LaurenWeissApp2017UITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +771,7 @@
 				2E1851E91F13F2750094F732 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

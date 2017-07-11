@@ -5,6 +5,22 @@
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "2E1851B81F13F2750094F732"
+               BuildableName = "LaurenWeissApp2017.app"
+               BlueprintName = "LaurenWeissApp2017"
+               ReferencedContainer = "container:LaurenWeissApp2017.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
    </BuildAction>
    <TestAction
       buildConfiguration = "Debug"
@@ -12,7 +28,36 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "2E1851CC1F13F2750094F732"
+               BuildableName = "LaurenWeissApp2017Tests.xctest"
+               BlueprintName = "LaurenWeissApp2017Tests"
+               ReferencedContainer = "container:LaurenWeissApp2017.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "2E1851D71F13F2750094F732"
+               BuildableName = "LaurenWeissApp2017UITests.xctest"
+               BlueprintName = "LaurenWeissApp2017UITests"
+               ReferencedContainer = "container:LaurenWeissApp2017.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "2E1851B81F13F2750094F732"
+            BuildableName = "LaurenWeissApp2017.app"
+            BlueprintName = "LaurenWeissApp2017"
+            ReferencedContainer = "container:LaurenWeissApp2017.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -26,6 +71,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "2E1851B81F13F2750094F732"
+            BuildableName = "LaurenWeissApp2017.app"
+            BlueprintName = "LaurenWeissApp2017"
+            ReferencedContainer = "container:LaurenWeissApp2017.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -35,6 +90,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "2E1851B81F13F2750094F732"
+            BuildableName = "LaurenWeissApp2017.app"
+            BlueprintName = "LaurenWeissApp2017"
+            ReferencedContainer = "container:LaurenWeissApp2017.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
