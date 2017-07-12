@@ -98,29 +98,12 @@
                     <connections>
                         <outlet property="nextButton" destination="Ueo-9f-YX3" id="npO-K9-nSS"/>
                         <outlet property="usernameTextField" destination="tiR-sw-QTL" id="sO6-fj-42U"/>
+                        <segue destination="l0L-Rz-KK6" kind="show" id="1qD-vH-aGK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="601-Ig-N7X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1565.5999999999999" y="63.418290854572717"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="2Ws-we-JND">
-            <objects>
-                <viewController id="fcf-kY-pgb" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="sGm-bO-uvC"/>
-                        <viewControllerLayoutGuide type="bottom" id="6P6-Gv-iC4"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="x1I-3t-QOq">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xVB-W2-lWl" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2369" y="63"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="PvY-3u-e4T">
@@ -139,6 +122,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4BA-G6-Ua1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-181.59999999999999" y="63.418290854572717"/>
+        </scene>
+        <!--EnterHealthDataInformation-->
+        <scene sceneID="KQi-gr-LEx">
+            <objects>
+                <viewControllerPlaceholder storyboardName="EnterHealthDataInformation" id="l0L-Rz-KK6" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IUQ-YC-B2g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2368.8000000000002" y="62.518740629685162"/>
         </scene>
     </scenes>
 </document>
