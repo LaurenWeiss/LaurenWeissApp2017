@@ -11,30 +11,48 @@ import UIKit
 
 class EnterHealthDataInformationViewController: UIViewController {
     
-    @IBOutlet weak var DatePicker: UIDatePicker!
-    
-    @IBOutlet weak var BirthdayLabel: UILabel!
-    
+  
+    @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var smokeSelector: UISegmentedControl!
+    @IBOutlet weak var genderSelector: UISegmentedControl!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
-    @IBAction func DoYouSmoke(_ sender: Any) {
-        
-//        var tipPercentage = 0.0
-//        
-//        switch smokeSelector.selectedSegmentIndex {
-//        case 0:
-//            tipPercentage = Yes
-//        case 1:
-//            tipPercentage = No
-//        default:
-//            break
-//        }
 
+    
+    @IBAction func calculateButtonTapped(_ sender: UIButton) {
         
+        let birthDate = getDateString()
+        let gender = selectGender()
+        
+        //call the API and pass the above parameters to the function
+        Network.callAPI(usingBirth: birthDate, andGender: gender)
     }
+    
+    
+    func getDateString() -> String {
+        let components = datePicker.calendar.dateComponents([Calendar.Component.day, Calendar.Component.month, Calendar.Component.year], from: datePicker.date)
+        let day = components.day!
+        let mon = components.month!
+        let year = components.year!
+        return "\(day) \(month(from: mon)) \(year)"
+    }
+    
+    private func month(from value: Int) -> String {
+     let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+        return months[value - 1]
+    }
+    
+    func selectGender() -> String {
+        switch genderSelector.selectedSegmentIndex {
+        case 0:
+        return "male"
+        default:
+        return "female"
+        }
+    }
+    
     
 }

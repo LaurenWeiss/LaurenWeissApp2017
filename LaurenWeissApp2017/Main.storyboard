@@ -57,9 +57,6 @@
                                     <segment title="Yes"/>
                                     <segment title="No"/>
                                 </segments>
-                                <connections>
-                                    <action selector="DoYouSmoke:" destination="fcf-kY-pgb" eventType="valueChanged" id="Y79-PD-T8v"/>
-                                </connections>
                             </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="OWx-9b-Yr4">
                                 <rect key="frame" x="9" y="464" width="350" height="29"/>
@@ -79,8 +76,16 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3iF-io-An1">
+                                <rect key="frame" x="155" y="586" width="64" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Calculate"/>
+                                <connections>
+                                    <action selector="calculateButtonTapped:" destination="fcf-kY-pgb" eventType="touchUpInside" id="Xii-Ua-0T0"/>
+                                </connections>
+                            </button>
                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="0T1-wZ-Yfa">
-                                <rect key="frame" x="111" y="60" width="248" height="114"/>
+                                <rect key="frame" x="111" y="64" width="248" height="114"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <date key="date" timeIntervalSinceReferenceDate="521573738.11314797">
                                     <!--2017-07-12 17:35:38 +0000-->
@@ -89,22 +94,15 @@
                                     <!--1900-01-01 11:00:53 +0000-->
                                 </date>
                             </datePicker>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3iF-io-An1">
-                                <rect key="frame" x="155" y="586" width="64" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Calculate"/>
-                                <connections>
-                                    <segue destination="gV2-Ne-3cN" kind="show" identifier="toDeathDateScreen" id="mY9-ae-SWa"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="XHX-mt-3QY"/>
                     <connections>
-                        <outlet property="BirthdayLabel" destination="AId-eB-Jb1" id="Oek-az-xbg"/>
                         <outlet property="DatePicker" destination="0T1-wZ-Yfa" id="f0z-jP-4oA"/>
+                        <outlet property="genderSelector" destination="qsl-e4-5Tq" id="qRQ-I1-8l7"/>
                         <outlet property="smokeSelector" destination="054-LS-Hgz" id="GkP-K8-D6C"/>
+                        <segue destination="gV2-Ne-3cN" kind="show" identifier="toDeathDateScreen" id="o7x-rs-6OU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xVB-W2-lWl" userLabel="First Responder" sceneMemberID="firstResponder"/>

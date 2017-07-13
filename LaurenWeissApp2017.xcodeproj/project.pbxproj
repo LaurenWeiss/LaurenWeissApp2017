@@ -26,6 +26,9 @@
 		2EFFB7321F16B8AA006BB041 /* DeathDateScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFFB7311F16B8AA006BB041 /* DeathDateScreenViewController.swift */; };
 		2EFFB7341F16B8BE006BB041 /* EnterHealthDataInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFFB7331F16B8BE006BB041 /* EnterHealthDataInformationViewController.swift */; };
 		2EFFB7361F16C169006BB041 /* LifeExpectancyCalculatedValues.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2EFFB7351F16C169006BB041 /* LifeExpectancyCalculatedValues.plist */; };
+		2EFFB7391F1819DF006BB041 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFFB7381F1819DF006BB041 /* Network.swift */; };
+		2EFFB73B1F182890006BB041 /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFFB73A1F182890006BB041 /* JSONParser.swift */; };
+		2EFFB73D1F182BCA006BB041 /* LifeExpectancy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFFB73C1F182BCA006BB041 /* LifeExpectancy.swift */; };
 		3017B2E1C24C0A5565DCE7A8 /* Pods_LaurenWeissApp2017.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98FC2CE630CEA8F99B3E8745 /* Pods_LaurenWeissApp2017.framework */; };
 		847A64F8EA616ED3DA6CC767 /* Pods_LaurenWeissApp2017UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FE3DDAA52C5EDE7B1A39A8A /* Pods_LaurenWeissApp2017UITests.framework */; };
 		EDD7B80B725A7902BB446DB5 /* Pods_LaurenWeissApp2017Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EABEF6E21D47AD5B1DD4751D /* Pods_LaurenWeissApp2017Tests.framework */; };
@@ -75,6 +78,9 @@
 		2EFFB7311F16B8AA006BB041 /* DeathDateScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeathDateScreenViewController.swift; sourceTree = "<group>"; };
 		2EFFB7331F16B8BE006BB041 /* EnterHealthDataInformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterHealthDataInformationViewController.swift; sourceTree = "<group>"; };
 		2EFFB7351F16C169006BB041 /* LifeExpectancyCalculatedValues.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = LifeExpectancyCalculatedValues.plist; sourceTree = "<group>"; };
+		2EFFB7381F1819DF006BB041 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		2EFFB73A1F182890006BB041 /* JSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
+		2EFFB73C1F182BCA006BB041 /* LifeExpectancy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LifeExpectancy.swift; sourceTree = "<group>"; };
 		56250601EED005B62EB6EE75 /* Pods-LaurenWeissApp2017UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaurenWeissApp2017UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LaurenWeissApp2017UITests/Pods-LaurenWeissApp2017UITests.release.xcconfig"; sourceTree = "<group>"; };
 		5FE6CE1AF1DB6ED6C42E8285 /* Pods-LaurenWeissApp2017UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaurenWeissApp2017UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LaurenWeissApp2017UITests/Pods-LaurenWeissApp2017UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		85F605AAF7FA19D6E053B755 /* Pods-LaurenWeissApp2017.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaurenWeissApp2017.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LaurenWeissApp2017/Pods-LaurenWeissApp2017.debug.xcconfig"; sourceTree = "<group>"; };
@@ -142,6 +148,7 @@
 				2EFFB70E1F153731006BB041 /* Supporting Files */,
 				2E1851EE1F1535850094F732 /* Storyboards */,
 				2EFFB7261F155E72006BB041 /* Extensions */,
+				2EFFB7371F1819B8006BB041 /* Network */,
 				2EFFB71B1F154821006BB041 /* Models */,
 				2EFFB70D1F153718006BB041 /* View Controllers */,
 				2E1851C31F13F2750094F732 /* Assets.xcassets */,
@@ -205,6 +212,7 @@
 		2EFFB71B1F154821006BB041 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				2EFFB73C1F182BCA006BB041 /* LifeExpectancy.swift */,
 				2EFFB71C1F15482E006BB041 /* User.swift */,
 			);
 			name = Models;
@@ -216,6 +224,15 @@
 				2EFFB7241F155E69006BB041 /* Storyboard+Utility.swift */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		2EFFB7371F1819B8006BB041 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				2EFFB7381F1819DF006BB041 /* Network.swift */,
+				2EFFB73A1F182890006BB041 /* JSONParser.swift */,
+			);
+			name = Network;
 			sourceTree = "<group>";
 		};
 		B45B6C8EC76008385F42D1C5 /* Pods */ = {
@@ -527,13 +544,16 @@
 			files = (
 				2EFFB71D1F15482E006BB041 /* User.swift in Sources */,
 				2EFFB71A1F153D5D006BB041 /* ViewController.swift in Sources */,
+				2EFFB7391F1819DF006BB041 /* Network.swift in Sources */,
 				2EFFB7301F16B875006BB041 /* SuggestionsScreenViewController.swift in Sources */,
+				2EFFB73B1F182890006BB041 /* JSONParser.swift in Sources */,
 				2EFFB7211F154C72006BB041 /* UserService.swift in Sources */,
 				2EFFB7341F16B8BE006BB041 /* EnterHealthDataInformationViewController.swift in Sources */,
 				2EFFB7251F155E69006BB041 /* Storyboard+Utility.swift in Sources */,
 				2E1851F01F1536F70094F732 /* LoginViewController.swift in Sources */,
 				2EFFB7231F1551DE006BB041 /* Constants.swift in Sources */,
 				2EFFB7321F16B8AA006BB041 /* DeathDateScreenViewController.swift in Sources */,
+				2EFFB73D1F182BCA006BB041 /* LifeExpectancy.swift in Sources */,
 				2EFFB71F1F1549CA006BB041 /* CreateUsernameViewController.swift in Sources */,
 				2E1851BD1F13F2750094F732 /* AppDelegate.swift in Sources */,
 			);
