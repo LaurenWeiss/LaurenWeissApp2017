@@ -19,23 +19,19 @@ class JSONParser {
         
         guard let yearsLeft = dataDict["yearsLeft"] as? Int else {
             return
+
         }
-        
+        print(yearsLeft)
+
         guard let minutesLeft = dataDict["minutesLeft"] as? Int else {
             return
         }
+        print(minutesLeft)
         guard let monthsLeft = dataDict["monthsLeft"] as? Int else {
             return
         }
-        guard let dateString = dataDict["dateString"] as? Int else {
-            return
-        }
-        
-        //print(yearsLeft)
-        print(dataDict)
-        print(yearsLeft)
-        print(minutesLeft)
         print(monthsLeft)
-        print(dateString)
+        //print(yearsLeft)
+        //print(dataDict)
     }
 }
