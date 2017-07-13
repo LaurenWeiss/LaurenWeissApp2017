@@ -98,7 +98,6 @@
                     <connections>
                         <outlet property="nextButton" destination="Ueo-9f-YX3" id="npO-K9-nSS"/>
                         <outlet property="usernameTextField" destination="tiR-sw-QTL" id="sO6-fj-42U"/>
-                        <segue destination="l0L-Rz-KK6" kind="show" id="1qD-vH-aGK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="601-Ig-N7X" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -122,14 +121,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4BA-G6-Ua1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-181.59999999999999" y="63.418290854572717"/>
-        </scene>
-        <!--EnterHealthDataInformation-->
-        <scene sceneID="KQi-gr-LEx">
-            <objects>
-                <viewControllerPlaceholder storyboardName="EnterHealthDataInformation" id="l0L-Rz-KK6" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="IUQ-YC-B2g" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2368.8000000000002" y="62.518740629685162"/>
         </scene>
     </scenes>
 </document>

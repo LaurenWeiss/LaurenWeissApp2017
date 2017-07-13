@@ -11,6 +11,8 @@ import Foundation
 struct Constants {
     struct Segue {
         static let toCreateUsername = "toCreateUsername"
+        static let toEnterHealthDataInformationViewController = "toEnterHealthDataInformationViewController"
+        static let toSuggsetionsScreenViewController = "toSuggsetionsScreenViewController"
     }
     struct UserDefaults {
         static let currentUser = "currentUser"

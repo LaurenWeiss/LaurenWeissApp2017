@@ -7,3 +7,34 @@
 //
 
 import Foundation
+import UIKit
+
+class EnterHealthDataInformationViewController: UIViewController {
+    
+    @IBOutlet weak var DatePicker: UIDatePicker!
+    
+    @IBOutlet weak var BirthdayLabel: UILabel!
+    
+    @IBOutlet weak var smokeSelector: UISegmentedControl!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    @IBAction func DoYouSmoke(_ sender: Any) {
+        
+//        var tipPercentage = 0.0
+//        
+//        switch smokeSelector.selectedSegmentIndex {
+//        case 0:
+//            tipPercentage = Yes
+//        case 1:
+//            tipPercentage = No
+//        default:
+//            break
+//        }
+
+        
+    }
+    
+}
