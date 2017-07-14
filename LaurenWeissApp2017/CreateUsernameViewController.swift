@@ -25,7 +25,7 @@ class CreateUsernameViewController: UIViewController {
     }
     
     // MARK: - IBActions
-    @IBAction func nextButtonTapped(_ sender: UIButton) {
+    @IBAction func nextButtonTapped(_ sender: Any) {
         guard let firUser = Auth.auth().currentUser,
             let username = usernameTextField.text,
             !username.isEmpty else { return }
@@ -50,3 +50,13 @@ class CreateUsernameViewController: UIViewController {
     }
 
 }
+
+//@IBAction func suggestionsButtonTapped(_ sender: Any) {
+//    
+//    let initialViewController = UIStoryboard.initialViewController(for: .main)
+//    self.view.window?.rootViewController = initialViewController
+//    self.view.window?.makeKeyAndVisible()
+//    
+//    self.performSegue(withIdentifier: Constants.Segue.toSuggsetionsScreenViewController, sender: self)
+//    
+//}

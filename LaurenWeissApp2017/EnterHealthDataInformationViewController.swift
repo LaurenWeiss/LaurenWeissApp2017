@@ -20,7 +20,7 @@ class EnterHealthDataInformationViewController: UIViewController, UIScrollViewDe
     override func viewDidLoad() {
         super.viewDidLoad()
     
-        scrollView.contentSize = CGSizeMake(self.view.frame.width, self.view.frame.height+100)
+     //   scrollView.contentSize = CGSizeMake(self.view.frame.width, self.view.frame.height+100)
     }
     
     
