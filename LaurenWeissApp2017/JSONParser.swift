@@ -5,7 +5,6 @@
 //  Created by Lauren Weiss on 7/13/17.
 //  Copyright © 2017 Lauren Weiss. All rights reserved.
 //
-
 import UIKit
 
 class JSONParser {
@@ -19,10 +18,10 @@ class JSONParser {
         
         guard let yearsLeft = dataDict["yearsLeft"] as? Int else {
             return
-
+            
         }
         print(yearsLeft)
-
+        
         guard let minutesLeft = dataDict["minutesLeft"] as? Int else {
             return
         }

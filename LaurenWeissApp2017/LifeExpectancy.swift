@@ -5,12 +5,11 @@
 //  Created by Lauren Weiss on 7/13/17.
 //  Copyright © 2017 Lauren Weiss. All rights reserved.
 //
-
 import Foundation
 
 class LifeExpectancy {
-
-   static let shared = LifeExpectancy()
+    
+    static let shared = LifeExpectancy()
     
     var dateString: String!
     var daysLeft: String!

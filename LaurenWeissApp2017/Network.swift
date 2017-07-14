@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import SwiftyJSON
+import Alamofire
 
 
 class Network {
@@ -51,7 +53,7 @@ class Network {
         }
         
         dataTask.resume()
-//
+        //
     }
     
     

@@ -11,8 +11,6 @@ import UIKit
 
 class SuggestionsScreenViewController: UIViewController {
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
     }

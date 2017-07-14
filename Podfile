@@ -10,6 +10,9 @@ pod 'Firebase/Core'
   pod 'FirebaseUI/Auth'
   pod 'Firebase/Database'
   pod 'Firebase/Storage'
+  pod 'SwiftyJSON'
+  pod 'Alamofire'
+  
 
   # Pods for LaurenWeissApp2017
 

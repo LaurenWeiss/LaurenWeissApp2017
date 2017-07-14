@@ -6,16 +6,30 @@
 //  Copyright © 2017 Lauren Weiss. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 class DeathDateScreenViewController: UIViewController {
     
     @IBOutlet weak var suggestionsButton: UIButton!
     
+    @IBOutlet weak var ageOfDeathLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //show ageOfDeath
+       // var ageOfDeath: String = LifeExpectancy.shared.yearsLeft + LifeExpectancy.shared.currentAge
+       // ageOfDeathLabel.text = ageOfDeath
+        
+        
+      //  ageOfDeathLabel.text = JSONParser.parse(yearsLeft)
+        ageOfDeathLabel.sizeToFit()
+        print("\(LifeExpectancy.shared.yearsLeft)\"hi")
+        
+    }
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
     
     @IBAction func suggestionsButtonTapped(_ sender: Any) {
@@ -27,4 +41,5 @@ class DeathDateScreenViewController: UIViewController {
         self.performSegue(withIdentifier: Constants.Segue.toSuggsetionsScreenViewController, sender: self)
         
     }
+    
 }

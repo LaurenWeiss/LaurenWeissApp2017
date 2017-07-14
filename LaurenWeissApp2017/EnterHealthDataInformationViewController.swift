@@ -5,13 +5,13 @@
 //  Created by Lauren Weiss on 7/12/17.
 //  Copyright © 2017 Lauren Weiss. All rights reserved.
 //
-
 import Foundation
 import UIKit
 
-class EnterHealthDataInformationViewController: UIViewController {
+class EnterHealthDataInformationViewController: UIViewController, UIScrollViewDelegate {
     
-  
+    @IBOutlet weak var scrollView: UIScrollView!
+    
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var smokeSelector: UISegmentedControl!
     @IBOutlet weak var genderSelector: UISegmentedControl!
@@ -19,8 +19,10 @@ class EnterHealthDataInformationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    
+        scrollView.contentSize = CGSizeMake(self.view.frame.width, self.view.frame.height+100)
     }
-
+    
     
     @IBAction func calculateButtonTapped(_ sender: UIButton) {
         
@@ -41,16 +43,16 @@ class EnterHealthDataInformationViewController: UIViewController {
     }
     
     private func month(from value: Int) -> String {
-     let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+        let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
         return months[value - 1]
     }
     
     func selectGender() -> String {
         switch genderSelector.selectedSegmentIndex {
         case 0:
-        return "male"
+            return "male"
         default:
-        return "female"
+            return "female"
         }
     }
     
