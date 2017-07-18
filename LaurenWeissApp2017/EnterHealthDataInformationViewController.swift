@@ -7,6 +7,8 @@
 //
 import Foundation
 import UIKit
+import EMCCountryPickerController
+
 
 class EnterHealthDataInformationViewController: UIViewController, UIScrollViewDelegate {
     
@@ -18,6 +20,9 @@ class EnterHealthDataInformationViewController: UIViewController, UIScrollViewDe
     @IBOutlet weak var genderSelector: UISegmentedControl!
     @IBOutlet weak var diabetesSelector: UISegmentedControl!
     
+    @IBOutlet weak var countryLabel: UILabel!
+    
+    var chosenCountry: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +35,7 @@ class EnterHealthDataInformationViewController: UIViewController, UIScrollViewDe
         
         let birthDate = getDateString()
         let gender = selectGender()
-        let country = selectCountry()
+        let country = chosenCountry!
         let diabetes = selectDiabetes()
         
         //call the API and pass the above parameters to the function
@@ -47,10 +52,6 @@ class EnterHealthDataInformationViewController: UIViewController, UIScrollViewDe
         return "\(day) \(month(from: mon)) \(year)"
     }
     
-    func selectCountry() -> String {
-     
-        return "hi"
-    }
     func selectDiabetes() -> String {
         switch diabetesSelector.selectedSegmentIndex {
         case 0:
@@ -74,5 +75,23 @@ class EnterHealthDataInformationViewController: UIViewController, UIScrollViewDe
         }
     }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "presentStateSegue" {
+            if let destinationVC = segue.destination as? EMCCountryPickerController {
+                destinationVC.countryDelegate = self
+            }
+        }
+    }
+}
+
+
+
+extension EnterHealthDataInformationViewController: EMCCountryDelegate {
+   
+    func countryController(_ sender: Any!, didSelect chosenCountry: EMCCountry!) {
+        print(chosenCountry.countryName())
+        countryLabel.text = chosenCountry.countryName()
+        self.chosenCountry = chosenCountry.countryName()
+        dismiss(animated: true, completion: nil)
+    }
 }
