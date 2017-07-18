@@ -12,7 +12,7 @@ pod 'Firebase/Core'
   pod 'Firebase/Storage'
   pod 'SwiftyJSON'
   pod 'Alamofire'
-  
+  pod 'EMCCountryPickerController', '~> 1.1'
 
   # Pods for LaurenWeissApp2017
 

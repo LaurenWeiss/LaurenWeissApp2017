@@ -16,21 +16,10 @@ class JSONParser {
             return
         }
         
-        guard let yearsLeft = dataDict["yearsLeft"] as? Int else {
+        guard let lifeExpectancy = dataDict["life_expectancy"] as? Int else {
             return
             
         }
-        print(yearsLeft)
-        
-        guard let minutesLeft = dataDict["minutesLeft"] as? Int else {
-            return
-        }
-        print(minutesLeft)
-        guard let monthsLeft = dataDict["monthsLeft"] as? Int else {
-            return
-        }
-        print(monthsLeft)
-        //print(yearsLeft)
-        //print(dataDict)
+        print(lifeExpectancy)
     }
 }

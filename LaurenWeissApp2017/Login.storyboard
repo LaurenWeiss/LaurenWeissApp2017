@@ -75,13 +75,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ueo-9f-YX3">
-                                <rect key="frame" x="150" y="300" width="46" height="30"/>
+                                <rect key="frame" x="150" y="302" width="46" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Next">
                                     <color key="titleColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="nextButtonTapped:" destination="bRB-qK-iBy" eventType="touchUpInside" id="XRk-UC-iQ8"/>
+                                    <action selector="nextButtonTapped:" destination="bRB-qK-iBy" eventType="touchUpInside" id="61p-Bh-gmk"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tiR-sw-QTL">
@@ -96,7 +96,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="nextButton" destination="Ueo-9f-YX3" id="npO-K9-nSS"/>
+                        <outlet property="nextButton" destination="Ueo-9f-YX3" id="RqI-0I-JkI"/>
                         <outlet property="usernameTextField" destination="tiR-sw-QTL" id="sO6-fj-42U"/>
                     </connections>
                 </viewController>

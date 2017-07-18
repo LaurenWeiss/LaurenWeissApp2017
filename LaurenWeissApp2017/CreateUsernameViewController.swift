@@ -14,7 +14,6 @@ class CreateUsernameViewController: UIViewController {
     // MARK: - Subviews
     
     @IBOutlet weak var usernameTextField: UITextField!
-    
     @IBOutlet weak var nextButton: UIButton!
     
     // MARK: - VC Lifecycle
@@ -23,9 +22,10 @@ class CreateUsernameViewController: UIViewController {
             super.viewDidLoad()
         nextButton.layer.cornerRadius = 6
     }
-    
     // MARK: - IBActions
+    
     @IBAction func nextButtonTapped(_ sender: Any) {
+        
         guard let firUser = Auth.auth().currentUser,
             let username = usernameTextField.text,
             !username.isEmpty else { return }
@@ -38,25 +38,12 @@ class CreateUsernameViewController: UIViewController {
             
             User.setCurrent(user, writeToUserDefaults: true)
             //Move to Main.storyboard -> main features
- 
             
             let storyboard = UIStoryboard(name: "Main", bundle: .main)
             let initialViewController = storyboard.instantiateInitialViewController()
             let window = UIWindow()
             window.rootViewController = initialViewController
             window.makeKeyAndVisible()
-            
         }
     }
-
 }
-
-//@IBAction func suggestionsButtonTapped(_ sender: Any) {
-//    
-//    let initialViewController = UIStoryboard.initialViewController(for: .main)
-//    self.view.window?.rootViewController = initialViewController
-//    self.view.window?.makeKeyAndVisible()
-//    
-//    self.performSegue(withIdentifier: Constants.Segue.toSuggsetionsScreenViewController, sender: self)
-//    
-//}

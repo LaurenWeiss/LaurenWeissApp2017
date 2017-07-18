@@ -7,24 +7,26 @@
 //
 
 import UIKit
-import SwiftyJSON
-import Alamofire
+//import SwiftyJSON
+//import Alamofire
 
 
 class Network {
     
-    static let baseURL: String = "https://life-left.p.mashape.com/time-left?"
+    static let baseURL: String = "http://api.population.io:80/1.0/life-expectancy/diabetes/no/male/United%20Kingdom/40"
     
-    static func callAPI(usingBirth birth: String, andGender gender: String) {
+    static func callAPI(usingBirth birth: String, andGender gender: String, andCountry country: String, andDiabetes diabetes: String) {
         
         //appending to the base url to make a long string url
-        let urlString = baseURL + "birth=\(birth)&gender=\(gender)"
+       // let urlString = baseURL + "birth=\(birth)&gender=\(gender)"
+        let urlString = baseURL
         //makes into valid url
-        let correctURL = urlString.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)
-        let validURL = URL(string: correctURL!)
+       // let correctURL = urlString.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)
+        let validURL = URL(string: urlString)
         
         //sesion allows contact with servers
         let session = URLSession.shared
+        //var request = URLRequest(url: validURL!)
         var request = URLRequest(url: validURL!)
         request.setValue("hAVVDBRbTOmshEls4oXWyrEAJNXup1v3CgfjsnLVJlgiHqW9Zc", forHTTPHeaderField: "X-Mashape-Key")
         request.setValue("application/json", forHTTPHeaderField: "Accept")

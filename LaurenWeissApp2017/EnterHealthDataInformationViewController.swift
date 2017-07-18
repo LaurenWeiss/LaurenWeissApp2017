@@ -11,10 +11,12 @@ import UIKit
 class EnterHealthDataInformationViewController: UIViewController, UIScrollViewDelegate {
     
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var countryPicker: UIPickerView!
     
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var smokeSelector: UISegmentedControl!
     @IBOutlet weak var genderSelector: UISegmentedControl!
+    @IBOutlet weak var diabetesSelector: UISegmentedControl!
     
     
     override func viewDidLoad() {
@@ -28,9 +30,12 @@ class EnterHealthDataInformationViewController: UIViewController, UIScrollViewDe
         
         let birthDate = getDateString()
         let gender = selectGender()
+        let country = selectCountry()
+        let diabetes = selectDiabetes()
         
         //call the API and pass the above parameters to the function
-        Network.callAPI(usingBirth: birthDate, andGender: gender)
+        Network.callAPI(usingBirth: birthDate, andGender: gender, andCountry: country, andDiabetes: diabetes)
+        
     }
     
     
@@ -40,6 +45,19 @@ class EnterHealthDataInformationViewController: UIViewController, UIScrollViewDe
         let mon = components.month!
         let year = components.year!
         return "\(day) \(month(from: mon)) \(year)"
+    }
+    
+    func selectCountry() -> String {
+     
+        return "hi"
+    }
+    func selectDiabetes() -> String {
+        switch diabetesSelector.selectedSegmentIndex {
+        case 0:
+            return "diabetic"
+        default:
+            return "not diabetic"
+        }
     }
     
     private func month(from value: Int) -> String {
