@@ -26,44 +26,39 @@ class EnterHealthDataInformationViewController: UIViewController, UIScrollViewDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        countryLabel.text = "United States"
+
     
-     //   scrollView.contentSize = CGSizeMake(self.view.frame.width, self.view.frame.height+100)
     }
+    
     
     
     @IBAction func calculateButtonTapped(_ sender: UIButton) {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "YYYY-MM-dd"
         
-        let birthDate = getDateString()
-        let gender = selectGender()
-        let country = chosenCountry!
-        let diabetes = selectDiabetes()
+        let dateFromDatePicker = datePicker.date
         
-        //call the API and pass the above parameters to the function
-        Network.callAPI(usingBirth: birthDate, andGender: gender, andCountry: country, andDiabetes: diabetes)
+        let birthDateString = formatter.string(from: dateFromDatePicker)
         
-    }
-    
-    
-    func getDateString() -> String {
-        let components = datePicker.calendar.dateComponents([Calendar.Component.day, Calendar.Component.month, Calendar.Component.year], from: datePicker.date)
-        let day = components.day!
-        let mon = components.month!
-        let year = components.year!
-        return "\(day) \(month(from: mon)) \(year)"
-    }
-    
-    func selectDiabetes() -> String {
-        switch diabetesSelector.selectedSegmentIndex {
-        case 0:
-            return "diabetic"
-        default:
-            return "not diabetic"
+        let sex = genderSelector.selectedSegmentIndex == 0 ? "male" : "female"
+        
+        let isSmoking = smokeSelector.selectedSegmentIndex == 0 ? true : false
+        
+        
+        var country = "United States"
+        if let _ = chosenCountry {
+
+            country = chosenCountry!
+
         }
-    }
-    
-    private func month(from value: Int) -> String {
-        let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
-        return months[value - 1]
+        
+        APIManager.getResponse(usingBirth: birthDateString, andGender: sex, andCountry: country, ifIsSmoking: isSmoking) { (lifeSpecsForThisUser) in
+            User.current.lifeSpecifications = lifeSpecsForThisUser
+            
+        }
+        
     }
     
     func selectGender() -> String {
@@ -76,9 +71,15 @@ class EnterHealthDataInformationViewController: UIViewController, UIScrollViewDe
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "presentStateSegue" {
+        if segue.identifier == "toCountriesList" {
             if let destinationVC = segue.destination as? EMCCountryPickerController {
                 destinationVC.countryDelegate = self
+            }
+        } else if segue.identifier == "toDeathDate" {
+            //pass your age from lifeSpecs to destination
+            //your destination has a container for that ready
+            if let destinationVC = segue.destination as? DeathDateScreenViewController {
+                
             }
         }
     }

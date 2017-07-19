@@ -124,14 +124,6 @@
                                                     <segment title="I don't smoke"/>
                                                 </segments>
                                             </segmentedControl>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Quy-Cu-X2i">
-                                                <rect key="frame" x="126" y="380" width="130" height="34"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Select Country"/>
-                                                <connections>
-                                                    <segue destination="aA6-Os-TTU" kind="presentation" identifier="presentStateSegue" id="egp-0S-yHQ"/>
-                                                </connections>
-                                            </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Birthday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ywe-Yp-VaI">
                                                 <rect key="frame" x="144" y="95" width="87" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -146,6 +138,14 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Quy-Cu-X2i">
+                                                <rect key="frame" x="116" y="380" width="130" height="34"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Select Country"/>
+                                                <connections>
+                                                    <segue destination="aA6-Os-TTU" kind="presentation" identifier="toCountriesList" id="egp-0S-yHQ"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="3iF-io-An1" firstAttribute="leading" secondItem="Rru-1a-fy2" secondAttribute="leading" constant="159" id="3eL-wd-kpJ"/>
@@ -178,6 +178,7 @@
                     <size key="freeformSize" width="375" height="1000"/>
                     <connections>
                         <outlet property="countryLabel" destination="bfL-zt-fil" id="pfk-zG-nRA"/>
+                        <outlet property="datePicker" destination="Q7P-UK-dlg" id="orE-YZ-gNJ"/>
                         <outlet property="genderSelector" destination="qsl-e4-5Tq" id="qRQ-I1-8l7"/>
                         <segue destination="gV2-Ne-3cN" kind="show" identifier="toDeathDate" id="xMy-iI-cN2"/>
                     </connections>

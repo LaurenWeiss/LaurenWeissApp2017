@@ -14,17 +14,21 @@ class DeathDateScreenViewController: UIViewController {
     
     @IBOutlet weak var ageOfDeathLabel: UILabel!
     
+    var deathAge: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //show ageOfDeath
+        
+        
        // var ageOfDeath: String = LifeExpectancy.shared.yearsLeft + LifeExpectancy.shared.currentAge
-       // ageOfDeathLabel.text = ageOfDeath
+        ageOfDeathLabel.text = LifeExpectancy
         
         
       //  ageOfDeathLabel.text = JSONParser.parse(yearsLeft)
         ageOfDeathLabel.sizeToFit()
-        print("\(LifeExpectancy.shared.yearsLeft)\"hi")
+//        print("\(LifeExpectancy.shared.yearsLeft)\"hi")
         
     }
     override func didReceiveMemoryWarning() {

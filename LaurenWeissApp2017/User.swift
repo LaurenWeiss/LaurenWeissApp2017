@@ -15,6 +15,8 @@ class User: NSObject {
     let uid: String
     let username: String
     
+    var lifeSpecifications: LifeSpecs? = nil
+    
     // MARK: - Init
     
     init(uid: String, username: String) {
