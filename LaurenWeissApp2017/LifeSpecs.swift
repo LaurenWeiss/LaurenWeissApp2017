@@ -34,7 +34,7 @@ class LifeSpecs {
         
         if isSmoking == true {
             //subtract first and then:
-            totalLifeExpectancy -= 10
+            self.totalLifeExpectancy -= 10
             self.totalLifeExpectancy = totalLE
             print(totalLifeExpectancy)
 

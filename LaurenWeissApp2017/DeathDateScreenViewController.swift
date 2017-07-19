@@ -23,7 +23,7 @@ class DeathDateScreenViewController: UIViewController {
         
         if let spec = currentSpec
         {
-            ageOfDeathLabel.text = String(spec.totalLifeExpectancy)
+            ageOfDeathLabel.text = String(Int(spec.totalLifeExpectancy))
         }
         
         ageOfDeathLabel.sizeToFit()

@@ -87,8 +87,6 @@ class EnterHealthDataInformationViewController: UIViewController, UIScrollViewDe
     }
 }
 
-
-
 extension EnterHealthDataInformationViewController: EMCCountryDelegate {
    
     func countryController(_ sender: Any!, didSelect chosenCountry: EMCCountry!) {
