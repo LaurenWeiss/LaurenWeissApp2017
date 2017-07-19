@@ -36,11 +36,11 @@
                         <viewControllerLayoutGuide type="bottom" id="6P6-Gv-iC4"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="x1I-3t-QOq">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="2000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zQ4-g6-SsY">
-                                <rect key="frame" x="0.0" y="64" width="375" height="936"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="1936"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rru-1a-fy2">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="905"/>
@@ -146,6 +146,28 @@
                                                     <segue destination="aA6-Os-TTU" kind="presentation" identifier="toCountriesList" id="egp-0S-yHQ"/>
                                                 </connections>
                                             </button>
+                                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="lzG-jd-Tdk">
+                                                <rect key="frame" x="195" y="683" width="118" height="31"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </slider>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Height" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="COz-xp-ETX">
+                                                <rect key="frame" x="63" y="688" width="54" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Weight" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GUr-Ok-ZSO">
+                                                <rect key="frame" x="53" y="753" width="64" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="XnH-0K-alE">
+                                                <rect key="frame" x="195" y="748" width="118" height="31"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </slider>
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="3iF-io-An1" firstAttribute="leading" secondItem="Rru-1a-fy2" secondAttribute="leading" constant="159" id="3eL-wd-kpJ"/>
@@ -175,11 +197,12 @@
                     </view>
                     <navigationItem key="navigationItem" id="XHX-mt-3QY"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="375" height="1000"/>
+                    <size key="freeformSize" width="375" height="2000"/>
                     <connections>
                         <outlet property="countryLabel" destination="bfL-zt-fil" id="pfk-zG-nRA"/>
                         <outlet property="datePicker" destination="Q7P-UK-dlg" id="orE-YZ-gNJ"/>
                         <outlet property="genderSelector" destination="qsl-e4-5Tq" id="qRQ-I1-8l7"/>
+                        <outlet property="smokeSelector" destination="qpu-TU-UsY" id="lWE-kL-y7N"/>
                         <segue destination="gV2-Ne-3cN" kind="show" identifier="toDeathDate" id="xMy-iI-cN2"/>
                     </connections>
                 </viewController>
@@ -196,7 +219,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Rf0-MQ-alh"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="v1u-Bc-JbF">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="2000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date of Death" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rxy-KB-hhw">
@@ -232,7 +255,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rQU-2p-PlP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4180" y="-74.212893553223395"/>
+            <point key="canvasLocation" x="4223" y="238"/>
         </scene>
         <!--Suggestions Screen View Controller-->
         <scene sceneID="Yah-cW-QX8">
@@ -243,7 +266,7 @@
                         <viewControllerLayoutGuide type="bottom" id="F4H-y0-G3C"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Nla-gc-kjq">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="2000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Suggestions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fJs-jF-rSN">

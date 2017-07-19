@@ -56,6 +56,7 @@ class EnterHealthDataInformationViewController: UIViewController, UIScrollViewDe
         
         APIManager.getResponse(usingBirth: birthDateString, andGender: sex, andCountry: country, ifIsSmoking: isSmoking) { (lifeSpecsForThisUser) in
             User.current.lifeSpecifications = lifeSpecsForThisUser
+            self.performSegue(withIdentifier: "toDeathDate", sender: self)
             
         }
         
@@ -78,8 +79,9 @@ class EnterHealthDataInformationViewController: UIViewController, UIScrollViewDe
         } else if segue.identifier == "toDeathDate" {
             //pass your age from lifeSpecs to destination
             //your destination has a container for that ready
-            if let destinationVC = segue.destination as? DeathDateScreenViewController {
-                
+            if let destinationVC = segue.destination as? DeathDateScreenViewController
+            {
+                destinationVC.currentSpec = User.current.lifeSpecifications
             }
         }
     }

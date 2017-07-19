@@ -16,24 +16,21 @@ class DeathDateScreenViewController: UIViewController {
     
     var deathAge: String?
     
+    var currentSpec: LifeSpecs?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //show ageOfDeath
+        if let spec = currentSpec
+        {
+            ageOfDeathLabel.text = String(spec.totalLifeExpectancy)
+        }
         
-        
-       // var ageOfDeath: String = LifeExpectancy.shared.yearsLeft + LifeExpectancy.shared.currentAge
-        ageOfDeathLabel.text = LifeExpectancy
-        
-        
-      //  ageOfDeathLabel.text = JSONParser.parse(yearsLeft)
         ageOfDeathLabel.sizeToFit()
-//        print("\(LifeExpectancy.shared.yearsLeft)\"hi")
         
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     @IBAction func suggestionsButtonTapped(_ sender: Any) {
