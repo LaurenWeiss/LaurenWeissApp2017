@@ -17,18 +17,36 @@ typealias FIRUser = FirebaseAuth.User
 class LoginViewController: UIViewController {
     
     // MARK: - Properties
+    @IBOutlet weak var lifELabel: UILabel!
     
     @IBOutlet weak var loginButton: UIButton!
     
+    @IBOutlet weak var xpectancyLabel: UILabel!
+    
     override func viewDidLoad() {
             super.viewDidLoad()
-        }
+    }
     
     // MARK: - VC Lifecycle
 
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        lifELabel.center.y -= view.bounds.width
+        xpectancyLabel.center.y -= view.bounds.width
+
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        UIView.animate(withDuration: 2.0, animations: {
+            self.lifELabel.center.y += self.view.bounds.width
+        })
+        UIView.animate(withDuration: 4.0, animations: {
+            self.xpectancyLabel.center.y += self.view.bounds.width
+        })
     }
     
     // MARK: - IBActions
@@ -50,8 +68,8 @@ class LoginViewController: UIViewController {
 
 extension LoginViewController: FUIAuthDelegate {
     func authUI(_ authUI: FUIAuth, didSignInWith user: FIRUser?, error: Error?) {
-        if let error = error {
-            assertionFailure("Error signing in: \(error.localizedDescription)")
+        if let _ = error {
+            //assertionFailure("Error signing in: \(error.localizedDescription)")
             return
         }
         

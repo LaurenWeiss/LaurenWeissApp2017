@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,39 +22,61 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="73a-59-e29">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="73a-59-e29">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="239"/>
-                                <color key="backgroundColor" red="0.44373762607574463" green="0.83544331789016724" blue="0.90850549936294556" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LifE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="id8-5H-ZuB">
+                                        <rect key="frame" x="8" y="138" width="140" height="93"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="76"/>
+                                        <color key="textColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="xpectancy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jgv-Qz-Q3K">
+                                        <rect key="frame" x="137" y="138" width="238" height="84"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="50"/>
+                                        <color key="textColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.23529411759999999" green="0.66666666669999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BWx-JG-WSC">
-                                <rect key="frame" x="35" y="417" width="305" height="73"/>
-                                <color key="backgroundColor" red="0.44373762607574463" green="0.83544331789016724" blue="0.90850549936294556" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BWx-JG-WSC">
+                                <rect key="frame" x="42.5" y="420" width="290" height="70"/>
+                                <color key="backgroundColor" red="0.098039215686274508" green="0.098039215686274508" blue="0.098039215686274508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="Nmx-Ad-84b"/>
+                                    <constraint firstAttribute="height" constant="70" id="Cz3-LG-YCy"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                <state key="normal" title="Register or Log In"/>
+                                <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="35"/>
+                                <state key="normal" title="Register or Log In">
+                                    <color key="titleColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="loginButtonTapped:" destination="S2V-mq-Ioy" eventType="touchUpInside" id="dkO-vU-8xF"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.032524956600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.23529411759999999" green="0.66666666669999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="BWx-JG-WSC" firstAttribute="leading" secondItem="EM4-0p-sL5" secondAttribute="leading" constant="35" id="3th-Eo-Ozk"/>
-                            <constraint firstAttribute="trailing" secondItem="BWx-JG-WSC" secondAttribute="trailing" constant="35" id="6uZ-ev-00u"/>
-                            <constraint firstItem="BWx-JG-WSC" firstAttribute="top" secondItem="73a-59-e29" secondAttribute="bottom" constant="25" id="nIS-KX-Jaj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="BWx-JG-WSC" secondAttribute="trailing" constant="26.5" id="JDK-yE-7Td"/>
+                            <constraint firstItem="BWx-JG-WSC" firstAttribute="leading" secondItem="EM4-0p-sL5" secondAttribute="leadingMargin" constant="26.5" id="S0r-FA-K8p"/>
+                            <constraint firstItem="BWx-JG-WSC" firstAttribute="centerX" secondItem="EM4-0p-sL5" secondAttribute="centerX" id="jIn-64-WaV"/>
+                            <constraint firstItem="mi7-Zn-tUr" firstAttribute="top" secondItem="BWx-JG-WSC" secondAttribute="bottom" constant="177" id="l4H-JC-yiK"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="9ow-Se-iIw"/>
                     <connections>
+                        <outlet property="lifELabel" destination="id8-5H-ZuB" id="Yx3-r7-tqg"/>
                         <outlet property="loginButton" destination="BWx-JG-WSC" id="d54-DD-GYM"/>
+                        <outlet property="xpectancyLabel" destination="Jgv-Qz-Q3K" id="qKX-p6-AjM"/>
                         <segue destination="bRB-qK-iBy" kind="show" identifier="toCreateUsername" id="zvQ-fT-ePl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OMH-i0-LPM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="714" y="63"/>
+            <point key="canvasLocation" x="712.79999999999995" y="62.518740629685162"/>
         </scene>
         <!--Create Username View Controller-->
         <scene sceneID="lBa-f0-Cii">

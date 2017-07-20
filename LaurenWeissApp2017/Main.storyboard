@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16D30" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="FHy-lp-lkb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16D30" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Py6-VJ-50z">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -25,22 +25,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M03-50-Uwv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4002" y="-1066"/>
+            <point key="canvasLocation" x="3488.8000000000002" y="-1520.6896551724139"/>
         </scene>
-        <!--Enter Health Data Information View Controller-->
+        <!--General Info View Controller-->
         <scene sceneID="2Ws-we-JND">
             <objects>
-                <viewController id="fcf-kY-pgb" customClass="EnterHealthDataInformationViewController" customModule="LaurenWeissApp2017" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="fcf-kY-pgb" customClass="GeneralInfoViewController" customModule="LaurenWeissApp2017" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sGm-bO-uvC"/>
                         <viewControllerLayoutGuide type="bottom" id="6P6-Gv-iC4"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="x1I-3t-QOq">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="2000"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zQ4-g6-SsY">
-                                <rect key="frame" x="0.0" y="64" width="375" height="1936"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="936"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rru-1a-fy2">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="905"/>
@@ -76,15 +76,18 @@
                                                     <segment title="Female"/>
                                                 </segments>
                                             </segmentedControl>
-                                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="qpu-TU-UsY">
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="qpu-TU-UsY">
                                                 <rect key="frame" x="174" y="324" width="172" height="29"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <segments>
                                                     <segment title="Yes"/>
                                                     <segment title="No"/>
                                                 </segments>
+                                                <connections>
+                                                    <action selector="smokeSelectorChanged:" destination="fcf-kY-pgb" eventType="valueChanged" id="HpU-xS-YmN"/>
+                                                </connections>
                                             </segmentedControl>
-                                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="mI0-RH-9BN">
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="mI0-RH-9BN">
                                                 <rect key="frame" x="183" y="259" width="172" height="29"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <segments>
@@ -121,7 +124,6 @@
                                                     <segment title="1 or more"/>
                                                     <segment title="2 or more"/>
                                                     <segment title="3 or more"/>
-                                                    <segment title="I don't smoke"/>
                                                 </segments>
                                             </segmentedControl>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Birthday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ywe-Yp-VaI">
@@ -169,6 +171,7 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </slider>
                                         </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="3iF-io-An1" firstAttribute="leading" secondItem="Rru-1a-fy2" secondAttribute="leading" constant="159" id="3eL-wd-kpJ"/>
                                             <constraint firstItem="qsl-e4-5Tq" firstAttribute="top" secondItem="Rru-1a-fy2" secondAttribute="top" constant="40" id="DdM-xj-Rej"/>
@@ -178,6 +181,13 @@
                                             <constraint firstAttribute="bottom" secondItem="3iF-io-An1" secondAttribute="bottom" constant="236" id="nJX-iQ-sCu"/>
                                         </constraints>
                                     </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="General" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sbw-5c-f3J">
+                                        <rect key="frame" x="8" y="-71" width="359" height="80"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="45"/>
+                                        <color key="textColor" red="0.23529411759999999" green="0.66666666669999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="Rru-1a-fy2" secondAttribute="bottom" id="21m-CN-iQF"/>
@@ -187,7 +197,7 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="zQ4-g6-SsY" firstAttribute="top" secondItem="sGm-bO-uvC" secondAttribute="bottom" id="26f-eo-T0K"/>
                             <constraint firstItem="zQ4-g6-SsY" firstAttribute="leading" secondItem="x1I-3t-QOq" secondAttribute="leading" id="Ivc-RJ-UJZ"/>
@@ -197,18 +207,19 @@
                     </view>
                     <navigationItem key="navigationItem" id="XHX-mt-3QY"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="375" height="2000"/>
+                    <size key="freeformSize" width="375" height="1000"/>
                     <connections>
                         <outlet property="countryLabel" destination="bfL-zt-fil" id="pfk-zG-nRA"/>
                         <outlet property="datePicker" destination="Q7P-UK-dlg" id="orE-YZ-gNJ"/>
                         <outlet property="genderSelector" destination="qsl-e4-5Tq" id="qRQ-I1-8l7"/>
+                        <outlet property="packsOfSmokeSelector" destination="PAn-3e-3Mi" id="kpj-0C-p1b"/>
                         <outlet property="smokeSelector" destination="qpu-TU-UsY" id="lWE-kL-y7N"/>
                         <segue destination="gV2-Ne-3cN" kind="show" identifier="toDeathDate" id="xMy-iI-cN2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xVB-W2-lWl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3348" y="-74.662668665667169"/>
+            <point key="canvasLocation" x="2351.1999999999998" y="-1148.7256371814094"/>
         </scene>
         <!--Death Date Screen View Controller-->
         <scene sceneID="twf-5A-bse">
@@ -219,7 +230,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Rf0-MQ-alh"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="v1u-Bc-JbF">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="2000"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date of Death" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rxy-KB-hhw">
@@ -255,7 +266,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rQU-2p-PlP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4223" y="238"/>
+            <point key="canvasLocation" x="3489" y="-619"/>
         </scene>
         <!--Suggestions Screen View Controller-->
         <scene sceneID="Yah-cW-QX8">
@@ -266,7 +277,7 @@
                         <viewControllerLayoutGuide type="bottom" id="F4H-y0-G3C"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Nla-gc-kjq">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="2000"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Suggestions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fJs-jF-rSN">
@@ -282,25 +293,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YNT-Sf-i42" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4959.1999999999998" y="-74.212893553223395"/>
+            <point key="canvasLocation" x="4298" y="-620"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="xG2-9h-V85">
+        <scene sceneID="bc9-A6-QIZ">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FHy-lp-lkb" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Py6-VJ-50z" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7lI-Fr-Y9d">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3lH-wI-Cqu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="fcf-kY-pgb" kind="relationship" relationship="rootViewController" id="Mee-ux-zss"/>
+                        <segue destination="fcf-kY-pgb" kind="relationship" relationship="rootViewController" id="zZ4-3g-81D"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LW7-52-D08" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DOa-Sa-7fc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2408.8000000000002" y="-74.212893553223395"/>
+            <point key="canvasLocation" x="1412" y="-1148.2758620689656"/>
         </scene>
     </scenes>
 </document>

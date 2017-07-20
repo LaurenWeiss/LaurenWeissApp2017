@@ -17,7 +17,6 @@
 		2E97D5D51F1FD6C800B065CE /* LifeSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E97D5D41F1FD6C800B065CE /* LifeSpecs.swift */; };
 		2EFFB7141F153ABB006BB041 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EFFB7131F153ABB006BB041 /* LaunchScreen.storyboard */; };
 		2EFFB7181F153AD2006BB041 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2EFFB7171F153AD2006BB041 /* GoogleService-Info.plist */; };
-		2EFFB71A1F153D5D006BB041 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFFB7191F153D5D006BB041 /* ViewController.swift */; };
 		2EFFB71D1F15482E006BB041 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFFB71C1F15482E006BB041 /* User.swift */; };
 		2EFFB71F1F1549CA006BB041 /* CreateUsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFFB71E1F1549CA006BB041 /* CreateUsernameViewController.swift */; };
 		2EFFB7211F154C72006BB041 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFFB7201F154C72006BB041 /* UserService.swift */; };
@@ -26,7 +25,7 @@
 		2EFFB72A1F169980006BB041 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EFFB7291F169980006BB041 /* Main.storyboard */; };
 		2EFFB7301F16B875006BB041 /* SuggestionsScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFFB72F1F16B875006BB041 /* SuggestionsScreenViewController.swift */; };
 		2EFFB7321F16B8AA006BB041 /* DeathDateScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFFB7311F16B8AA006BB041 /* DeathDateScreenViewController.swift */; };
-		2EFFB7341F16B8BE006BB041 /* EnterHealthDataInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFFB7331F16B8BE006BB041 /* EnterHealthDataInformationViewController.swift */; };
+		2EFFB7341F16B8BE006BB041 /* GeneralInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFFB7331F16B8BE006BB041 /* GeneralInfoViewController.swift */; };
 		3017B2E1C24C0A5565DCE7A8 /* Pods_LaurenWeissApp2017.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98FC2CE630CEA8F99B3E8745 /* Pods_LaurenWeissApp2017.framework */; };
 		847A64F8EA616ED3DA6CC767 /* Pods_LaurenWeissApp2017UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FE3DDAA52C5EDE7B1A39A8A /* Pods_LaurenWeissApp2017UITests.framework */; };
 		EDD7B80B725A7902BB446DB5 /* Pods_LaurenWeissApp2017Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EABEF6E21D47AD5B1DD4751D /* Pods_LaurenWeissApp2017Tests.framework */; };
@@ -67,7 +66,6 @@
 		2EFFB7111F153AA6006BB041 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2EFFB7131F153ABB006BB041 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2EFFB7171F153AD2006BB041 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		2EFFB7191F153D5D006BB041 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2EFFB71C1F15482E006BB041 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		2EFFB71E1F1549CA006BB041 /* CreateUsernameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateUsernameViewController.swift; sourceTree = "<group>"; };
 		2EFFB7201F154C72006BB041 /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
@@ -76,7 +74,7 @@
 		2EFFB7291F169980006BB041 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		2EFFB72F1F16B875006BB041 /* SuggestionsScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionsScreenViewController.swift; sourceTree = "<group>"; };
 		2EFFB7311F16B8AA006BB041 /* DeathDateScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeathDateScreenViewController.swift; sourceTree = "<group>"; };
-		2EFFB7331F16B8BE006BB041 /* EnterHealthDataInformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterHealthDataInformationViewController.swift; sourceTree = "<group>"; };
+		2EFFB7331F16B8BE006BB041 /* GeneralInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralInfoViewController.swift; sourceTree = "<group>"; };
 		56250601EED005B62EB6EE75 /* Pods-LaurenWeissApp2017UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaurenWeissApp2017UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LaurenWeissApp2017UITests/Pods-LaurenWeissApp2017UITests.release.xcconfig"; sourceTree = "<group>"; };
 		5FE6CE1AF1DB6ED6C42E8285 /* Pods-LaurenWeissApp2017UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaurenWeissApp2017UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LaurenWeissApp2017UITests/Pods-LaurenWeissApp2017UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		85F605AAF7FA19D6E053B755 /* Pods-LaurenWeissApp2017.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaurenWeissApp2017.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LaurenWeissApp2017/Pods-LaurenWeissApp2017.debug.xcconfig"; sourceTree = "<group>"; };
@@ -180,15 +178,22 @@
 			name = Storyboards;
 			sourceTree = "<group>";
 		};
+		2E44ACE81F2131F000167BE5 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				2EFFB71E1F1549CA006BB041 /* CreateUsernameViewController.swift */,
+				2E1851EF1F1536F70094F732 /* LoginViewController.swift */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
 		2EFFB70D1F153718006BB041 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				2E44ACE81F2131F000167BE5 /* Login */,
 				2EFFB72F1F16B875006BB041 /* SuggestionsScreenViewController.swift */,
-				2EFFB7331F16B8BE006BB041 /* EnterHealthDataInformationViewController.swift */,
+				2EFFB7331F16B8BE006BB041 /* GeneralInfoViewController.swift */,
 				2EFFB7311F16B8AA006BB041 /* DeathDateScreenViewController.swift */,
-				2EFFB71E1F1549CA006BB041 /* CreateUsernameViewController.swift */,
-				2E1851EF1F1536F70094F732 /* LoginViewController.swift */,
-				2EFFB7191F153D5D006BB041 /* ViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -536,10 +541,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2EFFB71D1F15482E006BB041 /* User.swift in Sources */,
-				2EFFB71A1F153D5D006BB041 /* ViewController.swift in Sources */,
 				2EFFB7301F16B875006BB041 /* SuggestionsScreenViewController.swift in Sources */,
 				2EFFB7211F154C72006BB041 /* UserService.swift in Sources */,
-				2EFFB7341F16B8BE006BB041 /* EnterHealthDataInformationViewController.swift in Sources */,
+				2EFFB7341F16B8BE006BB041 /* GeneralInfoViewController.swift in Sources */,
 				2EFFB7251F155E69006BB041 /* Storyboard+Utility.swift in Sources */,
 				2E1851F01F1536F70094F732 /* LoginViewController.swift in Sources */,
 				2EFFB7231F1551DE006BB041 /* Constants.swift in Sources */,

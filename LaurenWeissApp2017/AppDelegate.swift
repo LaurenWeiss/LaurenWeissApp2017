@@ -44,6 +44,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
 }
+
+
 extension AppDelegate {
     func configureInitialRootViewController(for window: UIWindow?) {
         let defaults = UserDefaults.standard
@@ -60,7 +62,7 @@ extension AppDelegate {
             initialViewController = UIStoryboard.initialViewController(for: .login)
         }
         
-        window?.rootViewController = initialViewController
-        window?.makeKeyAndVisible()
+        window!.rootViewController = initialViewController
+        window!.makeKeyAndVisible()
     }
 }

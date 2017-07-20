@@ -22,6 +22,7 @@ class CreateUsernameViewController: UIViewController {
             super.viewDidLoad()
         nextButton.layer.cornerRadius = 6
     }
+    
     // MARK: - IBActions
     
     @IBAction func nextButtonTapped(_ sender: Any) {
@@ -39,11 +40,11 @@ class CreateUsernameViewController: UIViewController {
             User.setCurrent(user, writeToUserDefaults: true)
             //Move to Main.storyboard -> main features
             
-            let storyboard = UIStoryboard(name: "Main", bundle: .main)
-            let initialViewController = storyboard.instantiateInitialViewController()
-            let window = UIWindow()
-            window.rootViewController = initialViewController
-            window.makeKeyAndVisible()
+            
+            let initialViewController = UIStoryboard.initialViewController(for: .main)
+            let  appDelegate = UIApplication.shared.delegate  as! AppDelegate
+            appDelegate.window!.rootViewController = initialViewController
+            appDelegate.window!.makeKeyAndVisible()
         }
     }
 }

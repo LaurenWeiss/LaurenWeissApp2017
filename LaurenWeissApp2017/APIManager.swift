@@ -27,10 +27,10 @@ class APIManager {
         
         Alamofire.request(url).responseData { (response) in
             
-            let json = JSON(with: response.data!) as? JSON
+            let json = JSON(with: response.data!)
             
-            if let jsonForLifeSpecs = json {
-                let lifeSpecs = LifeSpecs(withJSON: jsonForLifeSpecs, andSmokingInfo: isSmoking)
+            if !(json.null != nil) {
+                let lifeSpecs = LifeSpecs(withJSON: json, andSmokingInfo: isSmoking)
                 completionHandler(lifeSpecs)
             } else {
                 completionHandler(nil)
