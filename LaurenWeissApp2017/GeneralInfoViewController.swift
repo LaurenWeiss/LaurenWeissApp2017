@@ -14,10 +14,7 @@ class GeneralInfoViewController: UIViewController, UIScrollViewDelegate {
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var countryPicker: UIPickerView!
-
     @IBOutlet weak var datePicker: UIDatePicker!
-    @IBOutlet weak var smokeSelector: UISegmentedControl!
-    @IBOutlet weak var packsOfSmokeSelector: UISegmentedControl!
     @IBOutlet weak var genderSelector: UISegmentedControl!
     @IBOutlet weak var diabetesSelector: UISegmentedControl!
     
@@ -30,20 +27,6 @@ class GeneralInfoViewController: UIViewController, UIScrollViewDelegate {
         
         countryLabel.text = "United States"
         
-        if smokeSelector.selectedSegmentIndex == 1 {
-            packsOfSmokeSelector.isEnabled = false
-        } else {
-            packsOfSmokeSelector.isEnabled = true
-        }
-    }
-    
-    
-    @IBAction func smokeSelectorChanged(_ sender: UISegmentedControl) {
-        if smokeSelector.selectedSegmentIndex == 1 {
-            packsOfSmokeSelector.isEnabled = false
-        } else {
-            packsOfSmokeSelector.isEnabled = true
-        }
     }
     
     @IBAction func calculateButtonTapped(_ sender: UIButton) {
@@ -55,8 +38,6 @@ class GeneralInfoViewController: UIViewController, UIScrollViewDelegate {
         let birthDateString = formatter.string(from: dateFromDatePicker)
         
         let sex = genderSelector.selectedSegmentIndex == 0 ? "male" : "female"
-        
-        let isSmoking = smokeSelector.selectedSegmentIndex == 0 ? true : false
         
         var country = "United States"
         if let _ = chosenCountry {

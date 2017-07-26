@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16D30" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Py6-VJ-50z">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16D30" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="4MM-uK-INI">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -19,7 +19,7 @@
                         <viewControllerLayoutGuide type="bottom" id="rfO-4I-oK8"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="qMW-rz-KFu">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1436"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1439"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -28,10 +28,10 @@
             </objects>
             <point key="canvasLocation" x="4846" y="-4181"/>
         </scene>
-        <!--General Info View Controller-->
+        <!--Custom Side Menu Controller-->
         <scene sceneID="2Ws-we-JND">
             <objects>
-                <viewController id="fcf-kY-pgb" customClass="GeneralInfoViewController" customModule="LaurenWeissApp2017" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="fcf-kY-pgb" customClass="CustomSideMenuController" customModule="LaurenWeissApp2017" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sGm-bO-uvC"/>
                         <viewControllerLayoutGuide type="bottom" id="6P6-Gv-iC4"/>
@@ -46,35 +46,19 @@
                                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rru-1a-fy2">
                                         <rect key="frame" x="0.0" y="-64" width="375" height="1000"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Main" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sbw-5c-f3J">
-                                                <rect key="frame" x="140" y="68" width="89" height="45"/>
-                                                <fontDescription key="fontDescription" name="TamilSangamMN" family="Tamil Sangam MN" pointSize="45"/>
-                                                <color key="textColor" red="0.25490196078431371" green="0.80392156862745101" blue="0.5490196078431373" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LifExpectancy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="95J-YJ-g5L">
                                                 <rect key="frame" x="82" y="0.0" width="242.5" height="47"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="39"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g86-hH-bxK">
-                                                <rect key="frame" x="161" y="242" width="99" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="TabView"/>
-                                                <connections>
-                                                    <segue destination="4MM-uK-INI" kind="show" id="N3Q-2I-31V"/>
-                                                </connections>
-                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="95J-YJ-g5L" firstAttribute="top" secondItem="Rru-1a-fy2" secondAttribute="top" id="4dh-iG-a3L"/>
                                             <constraint firstItem="95J-YJ-g5L" firstAttribute="top" secondItem="Rru-1a-fy2" secondAttribute="top" id="Hit-x2-swn"/>
-                                            <constraint firstItem="sbw-5c-f3J" firstAttribute="centerX" secondItem="Rru-1a-fy2" secondAttribute="centerX" constant="-3" id="aBv-70-uwP"/>
                                             <constraint firstItem="95J-YJ-g5L" firstAttribute="leading" secondItem="Rru-1a-fy2" secondAttribute="leading" constant="81.5" id="bzf-Hi-VUF"/>
                                             <constraint firstItem="95J-YJ-g5L" firstAttribute="centerX" secondItem="Rru-1a-fy2" secondAttribute="centerX" constant="15.75" id="jaK-Rd-eur"/>
-                                            <constraint firstItem="sbw-5c-f3J" firstAttribute="top" secondItem="95J-YJ-g5L" secondAttribute="bottom" constant="21" id="smC-4d-QgO"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -103,7 +87,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xVB-W2-lWl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-543" y="-542"/>
+            <point key="canvasLocation" x="-935" y="-609"/>
         </scene>
         <!--Death Date Screen View Controller-->
         <scene sceneID="twf-5A-bse">
@@ -178,7 +162,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YNT-Sf-i42" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-999" y="1222"/>
+            <point key="canvasLocation" x="-809" y="1222"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bc9-A6-QIZ">
@@ -381,6 +365,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" id="U24-rK-iym"/>
                     <value key="contentSizeForViewInPopover" type="size" width="375" height="668"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="1500"/>
@@ -529,6 +514,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" id="PsE-9o-dd8"/>
                     <value key="contentSizeForViewInPopover" type="size" width="375" height="668"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="1600"/>
@@ -565,11 +551,14 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="FPY-qD-w8e">
-                                                <rect key="frame" x="127" y="1147" width="121" height="29"/>
+                                                <rect key="frame" x="8" y="1147" width="359" height="29"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <segments>
-                                                    <segment title="First"/>
-                                                    <segment title="Second"/>
+                                                    <segment title="Never"/>
+                                                    <segment title="Rarely (once a year or less)"/>
+                                                    <segment title="Sometimes (few times a year)"/>
+                                                    <segment title="Often (every few months)"/>
+                                                    <segment title="Very often (once or more a month)"/>
                                                 </segments>
                                             </segmentedControl>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qA4-Uw-1Yt">
@@ -580,9 +569,36 @@
                                                     <color key="titleColor" red="0.25490196079999999" green="0.80392156859999997" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </state>
                                                 <connections>
+                                                    <action selector="calculateButtonTapped:" destination="jik-Qf-Bh4" eventType="touchUpInside" id="Cxo-XO-wBI"/>
                                                     <action selector="calculateButtonTapped:" destination="fcf-kY-pgb" eventType="touchUpInside" id="NYH-vd-pTf"/>
                                                 </connections>
                                             </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What is your exposure to second-hand smoke?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TQN-V8-SfP">
+                                                <rect key="frame" x="-1" y="387" width="376" height="117"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="chD-8H-OBr">
+                                                <rect key="frame" x="21" y="500" width="338" height="29"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <segments>
+                                                    <segment title="Daily and prolonged"/>
+                                                    <segment title="Not daily but often and prolonged"/>
+                                                    <segment title="At least once a week and prolonged"/>
+                                                    <segment title="Rarely or never"/>
+                                                </segments>
+                                            </segmentedControl>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ufZ-zi-se6">
+                                                <rect key="frame" x="57" y="970" width="261" height="29"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <segments>
+                                                    <segment title="1 to 2"/>
+                                                    <segment title="3"/>
+                                                    <segment title="3 or more"/>
+                                                </segments>
+                                            </segmentedControl>
                                         </subviews>
                                         <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
@@ -595,6 +611,7 @@
                                         </segments>
                                         <connections>
                                             <action selector="smokeSelectorChanged:" destination="fcf-kY-pgb" eventType="valueChanged" id="oMg-R9-vaK"/>
+                                            <action selector="smokeSelectorChanged:" destination="jik-Qf-Bh4" eventType="valueChanged" id="yN5-ay-NLp"/>
                                         </connections>
                                     </segmentedControl>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Do you smoke?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cXK-KO-FGt">
@@ -608,21 +625,16 @@
                                         <rect key="frame" x="26" y="344" width="338" height="29"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <segments>
-                                            <segment title="1"/>
-                                            <segment title="1 or more"/>
-                                            <segment title="2 or more"/>
-                                            <segment title="3 or more"/>
+                                            <segment title="None"/>
+                                            <segment title="1 cigarette to half a pack"/>
+                                            <segment title="1 pack"/>
+                                            <segment title="1 and a half packs"/>
+                                            <segment title="2 packs"/>
+                                            <segment title="3 or more packs"/>
                                         </segments>
                                     </segmentedControl>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How many packs of cigarettes do you smoke per day?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GcF-eR-9jX">
                                         <rect key="frame" x="25" y="218" width="320" height="117"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How often are you exposed to second-hand smoke?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TQN-V8-SfP">
-                                        <rect key="frame" x="29" y="389" width="325" height="117"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                         <nil key="textColor"/>
@@ -656,36 +668,21 @@
                                         <color key="textColor" red="0.25490196079999999" green="0.80392156859999997" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="chD-8H-OBr">
-                                        <rect key="frame" x="122" y="515" width="121" height="29"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <segments>
-                                            <segment title="First"/>
-                                            <segment title="Second"/>
-                                        </segments>
-                                    </segmentedControl>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="NQD-hd-fMs">
                                         <rect key="frame" x="127" y="634" width="121" height="29"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <segments>
-                                            <segment title="First"/>
-                                            <segment title="Second"/>
+                                            <segment title="Yes"/>
+                                            <segment title="No"/>
                                         </segments>
                                     </segmentedControl>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="y3N-Bs-DWD">
-                                        <rect key="frame" x="127" y="777" width="121" height="29"/>
+                                        <rect key="frame" x="10" y="777" width="345" height="29"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <segments>
-                                            <segment title="First"/>
-                                            <segment title="Second"/>
-                                        </segments>
-                                    </segmentedControl>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ufZ-zi-se6">
-                                        <rect key="frame" x="119" y="972" width="121" height="29"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <segments>
-                                            <segment title="First"/>
-                                            <segment title="Second"/>
+                                            <segment title="1 or 2 days per week"/>
+                                            <segment title="3 to 5 days per week"/>
+                                            <segment title="6 or 7 days per week"/>
                                         </segments>
                                     </segmentedControl>
                                 </subviews>
@@ -693,13 +690,18 @@
                         </subviews>
                         <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" id="HMF-02-fa0"/>
                     <value key="contentSizeForViewInPopover" type="size" width="375" height="668"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="1300"/>
+                    <connections>
+                        <outlet property="packsOfSmokeSelector" destination="GQb-gI-40b" id="eqo-BS-9Aw"/>
+                        <outlet property="smokeSelector" destination="nn3-yo-lue" id="mxC-JV-u3d"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="epT-TQ-HF6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3604" y="-63"/>
+            <point key="canvasLocation" x="3604" y="-63.868065967016499"/>
         </scene>
         <!--RelationshipsVC-->
         <scene sceneID="MK1-Vw-JmL">
@@ -821,6 +823,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" id="tJS-Iw-ilx"/>
                     <value key="contentSizeForViewInPopover" type="size" width="375" height="668"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="1300"/>
@@ -982,14 +985,14 @@
                         <viewControllerLayoutGuide type="bottom" id="iaH-WD-6v4"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="XKa-oR-qDm">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1436"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1439"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GIl-V9-plH">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="1436"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="1439"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5xU-p3-MHZ">
-                                        <rect key="frame" x="0.0" y="-64" width="376" height="8002"/>
+                                        <rect key="frame" x="0.0" y="-64" width="376" height="1430"/>
                                         <subviews>
                                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="B1S-30-Ksl">
                                                 <rect key="frame" x="22" y="312" width="331" height="114"/>
@@ -1188,7 +1191,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="x8n-eu-Q2c"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="375" height="1436"/>
+                    <size key="freeformSize" width="375" height="1439"/>
                     <connections>
                         <outlet property="countryLabel" destination="HG3-25-iXt" id="50p-5K-tc6"/>
                         <outlet property="datePicker" destination="B1S-30-Ksl" id="XSh-dt-W85"/>
@@ -1202,36 +1205,36 @@
         <!--Custom Side Menu Controller-->
         <scene sceneID="pQC-cX-hTe">
             <objects>
-                <viewController id="4MM-uK-INI" customClass="CustomSideMenuController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="4MM-uK-INI" customClass="CustomSideMenuController" customModule="LaurenWeissApp2017" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="yYT-6s-fzE"/>
                         <viewControllerLayoutGuide type="bottom" id="vHq-QQ-4GF"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Wem-D4-jUh">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
-                        <segue destination="DYM-hE-FqL" kind="show" id="Co9-pu-P4M"/>
-                        <segue destination="sbC-UU-8ND" kind="show" id="owo-BR-eVn"/>
-                        <segue destination="I3c-QJ-grk" kind="show" id="VZC-x4-Bmo"/>
-                        <segue destination="cIC-ME-RQa" kind="show" id="ud6-f1-xfO"/>
-                        <segue destination="yI3-xv-95c" kind="show" id="zPs-sJ-4LY"/>
-                        <segue destination="PAZ-wA-0bK" kind="show" id="O6c-Yp-Lif"/>
-                        <segue destination="49u-L6-9PX" kind="show" id="Kus-5p-KmZ"/>
+                        <segue destination="DYM-hE-FqL" kind="custom" identifier="ShowSide" customClass="SideContainmentSegue" customModule="SideMenuController" id="Co9-pu-P4M"/>
+                        <segue destination="sbC-UU-8ND" kind="custom" identifier="ShowCenterGeneral" customClass="CenterContainmentSegue" customModule="SideMenuController" id="owo-BR-eVn"/>
+                        <segue destination="I3c-QJ-grk" kind="custom" identifier="ShowCenterDrugs" customClass="CenterContainmentSegue" customModule="SideMenuController" id="VZC-x4-Bmo"/>
+                        <segue destination="cIC-ME-RQa" kind="custom" identifier="ShowCenterDaily" customClass="CenterContainmentSegue" customModule="SideMenuController" id="ud6-f1-xfO"/>
+                        <segue destination="yI3-xv-95c" kind="custom" identifier="ShowCenterRelationships" customClass="CenterContainmentSegue" customModule="SideMenuController" id="zPs-sJ-4LY"/>
+                        <segue destination="PAZ-wA-0bK" kind="custom" identifier="ShowCenterDiet" customClass="CenterContainmentSegue" customModule="SideMenuController" id="O6c-Yp-Lif"/>
+                        <segue destination="49u-L6-9PX" kind="custom" identifier="ShowCenterOther" customClass="CenterContainmentSegue" customModule="SideMenuController" id="Kus-5p-KmZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="das-LO-4oY" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="238" y="-909"/>
+            <point key="canvasLocation" x="-42" y="-655"/>
         </scene>
         <!--Menu Controller-->
         <scene sceneID="e4V-p9-ULk">
             <objects>
-                <tableViewController id="DYM-hE-FqL" customClass="MenuController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="DYM-hE-FqL" customClass="MenuController" customModule="LaurenWeissApp2017" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="QQv-wh-5Ld">
-                        <rect key="frame" x="0.0" y="64" width="300" height="536"/>
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
@@ -1268,7 +1271,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="Lhr-aW-1h4" kind="show" id="tyy-Gs-7JG"/>
+                        <segue destination="Lhr-aW-1h4" kind="relationship" relationship="rootViewController" id="b8m-Jd-HSI"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="97Z-gA-II6" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1286,7 +1289,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="jik-Qf-Bh4" kind="show" id="lCU-HQ-lKT"/>
+                        <segue destination="jik-Qf-Bh4" kind="relationship" relationship="rootViewController" id="WFA-8P-f1H"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TGx-Rg-K7e" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1304,7 +1307,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="1yk-TQ-Sca" kind="show" id="QNX-uA-74h"/>
+                        <segue destination="1yk-TQ-Sca" kind="relationship" relationship="rootViewController" id="QTq-4i-rQq"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wu1-4O-H1e" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1322,7 +1325,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="69u-D4-qwI" kind="show" id="tDb-aw-5nx"/>
+                        <segue destination="69u-D4-qwI" kind="relationship" relationship="rootViewController" id="kr4-Nx-hVi"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vO0-sh-GAQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1340,7 +1343,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="qJs-K0-8Hl" kind="show" id="5gE-gg-kWq"/>
+                        <segue destination="qJs-K0-8Hl" kind="relationship" relationship="rootViewController" id="uKF-QJ-A1L"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="04V-eg-7BI" userLabel="First Responder" sceneMemberID="firstResponder"/>
