@@ -35,21 +35,46 @@ class LifeExpectancyCalculator {
         
         dispatchGroup.notify(queue: .main) {
             
+    //GENERAL VIEW CONTROLLER Functions
+            
+            
+            
+    //YOUR DAILY LIFE VIEW CONTROLLER Functions
+            
+            
+            
+    //RELATIONSHIPS VIEW CONTROLLER Functions
+            
+            
+            
+            
+    //DIET AND NUTRITION VIEW CONTROLLER Functions
+            
+            
+            
+            
+    //DRUGS AND ALCOHOL USE VIEW CONTROLLER Functions
+            
             //smoking impact
             if (user.lifeSpecifications?.isSmoking)! {
                 let agesToSubtract = LifeExpectancyCalculator.smokingImpact(lifeSpecs: user.lifeSpecifications!)
                 baseAge = baseAge - agesToSubtract
             }
             
-            onCompletion(baseAge)
-
             
-            //diabetes impact
             
-            //sport impact
+    //OTHER HEALTH INFO VIEW CONTROLLER Functions
+            
+            
+            
+            
+            
+            
+        onCompletion(baseAge)
   
         }
     }
+    
     
     
     private static func smokingImpact(lifeSpecs: LifeSpecs) -> Double {
@@ -62,13 +87,14 @@ class LifeExpectancyCalculator {
         case 2:
             return 3
         default:
-            //3
             return 4
         }
 
     }
     
-
+    
+    
+    
     
 
     

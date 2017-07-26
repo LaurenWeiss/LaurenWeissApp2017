@@ -53,6 +53,8 @@ class GeneralInfoViewController: UIViewController, UIScrollViewDelegate {
 
     }
     
+    //SELECT GENDER
+    
     func selectGender() -> String {
         switch genderSelector.selectedSegmentIndex {
         case 0:
@@ -61,6 +63,20 @@ class GeneralInfoViewController: UIViewController, UIScrollViewDelegate {
             return "female"
         }
     }
+    
+    
+    //SELECT WEIGHT
+    
+    //SELECT HEIGHT
+    
+    
+    //If BMI is high...
+    //Is it high because of muscle or fat? SELECT
+    
+    //HIGHEST LEVEL OF EDUCATION SELECT
+    
+    //DIABETES SELECTOR
+    
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -83,6 +99,8 @@ class GeneralInfoViewController: UIViewController, UIScrollViewDelegate {
 
 extension GeneralInfoViewController: EMCCountryDelegate {
    
+    
+    //SELECT COUNTRY
     func countryController(_ sender: Any!, didSelect chosenCountry: EMCCountry!) {
         print(chosenCountry.countryName())
         countryLabel.text = chosenCountry.countryName()

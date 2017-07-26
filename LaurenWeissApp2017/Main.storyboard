@@ -19,7 +19,7 @@
                         <viewControllerLayoutGuide type="bottom" id="rfO-4I-oK8"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="qMW-rz-KFu">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1439"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -193,11 +193,11 @@
                         <viewControllerLayoutGuide type="bottom" id="7pp-hZ-5zg"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="DJ4-cP-x6v">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1500"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1518"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8IB-gh-DHX">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="1501"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="1594"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1P9-En-feX">
@@ -370,11 +370,11 @@
                     <navigationItem key="navigationItem" id="U24-rK-iym"/>
                     <value key="contentSizeForViewInPopover" type="size" width="375" height="668"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="375" height="1500"/>
+                    <size key="freeformSize" width="375" height="1518"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ULb-GK-UTK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3214" y="-2751"/>
+            <point key="canvasLocation" x="2772" y="-2810.1949025487261"/>
         </scene>
         <!--Diet And NutritionVC-->
         <scene sceneID="EEO-1i-MXK">
@@ -1025,14 +1025,14 @@
                         <viewControllerLayoutGuide type="bottom" id="iaH-WD-6v4"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="XKa-oR-qDm">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1439"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GIl-V9-plH">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="1439"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GIl-V9-plH">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="1601"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5xU-p3-MHZ">
-                                        <rect key="frame" x="0.0" y="-64" width="376" height="1430"/>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5xU-p3-MHZ">
+                                        <rect key="frame" x="0.0" y="-64" width="376" height="1601"/>
                                         <subviews>
                                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="B1S-30-Ksl">
                                                 <rect key="frame" x="22" y="312" width="331" height="114"/>
@@ -1050,15 +1050,8 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Iuk-Rp-DW9">
-                                                <rect key="frame" x="185" y="194" width="117" height="29"/>
-                                                <segments>
-                                                    <segment title="Male"/>
-                                                    <segment title="Female"/>
-                                                </segments>
-                                            </segmentedControl>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="ZxK-rE-wMv">
-                                                <rect key="frame" x="104" y="1349" width="172" height="29"/>
+                                                <rect key="frame" x="106" y="1496" width="172" height="29"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <segments>
                                                     <segment title="Yes"/>
@@ -1066,14 +1059,14 @@
                                                 </segments>
                                             </segmentedControl>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Do you have diabetes?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GSa-PL-PzC">
-                                                <rect key="frame" x="55" y="1245" width="294" height="109"/>
+                                                <rect key="frame" x="41" y="1442" width="294" height="46"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HG3-25-iXt">
-                                                <rect key="frame" x="63" y="1050" width="272" height="27"/>
+                                                <rect key="frame" x="60" y="1073" width="272" height="27"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                                 <nil key="textColor"/>
@@ -1084,7 +1077,7 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </slider>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Where do you live?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jMD-O4-IzN">
-                                                <rect key="frame" x="73" y="922" width="246" height="53"/>
+                                                <rect key="frame" x="61" y="982" width="246" height="53"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                                 <nil key="textColor"/>
@@ -1095,21 +1088,12 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </slider>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="If your BMI is high, is it high because of muscle or fat?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P4g-mE-SK3">
-                                                <rect key="frame" x="34" y="743" width="311" height="116"/>
+                                                <rect key="frame" x="24" y="743" width="333" height="116"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="QdK-qv-eWx">
-                                                <rect key="frame" x="54" y="867" width="295" height="29"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <segments>
-                                                    <segment title="Muscle"/>
-                                                    <segment title="Fat"/>
-                                                    <segment title="BMI is not high"/>
-                                                </segments>
-                                            </segmentedControl>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="What is your birthday?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IXF-3I-SYS">
                                                 <rect key="frame" x="52" y="254" width="276" height="34"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
@@ -1150,7 +1134,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k8X-jE-ONz">
-                                                <rect key="frame" x="89" y="998" width="192" height="34"/>
+                                                <rect key="frame" x="84" y="1031" width="192" height="34"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                                 <state key="normal" title="Select Country"/>
@@ -1165,7 +1149,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C1c-WN-UER">
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C1c-WN-UER">
                                                 <rect key="frame" x="159" y="4034" width="75" height="33"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                 <state key="normal" title="Calculate">
@@ -1175,13 +1159,8 @@
                                                     <action selector="calculateButtonTapped:" destination="Lhr-aW-1h4" eventType="touchUpInside" id="OBn-pF-6rr"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cUn-1X-d5n">
-                                                <rect key="frame" x="302" y="83" width="46" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Button"/>
-                                            </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mqf-5I-0GC">
-                                                <rect key="frame" x="151" y="1397" width="75" height="32"/>
+                                                <rect key="frame" x="147" y="1555" width="75" height="32"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                 <state key="normal" title="Calculate">
@@ -1192,22 +1171,72 @@
                                                     <action selector="calculateButtonTapped:" destination="fcf-kY-pgb" eventType="touchUpInside" id="v8d-Px-UQU"/>
                                                 </connections>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lpx-wb-AXM">
+                                                <rect key="frame" x="262" y="185" width="95" height="41"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <state key="normal" title="Female"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ztF-Fa-Dpj">
+                                                <rect key="frame" x="177" y="185" width="68" height="39"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <state key="normal" title="Male"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ow-hA-ZrG">
+                                                <rect key="frame" x="134" y="850" width="88" height="46"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <state key="normal" title="Muscle"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uE0-UA-KyK">
+                                                <rect key="frame" x="7" y="1215" width="361" height="46"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <state key="normal" title="Advanced Degree (Masters, Doctorate)"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EXm-Ki-gAj">
+                                                <rect key="frame" x="-49" y="1287" width="478" height="46"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <state key="normal" title="College Degree (Bachelors, Associates)"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="73X-xI-9cb">
+                                                <rect key="frame" x="30" y="1341" width="324" height="46"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <state key="normal" title="High School Degree "/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aML-pH-2pW">
+                                                <rect key="frame" x="144" y="896" width="68" height="46"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <state key="normal" title="Fat"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fq5-9z-pkF">
+                                                <rect key="frame" x="95" y="950" width="178" height="46"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <state key="normal" title="BMI is not high"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9jc-95-k6l">
+                                                <rect key="frame" x="18" y="1388" width="344" height="46"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <state key="normal" title="I am currently in High School"/>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="C1c-WN-UER" secondAttribute="trailing" constant="142" id="3HC-hp-SKL"/>
-                                            <constraint firstItem="Iuk-Rp-DW9" firstAttribute="leading" secondItem="Idd-MV-Js3" secondAttribute="trailing" constant="46.5" id="Cjn-D3-WR8"/>
                                             <constraint firstItem="C1c-WN-UER" firstAttribute="leading" secondItem="5xU-p3-MHZ" secondAttribute="leading" constant="159" id="CxF-UA-7gh"/>
                                             <constraint firstItem="Idd-MV-Js3" firstAttribute="top" secondItem="J1h-vN-geM" secondAttribute="bottom" constant="142" id="Fn2-m7-XsG"/>
                                             <constraint firstItem="Idd-MV-Js3" firstAttribute="leading" secondItem="5xU-p3-MHZ" secondAttribute="leadingMargin" constant="40" id="QMC-4O-ZA2"/>
                                             <constraint firstAttribute="bottom" secondItem="C1c-WN-UER" secondAttribute="bottom" constant="3935" id="QsL-43-e6S"/>
                                             <constraint firstItem="IXF-3I-SYS" firstAttribute="top" secondItem="Idd-MV-Js3" secondAttribute="bottom" constant="31.5" id="V6m-x8-a3e"/>
                                             <constraint firstItem="ay0-H0-4Mi" firstAttribute="top" secondItem="J1h-vN-geM" secondAttribute="bottom" constant="21" id="YFj-Qg-y4y"/>
-                                            <constraint firstItem="Iuk-Rp-DW9" firstAttribute="centerX" secondItem="5xU-p3-MHZ" secondAttribute="centerX" constant="55.5" id="Zas-en-VIC"/>
                                             <constraint firstItem="J1h-vN-geM" firstAttribute="centerX" secondItem="5xU-p3-MHZ" secondAttribute="centerX" constant="23.5" id="bjU-yz-RAw"/>
                                             <constraint firstItem="J1h-vN-geM" firstAttribute="leading" secondItem="5xU-p3-MHZ" secondAttribute="leading" constant="81.5" id="eec-Dm-KYM"/>
-                                            <constraint firstItem="C1c-WN-UER" firstAttribute="top" secondItem="Iuk-Rp-DW9" secondAttribute="bottom" constant="3812" id="hlE-TB-sfC"/>
-                                            <constraint firstItem="Iuk-Rp-DW9" firstAttribute="top" secondItem="5xU-p3-MHZ" secondAttribute="top" constant="194" id="koj-GH-bEz"/>
                                             <constraint firstItem="J1h-vN-geM" firstAttribute="top" secondItem="5xU-p3-MHZ" secondAttribute="top" id="qz9-dB-MAU"/>
                                             <constraint firstItem="ay0-H0-4Mi" firstAttribute="centerX" secondItem="5xU-p3-MHZ" secondAttribute="centerX" constant="4.5" id="vwd-xx-fV4"/>
                                             <constraint firstItem="J1h-vN-geM" firstAttribute="top" secondItem="5xU-p3-MHZ" secondAttribute="top" id="ylN-wY-mKa"/>
@@ -1232,17 +1261,16 @@
                     </view>
                     <navigationItem key="navigationItem" id="x8n-eu-Q2c"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="375" height="1439"/>
+                    <size key="freeformSize" width="375" height="1600"/>
                     <connections>
                         <outlet property="countryLabel" destination="HG3-25-iXt" id="50p-5K-tc6"/>
                         <outlet property="datePicker" destination="B1S-30-Ksl" id="XSh-dt-W85"/>
-                        <outlet property="genderSelector" destination="Iuk-Rp-DW9" id="vZN-9i-3cv"/>
                         <segue destination="gV2-Ne-3cN" kind="show" identifier="toDeathDate" id="6SI-P8-LGL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gzd-mn-0zU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3604" y="-4181.559220389805"/>
+            <point key="canvasLocation" x="3604" y="-4182.0089955022495"/>
         </scene>
         <!--Custom Side Menu Controller-->
         <scene sceneID="pQC-cX-hTe">
@@ -1412,6 +1440,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="6SI-P8-LGL"/>
+        <segue reference="kH3-F7-Kof"/>
     </inferredMetricsTieBreakers>
 </document>

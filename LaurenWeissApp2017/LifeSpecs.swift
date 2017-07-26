@@ -16,16 +16,24 @@ class LifeSpecs {
     //GENERAL
 
     var dob: Date = Date()
-    
     var sex: String = "male"
-    
     var country: String = "United States"
+    
+    //DAILY LIFE
+    
+    
+    //RELATIONSHIPS
+    
+    
+    //DIET/NUTRITION
     
     
     //DRUGS/ALCOHOL
     
     var isSmoking: Bool = false
     var numCigarettesPerDay: Int!
+    
+    //OTHER HEALTH INFO
     
     
 
