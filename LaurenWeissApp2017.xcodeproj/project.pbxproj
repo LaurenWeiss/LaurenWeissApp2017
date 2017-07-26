@@ -20,6 +20,7 @@
 		2E6FB8F71F29182400B9A44A /* DrugAlcoholUseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6FB8F61F29182400B9A44A /* DrugAlcoholUseVC.swift */; };
 		2E6FB8F91F29183400B9A44A /* DietAndNutritionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6FB8F81F29183400B9A44A /* DietAndNutritionVC.swift */; };
 		2E6FB8FB1F29184000B9A44A /* OtherHealthInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6FB8FA1F29184000B9A44A /* OtherHealthInfoVC.swift */; };
+		2E6FB8FD1F293A9400B9A44A /* LifeExpectancyCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6FB8FC1F293A9400B9A44A /* LifeExpectancyCalculator.swift */; };
 		2E97D5D31F1FD59D00B065CE /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E97D5D21F1FD59D00B065CE /* APIManager.swift */; };
 		2E97D5D51F1FD6C800B065CE /* LifeSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E97D5D41F1FD6C800B065CE /* LifeSpecs.swift */; };
 		2EFFB7141F153ABB006BB041 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EFFB7131F153ABB006BB041 /* LaunchScreen.storyboard */; };
@@ -75,6 +76,7 @@
 		2E6FB8F61F29182400B9A44A /* DrugAlcoholUseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrugAlcoholUseVC.swift; sourceTree = "<group>"; };
 		2E6FB8F81F29183400B9A44A /* DietAndNutritionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DietAndNutritionVC.swift; sourceTree = "<group>"; };
 		2E6FB8FA1F29184000B9A44A /* OtherHealthInfoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherHealthInfoVC.swift; sourceTree = "<group>"; };
+		2E6FB8FC1F293A9400B9A44A /* LifeExpectancyCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LifeExpectancyCalculator.swift; sourceTree = "<group>"; };
 		2E97D5D21F1FD59D00B065CE /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		2E97D5D41F1FD6C800B065CE /* LifeSpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LifeSpecs.swift; sourceTree = "<group>"; };
 		2EFFB7111F153AA6006BB041 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 				2EFFB71B1F154821006BB041 /* Models */,
 				2EFFB70D1F153718006BB041 /* View Controllers */,
 				2E1851C31F13F2750094F732 /* Assets.xcassets */,
+				2E6FB8FC1F293A9400B9A44A /* LifeExpectancyCalculator.swift */,
 			);
 			path = LaurenWeissApp2017;
 			sourceTree = "<group>";
@@ -572,6 +575,7 @@
 				2E6FB8ED1F28FE4500B9A44A /* CustomSideMenuController.swift in Sources */,
 				2E6FB8F11F29100000B9A44A /* MenuController.swift in Sources */,
 				2EFFB7321F16B8AA006BB041 /* DeathDateScreenViewController.swift in Sources */,
+				2E6FB8FD1F293A9400B9A44A /* LifeExpectancyCalculator.swift in Sources */,
 				2E6FB8F31F29180600B9A44A /* YourDailyLifeVC.swift in Sources */,
 				2E97D5D31F1FD59D00B065CE /* APIManager.swift in Sources */,
 				2E6FB8F71F29182400B9A44A /* DrugAlcoholUseVC.swift in Sources */,

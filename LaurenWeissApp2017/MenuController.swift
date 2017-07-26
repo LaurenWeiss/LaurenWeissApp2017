@@ -12,7 +12,7 @@ import UIKit
 class MenuController: UITableViewController {
     
     let segues = ["ShowCenterGeneral", "ShowCenterDaily", "ShowCenterRelationships", "ShowCenterDrugs", "ShowCenterDiet", "ShowCenterOther" ]
-    let menuOptionLabels = ["General", "Daily Life", "Re", "Drugs", "diet", "other"]
+    let menuOptionLabels = ["General", "Daily Life", "Relationships", "Drug/Alcohol Use", "Diet and Nutrition", "Other Health Information"]
     private var previousIndex: NSIndexPath?
     
     override func viewDidLoad() {

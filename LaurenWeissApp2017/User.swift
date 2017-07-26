@@ -17,6 +17,9 @@ class User: NSObject {
     
     var lifeSpecifications: LifeSpecs? = nil
     
+    var finalAge: Double = 0.0
+
+    
     // MARK: - Init
     
     init(uid: String, username: String) {
@@ -24,6 +27,8 @@ class User: NSObject {
         self.username = username
         super.init()
     }
+    
+    
     init?(snapshot: DataSnapshot) {
         guard let dict = snapshot.value as? [String : Any],
             let username = dict["username"] as? String

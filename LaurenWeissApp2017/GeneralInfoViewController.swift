@@ -22,35 +22,34 @@ class GeneralInfoViewController: UIViewController, UIScrollViewDelegate {
     
     var chosenCountry: String!
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         countryLabel.text = "United States"
         
+        let lifeSpecs = LifeSpecs()
+        User.current.lifeSpecifications = lifeSpecs
+        
+        
+        
     }
     
     @IBAction func calculateButtonTapped(_ sender: UIButton) {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "YYYY-MM-dd"
         
-        let dateFromDatePicker = datePicker.date
+        let lauren = DispatchGroup()
+        lauren.enter()
         
-        let birthDateString = formatter.string(from: dateFromDatePicker)
-        
-        let sex = genderSelector.selectedSegmentIndex == 0 ? "male" : "female"
-        
-        var country = "United States"
-        if let _ = chosenCountry {
-            country = chosenCountry!
+        LifeExpectancyCalculator.calculateAge(forUser: User.current) { (finalAge) in
+            User.current.finalAge = finalAge
+            lauren.leave()
         }
         
-        APIManager.getResponse(usingBirth: birthDateString, andGender: sex, andCountry: country, ifIsSmoking: isSmoking) { (lifeSpecsForThisUser) in
-            User.current.lifeSpecifications = lifeSpecsForThisUser
-            User.current.lifeSpecifications!.numCigarettesPerDay = self.packsOfSmokeSelector.selectedSegmentIndex
-            User.current.lifeSpecifications!.adjustLEBasedOnCigPacks()
-            self.performSegue(withIdentifier: "toDeathDate", sender: self)
+        lauren.notify(queue: .main) {
+            print("done")
+            self.performSegue(withIdentifier: "toDeathDate", sender: nil)
         }
-        
 
     }
     
@@ -63,17 +62,20 @@ class GeneralInfoViewController: UIViewController, UIScrollViewDelegate {
         }
     }
     
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toCountriesList" {
             if let destinationVC = segue.destination as? EMCCountryPickerController {
                 destinationVC.countryDelegate = self
             }
         } else if segue.identifier == "toDeathDate" {
+            User.current.lifeSpecifications?.dob = datePicker.date
+            User.current.lifeSpecifications?.sex = selectGender()
             //pass your age from lifeSpecs to destination
             //your destination has a container for that ready
             if let destinationVC = segue.destination as? DeathDateScreenViewController
             {
-                destinationVC.currentSpec = User.current.lifeSpecifications
+                destinationVC.deathAgeAsDouble = User.current.finalAge
             }
         }
     }

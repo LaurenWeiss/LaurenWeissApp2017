@@ -16,4 +16,12 @@ class YourDailyLifeVC: UIViewController, UIScrollViewDelegate {
     }
     
     
+    @IBAction func calculateButtonTapped(_ sender: UIButton) {
+        LifeExpectancyCalculator.calculateAge(forUser: User.current) { (finalAge) in
+            User.current.finalAge = finalAge
+        }
+        
+    }
+    
+    
 }

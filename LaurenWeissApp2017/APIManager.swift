@@ -13,7 +13,7 @@ import Alamofire
 
 class APIManager {
 
-    static func getResponse(usingBirth birth: String, andGender gender: String, andCountry country: String, ifIsSmoking isSmoking: Bool, completionHandler: @escaping (LifeSpecs?) -> Void) {
+    static func getBaseAge(usingBirth birth: String, andGender gender: String, andCountry country: String, onCompletion: @escaping (Double?) -> Void) {
         
         let baseURL = "http://api.population.io:80/1.0/life-expectancy/total/"
         
@@ -22,21 +22,19 @@ class APIManager {
         }
         
         let url = "\(baseURL)\(gender)/\(countryUrlAllowed)/\(birth)"
-        
-//        let headers: HTTPHeaders = ["X-Amz-Cf-Id": "f0494da1a3fa927973f590922adec0fe87ecc02cb2d52da2590dd6435f623360"]
-        
+                
         Alamofire.request(url).responseData { (response) in
             
-            let json = JSON(with: response.data!)
-            
-            if !(json.null != nil) {
-                let lifeSpecs = LifeSpecs(withJSON: json, andSmokingInfo: isSmoking)
-                completionHandler(lifeSpecs)
-            } else {
-                completionHandler(nil)
+            guard let json = JSON(with: response.data!) as? JSON else {
+                onCompletion(nil)
+                return
             }
+            
+            let totalLE = json["total_life_expectancy"].double
+            onCompletion(totalLE)
             
         }
     }
     
 }
+

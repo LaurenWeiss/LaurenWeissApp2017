@@ -14,19 +14,26 @@ class DeathDateScreenViewController: UIViewController {
     
     @IBOutlet weak var ageOfDeathLabel: UILabel!
     
-    var deathAge: String?
+    
+    var deathAgeAsDouble: Double?
+    
+    var deathAgeAsString: String = ""
     
     var currentSpec: LifeSpecs?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let spec = currentSpec
-        {
-            ageOfDeathLabel.text = String(Int(spec.totalLifeExpectancy))
-        }
         
-        ageOfDeathLabel.sizeToFit()
+        if deathAgeAsDouble != nil {
+            deathAgeAsString = String(format: "%.2f", deathAgeAsDouble!)
+            
+            ageOfDeathLabel.text = deathAgeAsString
+            
+            
+            ageOfDeathLabel.sizeToFit()
+        }
+
         
     }
     override func didReceiveMemoryWarning() {

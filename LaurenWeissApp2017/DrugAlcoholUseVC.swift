@@ -35,16 +35,12 @@ class DrugAlcoholUseVC: UIViewController, UIScrollViewDelegate {
         }
     }
     
+    
     @IBAction func calculateButtonTapped(_ sender: UIButton) {
-        
-        let isSmoking = smokeSelector.selectedSegmentIndex == 0 ? true : false
-        
-        APIManager.getResponse(usingBirth: birthDateString, andGender: sex, andCountry: country, ifIsSmoking: isSmoking) { (lifeSpecsForThisUser) in
-            User.current.lifeSpecifications = lifeSpecsForThisUser
-            User.current.lifeSpecifications!.numCigarettesPerDay = self.packsOfSmokeSelector.selectedSegmentIndex
-            User.current.lifeSpecifications!.adjustLEBasedOnCigPacks()
-            self.performSegue(withIdentifier: "toDeathDate", sender: self)
+        LifeExpectancyCalculator.calculateAge(forUser: User.current) { (finalAge) in
+            User.current.finalAge = finalAge
         }
+        
     }
 
     
