@@ -13,6 +13,7 @@ pod 'Firebase/Core'
   pod 'SwiftyJSON'
   pod 'Alamofire'
   pod 'EMCCountryPickerController', '~> 1.1'
+  pod 'SideMenuController'
 
   # Pods for LaurenWeissApp2017
 

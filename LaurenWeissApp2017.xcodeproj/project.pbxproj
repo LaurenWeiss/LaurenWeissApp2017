@@ -13,6 +13,7 @@
 		2E1851DD1F13F2750094F732 /* LaurenWeissApp2017UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1851DC1F13F2750094F732 /* LaurenWeissApp2017UITests.swift */; };
 		2E1851ED1F15356C0094F732 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E1851EC1F15356C0094F732 /* Login.storyboard */; };
 		2E1851F01F1536F70094F732 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1851EF1F1536F70094F732 /* LoginViewController.swift */; };
+		2E6FB8ED1F28FE4500B9A44A /* CustomSideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6FB8EC1F28FE4500B9A44A /* CustomSideMenuController.swift */; };
 		2E97D5D31F1FD59D00B065CE /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E97D5D21F1FD59D00B065CE /* APIManager.swift */; };
 		2E97D5D51F1FD6C800B065CE /* LifeSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E97D5D41F1FD6C800B065CE /* LifeSpecs.swift */; };
 		2EFFB7141F153ABB006BB041 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EFFB7131F153ABB006BB041 /* LaunchScreen.storyboard */; };
@@ -61,6 +62,7 @@
 		2E1851DE1F13F2750094F732 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E1851EC1F15356C0094F732 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		2E1851EF1F1536F70094F732 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		2E6FB8EC1F28FE4500B9A44A /* CustomSideMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSideMenuController.swift; sourceTree = "<group>"; };
 		2E97D5D21F1FD59D00B065CE /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		2E97D5D41F1FD6C800B065CE /* LifeSpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LifeSpecs.swift; sourceTree = "<group>"; };
 		2EFFB7111F153AA6006BB041 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -205,6 +207,7 @@
 				2EFFB7111F153AA6006BB041 /* Info.plist */,
 				2EFFB7201F154C72006BB041 /* UserService.swift */,
 				2EFFB7221F1551DE006BB041 /* Constants.swift */,
+				2E6FB8EC1F28FE4500B9A44A /* CustomSideMenuController.swift */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -547,6 +550,7 @@
 				2EFFB7251F155E69006BB041 /* Storyboard+Utility.swift in Sources */,
 				2E1851F01F1536F70094F732 /* LoginViewController.swift in Sources */,
 				2EFFB7231F1551DE006BB041 /* Constants.swift in Sources */,
+				2E6FB8ED1F28FE4500B9A44A /* CustomSideMenuController.swift in Sources */,
 				2EFFB7321F16B8AA006BB041 /* DeathDateScreenViewController.swift in Sources */,
 				2E97D5D31F1FD59D00B065CE /* APIManager.swift in Sources */,
 				2EFFB71F1F1549CA006BB041 /* CreateUsernameViewController.swift in Sources */,
