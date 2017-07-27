@@ -24,6 +24,8 @@ class LifeSpecs {
     
     //DAILY LIFE
     
+    var stressLevels: String = "medium"
+    
     
     //RELATIONSHIPS
     

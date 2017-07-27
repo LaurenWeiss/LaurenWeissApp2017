@@ -35,7 +35,7 @@ class LifeExpectancyCalculator {
         
         dispatchGroup.notify(queue: .main) {
             
-//GENERAL VIEW CONTROLLER Functions (that are not part of the "base" age)
+//MARK: - GENERAL VIEW CONTROLLER Functions (that are not part of the "base" age)
     
             //bmi impact
             
