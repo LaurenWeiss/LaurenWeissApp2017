@@ -11,6 +11,9 @@ import UIKit
 
 class DietAndNutritionVC: UIViewController, UIScrollViewDelegate {
     
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }

@@ -12,28 +12,28 @@ import UIKit
 class DrugAlcoholUseVC: UIViewController, UIScrollViewDelegate {
     
     
-    @IBOutlet weak var smokeSelector: UISegmentedControl!
+   // @IBOutlet weak var smokeSelector: UISegmentedControl!
     
-    @IBOutlet weak var packsOfSmokeSelector: UISegmentedControl!
+  //  @IBOutlet weak var packsOfSmokeSelector: UISegmentedControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if smokeSelector.selectedSegmentIndex == 1 {
-            packsOfSmokeSelector.isEnabled = false
-        } else {
-            packsOfSmokeSelector.isEnabled = true
-        }
+//        if smokeSelector.selectedSegmentIndex == 1 {
+//            packsOfSmokeSelector.isEnabled = false
+//        } else {
+//            packsOfSmokeSelector.isEnabled = true
+//        }
         
     }
     
-    @IBAction func smokeSelectorChanged(_ sender: UISegmentedControl) {
-        if smokeSelector.selectedSegmentIndex == 1 {
-            packsOfSmokeSelector.isEnabled = false
-        } else {
-            packsOfSmokeSelector.isEnabled = true
-        }
-    }
+//    @IBAction func smokeSelectorChanged(_ sender: UISegmentedControl) {
+//        if smokeSelector.selectedSegmentIndex == 1 {
+//            packsOfSmokeSelector.isEnabled = false
+//        } else {
+//            packsOfSmokeSelector.isEnabled = true
+//        }
+//    }
     
     
     @IBAction func calculateButtonTapped(_ sender: UIButton) {

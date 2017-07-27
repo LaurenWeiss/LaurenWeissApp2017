@@ -35,25 +35,83 @@ class LifeExpectancyCalculator {
         
         dispatchGroup.notify(queue: .main) {
             
-    //GENERAL VIEW CONTROLLER Functions
+//GENERAL VIEW CONTROLLER Functions (that are not part of the "base" age)
+    
+            //bmi impact
+            
+            
+            //bmi high because of muscle or fat impact
+            
+            
+            //education impact
+            
+            
+            //diabetes impact
+            
+            
+//YOUR DAILY LIFE VIEW CONTROLLER Functions
+            //exercise impact
+            
+            //flossing impact
+            
+            //hours of work per week impact
+            
+            
+            //days of work per week impact
+            
+            //air quality impact
+            
+            
+            //seatbelt impact
+            
+            
+            //sleep impact
+            
+            
+            //stress levels impact
+            
+            
+//RELATIONSHIPS VIEW CONTROLLER Functions
+            //marital status impact
+            
+            
+            //personal contact impact
+            
+            
+            //heart attack impact
+            
+            
+            //cancer impact
+            
+            
+            //father impact
+            
+            
+            //mother impact
             
             
             
-    //YOUR DAILY LIFE VIEW CONTROLLER Functions
+//DIET AND NUTRITION VIEW CONTROLLER Functions
+            //coffee impact
+            
+            
+            //dairy impact
+            
+            
+            //sweets impact
+            
+            
+            //carbs impact
+            
+            
+            //red meat impact
+            
+            
+            //fast foods impact
             
             
             
-    //RELATIONSHIPS VIEW CONTROLLER Functions
-            
-            
-            
-            
-    //DIET AND NUTRITION VIEW CONTROLLER Functions
-            
-            
-            
-            
-    //DRUGS AND ALCOHOL USE VIEW CONTROLLER Functions
+//DRUGS AND ALCOHOL USE VIEW CONTROLLER Functions
             
             //smoking impact
             if (user.lifeSpecifications?.isSmoking)! {
@@ -61,24 +119,124 @@ class LifeExpectancyCalculator {
                 baseAge = baseAge - agesToSubtract
             }
             
+            //second hand smoking impact
             
             
-    //OTHER HEALTH INFO VIEW CONTROLLER Functions
+            //alcohol impact
+            
+            
+            //illegal drugs impact
             
             
             
+//OTHER HEALTH INFO VIEW CONTROLLER Functions
+            
+            //HDL levels impact
             
             
+            //LDL levels impact
             
+            
+            //sunscreen impact
+            
+            
+            //cancer screening impact
+            
+            
+            //anxiety about death impact
+            
+            
+        
         onCompletion(baseAge)
   
         }
     }
     
+//CALCULATIONS FOR IMPACT
     
     
-    private static func smokingImpact(lifeSpecs: LifeSpecs) -> Double {
+//GENERAL VIEW CONTROLLER Functions IMPACT CALCULATIONS (that are not part of the "base" age)
+    
+    //bmi impact
+    
+    
+    //bmi high because of muscle or fat impact
+    
+    
+    //education impact
+    
+    
+    //diabetes impact
+    
+    
+//YOUR DAILY LIFE VIEW CONTROLLER Functions
+    //exercise impact
+    
+    //flossing impact
+    
+    //hours of work per week impact
+    
+    
+    //days of work per week impact
+    
+    //air quality impact
+    
+    
+    //seatbelt impact
+    
+    
+    //sleep impact
+    
+    
+    //stress levels impact
+    
+    
+    
+    
+//RELATIONSHIPS VIEW CONTROLLER Functions
+    //marital status impact
+    
+    
+    //personal contact impact
+    
+    
+    //heart attack impact
+    
+    
+    //cancer impact
+    
+    
+    //father impact
+    
+    
+    //mother impact
+    
+    
+//DIET AND NUTRITION VIEW CONTROLLER Functions
+    //coffee impact
+    
+    
+    //dairy impact
+    
+    
+    //sweets impact
+    
+    
+    //carbs impact
+    
+    
+    //red meat impact
+    
+    
+    //fast foods impact
 
+    
+    
+//DRUGS AND ALCOHOL USE VIEW CONTROLLER Functions
+    
+    //smoking impact
+    private static func smokingImpact(lifeSpecs: LifeSpecs) -> Double {
+        
         switch lifeSpecs.numCigarettesPerDay {
         case 0:
             return 1
@@ -89,9 +247,33 @@ class LifeExpectancyCalculator {
         default:
             return 4
         }
-
+        
     }
+    //second hand smoking impact
     
+    
+    //alcohol impact
+    
+    
+    //illegal drugs impact
+    
+    
+    
+//OTHER HEALTH INFO VIEW CONTROLLER Functions
+    
+    //HDL levels impact
+    
+    
+    //LDL levels impact
+    
+    
+    //sunscreen impact
+    
+    
+    //cancer screening impact
+    
+    
+    //anxiety about death impact
     
     
     
