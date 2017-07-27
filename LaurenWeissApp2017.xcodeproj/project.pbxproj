@@ -23,6 +23,7 @@
 		2E6FB8FD1F293A9400B9A44A /* LifeExpectancyCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6FB8FC1F293A9400B9A44A /* LifeExpectancyCalculator.swift */; };
 		2E97D5D31F1FD59D00B065CE /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E97D5D21F1FD59D00B065CE /* APIManager.swift */; };
 		2E97D5D51F1FD6C800B065CE /* LifeSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E97D5D41F1FD6C800B065CE /* LifeSpecs.swift */; };
+		2EFE557E1F2A913A005CD33E /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFE557D1F2A913A005CD33E /* UIColorExtension.swift */; };
 		2EFFB7141F153ABB006BB041 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EFFB7131F153ABB006BB041 /* LaunchScreen.storyboard */; };
 		2EFFB7181F153AD2006BB041 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2EFFB7171F153AD2006BB041 /* GoogleService-Info.plist */; };
 		2EFFB71D1F15482E006BB041 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFFB71C1F15482E006BB041 /* User.swift */; };
@@ -33,7 +34,7 @@
 		2EFFB72A1F169980006BB041 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EFFB7291F169980006BB041 /* Main.storyboard */; };
 		2EFFB7301F16B875006BB041 /* SuggestionsScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFFB72F1F16B875006BB041 /* SuggestionsScreenViewController.swift */; };
 		2EFFB7321F16B8AA006BB041 /* DeathDateScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFFB7311F16B8AA006BB041 /* DeathDateScreenViewController.swift */; };
-		2EFFB7341F16B8BE006BB041 /* GeneralInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFFB7331F16B8BE006BB041 /* GeneralInfoViewController.swift */; };
+		2EFFB7341F16B8BE006BB041 /* GeneralInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFFB7331F16B8BE006BB041 /* GeneralInfoVC.swift */; };
 		3017B2E1C24C0A5565DCE7A8 /* Pods_LaurenWeissApp2017.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98FC2CE630CEA8F99B3E8745 /* Pods_LaurenWeissApp2017.framework */; };
 		847A64F8EA616ED3DA6CC767 /* Pods_LaurenWeissApp2017UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FE3DDAA52C5EDE7B1A39A8A /* Pods_LaurenWeissApp2017UITests.framework */; };
 		EDD7B80B725A7902BB446DB5 /* Pods_LaurenWeissApp2017Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EABEF6E21D47AD5B1DD4751D /* Pods_LaurenWeissApp2017Tests.framework */; };
@@ -79,6 +80,7 @@
 		2E6FB8FC1F293A9400B9A44A /* LifeExpectancyCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LifeExpectancyCalculator.swift; sourceTree = "<group>"; };
 		2E97D5D21F1FD59D00B065CE /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		2E97D5D41F1FD6C800B065CE /* LifeSpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LifeSpecs.swift; sourceTree = "<group>"; };
+		2EFE557D1F2A913A005CD33E /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		2EFFB7111F153AA6006BB041 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2EFFB7131F153ABB006BB041 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2EFFB7171F153AD2006BB041 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -90,7 +92,7 @@
 		2EFFB7291F169980006BB041 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		2EFFB72F1F16B875006BB041 /* SuggestionsScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionsScreenViewController.swift; sourceTree = "<group>"; };
 		2EFFB7311F16B8AA006BB041 /* DeathDateScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeathDateScreenViewController.swift; sourceTree = "<group>"; };
-		2EFFB7331F16B8BE006BB041 /* GeneralInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralInfoViewController.swift; sourceTree = "<group>"; };
+		2EFFB7331F16B8BE006BB041 /* GeneralInfoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralInfoVC.swift; sourceTree = "<group>"; };
 		56250601EED005B62EB6EE75 /* Pods-LaurenWeissApp2017UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaurenWeissApp2017UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LaurenWeissApp2017UITests/Pods-LaurenWeissApp2017UITests.release.xcconfig"; sourceTree = "<group>"; };
 		5FE6CE1AF1DB6ED6C42E8285 /* Pods-LaurenWeissApp2017UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaurenWeissApp2017UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LaurenWeissApp2017UITests/Pods-LaurenWeissApp2017UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		85F605AAF7FA19D6E053B755 /* Pods-LaurenWeissApp2017.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaurenWeissApp2017.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LaurenWeissApp2017/Pods-LaurenWeissApp2017.debug.xcconfig"; sourceTree = "<group>"; };
@@ -209,7 +211,7 @@
 			children = (
 				2E44ACE81F2131F000167BE5 /* Login */,
 				2EFFB72F1F16B875006BB041 /* SuggestionsScreenViewController.swift */,
-				2EFFB7331F16B8BE006BB041 /* GeneralInfoViewController.swift */,
+				2EFFB7331F16B8BE006BB041 /* GeneralInfoVC.swift */,
 				2E6FB8F21F29180600B9A44A /* YourDailyLifeVC.swift */,
 				2E6FB8F41F29181500B9A44A /* RelationshipsVC.swift */,
 				2E6FB8F81F29183400B9A44A /* DietAndNutritionVC.swift */,
@@ -229,6 +231,7 @@
 				2EFFB7221F1551DE006BB041 /* Constants.swift */,
 				2E6FB8EC1F28FE4500B9A44A /* CustomSideMenuController.swift */,
 				2E6FB8F01F29100000B9A44A /* MenuController.swift */,
+				2EFE557D1F2A913A005CD33E /* UIColorExtension.swift */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -568,10 +571,11 @@
 				2EFFB7301F16B875006BB041 /* SuggestionsScreenViewController.swift in Sources */,
 				2EFFB7211F154C72006BB041 /* UserService.swift in Sources */,
 				2E6FB8F91F29183400B9A44A /* DietAndNutritionVC.swift in Sources */,
-				2EFFB7341F16B8BE006BB041 /* GeneralInfoViewController.swift in Sources */,
+				2EFFB7341F16B8BE006BB041 /* GeneralInfoVC.swift in Sources */,
 				2EFFB7251F155E69006BB041 /* Storyboard+Utility.swift in Sources */,
 				2E1851F01F1536F70094F732 /* LoginViewController.swift in Sources */,
 				2EFFB7231F1551DE006BB041 /* Constants.swift in Sources */,
+				2EFE557E1F2A913A005CD33E /* UIColorExtension.swift in Sources */,
 				2E6FB8ED1F28FE4500B9A44A /* CustomSideMenuController.swift in Sources */,
 				2E6FB8F11F29100000B9A44A /* MenuController.swift in Sources */,
 				2EFFB7321F16B8AA006BB041 /* DeathDateScreenViewController.swift in Sources */,

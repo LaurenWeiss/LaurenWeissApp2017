@@ -14,10 +14,13 @@ class LifeSpecs {
 
     
     //GENERAL
-
     var dob: Date = Date()
     var sex: String = "male"
     var country: String = "United States"
+    var height: Double = 60.0
+    var weight: Double = 150.0
+    
+    
     
     //DAILY LIFE
     

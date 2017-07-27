@@ -15,7 +15,7 @@ class User: NSObject {
     let uid: String
     let username: String
     
-    var lifeSpecifications: LifeSpecs? = nil
+    var lifeSpecifications = LifeSpecs()
     
     var finalAge: Double = 0.0
 

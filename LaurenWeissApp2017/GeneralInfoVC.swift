@@ -10,7 +10,7 @@ import UIKit
 import EMCCountryPickerController
 
 
-class GeneralInfoViewController: UIViewController, UIScrollViewDelegate {
+class GeneralInfoVC: UIViewController, UIScrollViewDelegate {
     
     //general code connections
     @IBOutlet weak var scrollView: UIScrollView!
@@ -53,14 +53,24 @@ class GeneralInfoViewController: UIViewController, UIScrollViewDelegate {
         
         countryLabel.text = "United States"
         
-        let lifeSpecs = LifeSpecs()
-        User.current.lifeSpecifications = lifeSpecs
         
         //BMI status label
         statusLabel.layer.masksToBounds = true
         statusLabel.layer.cornerRadius = 5
         
+        if User.current.lifeSpecifications.sex == "male" {
+            maleButtonSelected()
+        } else {
+            femaleButtonSelected()
+        }
         
+        maleButton.layer.cornerRadius = 10
+        femaleButton.layer.cornerRadius = 10
+        
+        heightLabel.text = String(User.current.lifeSpecifications.height) + " inches"
+        weightLabel.text = String(User.current.lifeSpecifications.weight) + " pounds"
+        heightSlider.value = Float(User.current.lifeSpecifications.height)
+        weightSlider.value = Float(User.current.lifeSpecifications.weight)
     }
     
     //BMI Info functions
@@ -68,13 +78,14 @@ class GeneralInfoViewController: UIViewController, UIScrollViewDelegate {
     @IBAction func heightValueDidChange(_ sender: UISlider) {
         let currentValue = Float(sender.value)
         heightLabel.text = "\(currentValue) inches"
+        User.current.lifeSpecifications.height = Double(sender.value)
         self.calculateBMI()
-
     }
     
     @IBAction func weightValueDidChange(_ sender: UISlider) {
         let currentValue = Float(sender.value)
         weightLabel.text = "\(currentValue) pounds"
+        User.current.lifeSpecifications.weight = Double(sender.value)
         self.calculateBMI()
     }
     fileprivate func calculateBMI() {
@@ -131,18 +142,35 @@ class GeneralInfoViewController: UIViewController, UIScrollViewDelegate {
 //        }
 //    }
     
-    func selectGender() {
+    @IBAction func selectGender(_ sender: UIButton) {
         
-        if maleButton.isSelected {
-        maleButton.isEnabled = true
-        maleButton.backgroundColor = UIColor.green
-        }
-        if femaleButton.isSelected {
-        femaleButton.isEnabled = true
-        femaleButton.backgroundColor = UIColor.green
+        if sender.tag == 100 {
+            maleButtonSelected()
+            
+        } else if sender.tag == 101 {
+            femaleButtonSelected()
         }
     }
     
+    func maleButtonSelected(){
+        maleButton.backgroundColor = UIColor.primaryBlue
+        maleButton.setTitleColor(UIColor.white, for: .normal)
+        User.current.lifeSpecifications.sex = "male"
+        
+        femaleButton.setTitleColor(UIColor.primaryBlue, for: .normal)
+        femaleButton.backgroundColor = UIColor.clear
+    }
+    
+    func femaleButtonSelected() {
+        femaleButton.backgroundColor = UIColor.primaryBlue
+        femaleButton.setTitleColor(UIColor.white, for: .normal)
+        User.current.lifeSpecifications.sex = "female"
+        
+        maleButton.setTitleColor(UIColor.primaryBlue, for: .normal)
+        maleButton.backgroundColor = UIColor.clear
+    }
+    
+
     //If BMI is high...
     //Is it high because of muscle or fat? SELECT
     
@@ -155,7 +183,6 @@ class GeneralInfoViewController: UIViewController, UIScrollViewDelegate {
             highBMIDueToMuscle.isEnabled = true
             highBMIDueToMuscle.backgroundColor = UIColor.green
         }
-        
     }
     
     //HIGHEST LEVEL OF EDUCATION SELECT
@@ -196,8 +223,7 @@ class GeneralInfoViewController: UIViewController, UIScrollViewDelegate {
                 destinationVC.countryDelegate = self
             }
         } else if segue.identifier == "toDeathDate" {
-            User.current.lifeSpecifications?.dob = datePicker.date
-            User.current.lifeSpecifications?.sex = selectGender()
+            User.current.lifeSpecifications.dob = datePicker.date
             //pass your age from lifeSpecs to destination
             //your destination has a container for that ready
             if let destinationVC = segue.destination as? DeathDateScreenViewController
@@ -208,7 +234,7 @@ class GeneralInfoViewController: UIViewController, UIScrollViewDelegate {
     }
 }
 
-extension GeneralInfoViewController: EMCCountryDelegate {
+extension GeneralInfoVC: EMCCountryDelegate {
    
     
     //SELECT COUNTRY

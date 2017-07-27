@@ -18,13 +18,13 @@ class LifeExpectancyCalculator {
         let formatter = DateFormatter()
         formatter.dateFormat = "YYYY-MM-dd"
         
-        let dobString = formatter.string(from: (user.lifeSpecifications?.dob)!)
-        let gender = user.lifeSpecifications?.sex
-        let country = user.lifeSpecifications?.country
+        let dobString = formatter.string(from: (user.lifeSpecifications.dob))
+        let gender = user.lifeSpecifications.sex
+        let country = user.lifeSpecifications.country
         let dispatchGroup = DispatchGroup()
         
         dispatchGroup.enter()
-        APIManager.getBaseAge(usingBirth: dobString, andGender: gender!, andCountry: country!) { (responseAge) in
+        APIManager.getBaseAge(usingBirth: dobString, andGender: gender, andCountry: country) { (responseAge) in
             
             if let age = responseAge {
                 baseAge = age
@@ -114,8 +114,8 @@ class LifeExpectancyCalculator {
 //DRUGS AND ALCOHOL USE VIEW CONTROLLER Functions
             
             //smoking impact
-            if (user.lifeSpecifications?.isSmoking)! {
-                let agesToSubtract = LifeExpectancyCalculator.smokingImpact(lifeSpecs: user.lifeSpecifications!)
+            if (user.lifeSpecifications.isSmoking) {
+                let agesToSubtract = LifeExpectancyCalculator.smokingImpact(lifeSpecs: user.lifeSpecifications)
                 baseAge = baseAge - agesToSubtract
             }
             
@@ -274,9 +274,6 @@ class LifeExpectancyCalculator {
     
     
     //anxiety about death impact
-    
-    
-    
     
 
     
