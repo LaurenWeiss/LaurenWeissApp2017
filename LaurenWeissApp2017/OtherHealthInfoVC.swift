@@ -40,6 +40,17 @@ class OtherHealthInfoVC: UIViewController, UIScrollViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Calling Functions: SELECT HDL LEVELS
+        
+        //Calling Functions: SELECT LDL LEVELS
+        
+        //Calling Functions: SELECT SUN PROTECTION
+        
+        //Calling Functions: SELECT HOW OFTEN SCREENED FOR CANCER
+        
+        //Calling Functions: SELECT ANXIETY ABOUT DYING
+        
     }
     
     

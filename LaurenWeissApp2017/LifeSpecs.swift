@@ -26,7 +26,14 @@ class LifeSpecs {
     
     //DAILY LIFE
     
-    var stressLevels: String = "medium"
+    var numExerciseDays: String = "three"
+    var flossInfo: String = "no"
+    var numWorkHours: String = "lessThanFortyHoursPerWeekOfWorkSelected"
+    var numWorkDays: String = "fiveDaysOrLessWorkWeekSelected"
+    var airQuality: String = "slightlyPollutedAirQualitySelected"
+    var seatbeltInfo: String = "halfTimeSeatbeltSelected"
+    var numSleepHours: String = "sevenToNineHoursSleepSelected"
+    var stressLevels: String = "mediumStressLevelsSelected"
     
     
     //RELATIONSHIPS

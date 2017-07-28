@@ -100,13 +100,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Life Expectancy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rxy-KB-hhw">
-                                <rect key="frame" x="142" y="106" width="128" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mpX-Hr-xmY">
                                 <rect key="frame" x="101" y="301" width="173" height="102"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -124,6 +117,13 @@
                                     </segue>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your Life Expectancy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rxy-KB-hhw">
+                                <rect key="frame" x="23" y="102" width="343" height="106"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="40"/>
+                                <color key="textColor" red="0.23529411759999999" green="0.66666666669999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -136,7 +136,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rQU-2p-PlP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9191" y="-759"/>
+            <point key="canvasLocation" x="9189.6000000000004" y="-759.67016491754134"/>
         </scene>
         <!--Suggestions Screen View Controller-->
         <scene sceneID="Yah-cW-QX8">
@@ -308,10 +308,14 @@
                                                 </subviews>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mqf-5I-0GC">
-                                                <rect key="frame" x="119.5" y="1581.5" width="137" height="56"/>
+                                                <rect key="frame" x="93" y="1581.5" width="190" height="56"/>
+                                                <color key="backgroundColor" red="0.231566146" green="0.66540956500000004" blue="0.90203237530000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="190" id="j7I-LK-XZB"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="32"/>
                                                 <state key="normal" title="Calculate">
-                                                    <color key="titleColor" red="0.25490196079999999" green="0.80392156859999997" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="calculateButtonTapped:" destination="Lhr-aW-1h4" eventType="touchUpInside" id="Hs7-rt-g2d"/>
@@ -508,10 +512,13 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="JbD-ca-1gd">
-                                                <rect key="frame" x="106.5" y="734" width="163" height="135"/>
+                                                <rect key="frame" x="88" y="734" width="200" height="135"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ow-hA-ZrG">
-                                                        <rect key="frame" x="42.5" y="0.0" width="78" height="45"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="200" height="45"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="200" id="Box-gM-Txw"/>
+                                                        </constraints>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="Muscle">
                                                             <color key="titleColor" red="0.23529411759999999" green="0.66666666669999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -521,7 +528,10 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aML-pH-2pW">
-                                                        <rect key="frame" x="65" y="45" width="33" height="45"/>
+                                                        <rect key="frame" x="0.0" y="45" width="200" height="45"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="200" id="oyE-jh-6fn"/>
+                                                        </constraints>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="Fat">
                                                             <color key="titleColor" red="0.23529411759999999" green="0.66666666669999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -531,7 +541,10 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fq5-9z-pkF">
-                                                        <rect key="frame" x="0.0" y="90" width="163" height="45"/>
+                                                        <rect key="frame" x="0.0" y="90" width="200" height="45"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="200" id="Vaq-Pf-oZ9"/>
+                                                        </constraints>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="BMI is not high">
                                                             <color key="titleColor" red="0.23529411759999999" green="0.66666666669999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -625,6 +638,7 @@
                     <connections>
                         <outlet property="advancedDegree" destination="uE0-UA-KyK" id="qH9-ND-NAN"/>
                         <outlet property="bmiStatusLabel" destination="MUw-Wb-Qxc" id="GjA-2Q-xJM"/>
+                        <outlet property="calculateButton" destination="Mqf-5I-0GC" id="ErA-wV-j6P"/>
                         <outlet property="calculatedBMIValue" destination="VBg-fg-qiS" id="vep-OP-Zfi"/>
                         <outlet property="collegeDegree" destination="EXm-Ki-gAj" id="Zfk-22-JPE"/>
                         <outlet property="countryLabel" destination="HG3-25-iXt" id="50p-5K-tc6"/>
@@ -855,54 +869,75 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="aIc-ij-n4N">
                                                 <rect key="frame" x="41.5" y="201.5" width="293" height="363"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s1T-zO-pDZ">
+                                                    <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s1T-zO-pDZ">
                                                         <rect key="frame" x="39.5" y="0.0" width="214" height="45"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="Zero days per week">
                                                             <color key="titleColor" red="0.23529411759999999" green="0.66666666669999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="selectExercse:" destination="0kq-ab-HXa" eventType="touchUpInside" id="RfD-q7-fLz"/>
+                                                        </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3pB-pv-eeB">
+                                                    <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3pB-pv-eeB">
                                                         <rect key="frame" x="45.5" y="53" width="202" height="45"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="One day per week">
                                                             <color key="titleColor" red="0.23529411759999999" green="0.66666666669999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="selectExercse:" destination="0kq-ab-HXa" eventType="touchUpInside" id="Qtx-Tp-ldp"/>
+                                                        </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mrs-P7-w4A">
+                                                    <button opaque="NO" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mrs-P7-w4A">
                                                         <rect key="frame" x="42.5" y="106" width="208" height="45"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="Two days per week">
                                                             <color key="titleColor" red="0.23529411759999999" green="0.66666666669999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="selectExercse:" destination="0kq-ab-HXa" eventType="touchUpInside" id="HHZ-DS-2XS"/>
+                                                        </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Db-qQ-U0m">
+                                                    <button opaque="NO" tag="103" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Db-qQ-U0m">
                                                         <rect key="frame" x="33" y="159" width="227" height="45"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="Three days per week">
                                                             <color key="titleColor" red="0.23529411759999999" green="0.66666666669999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="selectExercse:" destination="0kq-ab-HXa" eventType="touchUpInside" id="zXe-Ov-54T"/>
+                                                        </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hv0-xS-fPf">
+                                                    <button opaque="NO" tag="104" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hv0-xS-fPf">
                                                         <rect key="frame" x="39.5" y="212" width="214" height="45"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="Four days per week">
                                                             <color key="titleColor" red="0.23529411759999999" green="0.66666666669999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="selectExercse:" destination="0kq-ab-HXa" eventType="touchUpInside" id="d96-fB-irr"/>
+                                                        </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VCC-Dx-mTn">
+                                                    <button opaque="NO" tag="105" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VCC-Dx-mTn">
                                                         <rect key="frame" x="42" y="265" width="209" height="45"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="Five days per week">
                                                             <color key="titleColor" red="0.23529411759999999" green="0.66666666669999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="selectExercse:" destination="0kq-ab-HXa" eventType="touchUpInside" id="4dB-Zi-HAY"/>
+                                                        </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tT5-1X-in0">
+                                                    <button opaque="NO" tag="106" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tT5-1X-in0">
                                                         <rect key="frame" x="0.0" y="318" width="293" height="45"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="Six to seven days per week">
                                                             <color key="titleColor" red="0.23529411759999999" green="0.66666666669999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="selectExercse:" destination="0kq-ab-HXa" eventType="touchUpInside" id="zfz-Zt-c6x"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -915,7 +950,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hRb-H4-ZoA">
                                                 <rect key="frame" x="94" y="637.5" width="188" height="45"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="owu-Xf-JpG">
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="owu-Xf-JpG">
                                                         <rect key="frame" x="0.0" y="0.0" width="90" height="45"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="90" id="Z19-Ml-yUv"/>
@@ -924,8 +959,11 @@
                                                         <state key="normal" title="Yes">
                                                             <color key="titleColor" red="0.23529411759999999" green="0.66666666669999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="selectFloss:" destination="0kq-ab-HXa" eventType="touchUpInside" id="wHl-eE-fuS"/>
+                                                        </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZfO-nc-owr">
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZfO-nc-owr">
                                                         <rect key="frame" x="98" y="0.0" width="90" height="45"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="90" id="kXd-8f-2Bv"/>
@@ -934,53 +972,92 @@
                                                         <state key="normal" title="No">
                                                             <color key="titleColor" red="0.23529411759999999" green="0.66666666669999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="selectFloss:" destination="0kq-ab-HXa" eventType="touchUpInside" id="wyt-Ye-KE0"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="X68-JQ-Yo9">
                                                 <rect key="frame" x="27" y="821" width="322" height="310"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gaJ-Pa-8vr">
-                                                        <rect key="frame" x="5.5" y="0.0" width="311" height="45"/>
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gaJ-Pa-8vr">
+                                                        <rect key="frame" x="0.0" y="0.0" width="322" height="45"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="322" id="N1J-Ma-Vze"/>
+                                                        </constraints>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="Less than 40 hours per week">
                                                             <color key="titleColor" red="0.23529411759999999" green="0.66666666669999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="selectNumHoursWorkPerWeek:" destination="0kq-ab-HXa" eventType="touchUpInside" id="jh0-S7-ilz"/>
+                                                        </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WPJ-Lo-fQs">
-                                                        <rect key="frame" x="28" y="53" width="266" height="45"/>
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WPJ-Lo-fQs">
+                                                        <rect key="frame" x="0.0" y="53" width="322" height="45"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="322" id="vRO-a4-9xR"/>
+                                                        </constraints>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="41 to 60 hours per week">
                                                             <color key="titleColor" red="0.23529411759999999" green="0.66666666669999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="selectNumHoursWorkPerWeek:" destination="0kq-ab-HXa" eventType="touchUpInside" id="Jit-Ia-jzH"/>
+                                                        </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fjt-nv-PGT">
-                                                        <rect key="frame" x="28" y="106" width="266" height="45"/>
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fjt-nv-PGT">
+                                                        <rect key="frame" x="0.0" y="106" width="322" height="45"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="322" id="w0t-BM-3Zp"/>
+                                                        </constraints>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="61 to 80 hours per week">
                                                             <color key="titleColor" red="0.23529411759999999" green="0.66666666669999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="selectNumHoursWorkPerWeek:" destination="0kq-ab-HXa" eventType="touchUpInside" id="31U-0J-2Fn"/>
+                                                        </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ybG-kI-4uU">
+                                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ybG-kI-4uU">
                                                         <rect key="frame" x="0.0" y="159" width="322" height="45"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="322" id="ekb-v8-1BC"/>
+                                                        </constraints>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="More than 80 hours per week">
                                                             <color key="titleColor" red="0.23529411759999999" green="0.66666666669999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="selectNumHoursWorkPerWeek:" destination="0kq-ab-HXa" eventType="touchUpInside" id="PCd-RD-shj"/>
+                                                        </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zkH-cM-fUj">
-                                                        <rect key="frame" x="69" y="212" width="184" height="45"/>
+                                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zkH-cM-fUj">
+                                                        <rect key="frame" x="0.0" y="212" width="322" height="45"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="322" id="xoB-Tn-Htc"/>
+                                                        </constraints>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="I am not working">
                                                             <color key="titleColor" red="0.23529411759999999" green="0.66666666669999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="selectNumHoursWorkPerWeek:" destination="0kq-ab-HXa" eventType="touchUpInside" id="QBP-VI-z6Q"/>
+                                                        </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5C1-fB-LUy">
-                                                        <rect key="frame" x="98" y="265" width="126" height="45"/>
+                                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5C1-fB-LUy">
+                                                        <rect key="frame" x="0.0" y="265" width="322" height="45"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="322" id="fYx-DE-zQD"/>
+                                                        </constraints>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="I am retired">
                                                             <color key="titleColor" red="0.23529411759999999" green="0.66666666669999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="selectNumHoursWorkPerWeek:" destination="0kq-ab-HXa" eventType="touchUpInside" id="q5Z-Fq-tMr"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -993,40 +1070,70 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="NKV-hh-1cc">
                                                 <rect key="frame" x="72.5" y="1237" width="231" height="257"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7gi-Xf-fFI">
-                                                        <rect key="frame" x="26.5" y="0.0" width="178" height="45"/>
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7gi-Xf-fFI">
+                                                        <rect key="frame" x="0.0" y="0.0" width="231" height="45"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="231" id="T89-DB-zhv"/>
+                                                        </constraints>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="Five days or less">
                                                             <color key="titleColor" red="0.23529411759999999" green="0.66666666669999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="numDaysSpentWorkingPerWeek:" destination="0kq-ab-HXa" eventType="touchUpInside" id="g9C-uG-Anf"/>
+                                                        </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EAr-w7-OgI">
-                                                        <rect key="frame" x="18" y="53" width="195" height="45"/>
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EAr-w7-OgI">
+                                                        <rect key="frame" x="0.0" y="53" width="231" height="45"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="231" id="g9Q-2K-Rey"/>
+                                                        </constraints>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="Six days per week">
                                                             <color key="titleColor" red="0.23529411759999999" green="0.66666666669999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="numDaysSpentWorkingPerWeek:" destination="0kq-ab-HXa" eventType="touchUpInside" id="P6P-ql-9zX"/>
+                                                        </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3BO-DC-JEH">
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3BO-DC-JEH">
                                                         <rect key="frame" x="0.0" y="106" width="231" height="45"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="231" id="LrK-YZ-pJr"/>
+                                                        </constraints>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="Seven days per week">
                                                             <color key="titleColor" red="0.23529411759999999" green="0.66666666669999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="numDaysSpentWorkingPerWeek:" destination="0kq-ab-HXa" eventType="touchUpInside" id="Q7P-sj-mjb"/>
+                                                        </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dai-w3-0jt">
-                                                        <rect key="frame" x="23.5" y="159" width="184" height="45"/>
+                                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dai-w3-0jt">
+                                                        <rect key="frame" x="0.0" y="159" width="231" height="45"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="231" id="pLH-Cy-tdo"/>
+                                                        </constraints>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="I am not working">
                                                             <color key="titleColor" red="0.23529411759999999" green="0.66666666669999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="numDaysSpentWorkingPerWeek:" destination="0kq-ab-HXa" eventType="touchUpInside" id="jBF-dl-gGd"/>
+                                                        </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aFa-XA-KV3">
-                                                        <rect key="frame" x="52.5" y="212" width="126" height="45"/>
+                                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aFa-XA-KV3">
+                                                        <rect key="frame" x="0.0" y="212" width="231" height="45"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="231" id="v3R-f7-74E"/>
+                                                        </constraints>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="I am retired">
                                                             <color key="titleColor" red="0.23529411759999999" green="0.66666666669999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="numDaysSpentWorkingPerWeek:" destination="0kq-ab-HXa" eventType="touchUpInside" id="pVj-O2-SEW"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -1045,20 +1152,29 @@
                                                         <state key="normal" title="Extremely clean">
                                                             <color key="titleColor" red="0.23529411759999999" green="0.66666666669999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="airQuality:" destination="0kq-ab-HXa" eventType="touchUpInside" id="Bj1-7n-bAu"/>
+                                                        </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oxc-HK-dRm">
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oxc-HK-dRm">
                                                         <rect key="frame" x="0.0" y="53" width="207" height="45"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="Slightly polluted">
                                                             <color key="titleColor" red="0.23529411759999999" green="0.66666666669999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="airQuality:" destination="0kq-ab-HXa" eventType="touchUpInside" id="g3e-O0-Dt9"/>
+                                                        </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s5r-ib-qos">
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s5r-ib-qos">
                                                         <rect key="frame" x="0.0" y="106" width="207" height="45"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="Extremely polluted">
                                                             <color key="titleColor" red="0.23529411759999999" green="0.66666666669999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="airQuality:" destination="0kq-ab-HXa" eventType="touchUpInside" id="Eez-SA-bIA"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -1072,32 +1188,56 @@
                                                 <rect key="frame" x="52" y="1857" width="272" height="204"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wdv-9p-vTI">
-                                                        <rect key="frame" x="98" y="0.0" width="76" height="45"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="272" height="45"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="272" id="Rf5-Oy-7iQ"/>
+                                                        </constraints>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="Always">
                                                             <color key="titleColor" red="0.23529411759999999" green="0.66666666669999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="seatbeltInfo:" destination="0kq-ab-HXa" eventType="touchUpInside" id="dbt-SK-883"/>
+                                                        </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iti-jI-Wa1">
-                                                        <rect key="frame" x="12.5" y="53" width="247" height="45"/>
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iti-jI-Wa1">
+                                                        <rect key="frame" x="0.0" y="53" width="272" height="45"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="272" id="l13-KZ-617"/>
+                                                        </constraints>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="About 80% of the time">
                                                             <color key="titleColor" red="0.23529411759999999" green="0.66666666669999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="seatbeltInfo:" destination="0kq-ab-HXa" eventType="touchUpInside" id="8WN-WJ-OuY"/>
+                                                        </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EiM-kQ-hdc">
-                                                        <rect key="frame" x="52" y="106" width="168" height="45"/>
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EiM-kQ-hdc">
+                                                        <rect key="frame" x="0.0" y="106" width="272" height="45"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="272" id="sOR-4C-UMm"/>
+                                                        </constraints>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="Half of the time">
                                                             <color key="titleColor" red="0.23529411759999999" green="0.66666666669999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="seatbeltInfo:" destination="0kq-ab-HXa" eventType="touchUpInside" id="P7X-NN-E4c"/>
+                                                        </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9sV-xg-pVu">
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9sV-xg-pVu">
                                                         <rect key="frame" x="0.0" y="159" width="272" height="45"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="272" id="hHO-UG-ag0"/>
+                                                        </constraints>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="Less than half of the time">
                                                             <color key="titleColor" red="0.23529411759999999" green="0.66666666669999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="seatbeltInfo:" destination="0kq-ab-HXa" eventType="touchUpInside" id="tPq-Hh-hGW"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -1116,6 +1256,9 @@
                                                         <state key="normal" title="Less than 5 hours">
                                                             <color key="titleColor" red="0.23529411759999999" green="0.66666666669999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="numHoursSleep:" destination="0kq-ab-HXa" eventType="touchUpInside" id="kjy-pu-LB3"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ieE-dP-d1i">
                                                         <rect key="frame" x="35" y="53" width="131" height="45"/>
@@ -1123,6 +1266,9 @@
                                                         <state key="normal" title="6 to 7 hours">
                                                             <color key="titleColor" red="0.23529411759999999" green="0.66666666669999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="numHoursSleep:" destination="0kq-ab-HXa" eventType="touchUpInside" id="5Nf-xg-gjI"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AZa-b3-jIW">
                                                         <rect key="frame" x="35" y="106" width="131" height="45"/>
@@ -1130,6 +1276,9 @@
                                                         <state key="normal" title="7 to 9 hours">
                                                             <color key="titleColor" red="0.23529411759999999" green="0.66666666669999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="numHoursSleep:" destination="0kq-ab-HXa" eventType="touchUpInside" id="GPl-fO-YwL"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8kL-eo-vxc">
                                                         <rect key="frame" x="0.0" y="159" width="201" height="45"/>
@@ -1137,6 +1286,9 @@
                                                         <state key="normal" title="More than 9 hours">
                                                             <color key="titleColor" red="0.23529411759999999" green="0.66666666669999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="numHoursSleep:" destination="0kq-ab-HXa" eventType="touchUpInside" id="7Ek-6r-ulN"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -1155,6 +1307,9 @@
                                                         <state key="normal" title="Low">
                                                             <color key="titleColor" red="0.23529411759999999" green="0.66666666669999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="stressLevelsInfo:" destination="0kq-ab-HXa" eventType="touchUpInside" id="QBh-z4-md4"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iqL-5w-JNN">
                                                         <rect key="frame" x="0.0" y="53" width="92" height="45"/>
@@ -1162,6 +1317,9 @@
                                                         <state key="normal" title="Medium">
                                                             <color key="titleColor" red="0.23529411759999999" green="0.66666666669999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="stressLevelsInfo:" destination="0kq-ab-HXa" eventType="touchUpInside" id="RSJ-RS-w9F"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WxF-ua-4kY">
                                                         <rect key="frame" x="19.5" y="106" width="53" height="45"/>
@@ -1169,6 +1327,9 @@
                                                         <state key="normal" title="High">
                                                             <color key="titleColor" red="0.23529411759999999" green="0.66666666669999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="stressLevelsInfo:" destination="0kq-ab-HXa" eventType="touchUpInside" id="zJq-G6-4Rr"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -1180,7 +1341,7 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="calculateButtonTapped:" destination="fcf-kY-pgb" eventType="touchUpInside" id="PDg-Fm-fxh"/>
-                                                    <action selector="calculateButtonTapped:" destination="0kq-ab-HXa" eventType="touchUpInside" id="SWu-hJ-aqq"/>
+                                                    <action selector="calculateButtonTapped:" destination="0kq-ab-HXa" eventType="touchUpInside" id="tvv-55-4oG"/>
                                                     <segue destination="gV2-Ne-3cN" kind="show" identifier="toDeathDate" id="jFv-J1-Ile"/>
                                                 </connections>
                                             </button>
@@ -1261,6 +1422,43 @@
                     <navigationItem key="navigationItem" id="Gck-YP-WwH"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="2900"/>
+                    <connections>
+                        <outlet property="about41to60HoursPerWeek" destination="WPJ-Lo-fQs" id="cnx-iz-DaP"/>
+                        <outlet property="about61to80HoursPerWeek" destination="Fjt-nv-PGT" id="Vva-KD-VKq"/>
+                        <outlet property="airQualitySelector" destination="Rwe-S3-0GS" id="FFR-PW-7OI"/>
+                        <outlet property="alwaysSeatbelt" destination="Wdv-9p-vTI" id="iSJ-n0-V1r"/>
+                        <outlet property="eightyPercentSeatbelt" destination="Iti-jI-Wa1" id="kao-hU-1ry"/>
+                        <outlet property="fiveExerciseDaysPerWeek" destination="VCC-Dx-mTn" id="Cup-L8-mtx"/>
+                        <outlet property="fiveOrLessWorkingDaysPerWeek" destination="7gi-Xf-fFI" id="Ixo-Bo-BOF"/>
+                        <outlet property="fourExerciseDaysPerWeek" destination="hv0-xS-fPf" id="1da-3c-j1Y"/>
+                        <outlet property="halfTimeSeatbelt" destination="EiM-kQ-hdc" id="xLb-hT-sPH"/>
+                        <outlet property="highStressLevels" destination="WxF-ua-4kY" id="fPg-bZ-Veg"/>
+                        <outlet property="lessThan40HoursPerWeek" destination="gaJ-Pa-8vr" id="3pE-bv-v2k"/>
+                        <outlet property="lessThanFiveHoursSleep" destination="pVm-21-tfC" id="OBn-bC-zUx"/>
+                        <outlet property="lessThanHalfSeatbelt" destination="9sV-xg-pVu" id="qIh-df-wp5"/>
+                        <outlet property="lowStressLevels" destination="V4h-lD-u3P" id="e02-Mq-NeF"/>
+                        <outlet property="mediumStressLevels" destination="iqL-5w-JNN" id="Vcm-7c-zhl"/>
+                        <outlet property="moreThan80HoursPerWeek" destination="ybG-kI-4uU" id="VGN-e8-nJi"/>
+                        <outlet property="moreThanNineHoursSleep" destination="8kL-eo-vxc" id="7KP-sW-KVX"/>
+                        <outlet property="noFloss" destination="ZfO-nc-owr" id="PAL-64-5lb"/>
+                        <outlet property="notWorkingAnyDaysPerWeek" destination="dai-w3-0jt" id="4p9-3k-3ss"/>
+                        <outlet property="notWorkingAnyHoursPerWeek" destination="zkH-cM-fUj" id="3YO-2i-25I"/>
+                        <outlet property="oneExerciseDayPerWeek" destination="3pB-pv-eeB" id="ghF-cq-ggz"/>
+                        <outlet property="retiredNotWorkingAnyDaysPerWeek" destination="aFa-XA-KV3" id="DXg-uH-gaD"/>
+                        <outlet property="retiredNotWorkingAnyHoursPerWeek" destination="5C1-fB-LUy" id="P3g-Pf-8DV"/>
+                        <outlet property="sevenToNineHoursSleep" destination="AZa-b3-jIW" id="124-4Y-cil"/>
+                        <outlet property="sevenWorkingDaysPerWeek" destination="3BO-DC-JEH" id="e8A-FN-iMo"/>
+                        <outlet property="sixToSevenExerciseDaysPerWeek" destination="tT5-1X-in0" id="Vj1-km-MVc"/>
+                        <outlet property="sixToSevenHoursSleep" destination="ieE-dP-d1i" id="iif-Uq-2of"/>
+                        <outlet property="sixWorkingDaysPerWeek" destination="EAr-w7-OgI" id="2Ed-fR-u7o"/>
+                        <outlet property="slightlyPollutedAir" destination="oxc-HK-dRm" id="cky-2F-0vR"/>
+                        <outlet property="threeExerciseDaysPerWeek" destination="8Db-qQ-U0m" id="7Ui-Sv-5FR"/>
+                        <outlet property="twoExerciseDaysPerWeek" destination="Mrs-P7-w4A" id="RJa-LA-c3h"/>
+                        <outlet property="veryCleanAir" destination="Rwe-S3-0GS" id="RiN-ue-aCh"/>
+                        <outlet property="veryPollutedAir" destination="s5r-ib-qos" id="mJM-TU-Okr"/>
+                        <outlet property="yesFloss" destination="owu-Xf-JpG" id="370-aR-5rS"/>
+                        <outlet property="zeroExerciseDaysPerWeek" destination="s1T-zO-pDZ" id="kjp-gA-MgA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oa4-hg-KRn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2559,6 +2757,20 @@
                     <navigationItem key="navigationItem" id="QXv-zh-1xU"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="1700"/>
+                    <connections>
+                        <outlet property="highHDL" destination="fYu-Vc-CvP" id="10X-OK-VpI"/>
+                        <outlet property="highLDL" destination="5KG-8x-cKQ" id="fQ4-vL-6vj"/>
+                        <outlet property="lowHDL" destination="9Lu-eU-uNN" id="owr-h1-78h"/>
+                        <outlet property="lowLDL" destination="3yS-bv-syv" id="5pv-zY-h8M"/>
+                        <outlet property="mediumHDL" destination="Hfv-da-yLo" id="PwI-e5-Bo1"/>
+                        <outlet property="mediumLDL" destination="9B2-U9-Drc" id="5di-Sr-asa"/>
+                        <outlet property="noAnxiousDying" destination="p2L-wa-LLw" id="nCZ-sA-jIf"/>
+                        <outlet property="noScreenedCancer" destination="3Eg-Jy-AEd" id="kAY-AY-T4o"/>
+                        <outlet property="unknownHDL" destination="kYx-GG-UVw" id="MmK-F7-cth"/>
+                        <outlet property="unknownLDL" destination="j46-qa-VkF" id="nPQ-b5-Vqv"/>
+                        <outlet property="yesAnxiousDying" destination="Ma7-kU-6EZ" id="7kF-co-tQK"/>
+                        <outlet property="yesScreenedCancer" destination="QSs-p7-ze8" id="wet-cS-ll7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nLQ-GQ-ILj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -230,7 +230,6 @@ class LifeExpectancyCalculator {
         default:
             return 0
         }
-        
     }
     
     

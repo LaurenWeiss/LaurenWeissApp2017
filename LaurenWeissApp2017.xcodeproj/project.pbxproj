@@ -361,6 +361,7 @@
 				TargetAttributes = {
 					2E1851B81F13F2750094F732 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 8846QUTNNX;
 						ProvisioningStyle = Automatic;
 					};
 					2E1851CC1F13F2750094F732 = {
@@ -723,7 +724,9 @@
 			baseConfigurationReference = 85F605AAF7FA19D6E053B755 /* Pods-LaurenWeissApp2017.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8846QUTNNX;
 				INFOPLIST_FILE = LaurenWeissApp2017/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = laurenweiss.LaurenWeissApp2017;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -736,7 +739,9 @@
 			baseConfigurationReference = AB14AE49CE75289008ACF788 /* Pods-LaurenWeissApp2017.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8846QUTNNX;
 				INFOPLIST_FILE = LaurenWeissApp2017/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = laurenweiss.LaurenWeissApp2017;
 				PRODUCT_NAME = "$(TARGET_NAME)";

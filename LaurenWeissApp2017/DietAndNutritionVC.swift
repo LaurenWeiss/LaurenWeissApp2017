@@ -57,6 +57,20 @@ class DietAndNutritionVC: UIViewController, UIScrollViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Calling Functions: SELECT NUM CAFFEINATED CUPS OF COFFEE PER DAY
+        
+        //Calling Functions: SELECT NUM SERVINGS OF DAIRY PER DAY
+        
+        //Calling Functions: SELECT HOW OFTEN YOU EAT SWEETS
+        
+        //Calling Functions: SELECT HOW OFTEN YOU EAT CARBS
+        
+        //Calling Functions: SELECT HOW OFTEN YOU EAT RED MEAT
+        
+        //Calling Functions: SELECT HOW OFTEN YOU EAT FAST FOODS
+        
+        
     }
     
     

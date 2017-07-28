@@ -50,11 +50,15 @@ class GeneralInfoVC: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var currentlyInHighSchool: UIButton!
     @IBOutlet weak var didntFinishHighSchool: UIButton!
     
+    @IBOutlet weak var calculateButton: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         countryLabel.text = "United States"
         
+        calculateButton.layer.cornerRadius = 10
         
         //BMI status label
         bmiStatusLabel.layer.masksToBounds = true

@@ -11,31 +11,30 @@ import UIKit
 
 class DrugAlcoholUseVC: UIViewController, UIScrollViewDelegate {
     
-    
-   // @IBOutlet weak var smokeSelector: UISegmentedControl!
-    
-  //  @IBOutlet weak var packsOfSmokeSelector: UISegmentedControl!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        if smokeSelector.selectedSegmentIndex == 1 {
-//            packsOfSmokeSelector.isEnabled = false
-//        } else {
-//            packsOfSmokeSelector.isEnabled = true
-//        }
+        //Calling Functions: SELECT WHETHER OR NOT YOU SMOKE
+        
+        //Calling Functions: SELECT NUMBER OF CIGARETTE PACKS SMOKED PER DAY
+        
+        //Calling Functions: SELECT SECOND-HAND SMOKING EXPOSURE
+        
+        //Calling Functions: SELECT WHETHER OR NOT YOU DRINK ALCOHOL
+        
+        //Calling Functions: SELECT NUM NIGHTS SPENT DRINKING
+        
+        //Calling Functions: SELECT HOW NUM DRINKS YOU HAVE IN ONE NIGHT OF DRINKING ALCOHOL
+        
+        //Calling Functions: SELECT WHETHER OR NOT YOU TAKE ILLEGAL DRUGS
+    
         
     }
     
-//    @IBAction func smokeSelectorChanged(_ sender: UISegmentedControl) {
-//        if smokeSelector.selectedSegmentIndex == 1 {
-//            packsOfSmokeSelector.isEnabled = false
-//        } else {
-//            packsOfSmokeSelector.isEnabled = true
-//        }
-//    }
-    
-    
+        
+        
     @IBAction func calculateButtonTapped(_ sender: UIButton) {
         LifeExpectancyCalculator.calculateAge(forUser: User.current) { (finalAge) in
             User.current.finalAge = finalAge

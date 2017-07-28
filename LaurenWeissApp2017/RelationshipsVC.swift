@@ -51,6 +51,21 @@ class RelationshipsVC: UIViewController, UIScrollViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Calling Functions: SELECT MARITAL STATUS
+        
+        //Calling Functions: SELECT PERSONAL CONTACT FROM FAMILY AND FRIENDS
+        
+        //Calling Functions: SELECT HEART ATTACK 
+        
+        //Calling Functions: SELECT IF CANCER RUNS IN FAMILY
+        
+        //Calling Functions: SELECT FATHER DEPENDENCY
+        
+        //Calling Functions: SELECT MOTHER DEPENDENCY
+        
+        
+        
     }
     
     

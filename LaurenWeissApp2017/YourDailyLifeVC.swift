@@ -69,205 +69,393 @@ class YourDailyLifeVC: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var lessThanHalfSeatbelt: UIButton!
     
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Calling Functions: SELECT GENDER
+        if User.current.lifeSpecifications.numExerciseDays == "zero" {
+            zeroExerciseDaysPerWeekSelected()
+        } else if User.current.lifeSpecifications.numExerciseDays == "one" {
+            oneExerciseDaysPerWeekSelected()
+        } else if User.current.lifeSpecifications.numExerciseDays == "two" {
+            twoExerciseDaysPerWeekSelected()
+        } else if User.current.lifeSpecifications.numExerciseDays == "three" {
+            threeExerciseDaysPerWeekSelected()
+        } else if User.current.lifeSpecifications.numExerciseDays == "four" {
+            fourExerciseDaysPerWeekSelected()
+        } else if User.current.lifeSpecifications.numExerciseDays == "five" {
+            fiveExerciseDaysPerWeekSelected()
+        } else if User.current.lifeSpecifications.numExerciseDays == "six to seven" {
+            sixToSevenExerciseDaysPerWeekSelected()
+        }
+        
+        //Calling Functions: SELECT FLOSS
+        if User.current.lifeSpecifications.flossInfo == "yes" {
+            yesFlossSelected()
+        } else if User.current.lifeSpecifications.flossInfo == "no" {
+            noFlossSelected()
+        }
+        
+        //Calling Functions: SELECT HOW MANY HOURS YOU WORK PER WEEK
+        if User.current.lifeSpecifications.numWorkHours == "lessThanFortyHoursPerWeekOfWorkSelected" {
+            lessThanFortyHoursPerWeekOfWorkSelected()
+        } else if User.current.lifeSpecifications.numWorkHours == "fortyOneToSixtyHoursPerWeekOfWorkSelected" {
+            fortyOneToSixtyHoursPerWeekOfWorkSelected()
+        } else if User.current.lifeSpecifications.numWorkHours == "sixtyOneToEightyHoursPerWeekOfWorkSelected" {
+            sixtyOneToEightyHoursPerWeekOfWorkSelected()
+        } else if User.current.lifeSpecifications.numWorkHours == "moreThanEightyHoursPerWeekOfWorkSelected" {
+            moreThanEightyHoursPerWeekOfWorkSelected()
+        } else if User.current.lifeSpecifications.numWorkHours == "notWorkingAnyHoursPerWeekSelected" {
+            notWorkingAnyHoursPerWeekSelected()
+        } else if User.current.lifeSpecifications.numWorkHours == "retiredNotWorkingAnyHoursPerWeekSelected" {
+            retiredNotWorkingAnyHoursPerWeekSelected()
+        }
+        
+        
+        //Calling Functions: SELECT HOW MANY WORK DAYS YOU HAVE PER WEEK
+        if User.current.lifeSpecifications.numWorkDays == "fiveDaysOrLessWorkWeekSelected" {
+            fiveDaysOrLessWorkWeekSelected()
+        } else if User.current.lifeSpecifications.numWorkDays == "sixDayWorkWeekSelected" {
+            sixDayWorkWeekSelected()
+        } else if User.current.lifeSpecifications.numWorkDays == "sevenDayWorkWeekSelected" {
+            sevenDayWorkWeekSelected()
+        } else if User.current.lifeSpecifications.numWorkDays == "notWorkingAnyDaysSelected" {
+            notWorkingAnyDaysSelected()
+        } else if User.current.lifeSpecifications.numWorkDays == "retiredNotWorkingAnyDaysSelected" {
+            retiredNotWorkingAnyDaysSelected()
+        }
+        
+        //Calling Functions: SELECT AIR QUALITY
+        if User.current.lifeSpecifications.airQuality == "veryCleanAirQualitySelected" {
+            veryCleanAirQualitySelected()
+        } else if User.current.lifeSpecifications.airQuality == "slightlyPollutedAirQualitySelected" {
+            slightlyPollutedAirQualitySelected()
+        } else if User.current.lifeSpecifications.airQuality == "veryPollutedAirQualitySelected" {
+            veryPollutedAirQualitySelected()
+        }
+        
+        //Calling Functions: SELECT SEATBELT SAFETY
+        if User.current.lifeSpecifications.seatbeltInfo == "alwaysWearSeatbeltSelected" {
+            alwaysWearSeatbeltSelected()
+        } else if User.current.lifeSpecifications.seatbeltInfo == "eightyPercentSeatbeltSelected" {
+            eightyPercentSeatbeltSelected()
+        } else if User.current.lifeSpecifications.seatbeltInfo == "halfTimeSeatbeltSelected" {
+            halfTimeSeatbeltSelected()
+        } else if User.current.lifeSpecifications.seatbeltInfo == "lessThanHalfTimeSeatbeltSelected" {
+            lessThanHalfTimeSeatbeltSelected()
+        }
+        
+        //Calling Functions: SELECT SLEEP HOURS
+        if User.current.lifeSpecifications.numSleepHours == "lessThanFiveHoursSleepSelected" {
+            lessThanFiveHoursSleepSelected()
+        } else if User.current.lifeSpecifications.numSleepHours == "sixToSevenHoursSleepSelected" {
+            sixToSevenHoursSleepSelected()
+        } else if User.current.lifeSpecifications.numSleepHours == "sevenToNineHoursSleepSelected" {
+            sevenToNineHoursSleepSelected()
+        } else if User.current.lifeSpecifications.numSleepHours == "moreThanNineHoursSleepSelected" {
+            moreThanNineHoursSleepSelected()
+        }
+        
+        //Calling Functions: SELECT STRESS LEVELS
+        if User.current.lifeSpecifications.stressLevels == "lowStressLevelsSelected" {
+            lowStressLevelsSelected()
+        } else if User.current.lifeSpecifications.stressLevels == "mediumStressLevelsSelected" {
+            mediumStressLevelsSelected()
+        } else if User.current.lifeSpecifications.stressLevels == "highStressLevelsSelected" {
+            highStressLevelsSelected()
+        }
+        //making buttons have rounded corners
+       
+        lowStressLevels.layer.cornerRadius = 10
+        mediumStressLevels.layer.cornerRadius = 10
+        highStressLevels.layer.cornerRadius = 10
+        zeroExerciseDaysPerWeek.layer.cornerRadius = 10
+        oneExerciseDayPerWeek.layer.cornerRadius = 10
+        twoExerciseDaysPerWeek.layer.cornerRadius = 10
+        threeExerciseDaysPerWeek.layer.cornerRadius = 10
+        fourExerciseDaysPerWeek.layer.cornerRadius = 10
+        fiveExerciseDaysPerWeek.layer.cornerRadius = 10
+        sixToSevenExerciseDaysPerWeek.layer.cornerRadius = 10
+        lessThanFiveHoursSleep.layer.cornerRadius = 10
+        sixToSevenHoursSleep.layer.cornerRadius = 10
+        sevenToNineHoursSleep.layer.cornerRadius = 10
+        moreThanNineHoursSleep.layer.cornerRadius = 10
+        yesFloss.layer.cornerRadius = 10
+        noFloss.layer.cornerRadius = 10
+        fiveOrLessWorkingDaysPerWeek.layer.cornerRadius = 10
+        sixWorkingDaysPerWeek.layer.cornerRadius = 10
+        sevenWorkingDaysPerWeek.layer.cornerRadius = 10
+        notWorkingAnyDaysPerWeek.layer.cornerRadius = 10
+        retiredNotWorkingAnyDaysPerWeek.layer.cornerRadius = 10
+        lessThan40HoursPerWeek.layer.cornerRadius = 10
+        about41to60HoursPerWeek.layer.cornerRadius = 10
+        about61to80HoursPerWeek.layer.cornerRadius = 10
+        moreThan80HoursPerWeek.layer.cornerRadius = 10
+        notWorkingAnyHoursPerWeek.layer.cornerRadius = 10
+        retiredNotWorkingAnyHoursPerWeek.layer.cornerRadius = 10
+        veryCleanAir.layer.cornerRadius = 10
+        slightlyPollutedAir.layer.cornerRadius = 10
+        veryPollutedAir.layer.cornerRadius = 10
+        alwaysSeatbelt.layer.cornerRadius = 10
+        eightyPercentSeatbelt.layer.cornerRadius = 10
+        halfTimeSeatbelt.layer.cornerRadius = 10
+        lessThanHalfSeatbelt.layer.cornerRadius = 10
     }
     
     
     @IBAction func calculateButtonTapped(_ sender: UIButton) {
+        
+        let lauren = DispatchGroup()
+        lauren.enter()
+        
         LifeExpectancyCalculator.calculateAge(forUser: User.current) { (finalAge) in
             User.current.finalAge = finalAge
+            lauren.leave()
         }
         
-    }
-    
-    //stress levels function
-    func stressLevels() {
-        if lowStressLevels.isSelected {
-            lowStressLevels.isEnabled = true
-            lowStressLevels.backgroundColor = UIColor.green
-        }
-        if mediumStressLevels.isSelected {
-            mediumStressLevels.isEnabled = true
-            mediumStressLevels.backgroundColor = UIColor.green
-        }
-        if highStressLevels.isSelected {
-            highStressLevels.isEnabled = true
-            highStressLevels.backgroundColor = UIColor.green
+        lauren.notify(queue: .main) {
+            print("done")
+            self.performSegue(withIdentifier: "toDeathDate", sender: nil)
         }
     }
     
-    //exercise info function
-    func selectExercise() {
-        if zeroExerciseDaysPerWeek.isSelected {
-        zeroExerciseDaysPerWeek.isEnabled = true
-        zeroExerciseDaysPerWeek.backgroundColor = UIColor.green
+    //exercise info functions
+    
+    @IBAction func selectExercse(_ sender: UIButton) {
+        if sender.tag == 100 {
+            zeroExerciseDaysPerWeekSelected()
+        } else if sender.tag == 101 {
+            oneExerciseDaysPerWeekSelected()
+        } else if sender.tag == 102 {
+            twoExerciseDaysPerWeekSelected()
+        } else if sender.tag == 103 {
+            threeExerciseDaysPerWeekSelected()
+        } else if sender.tag == 104 {
+            fourExerciseDaysPerWeekSelected()
+        } else if sender.tag == 105 {
+            fiveExerciseDaysPerWeekSelected()
+        } else if sender.tag == 106 {
+            sixToSevenExerciseDaysPerWeekSelected()
         }
-        if oneExerciseDayPerWeek.isSelected {
-            oneExerciseDayPerWeek.isEnabled = true
-            oneExerciseDayPerWeek.backgroundColor = UIColor.green
-        }
-        if twoExerciseDaysPerWeek.isSelected {
-            twoExerciseDaysPerWeek.isEnabled = true
-            twoExerciseDaysPerWeek.backgroundColor = UIColor.green
-        }
-        if threeExerciseDaysPerWeek.isSelected {
-            threeExerciseDaysPerWeek.isEnabled = true
-            threeExerciseDaysPerWeek.backgroundColor = UIColor.green
-        }
-        if fourExerciseDaysPerWeek.isSelected {
-            fourExerciseDaysPerWeek.isEnabled = true
-            fourExerciseDaysPerWeek.backgroundColor = UIColor.green
-        }
-        if fiveExerciseDaysPerWeek.isSelected {
-            fiveExerciseDaysPerWeek.isEnabled = true
-            fiveExerciseDaysPerWeek.backgroundColor = UIColor.green
-        }
-        if sixToSevenExerciseDaysPerWeek.isSelected {
-            sixToSevenExerciseDaysPerWeek.isEnabled = true
-            sixToSevenExerciseDaysPerWeek.backgroundColor = UIColor.green
-        }
-       
     }
     
     
-    //sleep info function
-    func selectSleep() {
-        if lessThanFiveHoursSleep.isSelected {
-            lessThanFiveHoursSleep.isEnabled = true
-            lessThanFiveHoursSleep.backgroundColor = UIColor.green
-        }
-        if sixToSevenHoursSleep.isSelected {
-            sixToSevenHoursSleep.isEnabled = true
-            sixToSevenHoursSleep.backgroundColor = UIColor.green
-        }
-        if sevenToNineHoursSleep.isSelected {
-            sevenToNineHoursSleep.isEnabled = true
-            sevenToNineHoursSleep.backgroundColor = UIColor.green
-        }
-        if moreThanNineHoursSleep.isSelected {
-            moreThanNineHoursSleep.isEnabled = true
-            moreThanNineHoursSleep.backgroundColor = UIColor.green
-        }
+    func zeroExerciseDaysPerWeekSelected() {
         
     }
-    
-    
-    //flossing info
-    func selectFlossing() {
-        if yesFloss.isSelected {
-            yesFloss.isEnabled = true
-            yesFloss.backgroundColor = UIColor.green
-        }
-        if noFloss.isSelected {
-            noFloss.isEnabled = true
-            noFloss.backgroundColor = UIColor.green
-        }
-    
+    func oneExerciseDaysPerWeekSelected() {
+        
     }
-    
-    //job info
-        ////number of days spend working out of the week function
-    func numDaysSpentWorking() {
-        if fiveOrLessWorkingDaysPerWeek.isSelected {
-            fiveOrLessWorkingDaysPerWeek.isEnabled = true
-            fiveOrLessWorkingDaysPerWeek.backgroundColor = UIColor.green
-        }
-        if sixWorkingDaysPerWeek.isSelected {
-            sixWorkingDaysPerWeek.isEnabled = true
-            sixWorkingDaysPerWeek.backgroundColor = UIColor.green
-        }
-        if sevenWorkingDaysPerWeek.isSelected {
-            sevenWorkingDaysPerWeek.isEnabled = true
-            sevenWorkingDaysPerWeek.backgroundColor = UIColor.green
-        }
-        if notWorkingAnyDaysPerWeek.isSelected {
-            notWorkingAnyDaysPerWeek.isEnabled = true
-            notWorkingAnyDaysPerWeek.backgroundColor = UIColor.green
-        }
-        if retiredNotWorkingAnyDaysPerWeek.isSelected {
-            retiredNotWorkingAnyDaysPerWeek.isEnabled = true
-            retiredNotWorkingAnyDaysPerWeek.backgroundColor = UIColor.green
-        }
+    func twoExerciseDaysPerWeekSelected() {
+        
+    }
+    func threeExerciseDaysPerWeekSelected() {
+        
+    }
+    func fourExerciseDaysPerWeekSelected() {
+        
+    }
+    func fiveExerciseDaysPerWeekSelected() {
+        
+    }
+    func sixToSevenExerciseDaysPerWeekSelected() {
+        
+    }
 
-    }
+    //flossing info functions
     
-    //hours spent working per week
-    func hoursSpentWorking() {
-        if lessThan40HoursPerWeek.isSelected {
-            lessThan40HoursPerWeek.isEnabled = true
-            lessThan40HoursPerWeek.backgroundColor = UIColor.green
-        }
-        if about41to60HoursPerWeek.isSelected {
-            about41to60HoursPerWeek.isEnabled = true
-            about41to60HoursPerWeek.backgroundColor = UIColor.green
-        }
-        if about61to80HoursPerWeek.isSelected {
-            about61to80HoursPerWeek.isEnabled = true
-            about61to80HoursPerWeek.backgroundColor = UIColor.green
-        }
-        if moreThan80HoursPerWeek.isSelected {
-            moreThan80HoursPerWeek.isEnabled = true
-            moreThan80HoursPerWeek.backgroundColor = UIColor.green
-        }
-        if notWorkingAnyHoursPerWeek.isSelected {
-            notWorkingAnyHoursPerWeek.isEnabled = true
-            notWorkingAnyHoursPerWeek.backgroundColor = UIColor.green
-        }
-        if retiredNotWorkingAnyDaysPerWeek.isSelected {
-            retiredNotWorkingAnyDaysPerWeek.isEnabled = true
-            retiredNotWorkingAnyDaysPerWeek.backgroundColor = UIColor.green
-        }
-    }
-    
-    //air quality selector function
-    func airQualityInfo() {
-        if veryCleanAir.isSelected {
-            veryCleanAir.isEnabled = true
-            veryCleanAir.backgroundColor = UIColor.green
-        }
-        if slightlyPollutedAir.isSelected {
-            slightlyPollutedAir.isEnabled = true
-            slightlyPollutedAir.backgroundColor = UIColor.green
-        }
-        if veryPollutedAir.isSelected {
-            veryPollutedAir.isEnabled = true
-            veryPollutedAir.backgroundColor = UIColor.green
+    @IBAction func selectFloss(_ sender: UIButton) {
+        if sender.tag == 1 {
+            yesFlossSelected()
+        } else if sender.tag == 2 {
+            noFlossSelected()
         }
     }
     
     
-    //seatbelt selector function
-    func seatbeltInfo() {
-        if alwaysSeatbelt.isSelected {
-            alwaysSeatbelt.isEnabled = true
-            alwaysSeatbelt.backgroundColor = UIColor.green
+    func yesFlossSelected() {
+        
+    }
+    func noFlossSelected() {
+        
+    }
+    
+    
+    //number of hours spent working info functions
+    
+    @IBAction func selectNumHoursWorkPerWeek(_ sender: UIButton) {
+        if sender.tag == 1 {
+            lessThanFortyHoursPerWeekOfWorkSelected()
+        } else if sender.tag == 2 {
+            fortyOneToSixtyHoursPerWeekOfWorkSelected()
+        } else if sender.tag == 3 {
+            sixtyOneToEightyHoursPerWeekOfWorkSelected()
+        } else if sender.tag == 4 {
+            moreThanEightyHoursPerWeekOfWorkSelected()
+        } else if sender.tag == 5 {
+            notWorkingAnyHoursPerWeekSelected()
+        } else if sender.tag == 6 {
+            retiredNotWorkingAnyHoursPerWeekSelected()
         }
-        if eightyPercentSeatbelt.isSelected {
-            eightyPercentSeatbelt.isEnabled = true
-            eightyPercentSeatbelt.backgroundColor = UIColor.green
-        }
-        if halfTimeSeatbelt.isSelected {
-            halfTimeSeatbelt.isEnabled = true
-            halfTimeSeatbelt.backgroundColor = UIColor.green
-        }
-        if lessThanHalfSeatbelt.isSelected {
-            lessThanHalfSeatbelt.isEnabled = true
-            lessThanHalfSeatbelt.backgroundColor = UIColor.green
+        
+    }
+    
+    
+    func lessThanFortyHoursPerWeekOfWorkSelected() {
+        
+    }
+    func fortyOneToSixtyHoursPerWeekOfWorkSelected() {
+        
+    }
+    func sixtyOneToEightyHoursPerWeekOfWorkSelected() {
+        
+    }
+    func moreThanEightyHoursPerWeekOfWorkSelected() {
+        
+    }
+    func notWorkingAnyHoursPerWeekSelected() {
+        
+    }
+    func retiredNotWorkingAnyHoursPerWeekSelected() {
+        
+    }
+    
+    
+    //number of days out of the week spent working
+    
+    @IBAction func numDaysSpentWorkingPerWeek(_ sender: UIButton) {
+        if sender.tag == 1 {
+            fiveDaysOrLessWorkWeekSelected()
+        } else if sender.tag == 2 {
+            sixDayWorkWeekSelected()
+        } else if sender.tag == 3 {
+            sevenDayWorkWeekSelected()
+        } else if sender.tag == 4 {
+            notWorkingAnyDaysSelected()
+        } else if sender.tag == 5 {
+            retiredNotWorkingAnyDaysSelected()
         }
     }
+    
+    
+    func fiveDaysOrLessWorkWeekSelected() {
+        
+    }
+    func sixDayWorkWeekSelected() {
+        
+    }
+    func sevenDayWorkWeekSelected() {
+        
+    }
+    func notWorkingAnyDaysSelected() {
+        
+    }
+    func retiredNotWorkingAnyDaysSelected() {
+    
+    }
+    
+    //air quality functions
+    
+    
+    @IBAction func airQuality(_ sender: UIButton) {
+        if sender.tag == 0 {
+            veryCleanAirQualitySelected()
+        } else if sender.tag == 1 {
+            slightlyPollutedAirQualitySelected()
+        } else if sender.tag == 2 {
+            veryPollutedAirQualitySelected()
+        }
+    }
+    
+    func veryCleanAirQualitySelected() {
+        
+    }
+    func slightlyPollutedAirQualitySelected() {
+        
+    }
+    func veryPollutedAirQualitySelected() {
+        
+    }
+    
+    //seatbelt info functions
+    
+    
+    @IBAction func seatbeltInfo(_ sender: UIButton) {
+        if sender.tag == 0 {
+            alwaysWearSeatbeltSelected()
+        } else if sender.tag == 1 {
+            eightyPercentSeatbeltSelected()
+        } else if sender.tag == 2 {
+            halfTimeSeatbeltSelected()
+        } else if sender.tag == 3 {
+            lessThanHalfTimeSeatbeltSelected()
+        }
+    }
+    
+    func alwaysWearSeatbeltSelected() {
+        
+    }
+    func eightyPercentSeatbeltSelected() {
+        
+    }
+    func halfTimeSeatbeltSelected() {
+        
+    }
+    func lessThanHalfTimeSeatbeltSelected() {
+        
+    }
+    
+    //hours of sleep per night info functions
+    
+    @IBAction func numHoursSleep(_ sender: UIButton) {
+        if sender.tag == 0 {
+            lessThanFiveHoursSleepSelected()
+        } else if sender.tag == 1 {
+            sixToSevenHoursSleepSelected()
+        } else if sender.tag == 2 {
+            sevenToNineHoursSleepSelected()
+        } else if sender.tag == 3 {
+            moreThanNineHoursSleepSelected()
+        }
+    }
+    func lessThanFiveHoursSleepSelected() {
+        
+    }
+    func sixToSevenHoursSleepSelected() {
+        
+    }
+    func sevenToNineHoursSleepSelected() {
+        
+    }
+    func moreThanNineHoursSleepSelected() {
+        
+    }
+    
+    //stress levels info functions
+    
+    @IBAction func stressLevelsInfo(_ sender: UIButton) {
+    }
+    func lowStressLevelsSelected() {
+        
+    }
+    func mediumStressLevelsSelected() {
+        
+    }
+    func highStressLevelsSelected() {
+        
+    }
+
+
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toDeathDate" {
-//            User.current.lifeSpecifications?.dob = datePicker.date
-//            User.current.lifeSpecifications?.sex = selectGender()
-            //pass your age from lifeSpecs to destination
-            //your destination has a container for that ready
+     if segue.identifier == "toDeathDate" {
+        
             if let destinationVC = segue.destination as? DeathDateScreenViewController
             {
                 destinationVC.deathAgeAsDouble = User.current.finalAge
             }
         }
     }
-    
 }
