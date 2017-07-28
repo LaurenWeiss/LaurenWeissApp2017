@@ -47,6 +47,7 @@ class GeneralInfoVC: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var advancedDegree: UIButton!
     @IBOutlet weak var collegeDegree: UIButton!
     @IBOutlet weak var highSchoolDegree: UIButton!
+    @IBOutlet weak var currentlyInHighSchool: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,6 +59,7 @@ class GeneralInfoVC: UIViewController, UIScrollViewDelegate {
         statusLabel.layer.masksToBounds = true
         statusLabel.layer.cornerRadius = 5
         
+        //Calling Functions: SELECT GENDER
         if User.current.lifeSpecifications.sex == "male" {
             maleButtonSelected()
         } else {
@@ -67,7 +69,7 @@ class GeneralInfoVC: UIViewController, UIScrollViewDelegate {
         maleButton.layer.cornerRadius = 10
         femaleButton.layer.cornerRadius = 10
         
-        
+        //Calling Functions: SELECT WHY BMI IS HIGH
         if User.current.lifeSpecifications.whyBMI == "BMI high because of fat" {
             highBMIBecauseOfFatSelected()
         } else if User.current.lifeSpecifications.whyBMI == "BMI high because of muscle" {
@@ -78,6 +80,21 @@ class GeneralInfoVC: UIViewController, UIScrollViewDelegate {
         highBMIDueToFat.layer.cornerRadius = 10
         highBMIDueToMuscle.layer.cornerRadius = 10
         notHighBMI.layer.cornerRadius = 10
+        
+        //Calling Functions: Select education level
+        if User.current.lifeSpecifications.educationLevel == "Advanced degree" {
+            hasAdvancedDegreeSelected()
+        } else if User.current.lifeSpecifications.educationLevel == "College degree" {
+            hasCollegeDegreeSelected()
+        } else if User.current.lifeSpecifications.educationLevel == "High school degree" {
+            hasHighSchoolDegreeSelected()
+        } else if User.current.lifeSpecifications.educationLevel == "Currently in high school" {
+            currentlyInHighSchoolSelected()
+        }
+        advancedDegree.layer.cornerRadius = 10
+        collegeDegree.layer.cornerRadius = 10
+        highSchoolDegree.layer.cornerRadius = 10
+        currentlyInHighSchool.layer.cornerRadius = 10
         
         
         heightLabel.text = String(User.current.lifeSpecifications.height) + " inches"
@@ -226,21 +243,83 @@ class GeneralInfoVC: UIViewController, UIScrollViewDelegate {
         
         
     }
-    //HIGHEST LEVEL OF EDUCATION SELECT
+    //SELECT HIGHEST LEVEL OF EDUCATION
     
-    func selectEducation() {
-        if advancedDegree.isSelected {
-            advancedDegree.isEnabled = true
-            advancedDegree.backgroundColor = UIColor.green
+    
+    @IBAction func selectEducationLevel(_ sender: UIButton) {
+        
+        if sender.tag == 0 {
+            hasAdvancedDegreeSelected()
+        } else if sender.tag == 1 {
+            hasCollegeDegreeSelected()
+        } else if sender.tag == 2 {
+            hasHighSchoolDegreeSelected()
+        } else if sender.tag == 3 {
+            currentlyInHighSchoolSelected()
         }
-        if collegeDegree.isSelected {
-            collegeDegree.isEnabled = true
-            collegeDegree.backgroundColor = UIColor.green
-        }
-        if highSchoolDegree.isSelected {
-            highSchoolDegree.isEnabled = true
-            highSchoolDegree.backgroundColor = UIColor.green
-        }
+        
+    }
+    
+    func hasAdvancedDegreeSelected() {
+        advancedDegree.backgroundColor = UIColor.primaryBlue
+        advancedDegree.setTitleColor(UIColor.white, for: .normal)
+        User.current.lifeSpecifications.educationLevel = "Advanced degree"
+        
+        collegeDegree.setTitleColor(UIColor.primaryBlue, for: .normal)
+        collegeDegree.backgroundColor = UIColor.clear
+        
+        highSchoolDegree.setTitleColor(UIColor.primaryBlue, for: .normal)
+        highSchoolDegree.backgroundColor = UIColor.clear
+        
+        currentlyInHighSchool.setTitleColor(UIColor.primaryBlue, for: .normal)
+        currentlyInHighSchool.backgroundColor = UIColor.clear
+        
+    }
+    func hasCollegeDegreeSelected() {
+        collegeDegree.backgroundColor = UIColor.primaryBlue
+        collegeDegree.setTitleColor(UIColor.white, for: .normal)
+        User.current.lifeSpecifications.educationLevel = "College degree"
+        
+        advancedDegree.setTitleColor(UIColor.primaryBlue, for: .normal)
+        advancedDegree.backgroundColor = UIColor.clear
+        
+        highSchoolDegree.setTitleColor(UIColor.primaryBlue, for: .normal)
+        highSchoolDegree.backgroundColor = UIColor.clear
+        
+        currentlyInHighSchool.setTitleColor(UIColor.primaryBlue, for: .normal)
+        currentlyInHighSchool.backgroundColor = UIColor.clear
+        
+    }
+    func hasHighSchoolDegreeSelected() {
+        highSchoolDegree.backgroundColor = UIColor.primaryBlue
+        highSchoolDegree.setTitleColor(UIColor.white, for: .normal)
+        User.current.lifeSpecifications.educationLevel = "High school degree"
+        
+        advancedDegree.setTitleColor(UIColor.primaryBlue, for: .normal)
+        advancedDegree.backgroundColor = UIColor.clear
+        
+        collegeDegree.setTitleColor(UIColor.primaryBlue, for: .normal)
+        collegeDegree.backgroundColor = UIColor.clear
+        
+        currentlyInHighSchool.setTitleColor(UIColor.primaryBlue, for: .normal)
+        currentlyInHighSchool.backgroundColor = UIColor.clear
+        
+        
+    }
+    func currentlyInHighSchoolSelected() {
+        currentlyInHighSchool.backgroundColor = UIColor.primaryBlue
+        currentlyInHighSchool.setTitleColor(UIColor.white, for: .normal)
+        User.current.lifeSpecifications.educationLevel = "Currently in high school"
+        
+        advancedDegree.setTitleColor(UIColor.primaryBlue, for: .normal)
+        advancedDegree.backgroundColor = UIColor.clear
+        
+        highSchoolDegree.setTitleColor(UIColor.primaryBlue, for: .normal)
+        highSchoolDegree.backgroundColor = UIColor.clear
+        
+        collegeDegree.setTitleColor(UIColor.primaryBlue, for: .normal)
+        collegeDegree.backgroundColor = UIColor.clear
+        
     }
     
     //DIABETES SELECTOR
