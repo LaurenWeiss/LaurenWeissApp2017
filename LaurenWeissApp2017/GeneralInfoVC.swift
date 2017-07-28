@@ -96,6 +96,15 @@ class GeneralInfoVC: UIViewController, UIScrollViewDelegate {
         highSchoolDegree.layer.cornerRadius = 10
         currentlyInHighSchool.layer.cornerRadius = 10
         
+        //Calling Functions: Select whether or not you have diabetes
+        if User.current.lifeSpecifications.diabetes == "no" {
+            noDiabetesSelected()
+        } else if User.current.lifeSpecifications.diabetes == "yes" {
+            yesDiabetesSelected()
+        }
+        
+        yesDiabetes.layer.cornerRadius = 10
+        noDiabetes.layer.cornerRadius = 10
         
         heightLabel.text = String(User.current.lifeSpecifications.height) + " inches"
         weightLabel.text = String(User.current.lifeSpecifications.weight) + " pounds"
@@ -248,13 +257,13 @@ class GeneralInfoVC: UIViewController, UIScrollViewDelegate {
     
     @IBAction func selectEducationLevel(_ sender: UIButton) {
         
-        if sender.tag == 0 {
+        if sender.tag == 100 {
             hasAdvancedDegreeSelected()
-        } else if sender.tag == 1 {
+        } else if sender.tag == 101 {
             hasCollegeDegreeSelected()
-        } else if sender.tag == 2 {
+        } else if sender.tag == 102 {
             hasHighSchoolDegreeSelected()
-        } else if sender.tag == 3 {
+        } else if sender.tag == 103 {
             currentlyInHighSchoolSelected()
         }
         
@@ -304,7 +313,6 @@ class GeneralInfoVC: UIViewController, UIScrollViewDelegate {
         currentlyInHighSchool.setTitleColor(UIColor.primaryBlue, for: .normal)
         currentlyInHighSchool.backgroundColor = UIColor.clear
         
-        
     }
     func currentlyInHighSchoolSelected() {
         currentlyInHighSchool.backgroundColor = UIColor.primaryBlue
@@ -319,20 +327,35 @@ class GeneralInfoVC: UIViewController, UIScrollViewDelegate {
         
         collegeDegree.setTitleColor(UIColor.primaryBlue, for: .normal)
         collegeDegree.backgroundColor = UIColor.clear
-        
     }
     
-    //DIABETES SELECTOR
-    func selectDiabetes() {
-        if yesDiabetes.isSelected {
-            yesDiabetes.isEnabled = true
-            yesDiabetes.backgroundColor = UIColor.green
+    //SELECT WHETHER OR NOT YOU HAVE DIABETES
+    
+    @IBAction func selectYourDiabetes(_ sender: UIButton) {
+        if sender.tag == 0 {
+            yesDiabetesSelected()
         }
-        if noDiabetes.isSelected {
-            noDiabetes.isEnabled = true
-            noDiabetes.backgroundColor = UIColor.green
+        if sender.tag == 1 {
+            noDiabetesSelected()
+        }
     }
+
+    func yesDiabetesSelected() {
+        yesDiabetes.backgroundColor = UIColor.primaryBlue
+        yesDiabetes.setTitleColor(UIColor.white, for: .normal)
+        User.current.lifeSpecifications.diabetes = "yes"
+        
+        noDiabetes.setTitleColor(UIColor.primaryBlue, for: .normal)
+        noDiabetes.backgroundColor = UIColor.clear
     
+    }
+    func noDiabetesSelected() {
+        noDiabetes.backgroundColor = UIColor.primaryBlue
+        noDiabetes.setTitleColor(UIColor.white, for: .normal)
+        User.current.lifeSpecifications.diabetes = "no"
+        
+        yesDiabetes.setTitleColor(UIColor.primaryBlue, for: .normal)
+        yesDiabetes.backgroundColor = UIColor.clear
     }
     
     //segue controls and life specifications
@@ -356,7 +379,6 @@ class GeneralInfoVC: UIViewController, UIScrollViewDelegate {
 
 extension GeneralInfoVC: EMCCountryDelegate {
    
-    
     //SELECT COUNTRY
     func countryController(_ sender: Any!, didSelect chosenCountry: EMCCountry!) {
         print(chosenCountry.countryName())

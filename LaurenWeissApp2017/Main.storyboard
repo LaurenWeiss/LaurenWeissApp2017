@@ -330,8 +330,11 @@
                                                         <state key="normal" title="Yes">
                                                             <color key="titleColor" red="0.23529411759999999" green="0.66666666669999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="selectYourDiabetes:" destination="Lhr-aW-1h4" eventType="touchUpInside" id="VKb-2D-uw1"/>
+                                                        </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3cx-Yy-hCU">
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3cx-Yy-hCU">
                                                         <rect key="frame" x="98" y="0.0" width="90" height="45"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="90" id="43c-j2-491"/>
@@ -340,6 +343,9 @@
                                                         <state key="normal" title="No">
                                                             <color key="titleColor" red="0.23529411759999999" green="0.66666666669999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="selectYourDiabetes:" destination="Lhr-aW-1h4" eventType="touchUpInside" id="Emr-Xu-h56"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -352,7 +358,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Idi-d5-7Bm">
                                                 <rect key="frame" x="8" y="1199.5" width="359" height="184"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uE0-UA-KyK">
+                                                    <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uE0-UA-KyK">
                                                         <rect key="frame" x="0.0" y="0.0" width="359" height="40"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
                                                         <state key="normal" title="Advanced Degree (Masters, Doctorate)">
@@ -362,7 +368,7 @@
                                                             <action selector="selectEducationLevel:" destination="Lhr-aW-1h4" eventType="touchUpInside" id="KJu-Eh-gWp"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EXm-Ki-gAj">
+                                                    <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EXm-Ki-gAj">
                                                         <rect key="frame" x="0.0" y="48" width="359" height="40"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
                                                         <state key="normal" title="College Degree (Bachelors, Associates)">
@@ -372,7 +378,7 @@
                                                             <action selector="selectEducationLevel:" destination="Lhr-aW-1h4" eventType="touchUpInside" id="A5d-Iq-zxf"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="73X-xI-9cb">
+                                                    <button opaque="NO" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="73X-xI-9cb">
                                                         <rect key="frame" x="0.0" y="96" width="359" height="40"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
                                                         <state key="normal" title="High School Degree ">
@@ -382,7 +388,7 @@
                                                             <action selector="selectEducationLevel:" destination="Lhr-aW-1h4" eventType="touchUpInside" id="O2Z-zB-0CW"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MYt-RW-Yz5">
+                                                    <button opaque="NO" tag="103" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MYt-RW-Yz5">
                                                         <rect key="frame" x="0.0" y="144" width="359" height="40"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
                                                         <state key="normal" title="Currently in high school">
@@ -620,12 +626,12 @@
                         <outlet property="highBMIDueToMuscle" destination="6Ow-hA-ZrG" id="xQx-ka-ae2"/>
                         <outlet property="highSchoolDegree" destination="73X-xI-9cb" id="3ea-5a-4Ej"/>
                         <outlet property="maleButton" destination="ztF-Fa-Dpj" id="7KO-In-8Ff"/>
-                        <outlet property="noDiabetes" destination="3cx-Yy-hCU" id="LwI-97-e0n"/>
+                        <outlet property="noDiabetes" destination="3cx-Yy-hCU" id="elZ-sl-XN4"/>
                         <outlet property="notHighBMI" destination="fq5-9z-pkF" id="CjC-S6-zlt"/>
                         <outlet property="statusLabel" destination="MUw-Wb-Qxc" id="l0H-yb-gcK"/>
                         <outlet property="weightLabel" destination="Cmt-GP-Gck" id="POJ-vb-ZK9"/>
                         <outlet property="weightSlider" destination="K9Z-Py-vc2" id="fV2-gE-NcV"/>
-                        <outlet property="yesDiabetes" destination="0Me-3m-Ffy" id="b1K-Ae-hIn"/>
+                        <outlet property="yesDiabetes" destination="0Me-3m-Ffy" id="Q96-pR-mhb"/>
                         <segue destination="gV2-Ne-3cN" kind="show" identifier="toDeathDate" id="6SI-P8-LGL"/>
                     </connections>
                 </viewController>

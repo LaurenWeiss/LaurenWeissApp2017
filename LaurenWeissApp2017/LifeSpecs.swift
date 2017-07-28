@@ -21,6 +21,7 @@ class LifeSpecs {
     var weight: Double = 150.0
     var whyBMI: String = "BMI high because of fat"
     var educationLevel: String = "Currently in high school"
+    var diabetes: String = "no"
     
     //DAILY LIFE
     
