@@ -498,6 +498,9 @@
                                                         <state key="normal" title="Fat">
                                                             <color key="titleColor" red="0.23529411759999999" green="0.66666666669999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="selectWhyBMI:" destination="Lhr-aW-1h4" eventType="touchUpInside" id="lFl-Gt-MW8"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fq5-9z-pkF">
                                                         <rect key="frame" x="0.0" y="90" width="163" height="45"/>
