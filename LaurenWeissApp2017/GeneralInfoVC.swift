@@ -67,6 +67,19 @@ class GeneralInfoVC: UIViewController, UIScrollViewDelegate {
         maleButton.layer.cornerRadius = 10
         femaleButton.layer.cornerRadius = 10
         
+        
+        if User.current.lifeSpecifications.whyBMI == "BMI high because of fat" {
+            highBMIBecauseOfFatSelected()
+        } else if User.current.lifeSpecifications.whyBMI == "BMI high because of muscle" {
+            highBMIBecauseOfMuscleSelected()
+        } else if User.current.lifeSpecifications.whyBMI == "not high BMI" {
+            notHighBMISelected()
+        }
+        highBMIDueToFat.layer.cornerRadius = 10
+        highBMIDueToMuscle.layer.cornerRadius = 10
+        notHighBMI.layer.cornerRadius = 10
+        
+        
         heightLabel.text = String(User.current.lifeSpecifications.height) + " inches"
         weightLabel.text = String(User.current.lifeSpecifications.weight) + " pounds"
         heightSlider.value = Float(User.current.lifeSpecifications.height)
@@ -133,15 +146,6 @@ class GeneralInfoVC: UIViewController, UIScrollViewDelegate {
     
     //SELECT GENDER
     
-//    func selectGender() -> String {
-//        switch genderSelector.selectedSegmentIndex {
-//        case 0:
-//            return "male"
-//        default:
-//            return "female"
-//        }
-//    }
-    
     @IBAction func selectGender(_ sender: UIButton) {
         
         if sender.tag == 100 {
@@ -171,20 +175,57 @@ class GeneralInfoVC: UIViewController, UIScrollViewDelegate {
     }
     
 
-    //If BMI is high...
-    //Is it high because of muscle or fat? SELECT
+    //SELECT WHY BMI IS HIGH OR IF IT IS NOT
     
-    func ifHighBMI() {
-        if highBMIDueToFat.isSelected {
-            highBMIDueToFat.isEnabled = true
-            highBMIDueToFat.backgroundColor = UIColor.green
-        }
-        if highBMIDueToMuscle.isSelected {
-            highBMIDueToMuscle.isEnabled = true
-            highBMIDueToMuscle.backgroundColor = UIColor.green
+    
+    @IBAction func selectWhyBMI(_ sender: UIButton) {
+        if sender.tag == 100 {
+            highBMIBecauseOfMuscleSelected()
+        } else if sender.tag == 101 {
+            highBMIBecauseOfFatSelected()
+        } else if sender.tag == 102 {
+            notHighBMISelected()
         }
     }
     
+    func highBMIBecauseOfFatSelected() {
+        highBMIDueToFat.backgroundColor = UIColor.primaryBlue
+        highBMIDueToFat.setTitleColor(UIColor.white, for: .normal)
+        User.current.lifeSpecifications.whyBMI = "BMI high because of fat"
+        
+        highBMIDueToMuscle.setTitleColor(UIColor.primaryBlue, for: .normal)
+        highBMIDueToMuscle.backgroundColor = UIColor.clear
+        
+        notHighBMI.setTitleColor(UIColor.primaryBlue, for: .normal)
+        notHighBMI.backgroundColor = UIColor.clear
+      
+    }
+    
+    func highBMIBecauseOfMuscleSelected() {
+        highBMIDueToMuscle.backgroundColor = UIColor.primaryBlue
+        highBMIDueToMuscle.setTitleColor(UIColor.white, for: .normal)
+        User.current.lifeSpecifications.whyBMI = "BMI high because of muscle"
+        
+        highBMIDueToFat.setTitleColor(UIColor.primaryBlue, for: .normal)
+        highBMIDueToFat.backgroundColor = UIColor.clear
+        
+        notHighBMI.setTitleColor(UIColor.primaryBlue, for: .normal)
+        notHighBMI.backgroundColor = UIColor.clear
+
+    }
+    func notHighBMISelected() {
+        notHighBMI.backgroundColor = UIColor.primaryBlue
+        notHighBMI.setTitleColor(UIColor.white, for: .normal)
+        User.current.lifeSpecifications.whyBMI = "not high BMI"
+        
+        highBMIDueToMuscle.setTitleColor(UIColor.primaryBlue, for: .normal)
+        highBMIDueToMuscle.backgroundColor = UIColor.clear
+        
+        highBMIDueToFat.setTitleColor(UIColor.primaryBlue, for: .normal)
+        highBMIDueToFat.backgroundColor = UIColor.clear
+        
+        
+    }
     //HIGHEST LEVEL OF EDUCATION SELECT
     
     func selectEducation() {
