@@ -47,11 +47,12 @@ class LifeExpectancyCalculator {
             baseAge = baseAge - agesToSubstractBasedOnMuscleFatBMI
             
             //education impact
-            let agesToSubtractBasedOnEducation = LifeExpectancyCalculator.educationImpact(lifeSpecs: user.lifeSpecifications)
-            baseAge = baseAge - agesToSubtractBasedOnEducation
+            let agesToAddBasedOnEducation = LifeExpectancyCalculator.educationImpact(lifeSpecs: user.lifeSpecifications)
+            baseAge = baseAge + agesToAddBasedOnEducation
             
             //diabetes impact
-            
+            let agesToSubtractBasedOnDiabetes = LifeExpectancyCalculator.diabetesImpact(lifeSpecs: user.lifeSpecifications)
+            baseAge = baseAge - agesToSubtractBasedOnDiabetes
             
 //YOUR DAILY LIFE VIEW CONTROLLER Functions
             //exercise impact
@@ -162,6 +163,7 @@ class LifeExpectancyCalculator {
 //GENERAL VIEW CONTROLLER Functions IMPACT CALCULATIONS (that are not part of the "base" age)
     
     //bmi impact
+    //haven't implemented correct calculations yet
     private static func bmiImpact(lifeSpecs: LifeSpecs) -> Double {
         
         switch lifeSpecs.BMI {
@@ -180,6 +182,7 @@ class LifeExpectancyCalculator {
     }
     
     //bmi high because of muscle or fat impact
+    //haven't implemented correct calculations yet
     private static func bmiBasedOnWhat(lifeSpecs: LifeSpecs) -> Double {
         
         switch lifeSpecs.whyBMI {
@@ -196,17 +199,20 @@ class LifeExpectancyCalculator {
     }
     
     //education impact
+    //has correct calculations
     private static func educationImpact(lifeSpecs: LifeSpecs) -> Double {
         
         switch lifeSpecs.educationLevel {
         case "Advanced degree":
-            return 1
+            return 0.5
         case "College degree":
-            return 2
+            return 0.5
         case "High school degree":
-            return 3
+            return 0.5
+        case "Some high school":
+             return -0.5
         case "Currently in high school":
-            return 4
+            return 0
         default:
             return 0
         }
@@ -214,6 +220,18 @@ class LifeExpectancyCalculator {
     }
     
     //diabetes impact
+    //haven't implemented correct calculations yet
+    private static func diabetesImpact(lifeSpecs: LifeSpecs) -> Double {
+        switch lifeSpecs.diabetes {
+        case "yes":
+            return 1
+        case "no":
+            return 2
+        default:
+            return 0
+        }
+        
+    }
     
     
 //YOUR DAILY LIFE VIEW CONTROLLER Functions
