@@ -35,10 +35,10 @@ class GeneralInfoVC: UIViewController, UIScrollViewDelegate {
     //BMI info
     @IBOutlet weak var weightLabel: UILabel!
     @IBOutlet weak var heightLabel: UILabel!
-    @IBOutlet weak var calculatedValue: UILabel!
+    @IBOutlet weak var calculatedBMIValue: UILabel!
     @IBOutlet weak var heightSlider: UISlider!
     @IBOutlet weak var weightSlider: UISlider!
-    @IBOutlet weak var statusLabel: UILabel!
+    @IBOutlet weak var bmiStatusLabel: UILabel!
     @IBOutlet weak var highBMIDueToMuscle: UIButton!
     @IBOutlet weak var highBMIDueToFat: UIButton!
     @IBOutlet weak var notHighBMI: UIButton!
@@ -56,8 +56,8 @@ class GeneralInfoVC: UIViewController, UIScrollViewDelegate {
         
         
         //BMI status label
-        statusLabel.layer.masksToBounds = true
-        statusLabel.layer.cornerRadius = 5
+        bmiStatusLabel.layer.masksToBounds = true
+        bmiStatusLabel.layer.cornerRadius = 5
         
         //Calling Functions: SELECT GENDER
         if User.current.lifeSpecifications.sex == "male" {
@@ -132,22 +132,22 @@ class GeneralInfoVC: UIViewController, UIScrollViewDelegate {
         let weight: Float = weightSlider.value
         let bmi: Float = (weight / (height*height)) * 703
         
-        calculatedValue.text = "\(bmi)"
+        calculatedBMIValue.text = "\(bmi)"
         self.changeStatus(bmi)
     }
     fileprivate func changeStatus(_ bmi: Float) {
         if (bmi < 18) {
-            statusLabel.text = "underweight"
-            statusLabel.textColor = UIColor.blue
+            bmiStatusLabel.text = "underweight"
+            bmiStatusLabel.textColor = UIColor.blue
         } else if (bmi >= 18 && bmi < 25) {
-            statusLabel.text = "normal"
-            statusLabel.textColor = UIColor.green
+            bmiStatusLabel.text = "normal"
+            bmiStatusLabel.textColor = UIColor.green
         } else if (bmi >= 25 && bmi < 30) {
-            statusLabel.text = "pre-obese"
-            statusLabel.textColor = UIColor.purple
+            bmiStatusLabel.text = "pre-obese"
+            bmiStatusLabel.textColor = UIColor.purple
         } else {
-            statusLabel.text = "obese"
-            statusLabel.textColor = UIColor.red
+            bmiStatusLabel.text = "obese"
+            bmiStatusLabel.textColor = UIColor.red
         }
     }
 

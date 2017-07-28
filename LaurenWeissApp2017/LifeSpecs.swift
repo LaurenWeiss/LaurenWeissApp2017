@@ -19,6 +19,7 @@ class LifeSpecs {
     var country: String = "United States"
     var height: Double = 60.0
     var weight: Double = 150.0
+    var BMI: String = "normal"
     var whyBMI: String = "BMI high because of fat"
     var educationLevel: String = "Currently in high school"
     var diabetes: String = "no"

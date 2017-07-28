@@ -614,7 +614,8 @@
                     <size key="freeformSize" width="375" height="1700"/>
                     <connections>
                         <outlet property="advancedDegree" destination="uE0-UA-KyK" id="qH9-ND-NAN"/>
-                        <outlet property="calculatedValue" destination="VBg-fg-qiS" id="hpF-Fn-81K"/>
+                        <outlet property="bmiStatusLabel" destination="MUw-Wb-Qxc" id="GjA-2Q-xJM"/>
+                        <outlet property="calculatedBMIValue" destination="VBg-fg-qiS" id="vep-OP-Zfi"/>
                         <outlet property="collegeDegree" destination="EXm-Ki-gAj" id="Zfk-22-JPE"/>
                         <outlet property="countryLabel" destination="HG3-25-iXt" id="50p-5K-tc6"/>
                         <outlet property="currentlyInHighSchool" destination="MYt-RW-Yz5" id="zFY-iT-c80"/>
@@ -628,7 +629,6 @@
                         <outlet property="maleButton" destination="ztF-Fa-Dpj" id="7KO-In-8Ff"/>
                         <outlet property="noDiabetes" destination="3cx-Yy-hCU" id="elZ-sl-XN4"/>
                         <outlet property="notHighBMI" destination="fq5-9z-pkF" id="CjC-S6-zlt"/>
-                        <outlet property="statusLabel" destination="MUw-Wb-Qxc" id="l0H-yb-gcK"/>
                         <outlet property="weightLabel" destination="Cmt-GP-Gck" id="POJ-vb-ZK9"/>
                         <outlet property="weightSlider" destination="K9Z-Py-vc2" id="fV2-gE-NcV"/>
                         <outlet property="yesDiabetes" destination="0Me-3m-Ffy" id="Q96-pR-mhb"/>

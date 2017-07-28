@@ -38,13 +38,17 @@ class LifeExpectancyCalculator {
 //MARK: - GENERAL VIEW CONTROLLER Functions (that are not part of the "base" age)
     
             //bmi impact
-            
+            let agesToSubtractBasedOnBMI = LifeExpectancyCalculator.bmiImpact(lifeSpecs: user.lifeSpecifications)
+            baseAge = baseAge - agesToSubtractBasedOnBMI
+
             
             //bmi high because of muscle or fat impact
-            
+            let agesToSubstractBasedOnMuscleFatBMI = LifeExpectancyCalculator.bmiBasedOnWhat(lifeSpecs: user.lifeSpecifications)
+            baseAge = baseAge - agesToSubstractBasedOnMuscleFatBMI
             
             //education impact
-            
+            let agesToSubtractBasedOnEducation = LifeExpectancyCalculator.educationImpact(lifeSpecs: user.lifeSpecifications)
+            baseAge = baseAge - agesToSubtractBasedOnEducation
             
             //diabetes impact
             
@@ -115,8 +119,8 @@ class LifeExpectancyCalculator {
             
             //smoking impact
             if (user.lifeSpecifications.isSmoking) {
-                let agesToSubtract = LifeExpectancyCalculator.smokingImpact(lifeSpecs: user.lifeSpecifications)
-                baseAge = baseAge - agesToSubtract
+                let agesToSubtractBasedOnSmoking = LifeExpectancyCalculator.smokingImpact(lifeSpecs: user.lifeSpecifications)
+                baseAge = baseAge - agesToSubtractBasedOnSmoking
             }
             
             //second hand smoking impact
@@ -158,13 +162,56 @@ class LifeExpectancyCalculator {
 //GENERAL VIEW CONTROLLER Functions IMPACT CALCULATIONS (that are not part of the "base" age)
     
     //bmi impact
-    
+    private static func bmiImpact(lifeSpecs: LifeSpecs) -> Double {
+        
+        switch lifeSpecs.BMI {
+        case "normal":
+            return 1
+        case "pre-obese":
+            return 2
+        case "obese":
+            return 3
+        case "underweight":
+            return 4
+        default:
+            return 0
+        }
+        
+    }
     
     //bmi high because of muscle or fat impact
-    
+    private static func bmiBasedOnWhat(lifeSpecs: LifeSpecs) -> Double {
+        
+        switch lifeSpecs.whyBMI {
+        case "BMI high because of fat":
+            return 1
+        case "BMI high because of muscle":
+            return 2
+        case "not high BMI":
+            return 3
+        default:
+            return 0
+        }
+        
+    }
     
     //education impact
-    
+    private static func educationImpact(lifeSpecs: LifeSpecs) -> Double {
+        
+        switch lifeSpecs.educationLevel {
+        case "Advanced degree":
+            return 1
+        case "College degree":
+            return 2
+        case "High school degree":
+            return 3
+        case "Currently in high school":
+            return 4
+        default:
+            return 0
+        }
+        
+    }
     
     //diabetes impact
     
