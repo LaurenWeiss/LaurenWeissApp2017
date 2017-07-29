@@ -243,24 +243,171 @@ class YourDailyLifeVC: UIViewController, UIScrollViewDelegate {
     
     
     func zeroExerciseDaysPerWeekSelected() {
+        zeroExerciseDaysPerWeek.backgroundColor = UIColor.primaryBlue
+        zeroExerciseDaysPerWeek.setTitleColor(UIColor.white, for: .normal)
+        User.current.lifeSpecifications.whyBMI = "zeroExerciseDaysPerWeek"
+        
+        oneExerciseDayPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        oneExerciseDayPerWeek.backgroundColor = UIColor.clear
+        
+        twoExerciseDaysPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        twoExerciseDaysPerWeek.backgroundColor = UIColor.clear
+        
+        threeExerciseDaysPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        threeExerciseDaysPerWeek.backgroundColor = UIColor.clear
+        
+        fourExerciseDaysPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        fourExerciseDaysPerWeek.backgroundColor = UIColor.clear
+        
+        fiveExerciseDaysPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        fiveExerciseDaysPerWeek.backgroundColor = UIColor.clear
+        
+        sixToSevenExerciseDaysPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        sixToSevenExerciseDaysPerWeek.backgroundColor = UIColor.clear
         
     }
     func oneExerciseDaysPerWeekSelected() {
+        oneExerciseDayPerWeek.backgroundColor = UIColor.primaryBlue
+        oneExerciseDayPerWeek.setTitleColor(UIColor.white, for: .normal)
+        User.current.lifeSpecifications.whyBMI = "oneExerciseDayPerWeek"
+        
+        zeroExerciseDaysPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        zeroExerciseDaysPerWeek.backgroundColor = UIColor.clear
+        
+        twoExerciseDaysPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        twoExerciseDaysPerWeek.backgroundColor = UIColor.clear
+        
+        threeExerciseDaysPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        threeExerciseDaysPerWeek.backgroundColor = UIColor.clear
+        
+        fourExerciseDaysPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        fourExerciseDaysPerWeek.backgroundColor = UIColor.clear
+        
+        fiveExerciseDaysPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        fiveExerciseDaysPerWeek.backgroundColor = UIColor.clear
+        
+        sixToSevenExerciseDaysPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        sixToSevenExerciseDaysPerWeek.backgroundColor = UIColor.clear
         
     }
     func twoExerciseDaysPerWeekSelected() {
+        twoExerciseDaysPerWeek.backgroundColor = UIColor.primaryBlue
+        twoExerciseDaysPerWeek.setTitleColor(UIColor.white, for: .normal)
+        User.current.lifeSpecifications.whyBMI = "twoExerciseDaysPerWeek"
+        
+        oneExerciseDayPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        oneExerciseDayPerWeek.backgroundColor = UIColor.clear
+        
+        zeroExerciseDaysPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        zeroExerciseDaysPerWeek.backgroundColor = UIColor.clear
+        
+        threeExerciseDaysPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        threeExerciseDaysPerWeek.backgroundColor = UIColor.clear
+        
+        fourExerciseDaysPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        fourExerciseDaysPerWeek.backgroundColor = UIColor.clear
+        
+        fiveExerciseDaysPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        fiveExerciseDaysPerWeek.backgroundColor = UIColor.clear
+        
+        sixToSevenExerciseDaysPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        sixToSevenExerciseDaysPerWeek.backgroundColor = UIColor.clear
         
     }
     func threeExerciseDaysPerWeekSelected() {
+        threeExerciseDaysPerWeek.backgroundColor = UIColor.primaryBlue
+        threeExerciseDaysPerWeek.setTitleColor(UIColor.white, for: .normal)
+        User.current.lifeSpecifications.whyBMI = "threeExerciseDaysPerWeek"
+        
+        oneExerciseDayPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        oneExerciseDayPerWeek.backgroundColor = UIColor.clear
+        
+        twoExerciseDaysPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        twoExerciseDaysPerWeek.backgroundColor = UIColor.clear
+        
+        zeroExerciseDaysPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        zeroExerciseDaysPerWeek.backgroundColor = UIColor.clear
+        
+        fourExerciseDaysPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        fourExerciseDaysPerWeek.backgroundColor = UIColor.clear
+        
+        fiveExerciseDaysPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        fiveExerciseDaysPerWeek.backgroundColor = UIColor.clear
+        
+        sixToSevenExerciseDaysPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        sixToSevenExerciseDaysPerWeek.backgroundColor = UIColor.clear
         
     }
     func fourExerciseDaysPerWeekSelected() {
+        fourExerciseDaysPerWeek.backgroundColor = UIColor.primaryBlue
+        fourExerciseDaysPerWeek.setTitleColor(UIColor.white, for: .normal)
+        User.current.lifeSpecifications.whyBMI = "fourExerciseDaysPerWeek"
+        
+        oneExerciseDayPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        oneExerciseDayPerWeek.backgroundColor = UIColor.clear
+        
+        twoExerciseDaysPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        twoExerciseDaysPerWeek.backgroundColor = UIColor.clear
+        
+        threeExerciseDaysPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        threeExerciseDaysPerWeek.backgroundColor = UIColor.clear
+        
+        zeroExerciseDaysPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        zeroExerciseDaysPerWeek.backgroundColor = UIColor.clear
+        
+        fiveExerciseDaysPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        fiveExerciseDaysPerWeek.backgroundColor = UIColor.clear
+        
+        sixToSevenExerciseDaysPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        sixToSevenExerciseDaysPerWeek.backgroundColor = UIColor.clear
         
     }
     func fiveExerciseDaysPerWeekSelected() {
+        fiveExerciseDaysPerWeek.backgroundColor = UIColor.primaryBlue
+        fiveExerciseDaysPerWeek.setTitleColor(UIColor.white, for: .normal)
+        User.current.lifeSpecifications.whyBMI = "fiveExerciseDaysPerWeek"
+        
+        oneExerciseDayPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        oneExerciseDayPerWeek.backgroundColor = UIColor.clear
+        
+        twoExerciseDaysPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        twoExerciseDaysPerWeek.backgroundColor = UIColor.clear
+        
+        threeExerciseDaysPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        threeExerciseDaysPerWeek.backgroundColor = UIColor.clear
+        
+        fourExerciseDaysPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        fourExerciseDaysPerWeek.backgroundColor = UIColor.clear
+        
+        zeroExerciseDaysPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        zeroExerciseDaysPerWeek.backgroundColor = UIColor.clear
+        
+        sixToSevenExerciseDaysPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        sixToSevenExerciseDaysPerWeek.backgroundColor = UIColor.clear
         
     }
     func sixToSevenExerciseDaysPerWeekSelected() {
+        sixToSevenExerciseDaysPerWeek.backgroundColor = UIColor.primaryBlue
+        sixToSevenExerciseDaysPerWeek.setTitleColor(UIColor.white, for: .normal)
+        User.current.lifeSpecifications.whyBMI = "sixToSevenExerciseDaysPerWeek"
+        
+        oneExerciseDayPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        oneExerciseDayPerWeek.backgroundColor = UIColor.clear
+        
+        twoExerciseDaysPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        twoExerciseDaysPerWeek.backgroundColor = UIColor.clear
+        
+        threeExerciseDaysPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        threeExerciseDaysPerWeek.backgroundColor = UIColor.clear
+        
+        fourExerciseDaysPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        fourExerciseDaysPerWeek.backgroundColor = UIColor.clear
+        
+        fiveExerciseDaysPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        fiveExerciseDaysPerWeek.backgroundColor = UIColor.clear
+        
+        zeroExerciseDaysPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        zeroExerciseDaysPerWeek.backgroundColor = UIColor.clear
         
     }
 
@@ -436,6 +583,13 @@ class YourDailyLifeVC: UIViewController, UIScrollViewDelegate {
     //stress levels info functions
     
     @IBAction func stressLevelsInfo(_ sender: UIButton) {
+        if sender.tag == 0 {
+            lowStressLevelsSelected()
+        } else if sender.tag == 1 {
+            mediumStressLevelsSelected()
+        } else if sender.tag == 2 {
+            highStressLevelsSelected()
+        }
     }
     func lowStressLevelsSelected() {
         
