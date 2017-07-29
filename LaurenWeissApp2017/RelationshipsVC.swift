@@ -52,6 +52,32 @@ class RelationshipsVC: UIViewController, UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //making the buttons have rounded corners
+        
+        single.layer.cornerRadius = 10
+        widowed.layer.cornerRadius = 10
+        married.layer.cornerRadius = 10
+        divorced.layer.cornerRadius = 10
+        tooYoungForMarriage.layer.cornerRadius = 10
+        
+        noContact.layer.cornerRadius = 10
+        contactFewTimesPerWeek.layer.cornerRadius = 10
+        contactMoreThanFewTimesPerWeek.layer.cornerRadius = 10
+        
+        yesHeartAttack.layer.cornerRadius = 10
+        noHeartAttack.layer.cornerRadius = 10
+        
+        yesCancer.layer.cornerRadius = 10
+        noCancer.layer.cornerRadius = 10
+        
+        fatherDependent.layer.cornerRadius = 10
+        fatherIndependent.layer.cornerRadius = 10
+        fatherDeceased.layer.cornerRadius = 10
+        
+        motherIndependent.layer.cornerRadius = 10
+        motherDeceased.layer.cornerRadius = 10
+        motherDependent.layer.cornerRadius = 10
+        
         //Calling Functions: SELECT MARITAL STATUS
         
         //Calling Functions: SELECT PERSONAL CONTACT FROM FAMILY AND FRIENDS
@@ -180,10 +206,7 @@ class RelationshipsVC: UIViewController, UIScrollViewDelegate {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toDeathDate" {
-            //            User.current.lifeSpecifications?.dob = datePicker.date
-            //            User.current.lifeSpecifications?.sex = selectGender()
-            //pass your age from lifeSpecs to destination
-            //your destination has a container for that ready
+            
             if let destinationVC = segue.destination as? DeathDateScreenViewController
             {
                 destinationVC.deathAgeAsDouble = User.current.finalAge

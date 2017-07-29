@@ -41,6 +41,28 @@ class OtherHealthInfoVC: UIViewController, UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //making the buttons have rounded corners
+        lowHDL.layer.cornerRadius = 10
+        mediumHDL.layer.cornerRadius = 10
+        highHDL.layer.cornerRadius = 10
+        unknownHDL.layer.cornerRadius = 10
+        
+        lowLDL.layer.cornerRadius = 10
+        mediumLDL.layer.cornerRadius = 10
+        highLDL.layer.cornerRadius = 10
+        unknownLDL.layer.cornerRadius = 10
+        
+        alwaysSunscreen.layer.cornerRadius = 10
+        mostlyWearSunscreen.layer.cornerRadius = 10
+        rarelySunscreen.layer.cornerRadius = 10
+        sometimesWearSunscreen.layer.cornerRadius = 10
+        
+        yesScreenedCancer.layer.cornerRadius = 10
+        noScreenedCancer.layer.cornerRadius = 10
+        
+        yesAnxiousDying.layer.cornerRadius = 10
+        noAnxiousDying.layer.cornerRadius = 10
+        
         //Calling Functions: SELECT HDL LEVELS
         
         //Calling Functions: SELECT LDL LEVELS
@@ -85,6 +107,16 @@ class OtherHealthInfoVC: UIViewController, UIScrollViewDelegate {
     //anxiety about death info
     func selectAnxiety(){
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toDeathDate" {
+            
+            if let destinationVC = segue.destination as? DeathDateScreenViewController
+            {
+                destinationVC.deathAgeAsDouble = User.current.finalAge
+            }
+        }
     }
     
 }

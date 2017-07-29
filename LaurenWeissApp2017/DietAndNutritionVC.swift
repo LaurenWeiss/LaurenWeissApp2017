@@ -58,6 +58,38 @@ class DietAndNutritionVC: UIViewController, UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //making the buttons have rounded corners
+        
+        zeroCupsCoffee.layer.cornerRadius = 10
+        oneToTwoCupsCoffee.layer.cornerRadius = 10
+        twoToThreeCupsCoffee.layer.cornerRadius = 10
+        
+        zeroToOneDairy.layer.cornerRadius = 10
+        twoToThreeDairy.layer.cornerRadius = 10
+        threeOrMoreDairy.layer.cornerRadius = 10
+        
+        rarelyCandy.layer.cornerRadius = 10
+        oneToTwoCandy.layer.cornerRadius = 10
+        threeToFiveCandy.layer.cornerRadius = 10
+        moreThanonceADayCandy.layer.cornerRadius = 10
+        OnceADayCandy.layer.cornerRadius = 10
+        
+        oneOrFewerCarbs.layer.cornerRadius = 10
+        oneTwicePerWeekCarbs.layer.cornerRadius = 10
+        oneEveryOtherDayCarbs.layer.cornerRadius = 10
+        oneToTwoADayCarbs.layer.cornerRadius = 10
+        threeOrMorePerDayCarbs.layer.cornerRadius = 10
+        
+        noMeat.layer.cornerRadius = 10
+        oneToTwoMeat.layer.cornerRadius = 10
+        sixToSevenMeat.layer.cornerRadius = 10
+        threeToFiveMeat.layer.cornerRadius = 10
+        
+        noFastFood.layer.cornerRadius = 10
+        oneToTwoFastfood.layer.cornerRadius = 10
+        threeToFourFastFood.layer.cornerRadius = 10
+        overFiveFastFood.layer.cornerRadius = 10
+        
         //Calling Functions: SELECT NUM CAFFEINATED CUPS OF COFFEE PER DAY
         
         //Calling Functions: SELECT NUM SERVINGS OF DAIRY PER DAY
@@ -206,10 +238,7 @@ class DietAndNutritionVC: UIViewController, UIScrollViewDelegate {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toDeathDate" {
-            //            User.current.lifeSpecifications?.dob = datePicker.date
-            //            User.current.lifeSpecifications?.sex = selectGender()
-            //pass your age from lifeSpecs to destination
-            //your destination has a container for that ready
+            
             if let destinationVC = segue.destination as? DeathDateScreenViewController
             {
                 destinationVC.deathAgeAsDouble = User.current.finalAge

@@ -1768,6 +1768,26 @@
                     <navigationItem key="navigationItem" id="uAa-8a-pwT"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="1800"/>
+                    <connections>
+                        <outlet property="contactFewTimesPerWeek" destination="z1H-MV-SXo" id="eCI-cf-6ZN"/>
+                        <outlet property="contactMoreThanFewTimesPerWeek" destination="OSU-d4-dHl" id="csI-gg-Ywo"/>
+                        <outlet property="divorced" destination="PPS-XK-w2X" id="B5e-9u-tfM"/>
+                        <outlet property="fatherDeceased" destination="Mlz-Vx-ZRa" id="WMe-qC-bnw"/>
+                        <outlet property="fatherDependent" destination="g2e-WJ-otM" id="aPR-6W-xaS"/>
+                        <outlet property="fatherIndependent" destination="nJK-YC-HdP" id="oTR-Jw-5Uk"/>
+                        <outlet property="married" destination="1Zu-C8-G3Y" id="T4y-uP-GQM"/>
+                        <outlet property="motherDeceased" destination="Xty-xg-uO4" id="slh-3u-dSW"/>
+                        <outlet property="motherDependent" destination="lkc-AB-qLD" id="Af2-iG-B6a"/>
+                        <outlet property="motherIndependent" destination="ZBP-Ic-VPJ" id="6N1-cl-GdL"/>
+                        <outlet property="noCancer" destination="tnl-hf-Ysa" id="5vT-31-mIT"/>
+                        <outlet property="noContact" destination="Iq7-jT-jWf" id="5wy-l2-kT9"/>
+                        <outlet property="noHeartAttack" destination="1Dn-f7-VZO" id="E51-kY-pBj"/>
+                        <outlet property="single" destination="hoz-fo-VbH" id="XPU-gF-6tb"/>
+                        <outlet property="tooYoungForMarriage" destination="q7c-V3-TFB" id="R4r-Pg-Mss"/>
+                        <outlet property="widowed" destination="S9f-h6-LPA" id="ES2-mO-LtT"/>
+                        <outlet property="yesCancer" destination="50P-3J-EUT" id="47c-oc-njg"/>
+                        <outlet property="yesHeartAttack" destination="7wV-6r-BqS" id="5dc-dg-QPr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uvy-K6-ext" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2135,6 +2155,32 @@
                     <navigationItem key="navigationItem" id="V7b-C7-MLw"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="2000"/>
+                    <connections>
+                        <outlet property="aboutThreeDrinksPerNight" destination="N8Z-Ic-cHj" id="xsP-gd-Kxk"/>
+                        <outlet property="atLeastThreeDrinksPerNight" destination="b7J-ju-d4x" id="qcm-tT-BfC"/>
+                        <outlet property="dailySecondHandSmoke" destination="WsS-mN-FLS" id="7qq-PJ-CBe"/>
+                        <outlet property="drugsEveryFewMonths" destination="i4e-Bg-2dh" id="u7p-lX-X55"/>
+                        <outlet property="drugsFewTimesPerYear" destination="NRR-jv-YcB" id="H3t-Bf-t6S"/>
+                        <outlet property="drugsOnceMorePerMonth" destination="R7U-hZ-PAn" id="t3x-hP-bbf"/>
+                        <outlet property="drugsOncePerYear" destination="72b-3s-fq1" id="SrV-vO-zHw"/>
+                        <outlet property="fewTimesWeekSecondHandSmoke" destination="k7K-rP-dWD" id="TBA-cG-qPm"/>
+                        <outlet property="neverDrugs" destination="wWu-sU-UuU" id="pAF-PY-Hqq"/>
+                        <outlet property="neverSecondHandSmoke" destination="gb3-sP-bcq" id="VEG-TC-dcW"/>
+                        <outlet property="noAlcohol" destination="7v5-x6-DSB" id="3cX-Ve-W51"/>
+                        <outlet property="noSmoke" destination="fDD-Yo-h61" id="hxo-Fu-rCz"/>
+                        <outlet property="onceAWeekSecondHandSmoke" destination="wfl-WU-l48" id="tWv-bf-DpP"/>
+                        <outlet property="oneAndHalfPacksSmoke" destination="dsF-Ko-wth" id="HE5-1R-j7F"/>
+                        <outlet property="oneCigToHalfPack" destination="MYb-BN-M2j" id="kMx-pf-nLb"/>
+                        <outlet property="onePackSmoke" destination="PUQ-oR-Mkn" id="iZl-de-5iy"/>
+                        <outlet property="oneToTwoDaysDrinkingPerWeek" destination="YIu-V1-vbK" id="7JE-1w-T9q"/>
+                        <outlet property="oneToTwoDrinksPerNight" destination="akM-2f-pRC" id="tjy-aU-P2y"/>
+                        <outlet property="sixToSevenDaysDrinkingPerWeek" destination="eSi-wE-gfR" id="tNA-R9-ROF"/>
+                        <outlet property="threeOrMorePacksSmoke" destination="WYc-lP-vQB" id="kOJ-wb-sO8"/>
+                        <outlet property="threeToFiveDaysDrinkingPerWeek" destination="P18-YJ-8Rt" id="hrn-bb-XD7"/>
+                        <outlet property="twoPacksSmoke" destination="E2Y-W5-af0" id="7sr-Nk-fh0"/>
+                        <outlet property="yesAlcohol" destination="BXz-ug-2ud" id="IhQ-a1-qeT"/>
+                        <outlet property="yesSmoke" destination="iEm-Fz-x4c" id="qBF-Nb-4bh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oHF-pO-UIg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2327,6 +2373,7 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="calculateButtonTapped:" destination="fcf-kY-pgb" eventType="touchUpInside" id="ESJ-ze-btS"/>
+                                                    <action selector="calculateButtonTapped:" destination="Mir-04-P5D" eventType="touchUpInside" id="cpb-mH-vrd"/>
                                                     <segue destination="gV2-Ne-3cN" kind="show" identifier="toDeathDate" id="3dN-ur-BTd"/>
                                                 </connections>
                                             </button>
@@ -2476,6 +2523,32 @@
                     <navigationItem key="navigationItem" id="qAt-vl-ERh"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="2290"/>
+                    <connections>
+                        <outlet property="OnceADayCandy" destination="cNN-Xp-l4X" id="8z8-Cn-WWV"/>
+                        <outlet property="moreThanonceADayCandy" destination="CQe-Xi-p4L" id="mxX-3C-3yg"/>
+                        <outlet property="noFastFood" destination="L4n-Jr-PsV" id="Vt6-j6-2kx"/>
+                        <outlet property="noMeat" destination="7f3-pj-edL" id="dfI-he-0HC"/>
+                        <outlet property="oneEveryOtherDayCarbs" destination="uMF-bB-quu" id="9Zr-1W-7Fw"/>
+                        <outlet property="oneOrFewerCarbs" destination="t46-ui-AIw" id="Dv6-Dw-OvX"/>
+                        <outlet property="oneToTwoADayCarbs" destination="pG1-Lg-03h" id="TPl-vd-BMf"/>
+                        <outlet property="oneToTwoCandy" destination="nZt-uS-mIS" id="WMn-EL-2dC"/>
+                        <outlet property="oneToTwoCupsCoffee" destination="zan-fF-9aY" id="u5C-nC-p19"/>
+                        <outlet property="oneToTwoFastfood" destination="TW5-yn-gjT" id="9zl-ni-ney"/>
+                        <outlet property="oneToTwoMeat" destination="oWV-6x-FB6" id="obZ-bR-hI7"/>
+                        <outlet property="oneTwicePerWeekCarbs" destination="k9w-Rc-BLK" id="Kaw-KP-CDr"/>
+                        <outlet property="overFiveFastFood" destination="X4b-bp-jjb" id="eei-VR-JnJ"/>
+                        <outlet property="rarelyCandy" destination="dPq-km-fRC" id="Y8y-ju-UGJ"/>
+                        <outlet property="sixToSevenMeat" destination="Ldc-OJ-mbF" id="Sqf-tT-IJ4"/>
+                        <outlet property="threeOrMoreDairy" destination="N60-ju-Fgv" id="zgt-IB-EgT"/>
+                        <outlet property="threeOrMorePerDayCarbs" destination="T1c-vC-2Xj" id="4Bm-2U-lbf"/>
+                        <outlet property="threeToFiveCandy" destination="uNh-QV-jNs" id="VzB-mc-cvt"/>
+                        <outlet property="threeToFiveMeat" destination="6wj-2d-7yC" id="q2L-vw-RFI"/>
+                        <outlet property="threeToFourFastFood" destination="jFn-bw-xB1" id="QbQ-9H-FiF"/>
+                        <outlet property="twoToThreeCupsCoffee" destination="Smw-IO-7lx" id="Bmk-gU-BYI"/>
+                        <outlet property="twoToThreeDairy" destination="ghl-Wc-ga9" id="fUw-9X-m6s"/>
+                        <outlet property="zeroCupsCoffee" destination="Gjf-Xs-VmH" id="28U-2e-VEx"/>
+                        <outlet property="zeroToOneDairy" destination="d1F-WP-VdH" id="4Ix-TA-kLt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="02T-vu-cZ0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2691,6 +2764,7 @@
                                                     <color key="titleColor" red="0.25490196079999999" green="0.80392156859999997" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </state>
                                                 <connections>
+                                                    <action selector="calculateButtonTapped:" destination="BY0-o7-UrF" eventType="touchUpInside" id="FmX-Xa-rza"/>
                                                     <action selector="calculateButtonTapped:" destination="fcf-kY-pgb" eventType="touchUpInside" id="nyc-IO-rmd"/>
                                                     <segue destination="gV2-Ne-3cN" kind="show" identifier="toDeathDate" id="ifv-IK-ZNZ"/>
                                                 </connections>
@@ -2757,14 +2831,18 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="1700"/>
                     <connections>
+                        <outlet property="alwaysSunscreen" destination="1Ps-Xs-AJs" id="0A9-Iq-yIL"/>
                         <outlet property="highHDL" destination="fYu-Vc-CvP" id="10X-OK-VpI"/>
                         <outlet property="highLDL" destination="5KG-8x-cKQ" id="fQ4-vL-6vj"/>
                         <outlet property="lowHDL" destination="9Lu-eU-uNN" id="owr-h1-78h"/>
                         <outlet property="lowLDL" destination="3yS-bv-syv" id="5pv-zY-h8M"/>
                         <outlet property="mediumHDL" destination="Hfv-da-yLo" id="PwI-e5-Bo1"/>
                         <outlet property="mediumLDL" destination="9B2-U9-Drc" id="5di-Sr-asa"/>
+                        <outlet property="mostlyWearSunscreen" destination="s02-PB-i2i" id="3Hf-ww-Rsm"/>
                         <outlet property="noAnxiousDying" destination="p2L-wa-LLw" id="nCZ-sA-jIf"/>
                         <outlet property="noScreenedCancer" destination="3Eg-Jy-AEd" id="kAY-AY-T4o"/>
+                        <outlet property="rarelySunscreen" destination="Mg8-xg-hVw" id="XWN-s3-dm4"/>
+                        <outlet property="sometimesWearSunscreen" destination="aWy-n1-eaR" id="Cbh-HN-xHa"/>
                         <outlet property="unknownHDL" destination="kYx-GG-UVw" id="MmK-F7-cth"/>
                         <outlet property="unknownLDL" destination="j46-qa-VkF" id="nPQ-b5-Vqv"/>
                         <outlet property="yesAnxiousDying" destination="Ma7-kU-6EZ" id="7kF-co-tQK"/>
@@ -2777,6 +2855,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="jFv-J1-Ile"/>
+        <segue reference="7Fn-ci-7ci"/>
     </inferredMetricsTieBreakers>
 </document>
