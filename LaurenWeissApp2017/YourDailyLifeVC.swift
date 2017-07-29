@@ -245,7 +245,7 @@ class YourDailyLifeVC: UIViewController, UIScrollViewDelegate {
     func zeroExerciseDaysPerWeekSelected() {
         zeroExerciseDaysPerWeek.backgroundColor = UIColor.primaryBlue
         zeroExerciseDaysPerWeek.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.whyBMI = "zeroExerciseDaysPerWeek"
+        User.current.lifeSpecifications.numExerciseDays = "zeroExerciseDaysPerWeek"
         
         oneExerciseDayPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
         oneExerciseDayPerWeek.backgroundColor = UIColor.clear
@@ -269,7 +269,7 @@ class YourDailyLifeVC: UIViewController, UIScrollViewDelegate {
     func oneExerciseDaysPerWeekSelected() {
         oneExerciseDayPerWeek.backgroundColor = UIColor.primaryBlue
         oneExerciseDayPerWeek.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.whyBMI = "oneExerciseDayPerWeek"
+        User.current.lifeSpecifications.numExerciseDays = "oneExerciseDayPerWeek"
         
         zeroExerciseDaysPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
         zeroExerciseDaysPerWeek.backgroundColor = UIColor.clear
@@ -293,7 +293,7 @@ class YourDailyLifeVC: UIViewController, UIScrollViewDelegate {
     func twoExerciseDaysPerWeekSelected() {
         twoExerciseDaysPerWeek.backgroundColor = UIColor.primaryBlue
         twoExerciseDaysPerWeek.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.whyBMI = "twoExerciseDaysPerWeek"
+        User.current.lifeSpecifications.numExerciseDays = "twoExerciseDaysPerWeek"
         
         oneExerciseDayPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
         oneExerciseDayPerWeek.backgroundColor = UIColor.clear
@@ -317,7 +317,7 @@ class YourDailyLifeVC: UIViewController, UIScrollViewDelegate {
     func threeExerciseDaysPerWeekSelected() {
         threeExerciseDaysPerWeek.backgroundColor = UIColor.primaryBlue
         threeExerciseDaysPerWeek.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.whyBMI = "threeExerciseDaysPerWeek"
+        User.current.lifeSpecifications.numExerciseDays = "threeExerciseDaysPerWeek"
         
         oneExerciseDayPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
         oneExerciseDayPerWeek.backgroundColor = UIColor.clear
@@ -341,7 +341,7 @@ class YourDailyLifeVC: UIViewController, UIScrollViewDelegate {
     func fourExerciseDaysPerWeekSelected() {
         fourExerciseDaysPerWeek.backgroundColor = UIColor.primaryBlue
         fourExerciseDaysPerWeek.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.whyBMI = "fourExerciseDaysPerWeek"
+        User.current.lifeSpecifications.numExerciseDays = "fourExerciseDaysPerWeek"
         
         oneExerciseDayPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
         oneExerciseDayPerWeek.backgroundColor = UIColor.clear
@@ -365,7 +365,7 @@ class YourDailyLifeVC: UIViewController, UIScrollViewDelegate {
     func fiveExerciseDaysPerWeekSelected() {
         fiveExerciseDaysPerWeek.backgroundColor = UIColor.primaryBlue
         fiveExerciseDaysPerWeek.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.whyBMI = "fiveExerciseDaysPerWeek"
+        User.current.lifeSpecifications.numExerciseDays = "fiveExerciseDaysPerWeek"
         
         oneExerciseDayPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
         oneExerciseDayPerWeek.backgroundColor = UIColor.clear
@@ -389,7 +389,7 @@ class YourDailyLifeVC: UIViewController, UIScrollViewDelegate {
     func sixToSevenExerciseDaysPerWeekSelected() {
         sixToSevenExerciseDaysPerWeek.backgroundColor = UIColor.primaryBlue
         sixToSevenExerciseDaysPerWeek.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.whyBMI = "sixToSevenExerciseDaysPerWeek"
+        User.current.lifeSpecifications.numExerciseDays = "sixToSevenExerciseDaysPerWeek"
         
         oneExerciseDayPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
         oneExerciseDayPerWeek.backgroundColor = UIColor.clear
@@ -421,12 +421,22 @@ class YourDailyLifeVC: UIViewController, UIScrollViewDelegate {
         }
     }
     
-    
     func yesFlossSelected() {
+        yesFloss.backgroundColor = UIColor.primaryBlue
+        yesFloss.setTitleColor(UIColor.white, for: .normal)
+        User.current.lifeSpecifications.flossInfo = "yesFloss"
+        
+        noFloss.setTitleColor(UIColor.primaryBlue, for: .normal)
+        noFloss.backgroundColor = UIColor.clear
         
     }
     func noFlossSelected() {
+        noFloss.backgroundColor = UIColor.primaryBlue
+        noFloss.setTitleColor(UIColor.white, for: .normal)
+        User.current.lifeSpecifications.flossInfo = "noFloss"
         
+        yesFloss.setTitleColor(UIColor.primaryBlue, for: .normal)
+        yesFloss.backgroundColor = UIColor.clear
     }
     
     
@@ -451,21 +461,128 @@ class YourDailyLifeVC: UIViewController, UIScrollViewDelegate {
     
     
     func lessThanFortyHoursPerWeekOfWorkSelected() {
+        lessThan40HoursPerWeek.backgroundColor = UIColor.primaryBlue
+        lessThan40HoursPerWeek.setTitleColor(UIColor.white, for: .normal)
+        User.current.lifeSpecifications.numWorkHours = "lessThanFortyHoursPerWeekOfWorkSelected"
         
+        about41to60HoursPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        about41to60HoursPerWeek.backgroundColor = UIColor.clear
+        
+        about61to80HoursPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        about61to80HoursPerWeek.backgroundColor = UIColor.clear
+        
+        moreThan80HoursPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        moreThan80HoursPerWeek.backgroundColor = UIColor.clear
+        
+        notWorkingAnyHoursPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        notWorkingAnyHoursPerWeek.backgroundColor = UIColor.clear
+        
+        retiredNotWorkingAnyHoursPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        retiredNotWorkingAnyHoursPerWeek.backgroundColor = UIColor.clear
     }
     func fortyOneToSixtyHoursPerWeekOfWorkSelected() {
+        about41to60HoursPerWeek.backgroundColor = UIColor.primaryBlue
+        about41to60HoursPerWeek.setTitleColor(UIColor.white, for: .normal)
+        User.current.lifeSpecifications.numWorkHours = "fortyOneToSixtyHoursPerWeekOfWorkSelected"
+        
+        lessThan40HoursPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        lessThan40HoursPerWeek.backgroundColor = UIColor.clear
+        
+        about61to80HoursPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        about61to80HoursPerWeek.backgroundColor = UIColor.clear
+        
+        moreThan80HoursPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        moreThan80HoursPerWeek.backgroundColor = UIColor.clear
+        
+        notWorkingAnyHoursPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        notWorkingAnyHoursPerWeek.backgroundColor = UIColor.clear
+        
+        retiredNotWorkingAnyHoursPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        retiredNotWorkingAnyHoursPerWeek.backgroundColor = UIColor.clear
         
     }
     func sixtyOneToEightyHoursPerWeekOfWorkSelected() {
+        about61to80HoursPerWeek.backgroundColor = UIColor.primaryBlue
+        about61to80HoursPerWeek.setTitleColor(UIColor.white, for: .normal)
+        User.current.lifeSpecifications.numWorkHours = "sixtyOneToEightyHoursPerWeekOfWorkSelected"
+        
+        about41to60HoursPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        about41to60HoursPerWeek.backgroundColor = UIColor.clear
+        
+        lessThan40HoursPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        lessThan40HoursPerWeek.backgroundColor = UIColor.clear
+        
+        moreThan80HoursPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        moreThan80HoursPerWeek.backgroundColor = UIColor.clear
+        
+        notWorkingAnyHoursPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        notWorkingAnyHoursPerWeek.backgroundColor = UIColor.clear
+        
+        retiredNotWorkingAnyHoursPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        retiredNotWorkingAnyHoursPerWeek.backgroundColor = UIColor.clear
         
     }
     func moreThanEightyHoursPerWeekOfWorkSelected() {
+        moreThan80HoursPerWeek.backgroundColor = UIColor.primaryBlue
+        moreThan80HoursPerWeek.setTitleColor(UIColor.white, for: .normal)
+        User.current.lifeSpecifications.numWorkHours = "moreThanEightyHoursPerWeekOfWorkSelected"
+        
+        about41to60HoursPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        about41to60HoursPerWeek.backgroundColor = UIColor.clear
+        
+        about61to80HoursPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        about61to80HoursPerWeek.backgroundColor = UIColor.clear
+        
+        lessThan40HoursPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        lessThan40HoursPerWeek.backgroundColor = UIColor.clear
+        
+        notWorkingAnyHoursPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        notWorkingAnyHoursPerWeek.backgroundColor = UIColor.clear
+        
+        retiredNotWorkingAnyHoursPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        retiredNotWorkingAnyHoursPerWeek.backgroundColor = UIColor.clear
         
     }
     func notWorkingAnyHoursPerWeekSelected() {
+        notWorkingAnyHoursPerWeek.backgroundColor = UIColor.primaryBlue
+        notWorkingAnyHoursPerWeek.setTitleColor(UIColor.white, for: .normal)
+        User.current.lifeSpecifications.numWorkHours = "notWorkingAnyHoursPerWeekSelected"
+        
+        about41to60HoursPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        about41to60HoursPerWeek.backgroundColor = UIColor.clear
+        
+        about61to80HoursPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        about61to80HoursPerWeek.backgroundColor = UIColor.clear
+        
+        moreThan80HoursPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        moreThan80HoursPerWeek.backgroundColor = UIColor.clear
+        
+        lessThan40HoursPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        lessThan40HoursPerWeek.backgroundColor = UIColor.clear
+        
+        retiredNotWorkingAnyHoursPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        retiredNotWorkingAnyHoursPerWeek.backgroundColor = UIColor.clear
         
     }
     func retiredNotWorkingAnyHoursPerWeekSelected() {
+        retiredNotWorkingAnyHoursPerWeek.backgroundColor = UIColor.primaryBlue
+        retiredNotWorkingAnyHoursPerWeek.setTitleColor(UIColor.white, for: .normal)
+        User.current.lifeSpecifications.numWorkHours = "retiredNotWorkingAnyHoursPerWeekSelected"
+        
+        about41to60HoursPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        about41to60HoursPerWeek.backgroundColor = UIColor.clear
+        
+        about61to80HoursPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        about61to80HoursPerWeek.backgroundColor = UIColor.clear
+        
+        moreThan80HoursPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        moreThan80HoursPerWeek.backgroundColor = UIColor.clear
+        
+        notWorkingAnyHoursPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        notWorkingAnyHoursPerWeek.backgroundColor = UIColor.clear
+        
+        lessThan40HoursPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        lessThan40HoursPerWeek.backgroundColor = UIColor.clear
         
     }
     
@@ -488,18 +605,102 @@ class YourDailyLifeVC: UIViewController, UIScrollViewDelegate {
     
     
     func fiveDaysOrLessWorkWeekSelected() {
+        fiveOrLessWorkingDaysPerWeek.backgroundColor = UIColor.primaryBlue
+        fiveOrLessWorkingDaysPerWeek.setTitleColor(UIColor.white, for: .normal)
+        User.current.lifeSpecifications.numWorkDays = "fiveDaysOrLessWorkWeekSelected"
         
+        sixWorkingDaysPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        sixWorkingDaysPerWeek.backgroundColor = UIColor.clear
+        
+        sevenWorkingDaysPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        sevenWorkingDaysPerWeek.backgroundColor = UIColor.clear
+        
+        notWorkingAnyDaysPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        notWorkingAnyDaysPerWeek.backgroundColor = UIColor.clear
+        
+        retiredNotWorkingAnyDaysPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        retiredNotWorkingAnyDaysPerWeek.backgroundColor = UIColor.clear
+        
+
     }
     func sixDayWorkWeekSelected() {
+        
+        sixWorkingDaysPerWeek.backgroundColor = UIColor.primaryBlue
+        sixWorkingDaysPerWeek.setTitleColor(UIColor.white, for: .normal)
+        User.current.lifeSpecifications.numWorkDays = "sixDayWorkWeekSelected"
+        
+        fiveOrLessWorkingDaysPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        fiveOrLessWorkingDaysPerWeek.backgroundColor = UIColor.clear
+        
+        sevenWorkingDaysPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        sevenWorkingDaysPerWeek.backgroundColor = UIColor.clear
+        
+        notWorkingAnyDaysPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        notWorkingAnyDaysPerWeek.backgroundColor = UIColor.clear
+        
+        retiredNotWorkingAnyDaysPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        retiredNotWorkingAnyDaysPerWeek.backgroundColor = UIColor.clear
+        
         
     }
     func sevenDayWorkWeekSelected() {
         
+        sevenWorkingDaysPerWeek.backgroundColor = UIColor.primaryBlue
+        sevenWorkingDaysPerWeek.setTitleColor(UIColor.white, for: .normal)
+        User.current.lifeSpecifications.numWorkDays = "sevenDayWorkWeekSelected"
+        
+        sixWorkingDaysPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        sixWorkingDaysPerWeek.backgroundColor = UIColor.clear
+        
+        fiveOrLessWorkingDaysPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        fiveOrLessWorkingDaysPerWeek.backgroundColor = UIColor.clear
+        
+        notWorkingAnyDaysPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        notWorkingAnyDaysPerWeek.backgroundColor = UIColor.clear
+        
+        retiredNotWorkingAnyDaysPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        retiredNotWorkingAnyDaysPerWeek.backgroundColor = UIColor.clear
+        
+        
     }
     func notWorkingAnyDaysSelected() {
         
+        notWorkingAnyDaysPerWeek.backgroundColor = UIColor.primaryBlue
+        notWorkingAnyDaysPerWeek.setTitleColor(UIColor.white, for: .normal)
+        User.current.lifeSpecifications.numWorkDays = "notWorkingAnyDaysSelected"
+        
+        sixWorkingDaysPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        sixWorkingDaysPerWeek.backgroundColor = UIColor.clear
+        
+        sevenWorkingDaysPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        sevenWorkingDaysPerWeek.backgroundColor = UIColor.clear
+        
+        fiveOrLessWorkingDaysPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        fiveOrLessWorkingDaysPerWeek.backgroundColor = UIColor.clear
+        
+        retiredNotWorkingAnyDaysPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        retiredNotWorkingAnyDaysPerWeek.backgroundColor = UIColor.clear
+        
+        
     }
     func retiredNotWorkingAnyDaysSelected() {
+        
+        retiredNotWorkingAnyDaysPerWeek.backgroundColor = UIColor.primaryBlue
+        retiredNotWorkingAnyDaysPerWeek.setTitleColor(UIColor.white, for: .normal)
+        User.current.lifeSpecifications.numWorkDays = "retiredNotWorkingAnyDaysSelected"
+        
+        sixWorkingDaysPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        sixWorkingDaysPerWeek.backgroundColor = UIColor.clear
+        
+        sevenWorkingDaysPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        sevenWorkingDaysPerWeek.backgroundColor = UIColor.clear
+        
+        notWorkingAnyDaysPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        notWorkingAnyDaysPerWeek.backgroundColor = UIColor.clear
+        
+        fiveOrLessWorkingDaysPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        fiveOrLessWorkingDaysPerWeek.backgroundColor = UIColor.clear
+        
     
     }
     
@@ -517,12 +718,40 @@ class YourDailyLifeVC: UIViewController, UIScrollViewDelegate {
     }
     
     func veryCleanAirQualitySelected() {
+        veryCleanAir.backgroundColor = UIColor.primaryBlue
+        veryCleanAir.setTitleColor(UIColor.white, for: .normal)
+        User.current.lifeSpecifications.airQuality = "veryCleanAirQualitySelected"
+        
+        slightlyPollutedAir.setTitleColor(UIColor.primaryBlue, for: .normal)
+        slightlyPollutedAir.backgroundColor = UIColor.clear
+        
+        veryPollutedAir.setTitleColor(UIColor.primaryBlue, for: .normal)
+        veryPollutedAir.backgroundColor = UIColor.clear
+        
         
     }
     func slightlyPollutedAirQualitySelected() {
+        slightlyPollutedAir.backgroundColor = UIColor.primaryBlue
+        slightlyPollutedAir.setTitleColor(UIColor.white, for: .normal)
+        User.current.lifeSpecifications.airQuality = "slightlyPollutedAirQualitySelected"
+        
+        veryCleanAir.setTitleColor(UIColor.primaryBlue, for: .normal)
+        veryCleanAir.backgroundColor = UIColor.clear
+        
+        veryPollutedAir.setTitleColor(UIColor.primaryBlue, for: .normal)
+        veryPollutedAir.backgroundColor = UIColor.clear
         
     }
     func veryPollutedAirQualitySelected() {
+        veryPollutedAir.backgroundColor = UIColor.primaryBlue
+        veryPollutedAir.setTitleColor(UIColor.white, for: .normal)
+        User.current.lifeSpecifications.airQuality = "veryPollutedAirQualitySelected"
+        
+        slightlyPollutedAir.setTitleColor(UIColor.primaryBlue, for: .normal)
+        slightlyPollutedAir.backgroundColor = UIColor.clear
+        
+        veryCleanAir.setTitleColor(UIColor.primaryBlue, for: .normal)
+        veryCleanAir.backgroundColor = UIColor.clear
         
     }
     
@@ -542,15 +771,61 @@ class YourDailyLifeVC: UIViewController, UIScrollViewDelegate {
     }
     
     func alwaysWearSeatbeltSelected() {
+        alwaysSeatbelt.backgroundColor = UIColor.primaryBlue
+        alwaysSeatbelt.setTitleColor(UIColor.white, for: .normal)
+        User.current.lifeSpecifications.seatbeltInfo = "alwaysWearSeatbeltSelected"
         
+        eightyPercentSeatbelt.setTitleColor(UIColor.primaryBlue, for: .normal)
+        eightyPercentSeatbelt.backgroundColor = UIColor.clear
+        
+        halfTimeSeatbelt.setTitleColor(UIColor.primaryBlue, for: .normal)
+        halfTimeSeatbelt.backgroundColor = UIColor.clear
+        
+        lessThanHalfSeatbelt.setTitleColor(UIColor.primaryBlue, for: .normal)
+        lessThanHalfSeatbelt.backgroundColor = UIColor.clear
     }
     func eightyPercentSeatbeltSelected() {
+        eightyPercentSeatbelt.backgroundColor = UIColor.primaryBlue
+        eightyPercentSeatbelt.setTitleColor(UIColor.white, for: .normal)
+        User.current.lifeSpecifications.seatbeltInfo = "eightyPercentSeatbeltSelected"
         
+        alwaysSeatbelt.setTitleColor(UIColor.primaryBlue, for: .normal)
+        alwaysSeatbelt.backgroundColor = UIColor.clear
+        
+        halfTimeSeatbelt.setTitleColor(UIColor.primaryBlue, for: .normal)
+        halfTimeSeatbelt.backgroundColor = UIColor.clear
+        
+        lessThanHalfSeatbelt.setTitleColor(UIColor.primaryBlue, for: .normal)
+        lessThanHalfSeatbelt.backgroundColor = UIColor.clear
     }
     func halfTimeSeatbeltSelected() {
+        halfTimeSeatbelt.backgroundColor = UIColor.primaryBlue
+        halfTimeSeatbelt.setTitleColor(UIColor.white, for: .normal)
+        User.current.lifeSpecifications.seatbeltInfo = "halfTimeSeatbeltSelected"
+        
+        alwaysSeatbelt.setTitleColor(UIColor.primaryBlue, for: .normal)
+        alwaysSeatbelt.backgroundColor = UIColor.clear
+        
+        eightyPercentSeatbelt.setTitleColor(UIColor.primaryBlue, for: .normal)
+        eightyPercentSeatbelt.backgroundColor = UIColor.clear
+        
+        lessThanHalfSeatbelt.setTitleColor(UIColor.primaryBlue, for: .normal)
+        lessThanHalfSeatbelt.backgroundColor = UIColor.clear
         
     }
     func lessThanHalfTimeSeatbeltSelected() {
+        lessThanHalfSeatbelt.backgroundColor = UIColor.primaryBlue
+        lessThanHalfSeatbelt.setTitleColor(UIColor.white, for: .normal)
+        User.current.lifeSpecifications.seatbeltInfo = "lessThanHalfTimeSeatbeltSelected"
+        
+        alwaysSeatbelt.setTitleColor(UIColor.primaryBlue, for: .normal)
+        alwaysSeatbelt.backgroundColor = UIColor.clear
+        
+        eightyPercentSeatbelt.setTitleColor(UIColor.primaryBlue, for: .normal)
+        eightyPercentSeatbelt.backgroundColor = UIColor.clear
+        
+        halfTimeSeatbelt.setTitleColor(UIColor.primaryBlue, for: .normal)
+        halfTimeSeatbelt.backgroundColor = UIColor.clear
         
     }
     
@@ -568,15 +843,63 @@ class YourDailyLifeVC: UIViewController, UIScrollViewDelegate {
         }
     }
     func lessThanFiveHoursSleepSelected() {
+        lessThanFiveHoursSleep.backgroundColor = UIColor.primaryBlue
+        lessThanFiveHoursSleep.setTitleColor(UIColor.white, for: .normal)
+        User.current.lifeSpecifications.numSleepHours = "lessThanFiveHoursSleepSelected"
+        
+        sixToSevenHoursSleep.setTitleColor(UIColor.primaryBlue, for: .normal)
+        sixToSevenHoursSleep.backgroundColor = UIColor.clear
+        
+        sevenToNineHoursSleep.setTitleColor(UIColor.primaryBlue, for: .normal)
+        sevenToNineHoursSleep.backgroundColor = UIColor.clear
+        
+        moreThanNineHoursSleep.setTitleColor(UIColor.primaryBlue, for: .normal)
+        moreThanNineHoursSleep.backgroundColor = UIColor.clear
         
     }
     func sixToSevenHoursSleepSelected() {
+        sixToSevenHoursSleep.backgroundColor = UIColor.primaryBlue
+        sixToSevenHoursSleep.setTitleColor(UIColor.white, for: .normal)
+        User.current.lifeSpecifications.numSleepHours = "sixToSevenHoursSleepSelected"
+        
+        lessThanFiveHoursSleep.setTitleColor(UIColor.primaryBlue, for: .normal)
+        lessThanFiveHoursSleep.backgroundColor = UIColor.clear
+        
+        sevenToNineHoursSleep.setTitleColor(UIColor.primaryBlue, for: .normal)
+        sevenToNineHoursSleep.backgroundColor = UIColor.clear
+        
+        moreThanNineHoursSleep.setTitleColor(UIColor.primaryBlue, for: .normal)
+        moreThanNineHoursSleep.backgroundColor = UIColor.clear
         
     }
     func sevenToNineHoursSleepSelected() {
+        sevenToNineHoursSleep.backgroundColor = UIColor.primaryBlue
+        sevenToNineHoursSleep.setTitleColor(UIColor.white, for: .normal)
+        User.current.lifeSpecifications.numSleepHours = "sevenToNineHoursSleepSelected"
+        
+        lessThanFiveHoursSleep.setTitleColor(UIColor.primaryBlue, for: .normal)
+        lessThanFiveHoursSleep.backgroundColor = UIColor.clear
+        
+        sixToSevenHoursSleep.setTitleColor(UIColor.primaryBlue, for: .normal)
+        sixToSevenHoursSleep.backgroundColor = UIColor.clear
+        
+        moreThanNineHoursSleep.setTitleColor(UIColor.primaryBlue, for: .normal)
+        moreThanNineHoursSleep.backgroundColor = UIColor.clear
         
     }
     func moreThanNineHoursSleepSelected() {
+        moreThanNineHoursSleep.backgroundColor = UIColor.primaryBlue
+        moreThanNineHoursSleep.setTitleColor(UIColor.white, for: .normal)
+        User.current.lifeSpecifications.numSleepHours = "moreThanNineHoursSleepSelected"
+        
+        lessThanFiveHoursSleep.setTitleColor(UIColor.primaryBlue, for: .normal)
+        lessThanFiveHoursSleep.backgroundColor = UIColor.clear
+        
+        sixToSevenHoursSleep.setTitleColor(UIColor.primaryBlue, for: .normal)
+        sixToSevenHoursSleep.backgroundColor = UIColor.clear
+        
+        sevenToNineHoursSleep.setTitleColor(UIColor.primaryBlue, for: .normal)
+        sevenToNineHoursSleep.backgroundColor = UIColor.clear
         
     }
     
@@ -592,13 +915,39 @@ class YourDailyLifeVC: UIViewController, UIScrollViewDelegate {
         }
     }
     func lowStressLevelsSelected() {
+        lowStressLevels.backgroundColor = UIColor.primaryBlue
+        lowStressLevels.setTitleColor(UIColor.white, for: .normal)
+        User.current.lifeSpecifications.stressLevels = "lowStressLevelsSelected"
+        
+        mediumStressLevels.setTitleColor(UIColor.primaryBlue, for: .normal)
+        mediumStressLevels.backgroundColor = UIColor.clear
+        
+        highStressLevels.setTitleColor(UIColor.primaryBlue, for: .normal)
+        highStressLevels.backgroundColor = UIColor.clear
         
     }
     func mediumStressLevelsSelected() {
+        mediumStressLevels.backgroundColor = UIColor.primaryBlue
+        mediumStressLevels.setTitleColor(UIColor.white, for: .normal)
+        User.current.lifeSpecifications.stressLevels = "mediumStressLevelsSelected"
+        
+        lowStressLevels.setTitleColor(UIColor.primaryBlue, for: .normal)
+        lowStressLevels.backgroundColor = UIColor.clear
+        
+        highStressLevels.setTitleColor(UIColor.primaryBlue, for: .normal)
+        highStressLevels.backgroundColor = UIColor.clear
         
     }
     func highStressLevelsSelected() {
+        highStressLevels.backgroundColor = UIColor.primaryBlue
+        highStressLevels.setTitleColor(UIColor.white, for: .normal)
+        User.current.lifeSpecifications.stressLevels = "highStressLevels"
         
+        lowStressLevels.setTitleColor(UIColor.primaryBlue, for: .normal)
+        lowStressLevels.backgroundColor = UIColor.clear
+        
+        mediumStressLevels.setTitleColor(UIColor.primaryBlue, for: .normal)
+        mediumStressLevels.backgroundColor = UIColor.clear
     }
 
 
