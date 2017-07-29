@@ -92,16 +92,70 @@ class DietAndNutritionVC: UIViewController, UIScrollViewDelegate {
         
         //Calling Functions: SELECT NUM CAFFEINATED CUPS OF COFFEE PER DAY
         
+        if User.current.lifeSpecifications.numCoffeeCups == "none" {
+            noCoffeeSelected()
+        } else if User.current.lifeSpecifications.numCoffeeCups == "one to two cups" {
+            oneToTwoCupsCoffeeSelected()
+        } else if User.current.lifeSpecifications.numCoffeeCups == "two to three cups" {
+            twoToThreeCupsCoffeeSelected()
+        }
+        
         //Calling Functions: SELECT NUM SERVINGS OF DAIRY PER DAY
+        if User.current.lifeSpecifications.numDairy == "zero to one" {
+            zeroToOneServingsDairySelected()
+        } else if User.current.lifeSpecifications.numDairy == "two to three" {
+            twoToThreeServingsDairySelected()
+        } else if User.current.lifeSpecifications.numDairy == "three or more" {
+            threeOrMoreServingsDairySelected()
+        }
         
         //Calling Functions: SELECT HOW OFTEN YOU EAT SWEETS
+        if User.current.lifeSpecifications.sweetsInfo == "rarely" {
+            rarelyHaveCandy()
+        } else if User.current.lifeSpecifications.sweetsInfo == "one to two days per week" {
+            oneToTwoDaysCandy()
+        } else if User.current.lifeSpecifications.sweetsInfo == "three to five days per week" {
+            threeToFiveDaysCandy()
+        } else if User.current.lifeSpecifications.sweetsInfo == "once a day" {
+            onceADayCandy()
+        } else if User.current.lifeSpecifications.sweetsInfo == "more than once a day" {
+            moreThanOnceADayCandy()
+        }
         
         //Calling Functions: SELECT HOW OFTEN YOU EAT CARBS
+        if User.current.lifeSpecifications.carbsInfo == "one or fewer servings per week" {
+            oneOrFewerCarbsPerWeek()
+        } else if User.current.lifeSpecifications.carbsInfo == "one serving twice per week" {
+            oneServingCarbsTwicePerWeek()
+        } else if User.current.lifeSpecifications.carbsInfo == "one serving every other day" {
+            oneServingCarbsEveryOtherDay()
+        } else if User.current.lifeSpecifications.carbsInfo == "one to two servings per day" {
+            oneToTwoServingsCarbsEveryDay()
+        } else if User.current.lifeSpecifications.carbsInfo == "three or more servings per day" {
+            threeOrMoreServingsCarbsPerDay()
+        }
         
         //Calling Functions: SELECT HOW OFTEN YOU EAT RED MEAT
+        if User.current.lifeSpecifications.redMeatInfo == "no red meat" {
+            noRedMeat()
+        } else if User.current.lifeSpecifications.redMeatInfo == "one to two days per week" {
+            oneToTwoDaysRedMeat()
+        } else if User.current.lifeSpecifications.redMeatInfo == "three to five days per week" {
+            threeToFiveDaysRedMeat()
+        } else if User.current.lifeSpecifications.redMeatInfo == "six to seven days per week" {
+            sixToSevenDaysRedMeat()
+        }
         
         //Calling Functions: SELECT HOW OFTEN YOU EAT FAST FOODS
-        
+        if User.current.lifeSpecifications.fastFoodsInfo == "none" {
+            noFastFoods()
+        } else if User.current.lifeSpecifications.fastFoodsInfo == "one to two servings per day" {
+            oneToTwoServingsFastFood()
+        } else if User.current.lifeSpecifications.fastFoodsInfo == "three to four servings per week" {
+            threeToFourServingsFastFood()
+        } else if User.current.lifeSpecifications.fastFoodsInfo == "over five servings per week" {
+            overFiveServingsPerWeekFastFood()
+        }
         
     }
     
@@ -114,126 +168,89 @@ class DietAndNutritionVC: UIViewController, UIScrollViewDelegate {
     }
     
     //cups of coffee info
-    func coffeeSelector(){
-        if zeroCupsCoffee.isSelected {
-            zeroCupsCoffee.isEnabled = true
-            zeroCupsCoffee.backgroundColor = UIColor.green
-        }
-        if oneToTwoCupsCoffee.isSelected {
-            oneToTwoCupsCoffee.isEnabled = true
-            oneToTwoCupsCoffee.backgroundColor = UIColor.green
-        }
-        if twoToThreeCupsCoffee.isSelected {
-            twoToThreeCupsCoffee.isEnabled = true
-            twoToThreeCupsCoffee.backgroundColor = UIColor.green
-        }
+    func noCoffeeSelected() {
+        
+    }
+    func oneToTwoCupsCoffeeSelected() {
+        
+    }
+    func twoToThreeCupsCoffeeSelected() {
+        
     }
     
     //dairy info
-    func dairySelector(){
-        if zeroToOneDairy.isSelected {
-            zeroToOneDairy.isEnabled = true
-            zeroToOneDairy.backgroundColor = UIColor.green
-        }
-        if twoToThreeDairy.isSelected {
-            twoToThreeDairy.isEnabled = true
-            twoToThreeDairy.backgroundColor = UIColor.green
-        }
-        if threeOrMoreDairy.isSelected {
-            threeOrMoreDairy.isEnabled = true
-            threeOrMoreDairy.backgroundColor = UIColor.green
-        }
-
+    func zeroToOneServingsDairySelected() {
+        
+    }
+    func twoToThreeServingsDairySelected() {
+        
+    }
+    func threeOrMoreServingsDairySelected() {
+        
     }
     
     //sweets info
-    func sweetsSelector(){
-        if rarelyCandy.isSelected {
-            rarelyCandy.isEnabled = true
-            rarelyCandy.backgroundColor = UIColor.green
-        }
-        if OnceADayCandy.isSelected {
-            OnceADayCandy.isEnabled = true
-            OnceADayCandy.backgroundColor = UIColor.green
-        }
-        if oneToTwoCandy.isSelected {
-            oneToTwoCandy.isEnabled = true
-            oneToTwoCandy.backgroundColor = UIColor.green
-        }
-        if threeToFiveCandy.isSelected {
-            threeToFiveCandy.isEnabled = true
-            threeToFiveCandy.backgroundColor = UIColor.green
-        }
-        if moreThanonceADayCandy.isSelected {
-            moreThanonceADayCandy.isEnabled = true
-            moreThanonceADayCandy.backgroundColor = UIColor.green
-        }
+    func rarelyHaveCandy() {
+        
+    }
+    func oneToTwoDaysCandy() {
+        
+    }
+    func threeToFiveDaysCandy() {
+        
+    }
+    func onceADayCandy() {
+        
+    }
+    func moreThanOnceADayCandy() {
+        
     }
     
     //carbs info
-    func carbsSelector(){
-        if oneOrFewerCarbs.isSelected {
-            oneOrFewerCarbs.isEnabled = true
-            oneOrFewerCarbs.backgroundColor = UIColor.green
-        }
-        if oneToTwoADayCarbs.isSelected {
-            oneToTwoADayCarbs.isEnabled = true
-            oneToTwoADayCarbs.backgroundColor = UIColor.green
-        }
-        if oneTwicePerWeekCarbs.isSelected {
-            oneTwicePerWeekCarbs.isEnabled = true
-            oneTwicePerWeekCarbs.backgroundColor = UIColor.green
-        }
-        if oneEveryOtherDayCarbs.isSelected {
-            oneEveryOtherDayCarbs.isEnabled = true
-            oneEveryOtherDayCarbs.backgroundColor = UIColor.green
-        }
-        if threeOrMorePerDayCarbs.isSelected {
-            threeOrMorePerDayCarbs.isEnabled = true
-            threeOrMorePerDayCarbs.backgroundColor = UIColor.green
-        }
+    func oneOrFewerCarbsPerWeek() {
+        
+    }
+    func oneServingCarbsTwicePerWeek() {
+        
+    }
+    func oneServingCarbsEveryOtherDay() {
+        
+    }
+    func oneToTwoServingsCarbsEveryDay() {
+        
+    }
+    func threeOrMoreServingsCarbsPerDay() {
+        
     }
     
     
     //red meat info
-    func redMeatSelector(){
-        if noMeat.isSelected {
-            noMeat.isEnabled = true
-            noMeat.backgroundColor = UIColor.green
-        }
-        if oneToTwoMeat.isSelected {
-            oneToTwoMeat.isEnabled = true
-            oneToTwoMeat.backgroundColor = UIColor.green
-        }
-        if sixToSevenMeat.isSelected {
-            sixToSevenMeat.isEnabled = true
-            sixToSevenMeat.backgroundColor = UIColor.green
-        }
-        if threeToFiveMeat.isSelected {
-            threeToFiveMeat.isEnabled = true
-            threeToFiveMeat.backgroundColor = UIColor.green
-        }
+  
+    func noRedMeat() {
+        
+    }
+    func oneToTwoDaysRedMeat() {
+        
+    }
+    func threeToFiveDaysRedMeat() {
+        
+    }
+    func sixToSevenDaysRedMeat() {
         
     }
     
     //fast foods info
-    func fastFoodsSelector(){
-        if noFastFood.isSelected {
-            noFastFood.isEnabled = true
-            noFastFood.backgroundColor = UIColor.green
-        }
-        if oneToTwoFastfood.isSelected {
-            oneToTwoFastfood.isEnabled = true
-            oneToTwoFastfood.backgroundColor = UIColor.green
-        }
-        if threeToFourFastFood.isSelected {
-            threeToFourFastFood.isEnabled = true
-            threeToFourFastFood.backgroundColor = UIColor.green
-        }
-        if overFiveFastFood.isSelected {
-            overFiveFastFood.isEnabled = true
-            overFiveFastFood.backgroundColor = UIColor.green
-        }
+    func noFastFoods() {
+        
+    }
+    func oneToTwoServingsFastFood() {
+        
+    }
+    func threeToFourServingsFastFood() {
+        
+    }
+    func overFiveServingsPerWeekFastFood() {
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

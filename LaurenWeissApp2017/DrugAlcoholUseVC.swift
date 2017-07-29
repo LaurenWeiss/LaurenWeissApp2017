@@ -68,6 +68,24 @@ class DrugAlcoholUseVC: UIViewController, UIScrollViewDelegate {
         onceAWeekSecondHandSmoke.layer.cornerRadius = 10
         fewTimesWeekSecondHandSmoke.layer.cornerRadius = 10
         
+        yesAlcohol.layer.cornerRadius = 10
+        noAlcohol.layer.cornerRadius = 10
+        
+        sixToSevenDaysDrinkingPerWeek.layer.cornerRadius = 10
+        threeToFiveDaysDrinkingPerWeek.layer.cornerRadius = 10
+        oneToTwoDaysDrinkingPerWeek.layer.cornerRadius = 10
+        
+        oneToTwoDrinksPerNight.layer.cornerRadius = 10
+        atLeastThreeDrinksPerNight.layer.cornerRadius = 10
+        aboutThreeDrinksPerNight.layer.cornerRadius = 10
+        
+        neverDrugs.layer.cornerRadius = 10
+        drugsOncePerYear.layer.cornerRadius = 10
+        drugsFewTimesPerYear.layer.cornerRadius = 10
+        drugsOnceMorePerMonth.layer.cornerRadius = 10
+        drugsEveryFewMonths.layer.cornerRadius = 10
+        
+        
         //Calling Functions: SELECT WHETHER OR NOT YOU SMOKE
         
         //Calling Functions: SELECT NUMBER OF CIGARETTE PACKS SMOKED PER DAY
@@ -85,7 +103,89 @@ class DrugAlcoholUseVC: UIViewController, UIScrollViewDelegate {
         
     }
     
+    //do you smoke
+    func yesSmoke() {
         
+    }
+    func noSmoke() {
+        
+    }
+    
+    //how many packs of cigs per day
+    func oneCigToHalfAPack() {
+        
+    }
+    func onePackCigPerDay() {
+        
+    }
+    func oneAndAHalfPacksPerDay() {
+        
+    }
+    func twoPacksPerDay() {
+        
+    }
+    func threeOrMorePacksPerDay() {
+        
+    }
+    
+    //exposure to second-hand smoke
+    func dailySecondHand() {
+        
+    }
+    func fewTimesPerWeekExposure() {
+        
+    }
+    func oncePerWeekExposure() {
+        
+    }
+    func neverExposure() {
+        
+    }
+    
+    //do you drink alcohol
+    func yesAlcohol() {
+        
+    }
+    func noAlcohol() {
+        
+    }
+    
+    //number of nights spent drinking alcohol
+    func oneToTwoDaysDrinkingPerWeek() {
+        
+    }
+    func threeToFiveDaysDrinkingPerWeek() {
+        
+    }
+    func sixToSevenDaysDrinkningPerWeek() {
+        
+    }
+    
+    //number of drinks in one night of drinkning
+    func oneToTwoDrinksPerNight() {
+        
+    }
+    func aboutThreeDrinksPerNight() {
+        
+    }
+    func atLeastThreeDrinksPerNight() {
+        
+    }
+    
+    //do you take illegal drugs
+    func neverDrugs() {
+        
+    }
+    func drugsFewTimesPerYear() {
+        
+    }
+    func drugsEveryFewMonths() {
+        
+    }
+    func drugsOnceOrMorePerMonth() {
+        
+    }
+    
         
     @IBAction func calculateButtonTapped(_ sender: UIButton) {
         LifeExpectancyCalculator.calculateAge(forUser: User.current) { (finalAge) in

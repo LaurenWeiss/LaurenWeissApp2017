@@ -37,18 +37,37 @@ class LifeSpecs {
     
     
     //RELATIONSHIPS
-    
+    var maritalStatus: String = ""
+    var personalContact: String = ""
+    var heartAttack: String = "no"
+    var cancerRun: String = "no"
+    var fatherDependency: String = ""
+    var motherDependency: String = ""
     
     //DIET/NUTRITION
-    
+    var numCoffeeCups: String = ""
+    var numDairy: String = ""
+    var sweetsInfo: String = ""
+    var carbsInfo: String = ""
+    var redMeatInfo: String = ""
+    var fastFoodsInfo: String = ""
     
     //DRUGS/ALCOHOL
     
     var isSmoking: Bool = false
     var numCigarettesPerDay: Int!
+    var secondHandSmoke: String = ""
+    var drinkAlcohol: Bool = true
+    var numNightsSpentDrinking: String = ""
+    var numDrinksPerNight: String = ""
+    var illegalDrugsInfo: String = ""
     
     //OTHER HEALTH INFO
-    
+    var hdlLevels: String = ""
+    var ldlLevels: String = ""
+    var sunProtectionInfo: String = ""
+    var cancerScreeningInfo: String = ""
+    var anxietyAboutDying: String = ""
     
 
 }

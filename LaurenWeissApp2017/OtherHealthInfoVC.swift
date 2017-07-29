@@ -84,28 +84,55 @@ class OtherHealthInfoVC: UIViewController, UIScrollViewDelegate {
     }
     
     //HDL info
-    func selectHDL(){
+    func lowHDLSelected(){
+        
+    }
+    func mediumHDLSelected(){
+        
+    }
+    func highHDLSelected() {
         
     }
     
     
     //LDL info
-    func selectLDL(){
+    func lowLDLSelected(){
+        
+    }
+    func mediumLDLSelected() {
+        
+    }
+    func highLDLSelected() {
         
     }
     
     //sunscreen info
-    func selectSunscreen(){
+    func alwaysSunscreen(){
+        
+    }
+    func mostOfTheTimeSunscreen(){
+        
+    }
+    func sometimesSunscreen() {
+        
+    }
+    func rarelySunscreen() {
         
     }
     
     //cancer screening info
-    func selectCancer(){
+    func noCancerScreening(){
+        
+    }
+    func yesCancerScreening() {
         
     }
     
     //anxiety about death info
-    func selectAnxiety(){
+    func yesAnxietyDeath(){
+        
+    }
+    func noAnxietyDeath() {
         
     }
     

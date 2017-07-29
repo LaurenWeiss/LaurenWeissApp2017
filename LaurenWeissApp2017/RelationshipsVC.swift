@@ -79,19 +79,58 @@ class RelationshipsVC: UIViewController, UIScrollViewDelegate {
         motherDependent.layer.cornerRadius = 10
         
         //Calling Functions: SELECT MARITAL STATUS
-        
+        if User.current.lifeSpecifications.maritalStatus == "single" {
+            singleSelected()
+        } else if User.current.lifeSpecifications.maritalStatus == "married" {
+            marriedSelected()
+        } else if User.current.lifeSpecifications.maritalStatus == "widowed" {
+            widowedSelected()
+        } else if User.current.lifeSpecifications.maritalStatus == "divorced" {
+            divorcedSelected()
+        } else if User.current.lifeSpecifications.maritalStatus == "too young to be married" {
+            tooYoungForMarriageSelected()
+        }
+       
         //Calling Functions: SELECT PERSONAL CONTACT FROM FAMILY AND FRIENDS
+        if User.current.lifeSpecifications.personalContact == "rare personal contact" {
+            noPersonalContactSelected()
+        } else if User.current.lifeSpecifications.personalContact == "contact few times per week" {
+            contactFewTimesPerWeekSelected()
+        } else if User.current.lifeSpecifications.personalContact == "contact more than few times per week" {
+            contactMoreThanFewTimesPerWeekSelected()
+        }
         
         //Calling Functions: SELECT HEART ATTACK 
+        if User.current.lifeSpecifications.heartAttack == "yes" {
+            yesHeartAttackSelected()
+        } else if User.current.lifeSpecifications.heartAttack == "no" {
+            noHeartAttackSelected()
+        }
         
         //Calling Functions: SELECT IF CANCER RUNS IN FAMILY
+        if User.current.lifeSpecifications.cancerRun == "yes" {
+            yesCancerSelected()
+        } else if User.current.lifeSpecifications.cancerRun == "no" {
+            noCancerSelected()
+        }
         
         //Calling Functions: SELECT FATHER DEPENDENCY
+        if User.current.lifeSpecifications.fatherDependency == "dependent" {
+            fatherDepedentSelected()
+        } else if User.current.lifeSpecifications.fatherDependency == "deceased" {
+            fatherDeceasedSelected()
+        } else if User.current.lifeSpecifications.fatherDependency == "independent" {
+            fatherIndependentSelected()
+        }
         
         //Calling Functions: SELECT MOTHER DEPENDENCY
-        
-        
-        
+        if User.current.lifeSpecifications.motherDependency == "dependent" {
+            motherDependentSelected()
+        } else if User.current.lifeSpecifications.motherDependency == "independent" {
+            motherIndependentSelected()
+        } else if User.current.lifeSpecifications.motherDependency == "deceased" {
+            motherDeceasedSelected()
+        }
     }
     
     
@@ -104,103 +143,72 @@ class RelationshipsVC: UIViewController, UIScrollViewDelegate {
     
     //martial status info
     
-    func selectMaritalStatus() {
-        if single.isSelected {
-            single.isEnabled = true
-            single.backgroundColor = UIColor.green
-        }
-        if married.isSelected {
-            married.isEnabled = true
-            married.backgroundColor = UIColor.green
-        }
-        if widowed.isSelected {
-            widowed.isEnabled = true
-            widowed.backgroundColor = UIColor.green
-        }
-        if divorced.isSelected {
-            divorced.isEnabled = true
-            divorced.backgroundColor = UIColor.green
-        }
-        if tooYoungForMarriage.isSelected {
-            tooYoungForMarriage.isEnabled = true
-            tooYoungForMarriage.backgroundColor = UIColor.green
-        }
+    func singleSelected() {
+        
+    }
+    func marriedSelected() {
+        
+    }
+    func widowedSelected() {
+        
+    }
+    func divorcedSelected() {
+        
+    }
+    func tooYoungForMarriageSelected() {
+        
     }
     
     
     //personal contact from family and friends info
-    func selectContact(){
-        if noContact.isSelected {
-            noContact.isEnabled = true
-            noContact.backgroundColor = UIColor.green
-        }
-        if contactFewTimesPerWeek.isSelected {
-            contactFewTimesPerWeek.isEnabled = true
-            contactFewTimesPerWeek.backgroundColor = UIColor.green
-        }
-        if contactMoreThanFewTimesPerWeek.isSelected {
-            contactMoreThanFewTimesPerWeek.isEnabled = true
-            contactMoreThanFewTimesPerWeek.backgroundColor = UIColor.green
-        }
+    
+    func noPersonalContactSelected() {
+        
+    }
+    func contactFewTimesPerWeekSelected() {
+        
+    }
+    func contactMoreThanFewTimesPerWeekSelected() {
+        
     }
     
     
     //heart attack info
-    func selectHeartAttack(){
-        if noHeartAttack.isSelected {
-            noHeartAttack.isEnabled = true
-            noHeartAttack.backgroundColor = UIColor.green
-        }
-        if yesHeartAttack.isSelected {
-            yesHeartAttack.isEnabled = true
-            yesHeartAttack.backgroundColor = UIColor.green
-        }
+    func yesHeartAttackSelected() {
+        
     }
-    
-    //cancer in family info
-    func cancerInfo(){
-        if yesCancer.isSelected {
-            yesCancer.isEnabled = true
-            yesCancer.backgroundColor = UIColor.green
-        }
-        if noCancer.isSelected {
-            noCancer.isEnabled = true
-            noCancer.backgroundColor = UIColor.green
-        }
+    func noHeartAttackSelected() {
         
     }
     
+    //cancer in family info
+    func yesCancerSelected() {
+        
+    }
+    func noCancerSelected() {
+        
+    }
+    
+    
     //father info
-    func fatherInfo(){
-        if fatherIndependent.isSelected {
-            fatherIndependent.isEnabled = true
-            fatherIndependent.backgroundColor = UIColor.green
-        }
-        if fatherDeceased.isSelected {
-            fatherDeceased.isEnabled = true
-            fatherDeceased.backgroundColor = UIColor.green
-        }
-        if fatherDependent.isSelected {
-            fatherDependent.isEnabled = true
-            fatherDependent.backgroundColor = UIColor.green
-        }
+    func fatherDepedentSelected() {
+        
+    }
+    func fatherIndependentSelected() {
+        
+    }
+    func fatherDeceasedSelected() {
         
     }
     
     //mother info
-    func motherInfo(){
-        if motherIndependent.isSelected {
-            motherIndependent.isEnabled = true
-            motherIndependent.backgroundColor = UIColor.green
-        }
-        if motherDeceased.isSelected {
-            motherDeceased.isEnabled = true
-            motherDeceased.backgroundColor = UIColor.green
-        }
-        if motherDependent.isSelected {
-            motherDependent.isEnabled = true
-            motherDependent.backgroundColor = UIColor.green
-        }
+    func motherDependentSelected() {
+        
+    }
+    func motherIndependentSelected() {
+        
+    }
+    func motherDeceasedSelected() {
         
     }
     
