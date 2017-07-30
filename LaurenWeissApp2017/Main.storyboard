@@ -2285,20 +2285,29 @@
                                                         <state key="normal" title="None">
                                                             <color key="titleColor" red="0.23529411759999999" green="0.66666666669999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="selectCoffee:" destination="Mir-04-P5D" eventType="touchUpInside" id="3HC-3N-cRs"/>
+                                                        </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zan-fF-9aY">
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zan-fF-9aY">
                                                         <rect key="frame" x="6.5" y="53" width="270" height="45"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="One to two cups per day">
                                                             <color key="titleColor" red="0.23529411759999999" green="0.66666666669999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="selectCoffee:" destination="Mir-04-P5D" eventType="touchUpInside" id="FbR-no-iH6"/>
+                                                        </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Smw-IO-7lx">
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Smw-IO-7lx">
                                                         <rect key="frame" x="0.0" y="106" width="283" height="45"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="Two to three cups per day">
                                                             <color key="titleColor" red="0.23529411759999999" green="0.66666666669999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="selectCoffee:" destination="Mir-04-P5D" eventType="touchUpInside" id="wU7-an-XHq"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -2311,20 +2320,29 @@
                                                         <state key="normal" title="Zero to one servings">
                                                             <color key="titleColor" red="0.23529411759999999" green="0.66666666669999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="selectDairy:" destination="Mir-04-P5D" eventType="touchUpInside" id="jnw-rp-m9w"/>
+                                                        </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ghl-Wc-ga9">
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ghl-Wc-ga9">
                                                         <rect key="frame" x="10.5" y="53" width="232" height="45"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="Two to three servings">
                                                             <color key="titleColor" red="0.23529411759999999" green="0.66666666669999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="selectDairy:" destination="Mir-04-P5D" eventType="touchUpInside" id="0y9-JU-ahX"/>
+                                                        </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N60-ju-Fgv">
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N60-ju-Fgv">
                                                         <rect key="frame" x="0.0" y="106" width="253" height="45"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="Three or more servings">
                                                             <color key="titleColor" red="0.23529411759999999" green="0.66666666669999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="selectDairy:" destination="Mir-04-P5D" eventType="touchUpInside" id="uF9-x4-zJ8"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -2343,34 +2361,49 @@
                                                         <state key="normal" title="One or fewer servings a week">
                                                             <color key="titleColor" red="0.23529411759999999" green="0.66666666669999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="selectCarbs:" destination="Mir-04-P5D" eventType="touchUpInside" id="DWe-PP-s9m"/>
+                                                        </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k9w-Rc-BLK">
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k9w-Rc-BLK">
                                                         <rect key="frame" x="22" y="53" width="280" height="45"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="One serving twice a week">
                                                             <color key="titleColor" red="0.23529411759999999" green="0.66666666669999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="selectCarbs:" destination="Mir-04-P5D" eventType="touchUpInside" id="iCF-cB-kSr"/>
+                                                        </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uMF-bB-quu">
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uMF-bB-quu">
                                                         <rect key="frame" x="7" y="106" width="310" height="45"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="One serving every other day">
                                                             <color key="titleColor" red="0.23529411759999999" green="0.66666666669999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="selectCarbs:" destination="Mir-04-P5D" eventType="touchUpInside" id="fU1-io-7Gd"/>
+                                                        </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pG1-Lg-03h">
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pG1-Lg-03h">
                                                         <rect key="frame" x="20" y="159" width="284" height="45"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="One to two servings a day">
                                                             <color key="titleColor" red="0.23529411759999999" green="0.66666666669999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="selectCarbs:" destination="Mir-04-P5D" eventType="touchUpInside" id="brt-oa-2yG"/>
+                                                        </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T1c-vC-2Xj">
+                                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T1c-vC-2Xj">
                                                         <rect key="frame" x="3" y="212" width="318" height="45"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="Three or more servings a day">
                                                             <color key="titleColor" red="0.23529411759999999" green="0.66666666669999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="selectCarbs:" destination="Mir-04-P5D" eventType="touchUpInside" id="8qf-O0-VwO"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -2395,27 +2428,39 @@
                                                         <state key="normal" title="None">
                                                             <color key="titleColor" red="0.23529411759999999" green="0.66666666669999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="selectFastFoods:" destination="Mir-04-P5D" eventType="touchUpInside" id="Sqf-1C-rzO"/>
+                                                        </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TW5-yn-gjT">
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TW5-yn-gjT">
                                                         <rect key="frame" x="9.5" y="53" width="327" height="45"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="One to two servings per week">
                                                             <color key="titleColor" red="0.23529411759999999" green="0.66666666669999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="selectFastFoods:" destination="Mir-04-P5D" eventType="touchUpInside" id="5lN-cs-IuO"/>
+                                                        </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jFn-bw-xB1">
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jFn-bw-xB1">
                                                         <rect key="frame" x="0.0" y="106" width="346" height="45"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="Three to four servings per week">
                                                             <color key="titleColor" red="0.23529411759999999" green="0.66666666669999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="selectFastFoods:" destination="Mir-04-P5D" eventType="touchUpInside" id="k7m-JI-XTg"/>
+                                                        </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X4b-bp-jjb">
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X4b-bp-jjb">
                                                         <rect key="frame" x="21.5" y="159" width="303" height="45"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="Over five servings per week">
                                                             <color key="titleColor" red="0.23529411759999999" green="0.66666666669999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="selectFastFoods:" destination="Mir-04-P5D" eventType="touchUpInside" id="mxo-og-x7v"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -2446,34 +2491,49 @@
                                                         <state key="normal" title="Rarely">
                                                             <color key="titleColor" red="0.23529411759999999" green="0.66666666669999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="selectSweets:" destination="Mir-04-P5D" eventType="touchUpInside" id="Eor-TT-4FF"/>
+                                                        </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nZt-uS-mIS">
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nZt-uS-mIS">
                                                         <rect key="frame" x="6.5" y="53" width="287" height="45"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="One to two days per week">
                                                             <color key="titleColor" red="0.23529411759999999" green="0.66666666669999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="selectSweets:" destination="Mir-04-P5D" eventType="touchUpInside" id="bfz-FV-gwY"/>
+                                                        </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uNh-QV-jNs">
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uNh-QV-jNs">
                                                         <rect key="frame" x="0.0" y="106" width="300" height="45"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="Three to five days per week">
                                                             <color key="titleColor" red="0.23529411759999999" green="0.66666666669999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="selectSweets:" destination="Mir-04-P5D" eventType="touchUpInside" id="WkL-4M-nkq"/>
+                                                        </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cNN-Xp-l4X">
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cNN-Xp-l4X">
                                                         <rect key="frame" x="87.5" y="159" width="125" height="45"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="Once a day">
                                                             <color key="titleColor" red="0.23529411759999999" green="0.66666666669999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="selectSweets:" destination="Mir-04-P5D" eventType="touchUpInside" id="YzJ-BS-W0R"/>
+                                                        </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CQe-Xi-p4L">
+                                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CQe-Xi-p4L">
                                                         <rect key="frame" x="31" y="212" width="238" height="45"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="More than once a day">
                                                             <color key="titleColor" red="0.23529411759999999" green="0.66666666669999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="selectSweets:" destination="Mir-04-P5D" eventType="touchUpInside" id="pwJ-RW-9Tl"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -2486,27 +2546,39 @@
                                                         <state key="normal" title="I don't eat red meat">
                                                             <color key="titleColor" red="0.23529411759999999" green="0.66666666669999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="selectRedMeat:" destination="Mir-04-P5D" eventType="touchUpInside" id="HRk-iW-Zb0"/>
+                                                        </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oWV-6x-FB6">
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oWV-6x-FB6">
                                                         <rect key="frame" x="6.5" y="53" width="287" height="45"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="One to two days per week">
                                                             <color key="titleColor" red="0.23529411759999999" green="0.66666666669999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="selectRedMeat:" destination="Mir-04-P5D" eventType="touchUpInside" id="Ap2-ga-TVx"/>
+                                                        </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6wj-2d-7yC">
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6wj-2d-7yC">
                                                         <rect key="frame" x="0.0" y="106" width="300" height="45"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="Three to five days per week">
                                                             <color key="titleColor" red="0.23529411759999999" green="0.66666666669999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="selectRedMeat:" destination="Mir-04-P5D" eventType="touchUpInside" id="NjM-J1-aEJ"/>
+                                                        </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ldc-OJ-mbF">
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ldc-OJ-mbF">
                                                         <rect key="frame" x="3.5" y="159" width="293" height="45"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="Six to seven days per week">
                                                             <color key="titleColor" red="0.23529411759999999" green="0.66666666669999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="selectRedMeat:" destination="Mir-04-P5D" eventType="touchUpInside" id="jfZ-kM-f97"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -2909,6 +2981,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="gco-TV-H0X"/>
+        <segue reference="3dN-ur-BTd"/>
     </inferredMetricsTieBreakers>
 </document>

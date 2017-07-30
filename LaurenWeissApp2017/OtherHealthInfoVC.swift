@@ -64,7 +64,14 @@ class OtherHealthInfoVC: UIViewController, UIScrollViewDelegate {
         noAnxiousDying.layer.cornerRadius = 10
         
         //Calling Functions: SELECT HDL LEVELS
-        
+        if User.current.lifeSpecifications.hdlLevels == "low" {
+            lowHDLSelected()
+        } else if User.current.lifeSpecifications.hdlLevels == "medium" {
+            mediumHDLSelected()
+        } else if User.current.lifeSpecifications.hdlLevels == "high" {
+            highHDLSelected()
+        }
+
         //Calling Functions: SELECT LDL LEVELS
         
         //Calling Functions: SELECT SUN PROTECTION
