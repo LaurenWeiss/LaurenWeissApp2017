@@ -88,104 +88,519 @@ class DrugAlcoholUseVC: UIViewController, UIScrollViewDelegate {
         
         //Calling Functions: SELECT WHETHER OR NOT YOU SMOKE
         
+        if User.current.lifeSpecifications.isSmoking == true {
+            yesSmokeSelected()
+        } else if User.current.lifeSpecifications.isSmoking == false {
+            noSmokeSelected()
+        }
+        
         //Calling Functions: SELECT NUMBER OF CIGARETTE PACKS SMOKED PER DAY
         
+        
+        
+        if User.current.lifeSpecifications.numCigarettesPerDay == "oneCigToHalfAPack" {
+            oneCigToHalfAPack()
+        } else if User.current.lifeSpecifications.numCigarettesPerDay == "onePackCigPerDay" {
+            onePackCigPerDay()
+        } else if User.current.lifeSpecifications.numCigarettesPerDay == "oneAndAHalfPacksPerDay" {
+            oneAndAHalfPacksPerDay()
+        } else if User.current.lifeSpecifications.numCigarettesPerDay == "twoPacksPerDay" {
+            twoPacksPerDay()
+        } else if User.current.lifeSpecifications.numCigarettesPerDay == "threeOrMorePacksPerDay" {
+            threeOrMorePacksPerDay()
+        }
+        
+        
         //Calling Functions: SELECT SECOND-HAND SMOKING EXPOSURE
-        
+        if User.current.lifeSpecifications.secondHandSmoke == "dailySecondHand" {
+            dailySecondHand()
+        } else if User.current.lifeSpecifications.secondHandSmoke == "fewTimesPerWeekExposure" {
+            fewTimesPerWeekExposure()
+        } else if User.current.lifeSpecifications.secondHandSmoke == "oncePerWeekExposure" {
+            oncePerWeekExposure()
+        } else if User.current.lifeSpecifications.secondHandSmoke == "neverExposure" {
+            neverExposure()
+        }
         //Calling Functions: SELECT WHETHER OR NOT YOU DRINK ALCOHOL
-        
+        if User.current.lifeSpecifications.drinkAlcohol == true {
+            yesAlcoholSelected()
+        } else if User.current.lifeSpecifications.drinkAlcohol == false {
+            noAlcoholSelected()
+        }
         //Calling Functions: SELECT NUM NIGHTS SPENT DRINKING
+        if User.current.lifeSpecifications.numNightsSpentDrinking == "oneToTwoDaysDrinkingPerWeekSelected" {
+            oneToTwoDaysDrinkingPerWeekSelected()
+        } else if User.current.lifeSpecifications.numNightsSpentDrinking == "threeToFiveDaysDrinkingPerWeekSelected" {
+            threeToFiveDaysDrinkingPerWeekSelected()
+        }  else if User.current.lifeSpecifications.numNightsSpentDrinking == "sixToSevenDaysDrinkningPerWeek" {
+            sixToSevenDaysDrinkningPerWeek()
+        }
         
         //Calling Functions: SELECT HOW NUM DRINKS YOU HAVE IN ONE NIGHT OF DRINKING ALCOHOL
-        
+        if User.current.lifeSpecifications.numDrinksPerNight == "oneToTwoDrinksPerNightSelected" {
+            oneToTwoDrinksPerNightSelected()
+        } else if User.current.lifeSpecifications.numDrinksPerNight == "aboutThreeDrinksPerNightSelected" {
+            aboutThreeDrinksPerNightSelected()
+        }  else if User.current.lifeSpecifications.numDrinksPerNight == "atLeastThreeDrinksPerNightSelected" {
+            atLeastThreeDrinksPerNightSelected()
+        }
         //Calling Functions: SELECT WHETHER OR NOT YOU TAKE ILLEGAL DRUGS
-    
-        
+        if User.current.lifeSpecifications.illegalDrugsInfo == "neverDrugsSelected" {
+            neverDrugsSelected()
+        } else if User.current.lifeSpecifications.illegalDrugsInfo == "drugsFewTimesPerYearSelected" {
+            drugsFewTimesPerYearSelected()
+        }  else if User.current.lifeSpecifications.illegalDrugsInfo == "drugsEveryFewMonthsSelected" {
+            drugsEveryFewMonthsSelected()
+        } else if User.current.lifeSpecifications.illegalDrugsInfo == "drugsOnceOrMorePerMonth" {
+            drugsOnceOrMorePerMonth()
+        } else if User.current.lifeSpecifications.illegalDrugsInfo == "drugsOncePerYear" {
+            drugsOncePerYearS()
+        }
     }
     
     //do you smoke
+    @IBAction func selectWhetherOrNotSmoke(_ sender: UIButton) {
+        if sender.tag == 0 {
+            yesSmokeSelected()
+        } else if sender.tag == 1 {
+            noSmokeSelected()
+        }
+    }
+    
     func yesSmokeSelected() {
+        yesSmoke.backgroundColor = UIColor.primaryBlue
+        yesSmoke.setTitleColor(UIColor.white, for: .normal)
+        User.current.lifeSpecifications.isSmoking = true
         
+        noSmoke.setTitleColor(UIColor.primaryBlue, for: .normal)
+        noSmoke.backgroundColor = UIColor.clear
     }
     func noSmokeSelected() {
+        noSmoke.backgroundColor = UIColor.primaryBlue
+        noSmoke.setTitleColor(UIColor.white, for: .normal)
+        User.current.lifeSpecifications.isSmoking = false
         
+        yesSmoke.setTitleColor(UIColor.primaryBlue, for: .normal)
+        yesSmoke.backgroundColor = UIColor.clear
     }
     
     //how many packs of cigs per day
+    
+    @IBAction func selectNumCigs(_ sender: UIButton) {
+        if sender.tag == 0 {
+            oneCigToHalfAPack()
+        } else if sender.tag == 1 {
+            onePackCigPerDay()
+        } else if sender.tag == 2 {
+            oneAndAHalfPacksPerDay()
+        } else if sender.tag == 3 {
+            twoPacksPerDay()
+        } else if sender.tag == 4 {
+            threeOrMorePacksPerDay()
+        }
+
+    }
+    
     func oneCigToHalfAPack() {
+        oneCigToHalfPack.backgroundColor = UIColor.primaryBlue
+        oneCigToHalfPack.setTitleColor(UIColor.white, for: .normal)
+        User.current.lifeSpecifications.numCigarettesPerDay = "oneCigToHalfAPack"
+        
+        onePackSmoke.setTitleColor(UIColor.primaryBlue, for: .normal)
+        onePackSmoke.backgroundColor = UIColor.clear
+        
+        oneAndHalfPacksSmoke.setTitleColor(UIColor.primaryBlue, for: .normal)
+        oneAndHalfPacksSmoke.backgroundColor = UIColor.clear
+        
+        twoPacksSmoke.setTitleColor(UIColor.primaryBlue, for: .normal)
+        twoPacksSmoke.backgroundColor = UIColor.clear
+        
+        threeOrMorePacksSmoke.setTitleColor(UIColor.primaryBlue, for: .normal)
+        threeOrMorePacksSmoke.backgroundColor = UIColor.clear
         
     }
     func onePackCigPerDay() {
         
+        onePackSmoke.backgroundColor = UIColor.primaryBlue
+        onePackSmoke.setTitleColor(UIColor.white, for: .normal)
+        User.current.lifeSpecifications.numCigarettesPerDay = "onePackCigPerDay"
+        
+        oneCigToHalfPack.setTitleColor(UIColor.primaryBlue, for: .normal)
+        oneCigToHalfPack.backgroundColor = UIColor.clear
+        
+        oneAndHalfPacksSmoke.setTitleColor(UIColor.primaryBlue, for: .normal)
+        oneAndHalfPacksSmoke.backgroundColor = UIColor.clear
+        
+        twoPacksSmoke.setTitleColor(UIColor.primaryBlue, for: .normal)
+        twoPacksSmoke.backgroundColor = UIColor.clear
+        
+        threeOrMorePacksSmoke.setTitleColor(UIColor.primaryBlue, for: .normal)
+        threeOrMorePacksSmoke.backgroundColor = UIColor.clear
+        
     }
     func oneAndAHalfPacksPerDay() {
+        
+        oneAndHalfPacksSmoke.backgroundColor = UIColor.primaryBlue
+        oneAndHalfPacksSmoke.setTitleColor(UIColor.white, for: .normal)
+        User.current.lifeSpecifications.numCigarettesPerDay = "oneAndAHalfPacksPerDay"
+        
+        onePackSmoke.setTitleColor(UIColor.primaryBlue, for: .normal)
+        onePackSmoke.backgroundColor = UIColor.clear
+        
+        oneCigToHalfPack.setTitleColor(UIColor.primaryBlue, for: .normal)
+        oneCigToHalfPack.backgroundColor = UIColor.clear
+        
+        twoPacksSmoke.setTitleColor(UIColor.primaryBlue, for: .normal)
+        twoPacksSmoke.backgroundColor = UIColor.clear
+        
+        threeOrMorePacksSmoke.setTitleColor(UIColor.primaryBlue, for: .normal)
+        threeOrMorePacksSmoke.backgroundColor = UIColor.clear
         
     }
     func twoPacksPerDay() {
         
+        twoPacksSmoke.backgroundColor = UIColor.primaryBlue
+        twoPacksSmoke.setTitleColor(UIColor.white, for: .normal)
+        User.current.lifeSpecifications.numCigarettesPerDay = "twoPacksPerDay"
+        
+        onePackSmoke.setTitleColor(UIColor.primaryBlue, for: .normal)
+        onePackSmoke.backgroundColor = UIColor.clear
+        
+        oneAndHalfPacksSmoke.setTitleColor(UIColor.primaryBlue, for: .normal)
+        oneAndHalfPacksSmoke.backgroundColor = UIColor.clear
+        
+        oneCigToHalfPack.setTitleColor(UIColor.primaryBlue, for: .normal)
+        oneCigToHalfPack.backgroundColor = UIColor.clear
+        
+        threeOrMorePacksSmoke.setTitleColor(UIColor.primaryBlue, for: .normal)
+        threeOrMorePacksSmoke.backgroundColor = UIColor.clear
+        
     }
     func threeOrMorePacksPerDay() {
+        
+        threeOrMorePacksSmoke.backgroundColor = UIColor.primaryBlue
+        threeOrMorePacksSmoke.setTitleColor(UIColor.white, for: .normal)
+        User.current.lifeSpecifications.numCigarettesPerDay = "threeOrMorePacksPerDay"
+        
+        onePackSmoke.setTitleColor(UIColor.primaryBlue, for: .normal)
+        onePackSmoke.backgroundColor = UIColor.clear
+        
+        oneAndHalfPacksSmoke.setTitleColor(UIColor.primaryBlue, for: .normal)
+        oneAndHalfPacksSmoke.backgroundColor = UIColor.clear
+        
+        twoPacksSmoke.setTitleColor(UIColor.primaryBlue, for: .normal)
+        twoPacksSmoke.backgroundColor = UIColor.clear
+        
+        oneCigToHalfPack.setTitleColor(UIColor.primaryBlue, for: .normal)
+        oneCigToHalfPack.backgroundColor = UIColor.clear
         
     }
     
     //exposure to second-hand smoke
-    func dailySecondHand() {
+    
+    @IBAction func selectSecondHandSmoke(_ sender: UIButton) {
+        if sender.tag == 0 {
+            dailySecondHand()
+        } else if sender.tag == 1 {
+            fewTimesPerWeekExposure()
+        } else if sender.tag == 2 {
+            oncePerWeekExposure()
+        } else if sender.tag == 3 {
+            neverExposure()
+        }
         
+    }
+    
+    
+    func dailySecondHand() {
+        dailySecondHandSmoke.backgroundColor = UIColor.primaryBlue
+        dailySecondHandSmoke.setTitleColor(UIColor.white, for: .normal)
+        User.current.lifeSpecifications.secondHandSmoke = "dailySecondHand"
+        
+        fewTimesWeekSecondHandSmoke.setTitleColor(UIColor.primaryBlue, for: .normal)
+        fewTimesWeekSecondHandSmoke.backgroundColor = UIColor.clear
+
+        onceAWeekSecondHandSmoke.setTitleColor(UIColor.primaryBlue, for: .normal)
+        onceAWeekSecondHandSmoke.backgroundColor = UIColor.clear
+        
+        neverSecondHandSmoke.setTitleColor(UIColor.primaryBlue, for: .normal)
+        neverSecondHandSmoke.backgroundColor = UIColor.clear
     }
     func fewTimesPerWeekExposure() {
+        fewTimesWeekSecondHandSmoke.backgroundColor = UIColor.primaryBlue
+        fewTimesWeekSecondHandSmoke.setTitleColor(UIColor.white, for: .normal)
+        User.current.lifeSpecifications.secondHandSmoke = "fewTimesPerWeekExposure"
         
+        dailySecondHandSmoke.setTitleColor(UIColor.primaryBlue, for: .normal)
+        dailySecondHandSmoke.backgroundColor = UIColor.clear
+        
+        onceAWeekSecondHandSmoke.setTitleColor(UIColor.primaryBlue, for: .normal)
+        onceAWeekSecondHandSmoke.backgroundColor = UIColor.clear
+        
+        neverSecondHandSmoke.setTitleColor(UIColor.primaryBlue, for: .normal)
+        neverSecondHandSmoke.backgroundColor = UIColor.clear
     }
     func oncePerWeekExposure() {
+        onceAWeekSecondHandSmoke.backgroundColor = UIColor.primaryBlue
+        onceAWeekSecondHandSmoke.setTitleColor(UIColor.white, for: .normal)
+        User.current.lifeSpecifications.secondHandSmoke = "oncePerWeekExposure"
         
+        fewTimesWeekSecondHandSmoke.setTitleColor(UIColor.primaryBlue, for: .normal)
+        fewTimesWeekSecondHandSmoke.backgroundColor = UIColor.clear
+        
+        dailySecondHandSmoke.setTitleColor(UIColor.primaryBlue, for: .normal)
+        dailySecondHandSmoke.backgroundColor = UIColor.clear
+        
+        neverSecondHandSmoke.setTitleColor(UIColor.primaryBlue, for: .normal)
+        neverSecondHandSmoke.backgroundColor = UIColor.clear
     }
     func neverExposure() {
+        neverSecondHandSmoke.backgroundColor = UIColor.primaryBlue
+        neverSecondHandSmoke.setTitleColor(UIColor.white, for: .normal)
+        User.current.lifeSpecifications.secondHandSmoke = "neverExposure"
         
+        fewTimesWeekSecondHandSmoke.setTitleColor(UIColor.primaryBlue, for: .normal)
+        fewTimesWeekSecondHandSmoke.backgroundColor = UIColor.clear
+        
+        onceAWeekSecondHandSmoke.setTitleColor(UIColor.primaryBlue, for: .normal)
+        onceAWeekSecondHandSmoke.backgroundColor = UIColor.clear
+        
+        dailySecondHandSmoke.setTitleColor(UIColor.primaryBlue, for: .normal)
+        dailySecondHandSmoke.backgroundColor = UIColor.clear
     }
     
     //do you drink alcohol
+    
+    @IBAction func selectDoYouDrink(_ sender: UIButton) {
+        if sender.tag == 0 {
+            yesAlcoholSelected()
+        } else if sender.tag == 1 {
+            noAlcoholSelected()
+        }
+        
+    }
+    
     func yesAlcoholSelected() {
+        yesAlcohol.backgroundColor = UIColor.primaryBlue
+        yesAlcohol.setTitleColor(UIColor.white, for: .normal)
+        User.current.lifeSpecifications.drinkAlcohol = true
+        
+        noAlcohol.setTitleColor(UIColor.primaryBlue, for: .normal)
+        noAlcohol.backgroundColor = UIColor.clear
         
     }
     func noAlcoholSelected() {
+        noAlcohol.backgroundColor = UIColor.primaryBlue
+        noAlcohol.setTitleColor(UIColor.white, for: .normal)
+        User.current.lifeSpecifications.drinkAlcohol = false
         
+        yesAlcohol.setTitleColor(UIColor.primaryBlue, for: .normal)
+        yesAlcohol.backgroundColor = UIColor.clear
     }
     
     //number of nights spent drinking alcohol
-    func oneToTwoDaysDrinkingPerWeekSelected() {
+    
+    @IBAction func selectNumNightsSpentDrinking(_ sender: UIButton) {
+        if sender.tag == 0 {
+            oneToTwoDaysDrinkingPerWeekSelected()
+        } else if sender.tag == 1 {
+            threeToFiveDaysDrinkingPerWeekSelected()
+        } else if sender.tag == 2 {
+            sixToSevenDaysDrinkningPerWeek()
+        }
         
+    }
+    func oneToTwoDaysDrinkingPerWeekSelected() {
+        oneToTwoDaysDrinkingPerWeek.backgroundColor = UIColor.primaryBlue
+        oneToTwoDaysDrinkingPerWeek.setTitleColor(UIColor.white, for: .normal)
+        User.current.lifeSpecifications.numNightsSpentDrinking = "oneToTwoDaysDrinkingPerWeekSelected"
+        
+        threeToFiveDaysDrinkingPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        threeToFiveDaysDrinkingPerWeek.backgroundColor = UIColor.clear
+        
+        sixToSevenDaysDrinkingPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        sixToSevenDaysDrinkingPerWeek.backgroundColor = UIColor.clear
     }
     func threeToFiveDaysDrinkingPerWeekSelected() {
+        threeToFiveDaysDrinkingPerWeek.backgroundColor = UIColor.primaryBlue
+        threeToFiveDaysDrinkingPerWeek.setTitleColor(UIColor.white, for: .normal)
+        User.current.lifeSpecifications.numNightsSpentDrinking = "threeToFiveDaysDrinkingPerWeekSelected"
         
+        oneToTwoDaysDrinkingPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        oneToTwoDaysDrinkingPerWeek.backgroundColor = UIColor.clear
+        
+        sixToSevenDaysDrinkingPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        sixToSevenDaysDrinkingPerWeek.backgroundColor = UIColor.clear
     }
     func sixToSevenDaysDrinkningPerWeek() {
+        sixToSevenDaysDrinkingPerWeek.backgroundColor = UIColor.primaryBlue
+        sixToSevenDaysDrinkingPerWeek.setTitleColor(UIColor.white, for: .normal)
+        User.current.lifeSpecifications.numNightsSpentDrinking = "sixToSevenDaysDrinkningPerWeek"
         
+        threeToFiveDaysDrinkingPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        threeToFiveDaysDrinkingPerWeek.backgroundColor = UIColor.clear
+        
+        oneToTwoDaysDrinkingPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        oneToTwoDaysDrinkingPerWeek.backgroundColor = UIColor.clear
     }
     
     //number of drinks in one night of drinkning
+    
+    @IBAction func selectNumberOfDrinksInOneNight(_ sender: UIButton) {
+        if sender.tag == 0 {
+            oneToTwoDrinksPerNightSelected()
+        } else if sender.tag == 1 {
+            aboutThreeDrinksPerNightSelected()
+        } else if sender.tag == 2 {
+            atLeastThreeDrinksPerNightSelected()
+        }
+        
+    }
+    
     func oneToTwoDrinksPerNightSelected() {
+        oneToTwoDrinksPerNight.backgroundColor = UIColor.primaryBlue
+        oneToTwoDrinksPerNight.setTitleColor(UIColor.white, for: .normal)
+        User.current.lifeSpecifications.numDrinksPerNight = "oneToTwoDrinksPerNightSelected"
+        
+        aboutThreeDrinksPerNight.setTitleColor(UIColor.primaryBlue, for: .normal)
+        aboutThreeDrinksPerNight.backgroundColor = UIColor.clear
+        
+        atLeastThreeDrinksPerNight.setTitleColor(UIColor.primaryBlue, for: .normal)
+        atLeastThreeDrinksPerNight.backgroundColor = UIColor.clear
         
     }
     func aboutThreeDrinksPerNightSelected() {
+        aboutThreeDrinksPerNight.backgroundColor = UIColor.primaryBlue
+        aboutThreeDrinksPerNight.setTitleColor(UIColor.white, for: .normal)
+        User.current.lifeSpecifications.numDrinksPerNight = "aboutThreeDrinksPerNightSelected"
         
+        oneToTwoDrinksPerNight.setTitleColor(UIColor.primaryBlue, for: .normal)
+        oneToTwoDrinksPerNight.backgroundColor = UIColor.clear
+        
+        atLeastThreeDrinksPerNight.setTitleColor(UIColor.primaryBlue, for: .normal)
+        atLeastThreeDrinksPerNight.backgroundColor = UIColor.clear
+        
+
     }
     func atLeastThreeDrinksPerNightSelected() {
+        atLeastThreeDrinksPerNight.backgroundColor = UIColor.primaryBlue
+        atLeastThreeDrinksPerNight.setTitleColor(UIColor.white, for: .normal)
+        User.current.lifeSpecifications.numDrinksPerNight = "atLeastThreeDrinksPerNightSelected"
         
+        aboutThreeDrinksPerNight.setTitleColor(UIColor.primaryBlue, for: .normal)
+        aboutThreeDrinksPerNight.backgroundColor = UIColor.clear
+        
+        oneToTwoDrinksPerNight.setTitleColor(UIColor.primaryBlue, for: .normal)
+        oneToTwoDrinksPerNight.backgroundColor = UIColor.clear
+
     }
     
     //do you take illegal drugs
-    func neverDrugsSelected() {
-        
-    }
-    func drugsFewTimesPerYearSelected() {
-        
-    }
-    func drugsEveryFewMonthsSelected() {
-        
-    }
-    func drugsOnceOrMorePerMonth() {
+    @IBAction func selectDrugUse(_ sender: UIButton) {
+        if sender.tag == 0 {
+            neverDrugsSelected()
+        } else if sender.tag == 1 {
+            drugsFewTimesPerYearSelected()
+        } else if sender.tag == 2 {
+            drugsEveryFewMonthsSelected()
+        } else if sender.tag == 3 {
+            drugsOnceOrMorePerMonth()
+        } else if sender.tag == 4 {
+            drugsOncePerYearS()
+        }
         
     }
     
+    
+    func neverDrugsSelected() {
+        neverDrugs.backgroundColor = UIColor.primaryBlue
+        neverDrugs.setTitleColor(UIColor.white, for: .normal)
+        User.current.lifeSpecifications.illegalDrugsInfo = "neverDrugsSelected"
+        
+        drugsFewTimesPerYear.setTitleColor(UIColor.primaryBlue, for: .normal)
+        drugsFewTimesPerYear.backgroundColor = UIColor.clear
+        
+        drugsEveryFewMonths.setTitleColor(UIColor.primaryBlue, for: .normal)
+        drugsEveryFewMonths.backgroundColor = UIColor.clear
+        
+        drugsOnceMorePerMonth.setTitleColor(UIColor.primaryBlue, for: .normal)
+        drugsOnceMorePerMonth.backgroundColor = UIColor.clear
+        
+        drugsOncePerYear.setTitleColor(UIColor.primaryBlue, for: .normal)
+        drugsOncePerYear.backgroundColor = UIColor.clear
+    }
+    func drugsFewTimesPerYearSelected() {
+        drugsFewTimesPerYear.backgroundColor = UIColor.primaryBlue
+        drugsFewTimesPerYear.setTitleColor(UIColor.white, for: .normal)
+        User.current.lifeSpecifications.illegalDrugsInfo = "drugsFewTimesPerYearSelected"
+        
+        neverDrugs.setTitleColor(UIColor.primaryBlue, for: .normal)
+        neverDrugs.backgroundColor = UIColor.clear
+        
+        drugsEveryFewMonths.setTitleColor(UIColor.primaryBlue, for: .normal)
+        drugsEveryFewMonths.backgroundColor = UIColor.clear
+        
+        drugsOnceMorePerMonth.setTitleColor(UIColor.primaryBlue, for: .normal)
+        drugsOnceMorePerMonth.backgroundColor = UIColor.clear
+        
+        drugsOncePerYear.setTitleColor(UIColor.primaryBlue, for: .normal)
+        drugsOncePerYear.backgroundColor = UIColor.clear
+        
+    }
+    func drugsEveryFewMonthsSelected() {
+        drugsEveryFewMonths.backgroundColor = UIColor.primaryBlue
+        drugsEveryFewMonths.setTitleColor(UIColor.white, for: .normal)
+        User.current.lifeSpecifications.illegalDrugsInfo = "drugsEveryFewMonthsSelected"
+        
+        drugsFewTimesPerYear.setTitleColor(UIColor.primaryBlue, for: .normal)
+        drugsFewTimesPerYear.backgroundColor = UIColor.clear
+        
+        neverDrugs.setTitleColor(UIColor.primaryBlue, for: .normal)
+        neverDrugs.backgroundColor = UIColor.clear
+        
+        drugsOnceMorePerMonth.setTitleColor(UIColor.primaryBlue, for: .normal)
+        drugsOnceMorePerMonth.backgroundColor = UIColor.clear
+        
+        drugsOncePerYear.setTitleColor(UIColor.primaryBlue, for: .normal)
+        drugsOncePerYear.backgroundColor = UIColor.clear
+        
+    }
+    func drugsOnceOrMorePerMonth() {
+        drugsOnceMorePerMonth.backgroundColor = UIColor.primaryBlue
+        drugsOnceMorePerMonth.setTitleColor(UIColor.white, for: .normal)
+        User.current.lifeSpecifications.illegalDrugsInfo = "drugsOnceOrMorePerMonth"
+        
+        drugsFewTimesPerYear.setTitleColor(UIColor.primaryBlue, for: .normal)
+        drugsFewTimesPerYear.backgroundColor = UIColor.clear
+        
+        drugsEveryFewMonths.setTitleColor(UIColor.primaryBlue, for: .normal)
+        drugsEveryFewMonths.backgroundColor = UIColor.clear
+        
+        neverDrugs.setTitleColor(UIColor.primaryBlue, for: .normal)
+        neverDrugs.backgroundColor = UIColor.clear
+        
+        drugsOncePerYear.setTitleColor(UIColor.primaryBlue, for: .normal)
+        drugsOncePerYear.backgroundColor = UIColor.clear
+        
+    }
+    func drugsOncePerYearS() {
+        drugsOncePerYear.backgroundColor = UIColor.primaryBlue
+        drugsOncePerYear.setTitleColor(UIColor.white, for: .normal)
+        User.current.lifeSpecifications.illegalDrugsInfo = "drugsOncePerYear"
+        
+        drugsFewTimesPerYear.setTitleColor(UIColor.primaryBlue, for: .normal)
+        drugsFewTimesPerYear.backgroundColor = UIColor.clear
+        
+        drugsEveryFewMonths.setTitleColor(UIColor.primaryBlue, for: .normal)
+        drugsEveryFewMonths.backgroundColor = UIColor.clear
+        
+        neverDrugs.setTitleColor(UIColor.primaryBlue, for: .normal)
+        neverDrugs.backgroundColor = UIColor.clear
+        
+        drugsOnceMorePerMonth.setTitleColor(UIColor.primaryBlue, for: .normal)
+        drugsOnceMorePerMonth.backgroundColor = UIColor.clear
+        
+    }
         
     @IBAction func calculateButtonTapped(_ sender: UIButton) {
         LifeExpectancyCalculator.calculateAge(forUser: User.current) { (finalAge) in

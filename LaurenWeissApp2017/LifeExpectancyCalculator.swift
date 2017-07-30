@@ -119,10 +119,10 @@ class LifeExpectancyCalculator {
 //DRUGS AND ALCOHOL USE VIEW CONTROLLER Functions
             
             //smoking impact
-            if (user.lifeSpecifications.isSmoking) {
-                let agesToSubtractBasedOnSmoking = LifeExpectancyCalculator.smokingImpact(lifeSpecs: user.lifeSpecifications)
-                baseAge = baseAge - agesToSubtractBasedOnSmoking
-            }
+//            if (user.lifeSpecifications.isSmoking) {
+//                let agesToSubtractBasedOnSmoking = LifeExpectancyCalculator.smokingImpact(lifeSpecs: user.lifeSpecifications)
+//                baseAge = baseAge - agesToSubtractBasedOnSmoking
+//            }
             
             //second hand smoking impact
             
@@ -299,20 +299,20 @@ class LifeExpectancyCalculator {
 //DRUGS AND ALCOHOL USE VIEW CONTROLLER Functions
     
     //smoking impact
-    private static func smokingImpact(lifeSpecs: LifeSpecs) -> Double {
-        
-        switch lifeSpecs.numCigarettesPerDay {
-        case 0:
-            return 1
-        case 1:
-            return 2
-        case 2:
-            return 3
-        default:
-            return 4
-        }
-        
-    }
+//    private static func smokingImpact(lifeSpecs: LifeSpecs) -> Double {
+//        
+//        switch lifeSpecs.numCigarettesPerDay {
+//        case 0:
+//            return 1
+//        case 1:
+//            return 2
+//        case 2:
+//            return 3
+//        default:
+//            return 4
+//        }
+//        
+//    }
     //second hand smoking impact
     
     
