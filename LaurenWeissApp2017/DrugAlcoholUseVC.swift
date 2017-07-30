@@ -104,10 +104,10 @@ class DrugAlcoholUseVC: UIViewController, UIScrollViewDelegate {
     }
     
     //do you smoke
-    func yesSmoke() {
+    func yesSmokeSelected() {
         
     }
-    func noSmoke() {
+    func noSmokeSelected() {
         
     }
     
@@ -143,18 +143,18 @@ class DrugAlcoholUseVC: UIViewController, UIScrollViewDelegate {
     }
     
     //do you drink alcohol
-    func yesAlcohol() {
+    func yesAlcoholSelected() {
         
     }
-    func noAlcohol() {
+    func noAlcoholSelected() {
         
     }
     
     //number of nights spent drinking alcohol
-    func oneToTwoDaysDrinkingPerWeek() {
+    func oneToTwoDaysDrinkingPerWeekSelected() {
         
     }
-    func threeToFiveDaysDrinkingPerWeek() {
+    func threeToFiveDaysDrinkingPerWeekSelected() {
         
     }
     func sixToSevenDaysDrinkningPerWeek() {
@@ -162,24 +162,24 @@ class DrugAlcoholUseVC: UIViewController, UIScrollViewDelegate {
     }
     
     //number of drinks in one night of drinkning
-    func oneToTwoDrinksPerNight() {
+    func oneToTwoDrinksPerNightSelected() {
         
     }
-    func aboutThreeDrinksPerNight() {
+    func aboutThreeDrinksPerNightSelected() {
         
     }
-    func atLeastThreeDrinksPerNight() {
+    func atLeastThreeDrinksPerNightSelected() {
         
     }
     
     //do you take illegal drugs
-    func neverDrugs() {
+    func neverDrugsSelected() {
         
     }
-    func drugsFewTimesPerYear() {
+    func drugsFewTimesPerYearSelected() {
         
     }
-    func drugsEveryFewMonths() {
+    func drugsEveryFewMonthsSelected() {
         
     }
     func drugsOnceOrMorePerMonth() {
@@ -191,7 +191,8 @@ class DrugAlcoholUseVC: UIViewController, UIScrollViewDelegate {
         LifeExpectancyCalculator.calculateAge(forUser: User.current) { (finalAge) in
             User.current.finalAge = finalAge
         }
-        
+    }
+    
         override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             if segue.identifier == "toDeathDate" {
                 
@@ -200,9 +201,7 @@ class DrugAlcoholUseVC: UIViewController, UIScrollViewDelegate {
                     destinationVC.deathAgeAsDouble = User.current.finalAge
                 }
             }
-        }
-        
-    }
-
-    
 }
+}
+
+

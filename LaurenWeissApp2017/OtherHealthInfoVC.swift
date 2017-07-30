@@ -107,7 +107,7 @@ class OtherHealthInfoVC: UIViewController, UIScrollViewDelegate {
     }
     
     //sunscreen info
-    func alwaysSunscreen(){
+    func alwaysSunscreenSelected(){
         
     }
     func mostOfTheTimeSunscreen(){
@@ -116,15 +116,15 @@ class OtherHealthInfoVC: UIViewController, UIScrollViewDelegate {
     func sometimesSunscreen() {
         
     }
-    func rarelySunscreen() {
+    func rarelySunscreenSelected() {
         
     }
     
     //cancer screening info
-    func noCancerScreening(){
+    func noCancerScreeningSelected(){
         
     }
-    func yesCancerScreening() {
+    func yesCancerScreeningSelected() {
         
     }
     
