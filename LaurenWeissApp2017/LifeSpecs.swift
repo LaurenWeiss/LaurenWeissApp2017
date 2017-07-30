@@ -11,7 +11,7 @@ import SwiftyJSON
 
 class LifeSpecs {
     
-
+//set default values here
     
     //GENERAL
     var dob: Date = Date()
