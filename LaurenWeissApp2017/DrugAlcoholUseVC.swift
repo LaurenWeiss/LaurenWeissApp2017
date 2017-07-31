@@ -48,10 +48,12 @@ class DrugAlcoholUseVC: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var drugsOnceMorePerMonth: UIButton!
     @IBOutlet weak var drugsEveryFewMonths: UIButton!
     
+    @IBOutlet weak var calculateButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        calculateButton.layer.cornerRadius = 10
+
         //making the buttons have rounded corners
         
         yesSmoke.layer.cornerRadius = 10
@@ -162,8 +164,21 @@ class DrugAlcoholUseVC: UIViewController, UIScrollViewDelegate {
     @IBAction func selectWhetherOrNotSmoke(_ sender: UIButton) {
         if sender.tag == 0 {
             yesSmokeSelected()
+            oneCigToHalfPack.isEnabled = true
+            oneAndHalfPacksSmoke.isEnabled = true
+            threeOrMorePacksSmoke.isEnabled = true
+            onePackSmoke.isEnabled = true
+            twoPacksSmoke.isEnabled = true
+            
         } else if sender.tag == 1 {
             noSmokeSelected()
+            oneCigToHalfPack.isEnabled = false
+            oneAndHalfPacksSmoke.isEnabled = false
+            threeOrMorePacksSmoke.isEnabled = false
+            twoPacksSmoke.isEnabled = false
+            onePackSmoke.isEnabled = false
+
+            
         }
     }
     

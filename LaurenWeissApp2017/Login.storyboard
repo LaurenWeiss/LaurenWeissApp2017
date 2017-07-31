@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -23,35 +22,37 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="73a-59-e29">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="239"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LifE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="id8-5H-ZuB">
                                         <rect key="frame" x="8" y="138" width="140" height="93"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="76"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-MediumItalic" family="Avenir Next" pointSize="76"/>
                                         <color key="textColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="xpectancy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jgv-Qz-Q3K">
                                         <rect key="frame" x="137" y="138" width="238" height="84"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="50"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-MediumItalic" family="Avenir Next" pointSize="50"/>
                                         <color key="textColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pexels-photo-103127" translatesAutoresizingMaskIntoConstraints="NO" id="VeL-ky-RLW">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.23529411759999999" green="0.66666666669999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BWx-JG-WSC">
-                                <rect key="frame" x="42.5" y="420" width="290" height="70"/>
-                                <color key="backgroundColor" red="0.098039215686274508" green="0.098039215686274508" blue="0.098039215686274508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="Cz3-LG-YCy"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BWx-JG-WSC">
+                                <rect key="frame" x="42.5" y="429" width="290" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="35"/>
                                 <state key="normal" title="Register or Log In">
-                                    <color key="titleColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.231566146" green="0.66540956500000004" blue="0.90203237530000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
                                     <action selector="loginButtonTapped:" destination="S2V-mq-Ioy" eventType="touchUpInside" id="dkO-vU-8xF"/>
@@ -59,12 +60,6 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.23529411759999999" green="0.66666666669999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="BWx-JG-WSC" secondAttribute="trailing" constant="26.5" id="JDK-yE-7Td"/>
-                            <constraint firstItem="BWx-JG-WSC" firstAttribute="leading" secondItem="EM4-0p-sL5" secondAttribute="leadingMargin" constant="26.5" id="S0r-FA-K8p"/>
-                            <constraint firstItem="BWx-JG-WSC" firstAttribute="centerX" secondItem="EM4-0p-sL5" secondAttribute="centerX" id="jIn-64-WaV"/>
-                            <constraint firstItem="mi7-Zn-tUr" firstAttribute="top" secondItem="BWx-JG-WSC" secondAttribute="bottom" constant="177" id="l4H-JC-yiK"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="9ow-Se-iIw"/>
                     <connections>
@@ -98,7 +93,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ueo-9f-YX3">
-                                <rect key="frame" x="150" y="302" width="46" height="22"/>
+                                <rect key="frame" x="150" y="302" width="97" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Next">
                                     <color key="titleColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -146,4 +141,7 @@
             <point key="canvasLocation" x="-181.59999999999999" y="63.418290854572717"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="pexels-photo-103127" width="6000" height="3125"/>
+    </resources>
 </document>

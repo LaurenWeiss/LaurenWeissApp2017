@@ -54,10 +54,12 @@ class DietAndNutritionVC: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var threeToFourFastFood: UIButton!
     @IBOutlet weak var overFiveFastFood: UIButton!
     
+    @IBOutlet weak var calculateButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        calculateButton.layer.cornerRadius = 10
+
         //making the buttons have rounded corners
         
         zeroCupsCoffee.layer.cornerRadius = 10

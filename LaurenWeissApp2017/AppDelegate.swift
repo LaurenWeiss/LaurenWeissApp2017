@@ -8,6 +8,8 @@
 
 import UIKit
 import Firebase
+import GoogleMobileAds
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,6 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         
         configureInitialRootViewController(for: window)
+        
+        GADMobileAds.configure(withApplicationID: "ca-app-pub-2458339528814864~5497031975")
+
         
         return true
     }

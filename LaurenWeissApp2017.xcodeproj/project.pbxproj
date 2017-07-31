@@ -13,6 +13,8 @@
 		2E1851DD1F13F2750094F732 /* LaurenWeissApp2017UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1851DC1F13F2750094F732 /* LaurenWeissApp2017UITests.swift */; };
 		2E1851ED1F15356C0094F732 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E1851EC1F15356C0094F732 /* Login.storyboard */; };
 		2E1851F01F1536F70094F732 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1851EF1F1536F70094F732 /* LoginViewController.swift */; };
+		2E3AB3981F2FADD300BE6050 /* SuggestionsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3AB3971F2FADD300BE6050 /* SuggestionsData.swift */; };
+		2E3AB39A1F2FC61100BE6050 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3AB3991F2FC61100BE6050 /* TableViewCell.swift */; };
 		2E6FB8ED1F28FE4500B9A44A /* CustomSideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6FB8EC1F28FE4500B9A44A /* CustomSideMenuController.swift */; };
 		2E6FB8F11F29100000B9A44A /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6FB8F01F29100000B9A44A /* MenuController.swift */; };
 		2E6FB8F31F29180600B9A44A /* YourDailyLifeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6FB8F21F29180600B9A44A /* YourDailyLifeVC.swift */; };
@@ -32,7 +34,7 @@
 		2EFFB7231F1551DE006BB041 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFFB7221F1551DE006BB041 /* Constants.swift */; };
 		2EFFB7251F155E69006BB041 /* Storyboard+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFFB7241F155E69006BB041 /* Storyboard+Utility.swift */; };
 		2EFFB72A1F169980006BB041 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EFFB7291F169980006BB041 /* Main.storyboard */; };
-		2EFFB7301F16B875006BB041 /* SuggestionsScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFFB72F1F16B875006BB041 /* SuggestionsScreenViewController.swift */; };
+		2EFFB7301F16B875006BB041 /* SuggestionsScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFFB72F1F16B875006BB041 /* SuggestionsScreenVC.swift */; };
 		2EFFB7321F16B8AA006BB041 /* DeathDateScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFFB7311F16B8AA006BB041 /* DeathDateScreenViewController.swift */; };
 		2EFFB7341F16B8BE006BB041 /* GeneralInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFFB7331F16B8BE006BB041 /* GeneralInfoVC.swift */; };
 		3017B2E1C24C0A5565DCE7A8 /* Pods_LaurenWeissApp2017.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98FC2CE630CEA8F99B3E8745 /* Pods_LaurenWeissApp2017.framework */; };
@@ -70,6 +72,8 @@
 		2E1851DE1F13F2750094F732 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E1851EC1F15356C0094F732 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		2E1851EF1F1536F70094F732 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		2E3AB3971F2FADD300BE6050 /* SuggestionsData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionsData.swift; sourceTree = "<group>"; };
+		2E3AB3991F2FC61100BE6050 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		2E6FB8EC1F28FE4500B9A44A /* CustomSideMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSideMenuController.swift; sourceTree = "<group>"; };
 		2E6FB8F01F29100000B9A44A /* MenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 		2E6FB8F21F29180600B9A44A /* YourDailyLifeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YourDailyLifeVC.swift; sourceTree = "<group>"; };
@@ -90,7 +94,7 @@
 		2EFFB7221F1551DE006BB041 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2EFFB7241F155E69006BB041 /* Storyboard+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Storyboard+Utility.swift"; sourceTree = "<group>"; };
 		2EFFB7291F169980006BB041 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		2EFFB72F1F16B875006BB041 /* SuggestionsScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionsScreenViewController.swift; sourceTree = "<group>"; };
+		2EFFB72F1F16B875006BB041 /* SuggestionsScreenVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionsScreenVC.swift; sourceTree = "<group>"; };
 		2EFFB7311F16B8AA006BB041 /* DeathDateScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeathDateScreenViewController.swift; sourceTree = "<group>"; };
 		2EFFB7331F16B8BE006BB041 /* GeneralInfoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralInfoVC.swift; sourceTree = "<group>"; };
 		56250601EED005B62EB6EE75 /* Pods-LaurenWeissApp2017UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaurenWeissApp2017UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LaurenWeissApp2017UITests/Pods-LaurenWeissApp2017UITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -156,6 +160,7 @@
 		2E1851BB1F13F2750094F732 /* LaurenWeissApp2017 */ = {
 			isa = PBXGroup;
 			children = (
+				2E196B4F1F2FC88D00E59572 /* cViews */,
 				2E1851BC1F13F2750094F732 /* AppDelegate.swift */,
 				2EFFB70E1F153731006BB041 /* Supporting Files */,
 				2E1851EE1F1535850094F732 /* Storyboards */,
@@ -197,6 +202,14 @@
 			name = Storyboards;
 			sourceTree = "<group>";
 		};
+		2E196B4F1F2FC88D00E59572 /* cViews */ = {
+			isa = PBXGroup;
+			children = (
+				2E3AB3991F2FC61100BE6050 /* TableViewCell.swift */,
+			);
+			name = cViews;
+			sourceTree = "<group>";
+		};
 		2E44ACE81F2131F000167BE5 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -210,7 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				2E44ACE81F2131F000167BE5 /* Login */,
-				2EFFB72F1F16B875006BB041 /* SuggestionsScreenViewController.swift */,
+				2EFFB72F1F16B875006BB041 /* SuggestionsScreenVC.swift */,
 				2EFFB7331F16B8BE006BB041 /* GeneralInfoVC.swift */,
 				2E6FB8F21F29180600B9A44A /* YourDailyLifeVC.swift */,
 				2E6FB8F41F29181500B9A44A /* RelationshipsVC.swift */,
@@ -239,6 +252,7 @@
 		2EFFB71B1F154821006BB041 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				2E3AB3971F2FADD300BE6050 /* SuggestionsData.swift */,
 				2EFFB71C1F15482E006BB041 /* User.swift */,
 				2E97D5D41F1FD6C800B065CE /* LifeSpecs.swift */,
 			);
@@ -568,8 +582,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E3AB3981F2FADD300BE6050 /* SuggestionsData.swift in Sources */,
 				2EFFB71D1F15482E006BB041 /* User.swift in Sources */,
-				2EFFB7301F16B875006BB041 /* SuggestionsScreenViewController.swift in Sources */,
+				2EFFB7301F16B875006BB041 /* SuggestionsScreenVC.swift in Sources */,
 				2EFFB7211F154C72006BB041 /* UserService.swift in Sources */,
 				2E6FB8F91F29183400B9A44A /* DietAndNutritionVC.swift in Sources */,
 				2EFFB7341F16B8BE006BB041 /* GeneralInfoVC.swift in Sources */,
@@ -589,6 +604,7 @@
 				2E1851BD1F13F2750094F732 /* AppDelegate.swift in Sources */,
 				2E6FB8F51F29181500B9A44A /* RelationshipsVC.swift in Sources */,
 				2E97D5D51F1FD6C800B065CE /* LifeSpecs.swift in Sources */,
+				2E3AB39A1F2FC61100BE6050 /* TableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

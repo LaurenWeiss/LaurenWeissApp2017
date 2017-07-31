@@ -69,11 +69,14 @@ class YourDailyLifeVC: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var lessThanHalfSeatbelt: UIButton!
     
     
+    @IBOutlet weak var calculateButton: UIButton!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        calculateButton.layer.cornerRadius = 10
+
         //Calling Functions: SELECT GENDER
         if User.current.lifeSpecifications.numExerciseDays == "zero" {
             zeroExerciseDaysPerWeekSelected()

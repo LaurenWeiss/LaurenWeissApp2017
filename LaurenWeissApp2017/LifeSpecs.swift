@@ -54,7 +54,7 @@ class LifeSpecs {
     
     //DRUGS/ALCOHOL
     
-    var isSmoking: Bool = false
+    var isSmoking: Bool = true
     var numCigarettesPerDay: String = ""
     var secondHandSmoke: String = ""
     var drinkAlcohol: Bool = true

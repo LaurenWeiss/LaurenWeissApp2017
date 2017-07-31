@@ -48,10 +48,12 @@ class RelationshipsVC: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var motherIndependent: UIButton!
     @IBOutlet weak var motherDeceased: UIButton!
     
+    @IBOutlet weak var calculateButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        calculateButton.layer.cornerRadius = 10
+
         //making the buttons have rounded corners
         
         single.layer.cornerRadius = 10

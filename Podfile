@@ -14,6 +14,7 @@ pod 'Firebase/Core'
   pod 'Alamofire'
   pod 'EMCCountryPickerController', '~> 1.1'
   pod 'SideMenuController'
+  pod 'Google-Mobile-Ads-SDK'
 
   # Pods for LaurenWeissApp2017
 
