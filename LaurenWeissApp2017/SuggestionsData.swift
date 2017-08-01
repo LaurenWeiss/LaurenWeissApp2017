@@ -101,7 +101,7 @@ class SuggestionsData {
         
         
         
-        
+        suggestionsArray.removeAll()
         prepareArray()
     }
 

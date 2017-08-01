@@ -23,8 +23,14 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var xpectancyLabel: UILabel!
     
+    
+    @IBOutlet weak var aboutButton: UIButton!
+    
     override func viewDidLoad() {
             super.viewDidLoad()
+        
+        loginButton.layer.cornerRadius = 10
+        aboutButton.layer.cornerRadius = 10
     }
     
     // MARK: - VC Lifecycle
@@ -34,20 +40,20 @@ class LoginViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        lifELabel.center.y -= view.bounds.width
-        xpectancyLabel.center.y -= view.bounds.width
-
-    }
+//    override func viewWillAppear(_ animated: Bool) {
+//        lifELabel.center.y -= view.bounds.width
+//        xpectancyLabel.center.y -= view.bounds.width
+//
+//    }
     
-    override func viewDidAppear(_ animated: Bool) {
-        UIView.animate(withDuration: 2.0, animations: {
-            self.lifELabel.center.y += self.view.bounds.width
-        })
-        UIView.animate(withDuration: 4.0, animations: {
-            self.xpectancyLabel.center.y += self.view.bounds.width
-        })
-    }
+//    override func viewDidAppear(_ animated: Bool) {
+//        UIView.animate(withDuration: 2.0, animations: {
+//            self.lifELabel.center.y += self.view.bounds.width
+//        })
+//        UIView.animate(withDuration: 4.0, animations: {
+//            self.xpectancyLabel.center.y += self.view.bounds.width
+//        })
+//    }
     
     // MARK: - IBActions
     

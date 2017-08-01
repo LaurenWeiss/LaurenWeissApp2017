@@ -16,11 +16,14 @@ class CreateUsernameViewController: UIViewController {
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var nextButton: UIButton!
     
+    @IBOutlet weak var createUsernameLabel: UILabel!
     // MARK: - VC Lifecycle
     
     override func viewDidLoad() {
             super.viewDidLoad()
-        nextButton.layer.cornerRadius = 6
+        nextButton.layer.cornerRadius = 10
+        createUsernameLabel.clipsToBounds = true
+        createUsernameLabel.layer.cornerRadius = 10
     }
     
     // MARK: - IBActions

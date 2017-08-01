@@ -74,6 +74,8 @@ class GeneralInfoVC: UIViewController, UIScrollViewDelegate {
         maleButton.layer.cornerRadius = 10
         femaleButton.layer.cornerRadius = 10
         
+        
+        
         //Calling Functions: SELECT WHY BMI IS HIGH
         if User.current.lifeSpecifications.whyBMI == "BMI high because of fat" {
             highBMIBecauseOfFatSelected()
@@ -135,6 +137,8 @@ class GeneralInfoVC: UIViewController, UIScrollViewDelegate {
         User.current.lifeSpecifications.weight = Double(sender.value)
         self.calculateBMI()
     }
+    
+    
     fileprivate func calculateBMI() {
         let height: Float = heightSlider.value
         let weight: Float = weightSlider.value
@@ -146,19 +150,25 @@ class GeneralInfoVC: UIViewController, UIScrollViewDelegate {
     fileprivate func changeStatus(_ bmi: Float) {
         if (bmi < 18) {
             bmiStatusLabel.text = "underweight"
+            
+            User.current.lifeSpecifications.BMI = "underweight"
             bmiStatusLabel.textColor = UIColor.blue
         } else if (bmi >= 18 && bmi < 25) {
             bmiStatusLabel.text = "normal"
+            User.current.lifeSpecifications.BMI = "normal"
             bmiStatusLabel.textColor = UIColor.green
         } else if (bmi >= 25 && bmi < 30) {
             bmiStatusLabel.text = "pre-obese"
+            User.current.lifeSpecifications.BMI = "pre-obese"
             bmiStatusLabel.textColor = UIColor.purple
         } else {
             bmiStatusLabel.text = "obese"
+            User.current.lifeSpecifications.BMI = "obese"
             bmiStatusLabel.textColor = UIColor.red
         }
     }
 
+    //MARK: - CALCULATE BUTTON
     //calculate button tapped by user
     
     @IBAction func calculateButtonTapped(_ sender: UIButton) {
