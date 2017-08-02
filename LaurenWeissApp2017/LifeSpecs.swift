@@ -31,7 +31,7 @@ class LifeSpecs {
     var numWorkHours: String = "lessThanFortyHoursPerWeekOfWorkSelected"
     var numWorkDays: String = "fiveDaysOrLessWorkWeekSelected"
     var airQuality: String = "slightlyPollutedAirQualitySelected"
-    var seatbeltInfo: String = "halfTimeSeatbeltSelected"
+  //  var seatbeltInfo: String = "halfTimeSeatbeltSelected"
     var numSleepHours: String = "sevenToNineHoursSleepSelected"
     var stressLevels: String = "mediumStressLevelsSelected"
     

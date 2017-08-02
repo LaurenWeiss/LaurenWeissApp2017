@@ -23,6 +23,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         GADMobileAds.configure(withApplicationID: "ca-app-pub-2458339528814864~5497031975")
 
+        //configure navigation bar style
+        UINavigationBar.appearance().barTintColor = UIColor.primaryBlue
+        UINavigationBar.appearance().tintColor = UIColor.white
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+        UINavigationBar.appearance().isTranslucent = false
+        UINavigationBar.appearance().setBackgroundImage(UIImage(), for:.default)
+        UINavigationBar.appearance().shadowImage = UIImage()
         
         return true
     }

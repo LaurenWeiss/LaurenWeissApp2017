@@ -77,8 +77,8 @@ class LifeExpectancyCalculator {
             baseAge = baseAge + yearsToAddBasedOnAirQuality
             
             //seatbelt impact
-            let yearsToAddBasedOnSeatbelt = LifeExpectancyCalculator.seatbeltImpact(lifeSpecs: user.lifeSpecifications)
-            baseAge = baseAge + yearsToAddBasedOnSeatbelt
+//            let yearsToAddBasedOnSeatbelt = LifeExpectancyCalculator.seatbeltImpact(lifeSpecs: user.lifeSpecifications)
+//            baseAge = baseAge + yearsToAddBasedOnSeatbelt
             
             //sleep impact
             let yearsToAddBasedOnSleep = LifeExpectancyCalculator.sleepImpact(lifeSpecs: user.lifeSpecifications)
@@ -373,17 +373,17 @@ class LifeExpectancyCalculator {
     //seatbelt impact
     //correct calculations
     //SEATBELT IS ACTUALLY PET INFO
-     static func seatbeltImpact(lifeSpecs: LifeSpecs) -> Double {
-        
-        switch lifeSpecs.seatbeltInfo {
-        case "yes":
-            return 2
-        case "no":
-            return 0
-        default:
-            return 0
-        }
-    }
+//     static func seatbeltImpact(lifeSpecs: LifeSpecs) -> Double {
+//        
+//        switch lifeSpecs.seatbeltInfo {
+//        case "yes":
+//            return 2
+//        case "no":
+//            return 0
+//        default:
+//            return 0
+//        }
+//    }
     
     //sleep impact
     //kind of correct calculations

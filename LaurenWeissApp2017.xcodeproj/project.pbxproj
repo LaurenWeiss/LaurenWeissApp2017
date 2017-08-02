@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E17322B1F327B0A0057B610 /* InstructionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E17322A1F327B0A0057B610 /* InstructionsVC.swift */; };
+		2E17322D1F3285520057B610 /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E17322C1F3285520057B610 /* Double+Extension.swift */; };
+		2E17322F1F3286A80057B610 /* Float+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E17322E1F3286A80057B610 /* Float+Extension.swift */; };
 		2E1851BD1F13F2750094F732 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1851BC1F13F2750094F732 /* AppDelegate.swift */; };
 		2E1851C41F13F2750094F732 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E1851C31F13F2750094F732 /* Assets.xcassets */; };
 		2E1851D21F13F2750094F732 /* LaurenWeissApp2017Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1851D11F13F2750094F732 /* LaurenWeissApp2017Tests.swift */; };
@@ -61,6 +64,9 @@
 
 /* Begin PBXFileReference section */
 		0FE3DDAA52C5EDE7B1A39A8A /* Pods_LaurenWeissApp2017UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LaurenWeissApp2017UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E17322A1F327B0A0057B610 /* InstructionsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstructionsVC.swift; sourceTree = "<group>"; };
+		2E17322C1F3285520057B610 /* Double+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
+		2E17322E1F3286A80057B610 /* Float+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Float+Extension.swift"; sourceTree = "<group>"; };
 		2E1851B91F13F2750094F732 /* LaurenWeissApp2017.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LaurenWeissApp2017.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E1851BC1F13F2750094F732 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2E1851C31F13F2750094F732 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -223,6 +229,7 @@
 			isa = PBXGroup;
 			children = (
 				2E44ACE81F2131F000167BE5 /* Login */,
+				2E17322A1F327B0A0057B610 /* InstructionsVC.swift */,
 				2EFFB72F1F16B875006BB041 /* SuggestionsScreenVC.swift */,
 				2EFFB7331F16B8BE006BB041 /* GeneralInfoVC.swift */,
 				2E6FB8F21F29180600B9A44A /* YourDailyLifeVC.swift */,
@@ -263,6 +270,8 @@
 			isa = PBXGroup;
 			children = (
 				2EFFB7241F155E69006BB041 /* Storyboard+Utility.swift */,
+				2E17322C1F3285520057B610 /* Double+Extension.swift */,
+				2E17322E1F3286A80057B610 /* Float+Extension.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -587,11 +596,13 @@
 				2EFFB7301F16B875006BB041 /* SuggestionsScreenVC.swift in Sources */,
 				2EFFB7211F154C72006BB041 /* UserService.swift in Sources */,
 				2E6FB8F91F29183400B9A44A /* DietAndNutritionVC.swift in Sources */,
+				2E17322B1F327B0A0057B610 /* InstructionsVC.swift in Sources */,
 				2EFFB7341F16B8BE006BB041 /* GeneralInfoVC.swift in Sources */,
 				2EFFB7251F155E69006BB041 /* Storyboard+Utility.swift in Sources */,
 				2E1851F01F1536F70094F732 /* LoginViewController.swift in Sources */,
 				2EFFB7231F1551DE006BB041 /* Constants.swift in Sources */,
 				2EFE557E1F2A913A005CD33E /* UIColorExtension.swift in Sources */,
+				2E17322D1F3285520057B610 /* Double+Extension.swift in Sources */,
 				2E6FB8ED1F28FE4500B9A44A /* CustomSideMenuController.swift in Sources */,
 				2E6FB8F11F29100000B9A44A /* MenuController.swift in Sources */,
 				2EFFB7321F16B8AA006BB041 /* DeathDateScreenViewController.swift in Sources */,
@@ -602,6 +613,7 @@
 				2EFFB71F1F1549CA006BB041 /* CreateUsernameViewController.swift in Sources */,
 				2E6FB8FB1F29184000B9A44A /* OtherHealthInfoVC.swift in Sources */,
 				2E1851BD1F13F2750094F732 /* AppDelegate.swift in Sources */,
+				2E17322F1F3286A80057B610 /* Float+Extension.swift in Sources */,
 				2E6FB8F51F29181500B9A44A /* RelationshipsVC.swift in Sources */,
 				2E97D5D51F1FD6C800B065CE /* LifeSpecs.swift in Sources */,
 				2E3AB39A1F2FC61100BE6050 /* TableViewCell.swift in Sources */,

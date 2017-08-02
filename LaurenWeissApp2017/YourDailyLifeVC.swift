@@ -63,10 +63,10 @@ class YourDailyLifeVC: UIViewController, UIScrollViewDelegate {
     
     //seatbelt info
     
-    @IBOutlet weak var alwaysSeatbelt: UIButton!
-    @IBOutlet weak var eightyPercentSeatbelt: UIButton!
-    @IBOutlet weak var halfTimeSeatbelt: UIButton!
-    @IBOutlet weak var lessThanHalfSeatbelt: UIButton!
+//    @IBOutlet weak var alwaysSeatbelt: UIButton!
+//    @IBOutlet weak var eightyPercentSeatbelt: UIButton!
+//    @IBOutlet weak var halfTimeSeatbelt: UIButton!
+//    @IBOutlet weak var lessThanHalfSeatbelt: UIButton!
     
     
     @IBOutlet weak var calculateButton: UIButton!
@@ -140,16 +140,16 @@ class YourDailyLifeVC: UIViewController, UIScrollViewDelegate {
         }
         
         //Calling Functions: SELECT SEATBELT SAFETY
-        if User.current.lifeSpecifications.seatbeltInfo == "alwaysWearSeatbeltSelected" {
-            alwaysWearSeatbeltSelected()
-        } else if User.current.lifeSpecifications.seatbeltInfo == "eightyPercentSeatbeltSelected" {
-            eightyPercentSeatbeltSelected()
-        } else if User.current.lifeSpecifications.seatbeltInfo == "halfTimeSeatbeltSelected" {
-            halfTimeSeatbeltSelected()
-        } else if User.current.lifeSpecifications.seatbeltInfo == "lessThanHalfTimeSeatbeltSelected" {
-            lessThanHalfTimeSeatbeltSelected()
-        }
-        
+//        if User.current.lifeSpecifications.seatbeltInfo == "alwaysWearSeatbeltSelected" {
+//            alwaysWearSeatbeltSelected()
+//        } else if User.current.lifeSpecifications.seatbeltInfo == "eightyPercentSeatbeltSelected" {
+//            eightyPercentSeatbeltSelected()
+//        } else if User.current.lifeSpecifications.seatbeltInfo == "halfTimeSeatbeltSelected" {
+//            halfTimeSeatbeltSelected()
+//        } else if User.current.lifeSpecifications.seatbeltInfo == "lessThanHalfTimeSeatbeltSelected" {
+//            lessThanHalfTimeSeatbeltSelected()
+//        }
+//        
         //Calling Functions: SELECT SLEEP HOURS
         if User.current.lifeSpecifications.numSleepHours == "lessThanFiveHoursSleepSelected" {
             lessThanFiveHoursSleepSelected()
@@ -201,10 +201,10 @@ class YourDailyLifeVC: UIViewController, UIScrollViewDelegate {
         veryCleanAir.layer.cornerRadius = 10
         slightlyPollutedAir.layer.cornerRadius = 10
         veryPollutedAir.layer.cornerRadius = 10
-        alwaysSeatbelt.layer.cornerRadius = 10
-        eightyPercentSeatbelt.layer.cornerRadius = 10
-        halfTimeSeatbelt.layer.cornerRadius = 10
-        lessThanHalfSeatbelt.layer.cornerRadius = 10
+//        alwaysSeatbelt.layer.cornerRadius = 10
+//        eightyPercentSeatbelt.layer.cornerRadius = 10
+//       halfTimeSeatbelt.layer.cornerRadius = 10
+//        lessThanHalfSeatbelt.layer.cornerRadius = 10
     }
     
     
@@ -760,77 +760,77 @@ class YourDailyLifeVC: UIViewController, UIScrollViewDelegate {
     
     //seatbelt info functions
     
-    
-    @IBAction func seatbeltInfo(_ sender: UIButton) {
-        if sender.tag == 0 {
-            alwaysWearSeatbeltSelected()
-        } else if sender.tag == 1 {
-            eightyPercentSeatbeltSelected()
-        } else if sender.tag == 2 {
-            halfTimeSeatbeltSelected()
-        } else if sender.tag == 3 {
-            lessThanHalfTimeSeatbeltSelected()
-        }
-    }
-    
-    func alwaysWearSeatbeltSelected() {
-        alwaysSeatbelt.backgroundColor = UIColor.primaryBlue
-        alwaysSeatbelt.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.seatbeltInfo = "alwaysWearSeatbeltSelected"
-        
-        eightyPercentSeatbelt.setTitleColor(UIColor.primaryBlue, for: .normal)
-        eightyPercentSeatbelt.backgroundColor = UIColor.clear
-        
-        halfTimeSeatbelt.setTitleColor(UIColor.primaryBlue, for: .normal)
-        halfTimeSeatbelt.backgroundColor = UIColor.clear
-        
-        lessThanHalfSeatbelt.setTitleColor(UIColor.primaryBlue, for: .normal)
-        lessThanHalfSeatbelt.backgroundColor = UIColor.clear
-    }
-    func eightyPercentSeatbeltSelected() {
-        eightyPercentSeatbelt.backgroundColor = UIColor.primaryBlue
-        eightyPercentSeatbelt.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.seatbeltInfo = "eightyPercentSeatbeltSelected"
-        
-        alwaysSeatbelt.setTitleColor(UIColor.primaryBlue, for: .normal)
-        alwaysSeatbelt.backgroundColor = UIColor.clear
-        
-        halfTimeSeatbelt.setTitleColor(UIColor.primaryBlue, for: .normal)
-        halfTimeSeatbelt.backgroundColor = UIColor.clear
-        
-        lessThanHalfSeatbelt.setTitleColor(UIColor.primaryBlue, for: .normal)
-        lessThanHalfSeatbelt.backgroundColor = UIColor.clear
-    }
-    func halfTimeSeatbeltSelected() {
-        halfTimeSeatbelt.backgroundColor = UIColor.primaryBlue
-        halfTimeSeatbelt.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.seatbeltInfo = "halfTimeSeatbeltSelected"
-        
-        alwaysSeatbelt.setTitleColor(UIColor.primaryBlue, for: .normal)
-        alwaysSeatbelt.backgroundColor = UIColor.clear
-        
-        eightyPercentSeatbelt.setTitleColor(UIColor.primaryBlue, for: .normal)
-        eightyPercentSeatbelt.backgroundColor = UIColor.clear
-        
-        lessThanHalfSeatbelt.setTitleColor(UIColor.primaryBlue, for: .normal)
-        lessThanHalfSeatbelt.backgroundColor = UIColor.clear
-        
-    }
-    func lessThanHalfTimeSeatbeltSelected() {
-        lessThanHalfSeatbelt.backgroundColor = UIColor.primaryBlue
-        lessThanHalfSeatbelt.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.seatbeltInfo = "lessThanHalfTimeSeatbeltSelected"
-        
-        alwaysSeatbelt.setTitleColor(UIColor.primaryBlue, for: .normal)
-        alwaysSeatbelt.backgroundColor = UIColor.clear
-        
-        eightyPercentSeatbelt.setTitleColor(UIColor.primaryBlue, for: .normal)
-        eightyPercentSeatbelt.backgroundColor = UIColor.clear
-        
-        halfTimeSeatbelt.setTitleColor(UIColor.primaryBlue, for: .normal)
-        halfTimeSeatbelt.backgroundColor = UIColor.clear
-        
-    }
+//    
+//    @IBAction func seatbeltInfo(_ sender: UIButton) {
+//        if sender.tag == 0 {
+//            alwaysWearSeatbeltSelected()
+//        } else if sender.tag == 1 {
+//            eightyPercentSeatbeltSelected()
+//        } else if sender.tag == 2 {
+//            halfTimeSeatbeltSelected()
+//        } else if sender.tag == 3 {
+//            lessThanHalfTimeSeatbeltSelected()
+//        }
+//    }
+//    
+//    func alwaysWearSeatbeltSelected() {
+//        alwaysSeatbelt.backgroundColor = UIColor.primaryBlue
+//        alwaysSeatbelt.setTitleColor(UIColor.white, for: .normal)
+//        User.current.lifeSpecifications.seatbeltInfo = "alwaysWearSeatbeltSelected"
+//        
+//        eightyPercentSeatbelt.setTitleColor(UIColor.primaryBlue, for: .normal)
+//        eightyPercentSeatbelt.backgroundColor = UIColor.clear
+//        
+//        halfTimeSeatbelt.setTitleColor(UIColor.primaryBlue, for: .normal)
+//        halfTimeSeatbelt.backgroundColor = UIColor.clear
+//        
+//        lessThanHalfSeatbelt.setTitleColor(UIColor.primaryBlue, for: .normal)
+//        lessThanHalfSeatbelt.backgroundColor = UIColor.clear
+//    }
+//    func eightyPercentSeatbeltSelected() {
+//        eightyPercentSeatbelt.backgroundColor = UIColor.primaryBlue
+//        eightyPercentSeatbelt.setTitleColor(UIColor.white, for: .normal)
+//        User.current.lifeSpecifications.seatbeltInfo = "eightyPercentSeatbeltSelected"
+//        
+//        alwaysSeatbelt.setTitleColor(UIColor.primaryBlue, for: .normal)
+//        alwaysSeatbelt.backgroundColor = UIColor.clear
+//        
+//        halfTimeSeatbelt.setTitleColor(UIColor.primaryBlue, for: .normal)
+//        halfTimeSeatbelt.backgroundColor = UIColor.clear
+//        
+//        lessThanHalfSeatbelt.setTitleColor(UIColor.primaryBlue, for: .normal)
+//        lessThanHalfSeatbelt.backgroundColor = UIColor.clear
+//    }
+//    func halfTimeSeatbeltSelected() {
+////        halfTimeSeatbelt.backgroundColor = UIColor.primaryBlue
+////        halfTimeSeatbelt.setTitleColor(UIColor.white, for: .normal)
+//        User.current.lifeSpecifications.seatbeltInfo = "halfTimeSeatbeltSelected"
+//        
+//        alwaysSeatbelt.setTitleColor(UIColor.primaryBlue, for: .normal)
+//        alwaysSeatbelt.backgroundColor = UIColor.clear
+//        
+//        eightyPercentSeatbelt.setTitleColor(UIColor.primaryBlue, for: .normal)
+//        eightyPercentSeatbelt.backgroundColor = UIColor.clear
+//        
+//        lessThanHalfSeatbelt.setTitleColor(UIColor.primaryBlue, for: .normal)
+//        lessThanHalfSeatbelt.backgroundColor = UIColor.clear
+//        
+//    }
+//    func lessThanHalfTimeSeatbeltSelected() {
+//        lessThanHalfSeatbelt.backgroundColor = UIColor.primaryBlue
+//        lessThanHalfSeatbelt.setTitleColor(UIColor.white, for: .normal)
+//        User.current.lifeSpecifications.seatbeltInfo = "lessThanHalfTimeSeatbeltSelected"
+//        
+//        alwaysSeatbelt.setTitleColor(UIColor.primaryBlue, for: .normal)
+//        alwaysSeatbelt.backgroundColor = UIColor.clear
+//        
+//        eightyPercentSeatbelt.setTitleColor(UIColor.primaryBlue, for: .normal)
+//        eightyPercentSeatbelt.backgroundColor = UIColor.clear
+//        
+//        halfTimeSeatbelt.setTitleColor(UIColor.primaryBlue, for: .normal)
+//        halfTimeSeatbelt.backgroundColor = UIColor.clear
+//        
+//    }
     
     //hours of sleep per night info functions
     

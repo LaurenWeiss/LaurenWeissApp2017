@@ -57,7 +57,7 @@ class GeneralInfoVC: UIViewController, UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        countryLabel.text = "United States"
+        countryLabel.text = User.current.lifeSpecifications.country
         
         calculateButton.layer.cornerRadius = 10
         
@@ -117,25 +117,27 @@ class GeneralInfoVC: UIViewController, UIScrollViewDelegate {
         yesDiabetes.layer.cornerRadius = 10
         noDiabetes.layer.cornerRadius = 10
         
-        heightLabel.text = String(User.current.lifeSpecifications.height) + " inches"
-        weightLabel.text = String(User.current.lifeSpecifications.weight) + " pounds"
-        heightSlider.value = Float(User.current.lifeSpecifications.height)
-        weightSlider.value = Float(User.current.lifeSpecifications.weight)
+        heightLabel.text = String(User.current.lifeSpecifications.height.rounded()) + " inches"
+        weightLabel.text = String(User.current.lifeSpecifications.weight.rounded()) + " pounds"
+        heightSlider.value = Float(User.current.lifeSpecifications.height.rounded())
+        weightSlider.value = Float(User.current.lifeSpecifications.weight.rounded())
+        
+        calculateBMI()
     }
     
     //BMI Info functions
     
     @IBAction func heightValueDidChange(_ sender: UISlider) {
-        let currentValue = Float(sender.value)
+        let currentValue = sender.value.rounded()
         heightLabel.text = "\(currentValue) inches"
-        User.current.lifeSpecifications.height = Double(sender.value)
+        User.current.lifeSpecifications.height = Double(sender.value.rounded())
         self.calculateBMI()
     }
     
     @IBAction func weightValueDidChange(_ sender: UISlider) {
-        let currentValue = Float(sender.value)
+        let currentValue = sender.value.rounded()
         weightLabel.text = "\(currentValue) pounds"
-        User.current.lifeSpecifications.weight = Double(sender.value)
+        User.current.lifeSpecifications.weight = Double(sender.value.rounded())
         self.calculateBMI()
     }
     
@@ -144,28 +146,29 @@ class GeneralInfoVC: UIViewController, UIScrollViewDelegate {
         let height: Float = heightSlider.value
         let weight: Float = weightSlider.value
         let bmi: Float = (weight / (height*height)) * 703
+        let roundedBMI = bmi.rounded()
         
-        calculatedBMIValue.text = "\(bmi)"
-        self.changeStatus(bmi)
+        calculatedBMIValue.text = "\(Int(roundedBMI))"
+        self.changeStatus(roundedBMI)
     }
     fileprivate func changeStatus(_ bmi: Float) {
         if (bmi < 18) {
-            bmiStatusLabel.text = "underweight"
+            bmiStatusLabel.text = "Underweight"
             
             User.current.lifeSpecifications.BMI = "underweight"
-            bmiStatusLabel.textColor = UIColor.blue
+            bmiStatusLabel.textColor = UIColor.primaryBlue
         } else if (bmi >= 18 && bmi < 25) {
-            bmiStatusLabel.text = "normal"
+            bmiStatusLabel.text = "Normal"
             User.current.lifeSpecifications.BMI = "normal"
-            bmiStatusLabel.textColor = UIColor.green
+            bmiStatusLabel.textColor = UIColor.primaryBlue
         } else if (bmi >= 25 && bmi < 30) {
-            bmiStatusLabel.text = "pre-obese"
+            bmiStatusLabel.text = "Pre-obese"
             User.current.lifeSpecifications.BMI = "pre-obese"
-            bmiStatusLabel.textColor = UIColor.purple
+            bmiStatusLabel.textColor = UIColor.primaryBlue
         } else {
-            bmiStatusLabel.text = "obese"
+            bmiStatusLabel.text = "Obese"
             User.current.lifeSpecifications.BMI = "obese"
-            bmiStatusLabel.textColor = UIColor.red
+            bmiStatusLabel.textColor = UIColor.primaryBlue
         }
     }
 
@@ -430,9 +433,9 @@ extension GeneralInfoVC: EMCCountryDelegate {
    
     //SELECT COUNTRY
     func countryController(_ sender: Any!, didSelect chosenCountry: EMCCountry!) {
-        print(chosenCountry.countryName())
+        User.current.lifeSpecifications.country = chosenCountry.countryName()
         countryLabel.text = chosenCountry.countryName()
         self.chosenCountry = chosenCountry.countryName()
-        dismiss(animated: true, completion: nil)
+        //dismiss(animated: true, completion: nil)
     }
 }
