@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -85,10 +86,10 @@
             </objects>
             <point key="canvasLocation" x="712.79999999999995" y="62.518740629685162"/>
         </scene>
-        <!--View Controller-->
+        <!--About-->
         <scene sceneID="AUa-Df-4ET">
             <objects>
-                <viewController id="TTi-9q-SRT" sceneMemberID="viewController">
+                <viewController id="TTi-9q-SRT" userLabel="About" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cRe-wV-eBh"/>
                         <viewControllerLayoutGuide type="bottom" id="ZGH-wp-8nR"/>
@@ -96,12 +97,46 @@
                     <view key="view" contentMode="scaleToFill" id="8hg-ic-saz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Socialive (1)" translatesAutoresizingMaskIntoConstraints="NO" id="dPp-Q2-LWM">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="my_logo (2)" translatesAutoresizingMaskIntoConstraints="NO" id="huo-HP-TRN">
+                                <rect key="frame" x="0.0" y="0.0" width="379" height="179"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="About" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PSC-YD-VWg">
+                                <rect key="frame" x="157" y="162" width="64" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="11" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4tK-PC-BC7">
+                                <rect key="frame" x="37" y="213" width="305" height="207"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Have you ever wondered how many years you have left to live? With the LifExpectancy app, not only will you be able to get your life expectancy, but you will also be given suggestions on how to add years to your life. In addition, LifExpectancy stores all of your information so that you can update and track your progress in maintaining a healthy lifestyle.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="11" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JQz-bc-4lG">
+                                <rect key="frame" x="37" y="428" width="305" height="207"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">LifExpectancy, an app made to promote healthy living with an interseting approach, is based on the collective research of multiple sources, including a physician from Centura Health, the World Health Organization, social security databases, and the work of Boston University School of Medicine.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0ao-FT-ohN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="708" y="795"/>
+            <point key="canvasLocation" x="708" y="794.75262368815595"/>
         </scene>
         <!--Create Username View Controller-->
         <scene sceneID="lBa-f0-Cii">
@@ -119,10 +154,12 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ueo-9f-YX3">
-                                <rect key="frame" x="166" y="604" width="97" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ueo-9f-YX3">
+                                <rect key="frame" x="155" y="604" width="65" height="36"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="65" id="kDy-3m-11s"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
                                 <state key="normal" title="Next">
                                     <color key="titleColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -131,23 +168,33 @@
                                     <action selector="nextButtonTapped:" destination="bRB-qK-iBy" eventType="touchUpInside" id="61p-Bh-gmk"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="19" translatesAutoresizingMaskIntoConstraints="NO" id="tiR-sw-QTL">
-                                <rect key="frame" x="128" y="554" width="151" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="19" translatesAutoresizingMaskIntoConstraints="NO" id="tiR-sw-QTL">
+                                <rect key="frame" x="116" y="554" width="143" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Create Username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AsA-G9-tak">
-                                <rect key="frame" x="16" y="28" width="329" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create Username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AsA-G9-tak">
+                                <rect key="frame" x="24" y="28" width="327" height="48"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-BoldItalic" family="Avenir Next" pointSize="35"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="AsA-G9-tak" firstAttribute="centerX" secondItem="hfC-TU-kJp" secondAttribute="centerX" id="1Gl-go-ddz"/>
+                            <constraint firstItem="Ueo-9f-YX3" firstAttribute="top" secondItem="tiR-sw-QTL" secondAttribute="bottom" constant="20" id="BJc-MH-gBJ"/>
+                            <constraint firstItem="tiR-sw-QTL" firstAttribute="top" secondItem="AsA-G9-tak" secondAttribute="bottom" constant="478" id="Fnt-Kc-P0M"/>
+                            <constraint firstItem="AsA-G9-tak" firstAttribute="top" secondItem="eFR-mM-ewp" secondAttribute="bottom" constant="8" id="SFU-oP-ZrW"/>
+                            <constraint firstItem="tiR-sw-QTL" firstAttribute="leading" secondItem="hfC-TU-kJp" secondAttribute="leadingMargin" constant="100" id="d27-SU-eAP"/>
+                            <constraint firstItem="tiR-sw-QTL" firstAttribute="centerX" secondItem="hfC-TU-kJp" secondAttribute="centerX" id="hne-fd-hn8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="AsA-G9-tak" secondAttribute="trailing" constant="8" id="n4p-cZ-eh5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tiR-sw-QTL" secondAttribute="trailing" constant="100" id="qPK-gW-1KW"/>
+                            <constraint firstItem="Ueo-9f-YX3" firstAttribute="centerX" secondItem="hfC-TU-kJp" secondAttribute="centerX" id="zHk-0R-4ds"/>
+                            <constraint firstItem="AsA-G9-tak" firstAttribute="leading" secondItem="hfC-TU-kJp" secondAttribute="leadingMargin" constant="8" id="zHy-kE-60s"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="createUsernameLabel" destination="AsA-G9-tak" id="gbg-tY-N5h"/>
@@ -179,6 +226,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Socialive (1)" width="1680" height="1050"/>
+        <image name="my_logo (2)" width="495" height="194"/>
         <image name="my_logo (3)" width="400" height="170"/>
         <image name="pexels-photo" width="5472" height="3648"/>
         <image name="pexels-photo-103127" width="6000" height="3125"/>
