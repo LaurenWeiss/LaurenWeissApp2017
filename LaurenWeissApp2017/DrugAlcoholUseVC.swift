@@ -389,8 +389,21 @@ class DrugAlcoholUseVC: UIViewController, UIScrollViewDelegate {
     @IBAction func selectDoYouDrink(_ sender: UIButton) {
         if sender.tag == 0 {
             yesAlcoholSelected()
+            oneToTwoDrinksPerNight.isEnabled = true
+            threeToFiveDaysDrinkingPerWeek.isEnabled = true
+            sixToSevenDaysDrinkingPerWeek.isEnabled = true
+            oneToTwoDrinksPerNight.isEnabled = true
+            aboutThreeDrinksPerNight.isEnabled = true
+            atLeastThreeDrinksPerNight.isEnabled = true
+            
         } else if sender.tag == 1 {
             noAlcoholSelected()
+            oneToTwoDrinksPerNight.isEnabled = false
+            threeToFiveDaysDrinkingPerWeek.isEnabled = false
+            sixToSevenDaysDrinkingPerWeek.isEnabled = false
+            oneToTwoDrinksPerNight.isEnabled = false
+            aboutThreeDrinksPerNight.isEnabled = false
+            atLeastThreeDrinksPerNight.isEnabled = false
         }
         
     }

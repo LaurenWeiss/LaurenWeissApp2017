@@ -11,6 +11,6 @@ import UIKit
 extension UIColor {
     
     static var primaryBlue: UIColor {
-        return UIColor(red: 60/255, green: 170/255, blue: 230/255, alpha: 1)
+        return UIColor(red: 97/255, green: 177/255, blue: 188/255, alpha: 1)
     }
 }

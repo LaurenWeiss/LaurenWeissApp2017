@@ -200,18 +200,18 @@ class LifeExpectancyCalculator {
 //GENERAL VIEW CONTROLLER Functions IMPACT CALCULATIONS (that are not part of the "base" age)
     
     //bmi impact
-    //haven't implemented correct calculations yet
-    private static func bmiImpact(lifeSpecs: LifeSpecs) -> Double {
+    //kind of correct calculations
+     static func bmiImpact(lifeSpecs: LifeSpecs) -> Double {
         
         switch lifeSpecs.BMI {
         case "normal":
-            return 1
+            return 0
         case "pre-obese":
-            return 2
+            return -5
         case "obese":
-            return 3
+            return -8
         case "underweight":
-            return 4
+            return -1
         default:
             return 0
         }
@@ -219,16 +219,16 @@ class LifeExpectancyCalculator {
     }
     
     //bmi high because of muscle or fat impact
-    //haven't implemented correct calculations yet
-    private static func bmiBasedOnWhat(lifeSpecs: LifeSpecs) -> Double {
+    //kind of crrect calculations
+     static func bmiBasedOnWhat(lifeSpecs: LifeSpecs) -> Double {
         
         switch lifeSpecs.whyBMI {
         case "BMI high because of fat":
-            return 1
+            return 0
         case "BMI high because of muscle":
-            return 2
+            return 5
         case "not high BMI":
-            return 3
+            return 0
         default:
             return 0
         }
@@ -257,13 +257,13 @@ class LifeExpectancyCalculator {
     }
     
     //diabetes impact
-    //haven't implemented correct calculations yet
-    private static func diabetesImpact(lifeSpecs: LifeSpecs) -> Double {
+    //correct calculations (averaged type I and type II)
+     static func diabetesImpact(lifeSpecs: LifeSpecs) -> Double {
         switch lifeSpecs.diabetes {
         case "yes":
-            return 1
+            return -15
         case "no":
-            return 2
+            return 0
         default:
             return 0
         }
@@ -273,7 +273,7 @@ class LifeExpectancyCalculator {
 //YOUR DAILY LIFE VIEW CONTROLLER Functions
     //exercise impact
     //correct calculations
-    private static func exerciseImpact(lifeSpecs: LifeSpecs) -> Double {
+     static func exerciseImpact(lifeSpecs: LifeSpecs) -> Double {
         
         switch lifeSpecs.numExerciseDays {
         case "zero":
@@ -298,7 +298,7 @@ class LifeExpectancyCalculator {
     
     //flossing impact
     //correct calculations
-    private static func flossingImpact(lifeSpecs: LifeSpecs) -> Double {
+     static func flossingImpact(lifeSpecs: LifeSpecs) -> Double {
         
         switch lifeSpecs.flossInfo {
         case "yes":
@@ -313,7 +313,7 @@ class LifeExpectancyCalculator {
     
     //hours of work per week impact
     //correct calculations
-    private static func numHoursWorkPerWeek(lifeSpecs: LifeSpecs) -> Double {
+     static func numHoursWorkPerWeek(lifeSpecs: LifeSpecs) -> Double {
         
         switch lifeSpecs.numWorkHours {
         case "lessThanFortyHoursPerWeekOfWorkSelected":
@@ -335,7 +335,7 @@ class LifeExpectancyCalculator {
     
     //days of work per week impact
     //correct calculations
-    private static func numDaysWorkPerWeek(lifeSpecs: LifeSpecs) -> Double {
+     static func numDaysWorkPerWeek(lifeSpecs: LifeSpecs) -> Double {
         
         switch lifeSpecs.numWorkDays {
         case "fiveDaysOrLessWorkWeekSelected":
@@ -355,7 +355,7 @@ class LifeExpectancyCalculator {
     
     //air quality impact
     //correct calculations
-    private static func airQuality(lifeSpecs: LifeSpecs) -> Double {
+     static func airQuality(lifeSpecs: LifeSpecs) -> Double {
         
         switch lifeSpecs.airQuality {
         case "veryCleanAirQualitySelected":
@@ -372,17 +372,14 @@ class LifeExpectancyCalculator {
     
     //seatbelt impact
     //correct calculations
-    private static func seatbeltImpact(lifeSpecs: LifeSpecs) -> Double {
+    //SEATBELT IS ACTUALLY PET INFO
+     static func seatbeltImpact(lifeSpecs: LifeSpecs) -> Double {
         
         switch lifeSpecs.seatbeltInfo {
-        case "alwaysWearSeatbeltSelected":
-            return 0.75
-        case "eightyPercentSeatbeltSelected":
-            return 0.75
-        case "halfTimeSeatbeltSelected":
-            return -0.75
-        case "lessThanHalfTimeSeatbeltSelected":
-            return -0.75
+        case "yes":
+            return 2
+        case "no":
+            return 0
         default:
             return 0
         }
@@ -390,7 +387,7 @@ class LifeExpectancyCalculator {
     
     //sleep impact
     //kind of correct calculations
-    private static func sleepImpact(lifeSpecs: LifeSpecs) -> Double {
+     static func sleepImpact(lifeSpecs: LifeSpecs) -> Double {
         
         switch lifeSpecs.numSleepHours {
         case "lessThanFiveHoursSleepSelected":
@@ -401,6 +398,8 @@ class LifeExpectancyCalculator {
             return 2
         case "moreThanNineHoursSleepSelected":
             return -1
+        case "fiveToSixHoursSleepSelected":
+            return -2.5
         default:
             return 0
         }
@@ -408,7 +407,7 @@ class LifeExpectancyCalculator {
     
     //stress levels impact
     //correct calculations
-    private static func stressLevelsImpact(lifeSpecs: LifeSpecs) -> Double {
+     static func stressLevelsImpact(lifeSpecs: LifeSpecs) -> Double {
         
         switch lifeSpecs.stressLevels {
         case "lowStressLevelsSelected":
@@ -427,7 +426,7 @@ class LifeExpectancyCalculator {
 //RELATIONSHIPS VIEW CONTROLLER Functions
     //marital status impact
     //kind of correct calculations
-    private static func maritalStatusImpact(lifeSpecs: LifeSpecs) -> Double {
+     static func maritalStatusImpact(lifeSpecs: LifeSpecs) -> Double {
         
         switch lifeSpecs.maritalStatus {
         case "single":
@@ -447,71 +446,77 @@ class LifeExpectancyCalculator {
     
     
     //personal contact impact
+    //correct calculations
     
-    private static func personalContactImpact(lifeSpecs: LifeSpecs) -> Double {
+    static func personalContactImpact(lifeSpecs: LifeSpecs) -> Double {
         
         switch lifeSpecs.personalContact {
         case "rare personal contact":
-            return 1
+            return -0.5
         case "contact few times per week":
-            return 2
+            return 0.5
         case "contact more than few times per week":
-            return 3
+            return 1
         default:
             return 0
         }
     }
     //heart attack impact
-    private static func heartAttackImpact(lifeSpecs: LifeSpecs) -> Double {
+    //haven't implemented correct calculations yet
+     static func heartAttackImpact(lifeSpecs: LifeSpecs) -> Double {
         
         switch lifeSpecs.heartAttack {
         case "yes":
-            return 1
+            return 0
         case "no":
-            return 2
+            return 0
         default:
             return 0
         }
     }
     
     //cancer impact
-    private static func cancerImpact(lifeSpecs: LifeSpecs) -> Double {
+    //haven't implemented correct calculations yet
+    
+    static func cancerImpact(lifeSpecs: LifeSpecs) -> Double {
         
         switch lifeSpecs.cancerRun {
         case "yes":
-            return 1
+            return 0
         case "no":
-            return 2
+            return 0
         default:
             return 0
         }
     }
     
     //father impact
-    private static func fatherImpact(lifeSpecs: LifeSpecs) -> Double {
+    //haven't implemented correct calculations yet
+     static func fatherImpact(lifeSpecs: LifeSpecs) -> Double {
         
         switch lifeSpecs.fatherDependency {
         case "dependent":
-            return 1
+            return 0
         case "deceased":
-            return 2
+            return 0
         case "independent":
-            return 3
+            return 0
         default:
             return 0
         }
     }
     
     //mother impact
-    private static func motherImpact(lifeSpecs: LifeSpecs) -> Double {
+    //haven't implemented correct calculations yet
+     static func motherImpact(lifeSpecs: LifeSpecs) -> Double {
         
         switch lifeSpecs.motherDependency {
         case "dependent":
-            return 1
+            return 0
         case "deceased":
-            return 2
+            return 0
         case "independent":
-            return 3
+            return 0
         default:
             return 0
         }
@@ -520,7 +525,7 @@ class LifeExpectancyCalculator {
 //DIET AND NUTRITION VIEW CONTROLLER Functions
     //coffee impact
     //correct calculations
-    private static func coffeeImpact(lifeSpecs: LifeSpecs) -> Double {
+     static func coffeeImpact(lifeSpecs: LifeSpecs) -> Double {
         
         switch lifeSpecs.numCoffeeCups {
         case "none":
@@ -535,7 +540,9 @@ class LifeExpectancyCalculator {
     }
     
     //dairy impact
-    private static func dairyImpact(lifeSpecs: LifeSpecs) -> Double {
+    //kind of correct calculations
+    
+    static func dairyImpact(lifeSpecs: LifeSpecs) -> Double {
         
         switch lifeSpecs.numDairy {
         case "zero to one":
@@ -543,7 +550,7 @@ class LifeExpectancyCalculator {
         case "two to three":
             return 0.5
         case "three or more":
-            return 0
+            return 0.5
         default:
             return 0
         }
@@ -551,7 +558,7 @@ class LifeExpectancyCalculator {
     
     //sweets impact
     //kind of correct calculations
-    private static func sweetsImpact(lifeSpecs: LifeSpecs) -> Double {
+     static func sweetsImpact(lifeSpecs: LifeSpecs) -> Double {
         
         switch lifeSpecs.sweetsInfo {
         case "rarely":
@@ -559,7 +566,7 @@ class LifeExpectancyCalculator {
         case "onetotwodaysperweek":
             return 0.5
         case "threetofivedaysperweek":
-            return -1
+            return -0.5
         case "onceaday":
             return -1
         case "morethanonceaday":
@@ -570,8 +577,8 @@ class LifeExpectancyCalculator {
     }
     
     //carbs impact
-    //don't know the calculations yet
-    private static func carbsImpact(lifeSpecs: LifeSpecs) -> Double {
+    //guessed these calculations
+     static func carbsImpact(lifeSpecs: LifeSpecs) -> Double {
         
         switch lifeSpecs.carbsInfo {
         case "oneorfewerservings":
@@ -592,7 +599,7 @@ class LifeExpectancyCalculator {
     
     //red meat impact
     //kind of correct calculations
-    private static func redMeatImpact(lifeSpecs: LifeSpecs) -> Double {
+     static func redMeatImpact(lifeSpecs: LifeSpecs) -> Double {
         
         switch lifeSpecs.redMeatInfo {
         case "noredmeat":
@@ -610,7 +617,7 @@ class LifeExpectancyCalculator {
     
     //fast foods impact
     //i think these are the correct calculations
-    private static func fastFoodsImpact(lifeSpecs: LifeSpecs) -> Double {
+     static func fastFoodsImpact(lifeSpecs: LifeSpecs) -> Double {
         
         switch lifeSpecs.fastFoodsInfo {
         case "none":
@@ -629,23 +636,7 @@ class LifeExpectancyCalculator {
     
 //DRUGS AND ALCOHOL USE VIEW CONTROLLER Functions
     
-    //smoking impact
-    
-//    private static func doYouSmoke(lifeSpecs: LifeSpecs) -> Boolean {
-//        
-//        switch lifeSpecs.isSmoking {
-//        case true:
-//            return
-//        case false:
-//            return
-//        default:
-//            return
-//        }
-//        
-//    }
-    
-    
-    //need to work on these calculations
+    //guessed on these calculations
     static func smokingImpact(lifeSpecs: LifeSpecs) -> Int {
         
         switch lifeSpecs.numCigarettesPerDay {
@@ -654,27 +645,27 @@ class LifeExpectancyCalculator {
         case "onePackCigPerDay":
             return -10
         case "oneAndAHalfPacksPerDay":
-            return -11
+            return -15
         case "twoPacksPerDay":
-            return -12
+            return -17
         case "threeOrMorePacksPerDay":
-            return -13
+            return -22
         default:
             return 0
         }
         
     }
     //second hand smoking impact
-    //need to work on these calculations
-    private static func secondHandSmokingImpact(lifeSpecs: LifeSpecs) -> Double {
+    //guessed on these calculations
+     static func secondHandSmokingImpact(lifeSpecs: LifeSpecs) -> Double {
         
         switch lifeSpecs.secondHandSmoke {
         case "dailySecondHand":
             return -7
         case "fewTimesPerWeekExposure":
-            return -5
+            return -4
         case "oncePerWeekExposure":
-            return -5
+            return -2
         case "neverExposure":
             return 0
         default:
@@ -699,7 +690,7 @@ class LifeExpectancyCalculator {
     
     //Work on these calculations
     //HELP -depends on answer to next question
-    private static func alcoholImpactNightsSpentDrinking(lifeSpecs: LifeSpecs) -> Double {
+     static func alcoholImpactNightsSpentDrinking(lifeSpecs: LifeSpecs) -> Double {
         
         switch lifeSpecs.numNightsSpentDrinking {
         case "oneToTwoDaysDrinkingPerWeekSelected":
@@ -717,7 +708,7 @@ class LifeExpectancyCalculator {
     //Work on these calculations
     //HELP -depends on answer to previous question
 
-    private static func alcoholImpactNumDrinks(lifeSpecs: LifeSpecs) -> Double {
+     static func alcoholImpactNumDrinks(lifeSpecs: LifeSpecs) -> Double {
         
         switch lifeSpecs.numNightsSpentDrinking {
         case "oneToTwoDrinksPerNightSelected":
@@ -733,8 +724,8 @@ class LifeExpectancyCalculator {
     }
     
     //illegal drugs impact
-    
-    private static func drugsImpact(lifeSpecs: LifeSpecs) -> Double {
+    //correct calculations
+     static func drugsImpact(lifeSpecs: LifeSpecs) -> Double {
         
         switch lifeSpecs.illegalDrugsInfo {
         case "neverDrugsSelected":
@@ -757,15 +748,16 @@ class LifeExpectancyCalculator {
 //OTHER HEALTH INFO VIEW CONTROLLER Functions
     
     //HDL levels impact
-    private static func hdlImpact(lifeSpecs: LifeSpecs) -> Double {
+    //correct calculations
+     static func hdlImpact(lifeSpecs: LifeSpecs) -> Double {
         
         switch lifeSpecs.hdlLevels {
         case "low":
-            return 1
+            return -1
         case "medium":
-            return 2
+            return 1
         case "high":
-            return 3
+            return 1
         case "unknown":
             return 5
         default:
@@ -775,15 +767,16 @@ class LifeExpectancyCalculator {
     }
     
     //LDL levels impact
-    private static func ldlImpact(lifeSpecs: LifeSpecs) -> Double {
+    //correct calculations
+     static func ldlImpact(lifeSpecs: LifeSpecs) -> Double {
         
         switch lifeSpecs.ldlLevels {
         case "low":
             return 1
         case "medium":
-            return 2
+            return 1
         case "high":
-            return 3
+            return -1
         case "unknown":
             return 5
         default:
@@ -793,17 +786,18 @@ class LifeExpectancyCalculator {
     }
     
     //sunscreen impact
-    private static func sunscreenImpact(lifeSpecs: LifeSpecs) -> Double {
+    //correct calculations
+     static func sunscreenImpact(lifeSpecs: LifeSpecs) -> Double {
         
         switch lifeSpecs.sunProtectionInfo {
         case "alwaysSunscreenSelected":
             return 1
         case "mostOfTheTimeSunscreen":
-            return 2
+            return 0.5
         case "sometimesSunscreen":
-            return 3
+            return -0.5
         case "rarelySunscreenSelected":
-            return 5
+            return -1
         default:
             return 4
         }
@@ -811,30 +805,31 @@ class LifeExpectancyCalculator {
     }
     
     //cancer screening impact
-    private static func cancerScreeningImpact(lifeSpecs: LifeSpecs) -> Double {
+    //correct calculations
+     static func cancerScreeningImpact(lifeSpecs: LifeSpecs) -> Double {
         
         switch lifeSpecs.cancerScreeningInfo {
         case "noCancerScreeningSelected":
-            return 1
+            return -1
         case "yesCancerScreeningSelected":
-            return 2
+            return 1
         default:
-            return 4
+            return 0
         }
         
     }
     
     //anxiety about death impact
-    
-    private static func anxietyAboutDeathImpact(lifeSpecs: LifeSpecs) -> Double {
+    //correct calculations
+     static func anxietyAboutDeathImpact(lifeSpecs: LifeSpecs) -> Double {
         
         switch lifeSpecs.anxietyAboutDying {
         case "yesAnxietyDeath":
-            return 1
+            return -2
         case "noAnxietyDeath":
-            return 2
+            return 1
         default:
-            return 4
+            return 0
         }
         
     }

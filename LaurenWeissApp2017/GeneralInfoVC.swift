@@ -20,6 +20,7 @@ class GeneralInfoVC: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var countryLabel: UILabel!
     var chosenCountry: String!
     
+    @IBOutlet weak var selectCountry: UIButton!
     //date of birth info
     @IBOutlet weak var datePicker: UIDatePicker!
     
@@ -73,7 +74,7 @@ class GeneralInfoVC: UIViewController, UIScrollViewDelegate {
         
         maleButton.layer.cornerRadius = 10
         femaleButton.layer.cornerRadius = 10
-        
+        selectCountry.layer.cornerRadius = 10
         
         
         //Calling Functions: SELECT WHY BMI IS HIGH
