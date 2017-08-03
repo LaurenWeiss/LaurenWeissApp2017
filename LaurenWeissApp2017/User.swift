@@ -17,7 +17,7 @@ class User: NSObject {
     
     var lifeSpecifications = LifeSpecs()
     
-    var finalAge: Double = 0.0
+    var finalAge: Int = 0
 
     
     // MARK: - Init

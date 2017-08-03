@@ -17,7 +17,7 @@ class CustomSideMenuController: SideMenuController {
     }
     
     required init?(coder aDecoder: NSCoder) {
-        SideMenuController.preferences.drawing.menuButtonImage = UIImage(named: "icons8-Menu-64")
+        SideMenuController.preferences.drawing.menuButtonImage = UIImage(named: "icons8-Menu-48")
         SideMenuController.preferences.drawing.sidePanelPosition = .overCenterPanelLeft
         SideMenuController.preferences.drawing.sidePanelWidth = 300
         SideMenuController.preferences.drawing.centerPanelShadow = true

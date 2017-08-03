@@ -69,15 +69,22 @@ class YourDailyLifeVC: UIViewController, UIScrollViewDelegate {
 //    @IBOutlet weak var lessThanHalfSeatbelt: UIButton!
     
     
+    //pet info
+    @IBOutlet weak var yesPetOwner: UIButton!
+    @IBOutlet weak var notAPetOwner: UIButton!
+    
     @IBOutlet weak var calculateButton: UIButton!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        calculateButton.backgroundColor = UIColor.primaryBlue
+
+        
         calculateButton.layer.cornerRadius = 10
 
-        //Calling Functions: SELECT GENDER
+        //Calling Functions: SELECT EXERCISE
         if User.current.lifeSpecifications.numExerciseDays == "zero" {
             zeroExerciseDaysPerWeekSelected()
         } else if User.current.lifeSpecifications.numExerciseDays == "one" {
@@ -169,6 +176,15 @@ class YourDailyLifeVC: UIViewController, UIScrollViewDelegate {
         } else if User.current.lifeSpecifications.stressLevels == "highStressLevelsSelected" {
             highStressLevelsSelected()
         }
+        
+        //Calling Functions: Select pet ownership status
+        if User.current.lifeSpecifications.petOwner == "no" {
+            notAPetOwnerSelected()
+        } else if User.current.lifeSpecifications.petOwner == "yes" {
+        
+            yesPetOwnerSelected()
+        }
+        
         //making buttons have rounded corners
        
         lowStressLevels.layer.cornerRadius = 10
@@ -201,6 +217,8 @@ class YourDailyLifeVC: UIViewController, UIScrollViewDelegate {
         veryCleanAir.layer.cornerRadius = 10
         slightlyPollutedAir.layer.cornerRadius = 10
         veryPollutedAir.layer.cornerRadius = 10
+        yesPetOwner.layer.cornerRadius = 10
+        notAPetOwner.layer.cornerRadius = 10
 //        alwaysSeatbelt.layer.cornerRadius = 10
 //        eightyPercentSeatbelt.layer.cornerRadius = 10
 //       halfTimeSeatbelt.layer.cornerRadius = 10
@@ -214,7 +232,7 @@ class YourDailyLifeVC: UIViewController, UIScrollViewDelegate {
         lauren.enter()
         
         LifeExpectancyCalculator.calculateAge(forUser: User.current) { (finalAge) in
-            User.current.finalAge = finalAge
+            User.current.finalAge = Int(finalAge)
             lauren.leave()
         }
         
@@ -223,6 +241,35 @@ class YourDailyLifeVC: UIViewController, UIScrollViewDelegate {
             self.performSegue(withIdentifier: "toDeathDate", sender: nil)
         }
     }
+    
+    
+    //pet owner info functions
+    
+    @IBAction func selectPetOwnership(_ sender: UIButton) {
+        if sender.tag == 100 {
+            yesPetOwnerSelected()
+        } else if sender.tag == 200 {
+            notAPetOwnerSelected()
+        }
+    }
+    
+    func yesPetOwnerSelected() {
+        yesPetOwner.backgroundColor = UIColor.primaryBlue
+        yesPetOwner.setTitleColor(UIColor.white, for: .normal)
+        User.current.lifeSpecifications.petOwner = "yes"
+        
+        notAPetOwner.setTitleColor(UIColor.primaryBlue, for: .normal)
+        notAPetOwner.backgroundColor = UIColor.clear
+    }
+    func notAPetOwnerSelected() {
+        notAPetOwner.backgroundColor = UIColor.primaryBlue
+        notAPetOwner.setTitleColor(UIColor.white, for: .normal)
+        User.current.lifeSpecifications.petOwner = "no"
+        
+        yesPetOwner.setTitleColor(UIColor.primaryBlue, for: .normal)
+        yesPetOwner.backgroundColor = UIColor.clear
+    }
+    
     
     //exercise info functions
     
@@ -248,7 +295,7 @@ class YourDailyLifeVC: UIViewController, UIScrollViewDelegate {
     func zeroExerciseDaysPerWeekSelected() {
         zeroExerciseDaysPerWeek.backgroundColor = UIColor.primaryBlue
         zeroExerciseDaysPerWeek.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.numExerciseDays = "zeroExerciseDaysPerWeek"
+        User.current.lifeSpecifications.numExerciseDays = "zero"
         
         oneExerciseDayPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
         oneExerciseDayPerWeek.backgroundColor = UIColor.clear
@@ -272,7 +319,7 @@ class YourDailyLifeVC: UIViewController, UIScrollViewDelegate {
     func oneExerciseDaysPerWeekSelected() {
         oneExerciseDayPerWeek.backgroundColor = UIColor.primaryBlue
         oneExerciseDayPerWeek.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.numExerciseDays = "oneExerciseDayPerWeek"
+        User.current.lifeSpecifications.numExerciseDays = "one"
         
         zeroExerciseDaysPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
         zeroExerciseDaysPerWeek.backgroundColor = UIColor.clear
@@ -296,7 +343,7 @@ class YourDailyLifeVC: UIViewController, UIScrollViewDelegate {
     func twoExerciseDaysPerWeekSelected() {
         twoExerciseDaysPerWeek.backgroundColor = UIColor.primaryBlue
         twoExerciseDaysPerWeek.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.numExerciseDays = "twoExerciseDaysPerWeek"
+        User.current.lifeSpecifications.numExerciseDays = "two"
         
         oneExerciseDayPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
         oneExerciseDayPerWeek.backgroundColor = UIColor.clear
@@ -320,7 +367,7 @@ class YourDailyLifeVC: UIViewController, UIScrollViewDelegate {
     func threeExerciseDaysPerWeekSelected() {
         threeExerciseDaysPerWeek.backgroundColor = UIColor.primaryBlue
         threeExerciseDaysPerWeek.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.numExerciseDays = "threeExerciseDaysPerWeek"
+        User.current.lifeSpecifications.numExerciseDays = "three"
         
         oneExerciseDayPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
         oneExerciseDayPerWeek.backgroundColor = UIColor.clear
@@ -344,7 +391,7 @@ class YourDailyLifeVC: UIViewController, UIScrollViewDelegate {
     func fourExerciseDaysPerWeekSelected() {
         fourExerciseDaysPerWeek.backgroundColor = UIColor.primaryBlue
         fourExerciseDaysPerWeek.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.numExerciseDays = "fourExerciseDaysPerWeek"
+        User.current.lifeSpecifications.numExerciseDays = "four"
         
         oneExerciseDayPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
         oneExerciseDayPerWeek.backgroundColor = UIColor.clear
@@ -368,7 +415,7 @@ class YourDailyLifeVC: UIViewController, UIScrollViewDelegate {
     func fiveExerciseDaysPerWeekSelected() {
         fiveExerciseDaysPerWeek.backgroundColor = UIColor.primaryBlue
         fiveExerciseDaysPerWeek.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.numExerciseDays = "fiveExerciseDaysPerWeek"
+        User.current.lifeSpecifications.numExerciseDays = "five"
         
         oneExerciseDayPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
         oneExerciseDayPerWeek.backgroundColor = UIColor.clear
@@ -392,7 +439,7 @@ class YourDailyLifeVC: UIViewController, UIScrollViewDelegate {
     func sixToSevenExerciseDaysPerWeekSelected() {
         sixToSevenExerciseDaysPerWeek.backgroundColor = UIColor.primaryBlue
         sixToSevenExerciseDaysPerWeek.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.numExerciseDays = "sixToSevenExerciseDaysPerWeek"
+        User.current.lifeSpecifications.numExerciseDays = "six to seven"
         
         oneExerciseDayPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
         oneExerciseDayPerWeek.backgroundColor = UIColor.clear
@@ -427,7 +474,7 @@ class YourDailyLifeVC: UIViewController, UIScrollViewDelegate {
     func yesFlossSelected() {
         yesFloss.backgroundColor = UIColor.primaryBlue
         yesFloss.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.flossInfo = "yesFloss"
+        User.current.lifeSpecifications.flossInfo = "yes"
         
         noFloss.setTitleColor(UIColor.primaryBlue, for: .normal)
         noFloss.backgroundColor = UIColor.clear
@@ -436,7 +483,7 @@ class YourDailyLifeVC: UIViewController, UIScrollViewDelegate {
     func noFlossSelected() {
         noFloss.backgroundColor = UIColor.primaryBlue
         noFloss.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.flossInfo = "noFloss"
+        User.current.lifeSpecifications.flossInfo = "no"
         
         yesFloss.setTitleColor(UIColor.primaryBlue, for: .normal)
         yesFloss.backgroundColor = UIColor.clear
@@ -960,7 +1007,7 @@ class YourDailyLifeVC: UIViewController, UIScrollViewDelegate {
         
             if let destinationVC = segue.destination as? DeathDateScreenViewController
             {
-                destinationVC.deathAgeAsDouble = User.current.finalAge
+                destinationVC.deathAgeAsInt = User.current.finalAge
             }
         }
     }

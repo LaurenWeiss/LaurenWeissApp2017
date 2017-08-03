@@ -41,6 +41,9 @@ class OtherHealthInfoVC: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var calculateButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        calculateButton.backgroundColor = UIColor.primaryBlue
+
         calculateButton.layer.cornerRadius = 10
 
         //making the buttons have rounded corners
@@ -116,7 +119,7 @@ class OtherHealthInfoVC: UIViewController, UIScrollViewDelegate {
     
     @IBAction func calculateButtonTapped(_ sender: UIButton) {
         LifeExpectancyCalculator.calculateAge(forUser: User.current) { (finalAge) in
-            User.current.finalAge = finalAge
+            User.current.finalAge = Int(finalAge)
         }
         
     }
@@ -402,7 +405,7 @@ class OtherHealthInfoVC: UIViewController, UIScrollViewDelegate {
             
             if let destinationVC = segue.destination as? DeathDateScreenViewController
             {
-                destinationVC.deathAgeAsDouble = User.current.finalAge
+                destinationVC.deathAgeAsInt = User.current.finalAge
             }
         }
     }

@@ -52,6 +52,9 @@ class RelationshipsVC: UIViewController, UIScrollViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        calculateButton.backgroundColor = UIColor.primaryBlue
+
         calculateButton.layer.cornerRadius = 10
 
         //making the buttons have rounded corners
@@ -138,7 +141,7 @@ class RelationshipsVC: UIViewController, UIScrollViewDelegate {
     
     @IBAction func calculateButtonTapped(_ sender: UIButton) {
         LifeExpectancyCalculator.calculateAge(forUser: User.current) { (finalAge) in
-            User.current.finalAge = finalAge
+            User.current.finalAge = Int(finalAge)
         }
         
     }
@@ -459,7 +462,7 @@ class RelationshipsVC: UIViewController, UIScrollViewDelegate {
             
             if let destinationVC = segue.destination as? DeathDateScreenViewController
             {
-                destinationVC.deathAgeAsDouble = User.current.finalAge
+                destinationVC.deathAgeAsInt = User.current.finalAge
             }
         }
     }

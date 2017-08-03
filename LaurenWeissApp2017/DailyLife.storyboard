@@ -18,14 +18,14 @@
                         <viewControllerLayoutGuide type="bottom" id="d3R-v2-20r"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="IUp-FF-c3y">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="2900"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WGU-Zp-6SQ">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="2900"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nig-3c-IMA" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="2900"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="2558"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Daily Life" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vBw-6y-YJy">
                                                 <rect key="frame" x="55" y="16" width="265" height="55"/>
@@ -34,143 +34,132 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How many days per week do you exercise for 30 minutes or more?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cez-Xg-3Q5">
-                                                <rect key="frame" x="8" y="95" width="359" height="98.5"/>
-                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="24"/>
-                                                <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How many hours do you work per week (including your commute)? " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PMP-oT-W6d">
-                                                <rect key="frame" x="8" y="714.5" width="359" height="98.5"/>
+                                                <rect key="frame" x="8" y="103" width="359" height="98.5"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="24"/>
                                                 <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="aIc-ij-n4N">
-                                                <rect key="frame" x="28" y="201.5" width="320" height="363"/>
+                                                <rect key="frame" x="8" y="211.5" width="359" height="363"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s1T-zO-pDZ">
-                                                        <rect key="frame" x="0.0" y="0.0" width="320" height="45"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="320" id="kju-Pc-y3P"/>
-                                                        </constraints>
+                                                        <rect key="frame" x="0.0" y="0.0" width="359" height="45"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="Zero days per week">
-                                                            <color key="titleColor" red="0.37935057280000001" green="0.69332247970000005" blue="0.73731225730000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <color key="titleColor" red="0.08235294118" green="0.70196078429999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="selectExercse:" destination="0kq-ab-HXa" eventType="touchUpInside" id="RfD-q7-fLz"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3pB-pv-eeB">
-                                                        <rect key="frame" x="0.0" y="53" width="320" height="45"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="320" id="rpE-YF-3wb"/>
-                                                        </constraints>
+                                                        <rect key="frame" x="0.0" y="53" width="359" height="45"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="One day per week">
-                                                            <color key="titleColor" red="0.37935057280000001" green="0.69332247970000005" blue="0.73731225730000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <color key="titleColor" red="0.08235294118" green="0.70196078429999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="selectExercse:" destination="0kq-ab-HXa" eventType="touchUpInside" id="Qtx-Tp-ldp"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mrs-P7-w4A">
-                                                        <rect key="frame" x="0.0" y="106" width="320" height="45"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="320" id="pBn-cU-wwF"/>
-                                                        </constraints>
+                                                        <rect key="frame" x="0.0" y="106" width="359" height="45"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="Two days per week">
-                                                            <color key="titleColor" red="0.37935057280000001" green="0.69332247970000005" blue="0.73731225730000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <color key="titleColor" red="0.08235294118" green="0.70196078429999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="selectExercse:" destination="0kq-ab-HXa" eventType="touchUpInside" id="HHZ-DS-2XS"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="103" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Db-qQ-U0m">
-                                                        <rect key="frame" x="0.0" y="159" width="320" height="45"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="320" id="O3y-rP-vq5"/>
-                                                        </constraints>
+                                                        <rect key="frame" x="0.0" y="159" width="359" height="45"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="Three days per week">
-                                                            <color key="titleColor" red="0.37935057280000001" green="0.69332247970000005" blue="0.73731225730000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <color key="titleColor" red="0.08235294118" green="0.70196078429999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="selectExercse:" destination="0kq-ab-HXa" eventType="touchUpInside" id="zXe-Ov-54T"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="104" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hv0-xS-fPf">
-                                                        <rect key="frame" x="0.0" y="212" width="320" height="45"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="320" id="XTX-Hx-Tzn"/>
-                                                        </constraints>
+                                                        <rect key="frame" x="0.0" y="212" width="359" height="45"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="Four days per week">
-                                                            <color key="titleColor" red="0.37935057280000001" green="0.69332247970000005" blue="0.73731225730000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <color key="titleColor" red="0.08235294118" green="0.70196078429999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="selectExercse:" destination="0kq-ab-HXa" eventType="touchUpInside" id="d96-fB-irr"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="105" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VCC-Dx-mTn">
-                                                        <rect key="frame" x="0.0" y="265" width="320" height="45"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="320" id="iip-uV-LPL"/>
-                                                        </constraints>
+                                                        <rect key="frame" x="0.0" y="265" width="359" height="45"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="Five days per week">
-                                                            <color key="titleColor" red="0.37935057280000001" green="0.69332247970000005" blue="0.73731225730000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <color key="titleColor" red="0.08235294118" green="0.70196078429999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="selectExercse:" destination="0kq-ab-HXa" eventType="touchUpInside" id="4dB-Zi-HAY"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="106" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tT5-1X-in0">
-                                                        <rect key="frame" x="0.0" y="318" width="320" height="45"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="320" id="CIO-Us-1uG"/>
-                                                        </constraints>
+                                                        <rect key="frame" x="0.0" y="318" width="359" height="45"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="Six to seven days per week">
-                                                            <color key="titleColor" red="0.37935057280000001" green="0.69332247970000005" blue="0.73731225730000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <color key="titleColor" red="0.08235294118" green="0.70196078429999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="selectExercse:" destination="0kq-ab-HXa" eventType="touchUpInside" id="zfz-Zt-c6x"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="8Db-qQ-U0m" secondAttribute="trailing" id="1xg-dJ-Fse"/>
+                                                    <constraint firstAttribute="trailing" secondItem="hv0-xS-fPf" secondAttribute="trailing" id="Frl-PF-N10"/>
+                                                    <constraint firstAttribute="trailing" secondItem="3pB-pv-eeB" secondAttribute="trailing" id="KqD-s1-qWy"/>
+                                                    <constraint firstAttribute="trailing" secondItem="tT5-1X-in0" secondAttribute="trailing" id="OhW-m2-Y1U"/>
+                                                    <constraint firstItem="tT5-1X-in0" firstAttribute="leading" secondItem="aIc-ij-n4N" secondAttribute="leading" id="Uos-SN-3Fv"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Mrs-P7-w4A" secondAttribute="trailing" id="fKl-5q-93m"/>
+                                                    <constraint firstAttribute="trailing" secondItem="VCC-Dx-mTn" secondAttribute="trailing" id="g51-nX-T8G"/>
+                                                    <constraint firstItem="VCC-Dx-mTn" firstAttribute="leading" secondItem="aIc-ij-n4N" secondAttribute="leading" id="gqo-sj-gwO"/>
+                                                    <constraint firstItem="Mrs-P7-w4A" firstAttribute="leading" secondItem="aIc-ij-n4N" secondAttribute="leading" id="ifc-SR-1bw"/>
+                                                    <constraint firstItem="s1T-zO-pDZ" firstAttribute="leading" secondItem="aIc-ij-n4N" secondAttribute="leading" id="mQX-SM-Y6H"/>
+                                                    <constraint firstItem="hv0-xS-fPf" firstAttribute="leading" secondItem="aIc-ij-n4N" secondAttribute="leading" id="ntj-Df-YUy"/>
+                                                    <constraint firstAttribute="trailing" secondItem="s1T-zO-pDZ" secondAttribute="trailing" id="roT-J5-wPK"/>
+                                                    <constraint firstItem="3pB-pv-eeB" firstAttribute="leading" secondItem="aIc-ij-n4N" secondAttribute="leading" id="rye-Fl-Q8t"/>
+                                                    <constraint firstItem="8Db-qQ-U0m" firstAttribute="leading" secondItem="aIc-ij-n4N" secondAttribute="leading" id="xTn-97-i0o"/>
+                                                </constraints>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Do you floss everyday?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mzY-QI-Lgj">
-                                                <rect key="frame" x="60.5" y="596.5" width="254.5" height="33"/>
+                                                <rect key="frame" x="60.5" y="606.5" width="254.5" height="33"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="24"/>
                                                 <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hRb-H4-ZoA">
-                                                <rect key="frame" x="94" y="637.5" width="188" height="45"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="hRb-H4-ZoA">
+                                                <rect key="frame" x="85.5" y="649.5" width="204" height="45"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="owu-Xf-JpG">
                                                         <rect key="frame" x="0.0" y="0.0" width="90" height="45"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="90" id="Z19-Ml-yUv"/>
+                                                            <constraint firstAttribute="width" constant="90" id="3Bv-xC-VHA"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="Yes">
-                                                            <color key="titleColor" red="0.37935057280000001" green="0.69332247970000005" blue="0.73731225730000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <color key="titleColor" red="0.08235294118" green="0.70196078429999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="selectFloss:" destination="0kq-ab-HXa" eventType="touchUpInside" id="wHl-eE-fuS"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZfO-nc-owr">
-                                                        <rect key="frame" x="98" y="0.0" width="90" height="45"/>
+                                                        <rect key="frame" x="114" y="0.0" width="90" height="45"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="90" id="kXd-8f-2Bv"/>
+                                                            <constraint firstAttribute="width" constant="90" id="yXu-0e-sAu"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="No">
-                                                            <color key="titleColor" red="0.37935057280000001" green="0.69332247970000005" blue="0.73731225730000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <color key="titleColor" red="0.08235294118" green="0.70196078429999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="selectFloss:" destination="0kq-ab-HXa" eventType="touchUpInside" id="wyt-Ye-KE0"/>
@@ -178,342 +167,372 @@
                                                     </button>
                                                 </subviews>
                                             </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How many hours do you work per week (including your commute)? " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PMP-oT-W6d">
+                                                <rect key="frame" x="8" y="726.5" width="359" height="98.5"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="24"/>
+                                                <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="X68-JQ-Yo9">
-                                                <rect key="frame" x="18" y="821" width="340" height="310"/>
+                                                <rect key="frame" x="8" y="835" width="359" height="310"/>
                                                 <subviews>
-                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gaJ-Pa-8vr">
-                                                        <rect key="frame" x="9" y="0.0" width="322" height="45"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="322" id="N1J-Ma-Vze" userLabel="width = 340"/>
-                                                        </constraints>
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gaJ-Pa-8vr">
+                                                        <rect key="frame" x="0.0" y="0.0" width="359" height="45"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="Less than 40 hours per week">
-                                                            <color key="titleColor" red="0.37935057280000001" green="0.69332247970000005" blue="0.73731225730000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <color key="titleColor" red="0.08235294118" green="0.70196078429999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="selectNumHoursWorkPerWeek:" destination="0kq-ab-HXa" eventType="touchUpInside" id="jh0-S7-ilz"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WPJ-Lo-fQs">
-                                                        <rect key="frame" x="9" y="53" width="322" height="45"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="322" id="vRO-a4-9xR" userLabel="width = 340"/>
-                                                        </constraints>
+                                                        <rect key="frame" x="0.0" y="53" width="359" height="45"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="41 to 60 hours per week">
-                                                            <color key="titleColor" red="0.37935057280000001" green="0.69332247970000005" blue="0.73731225730000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <color key="titleColor" red="0.08235294118" green="0.70196078429999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="selectNumHoursWorkPerWeek:" destination="0kq-ab-HXa" eventType="touchUpInside" id="Jit-Ia-jzH"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fjt-nv-PGT">
-                                                        <rect key="frame" x="9" y="106" width="322" height="45"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="322" id="w0t-BM-3Zp" userLabel="width = 340"/>
-                                                        </constraints>
+                                                        <rect key="frame" x="0.0" y="106" width="359" height="45"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="61 to 80 hours per week">
-                                                            <color key="titleColor" red="0.37935057280000001" green="0.69332247970000005" blue="0.73731225730000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <color key="titleColor" red="0.08235294118" green="0.70196078429999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="selectNumHoursWorkPerWeek:" destination="0kq-ab-HXa" eventType="touchUpInside" id="31U-0J-2Fn"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ybG-kI-4uU">
-                                                        <rect key="frame" x="0.0" y="159" width="340" height="45"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="340" id="bst-hC-ggc"/>
-                                                        </constraints>
+                                                    <button opaque="NO" tag="4" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ybG-kI-4uU">
+                                                        <rect key="frame" x="0.0" y="159" width="359" height="45"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="More than 80 hours per week">
-                                                            <color key="titleColor" red="0.37935057280000001" green="0.69332247970000005" blue="0.73731225730000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <color key="titleColor" red="0.08235294118" green="0.70196078429999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="selectNumHoursWorkPerWeek:" destination="0kq-ab-HXa" eventType="touchUpInside" id="PCd-RD-shj"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zkH-cM-fUj">
-                                                        <rect key="frame" x="9" y="212" width="322" height="45"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="322" id="xoB-Tn-Htc" userLabel="width = 340"/>
-                                                        </constraints>
+                                                        <rect key="frame" x="0.0" y="212" width="359" height="45"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="I am not working">
-                                                            <color key="titleColor" red="0.37935057280000001" green="0.69332247970000005" blue="0.73731225730000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <color key="titleColor" red="0.08235294118" green="0.70196078429999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="selectNumHoursWorkPerWeek:" destination="0kq-ab-HXa" eventType="touchUpInside" id="QBP-VI-z6Q"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5C1-fB-LUy">
-                                                        <rect key="frame" x="9" y="265" width="322" height="45"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="322" id="fYx-DE-zQD" userLabel="width = 340"/>
-                                                        </constraints>
+                                                        <rect key="frame" x="0.0" y="265" width="359" height="45"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="I am retired">
-                                                            <color key="titleColor" red="0.37935057280000001" green="0.69332247970000005" blue="0.73731225730000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <color key="titleColor" red="0.08235294118" green="0.70196078429999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="selectNumHoursWorkPerWeek:" destination="0kq-ab-HXa" eventType="touchUpInside" id="q5Z-Fq-tMr"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="zkH-cM-fUj" firstAttribute="leading" secondItem="X68-JQ-Yo9" secondAttribute="leading" id="27T-SO-0Bl"/>
+                                                    <constraint firstAttribute="trailing" secondItem="gaJ-Pa-8vr" secondAttribute="trailing" id="8bj-Qk-W7Z"/>
+                                                    <constraint firstItem="ybG-kI-4uU" firstAttribute="leading" secondItem="X68-JQ-Yo9" secondAttribute="leading" id="9Zq-Jp-w6N"/>
+                                                    <constraint firstItem="5C1-fB-LUy" firstAttribute="leading" secondItem="X68-JQ-Yo9" secondAttribute="leading" id="Esa-y2-Oxu"/>
+                                                    <constraint firstItem="gaJ-Pa-8vr" firstAttribute="leading" secondItem="X68-JQ-Yo9" secondAttribute="leading" id="OR1-Wb-W0b"/>
+                                                    <constraint firstAttribute="trailing" secondItem="zkH-cM-fUj" secondAttribute="trailing" id="RqE-rt-uOA"/>
+                                                    <constraint firstItem="Fjt-nv-PGT" firstAttribute="leading" secondItem="X68-JQ-Yo9" secondAttribute="leading" id="cjF-xw-Vo9"/>
+                                                    <constraint firstAttribute="trailing" secondItem="WPJ-Lo-fQs" secondAttribute="trailing" id="cn7-Id-TEa"/>
+                                                    <constraint firstAttribute="trailing" secondItem="ybG-kI-4uU" secondAttribute="trailing" id="jlb-SD-Hau"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Fjt-nv-PGT" secondAttribute="trailing" id="py1-Qr-Wb1"/>
+                                                    <constraint firstItem="WPJ-Lo-fQs" firstAttribute="leading" secondItem="X68-JQ-Yo9" secondAttribute="leading" id="r1m-64-zfH"/>
+                                                    <constraint firstAttribute="trailing" secondItem="5C1-fB-LUy" secondAttribute="trailing" id="rwf-W0-nAT"/>
+                                                </constraints>
                                             </stackView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How many days do you work out of the week?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lph-Vx-ZVQ">
-                                                <rect key="frame" x="8" y="1163" width="359" height="66"/>
-                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="24"/>
-                                                <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="NKV-hh-1cc">
-                                                <rect key="frame" x="43" y="1237" width="290" height="257"/>
+                                                <rect key="frame" x="8" y="1253" width="359" height="257"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7gi-Xf-fFI">
-                                                        <rect key="frame" x="0.0" y="0.0" width="290" height="45"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="290" id="T89-DB-zhv" userLabel="width = 300"/>
-                                                        </constraints>
+                                                        <rect key="frame" x="0.0" y="0.0" width="359" height="45"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="Five days or less">
-                                                            <color key="titleColor" red="0.23529411759999999" green="0.66666666669999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <color key="titleColor" red="0.08235294118" green="0.70196078429999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="numDaysSpentWorkingPerWeek:" destination="0kq-ab-HXa" eventType="touchUpInside" id="g9C-uG-Anf"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EAr-w7-OgI">
-                                                        <rect key="frame" x="0.0" y="53" width="290" height="45"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="290" id="g9Q-2K-Rey"/>
-                                                        </constraints>
+                                                        <rect key="frame" x="0.0" y="53" width="359" height="45"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="Six days per week">
-                                                            <color key="titleColor" red="0.23529411759999999" green="0.66666666669999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <color key="titleColor" red="0.08235294118" green="0.70196078429999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="numDaysSpentWorkingPerWeek:" destination="0kq-ab-HXa" eventType="touchUpInside" id="P6P-ql-9zX"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3BO-DC-JEH">
-                                                        <rect key="frame" x="0.0" y="106" width="290" height="45"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="290" id="LrK-YZ-pJr" userLabel="width = 300"/>
-                                                        </constraints>
+                                                        <rect key="frame" x="0.0" y="106" width="359" height="45"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="Seven days per week">
-                                                            <color key="titleColor" red="0.23529411759999999" green="0.66666666669999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <color key="titleColor" red="0.08235294118" green="0.70196078429999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="numDaysSpentWorkingPerWeek:" destination="0kq-ab-HXa" eventType="touchUpInside" id="Q7P-sj-mjb"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dai-w3-0jt">
-                                                        <rect key="frame" x="0.0" y="159" width="290" height="45"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="290" id="pLH-Cy-tdo"/>
-                                                        </constraints>
+                                                        <rect key="frame" x="0.0" y="159" width="359" height="45"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="I am not working">
-                                                            <color key="titleColor" red="0.23529411759999999" green="0.66666666669999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <color key="titleColor" red="0.08235294118" green="0.70196078429999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="numDaysSpentWorkingPerWeek:" destination="0kq-ab-HXa" eventType="touchUpInside" id="jBF-dl-gGd"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aFa-XA-KV3">
-                                                        <rect key="frame" x="0.0" y="212" width="290" height="45"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="290" id="v3R-f7-74E"/>
-                                                        </constraints>
+                                                        <rect key="frame" x="0.0" y="212" width="359" height="45"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="I am retired">
-                                                            <color key="titleColor" red="0.23529411759999999" green="0.66666666669999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <color key="titleColor" red="0.08235294118" green="0.70196078429999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="numDaysSpentWorkingPerWeek:" destination="0kq-ab-HXa" eventType="touchUpInside" id="pVj-O2-SEW"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="dai-w3-0jt" secondAttribute="trailing" id="2NL-xX-DwN"/>
+                                                    <constraint firstItem="dai-w3-0jt" firstAttribute="leading" secondItem="NKV-hh-1cc" secondAttribute="leading" id="9Ey-KO-N3y"/>
+                                                    <constraint firstAttribute="trailing" secondItem="3BO-DC-JEH" secondAttribute="trailing" id="Nxf-iT-rUZ"/>
+                                                    <constraint firstItem="7gi-Xf-fFI" firstAttribute="leading" secondItem="NKV-hh-1cc" secondAttribute="leading" id="OBz-QK-XXC"/>
+                                                    <constraint firstAttribute="trailing" secondItem="7gi-Xf-fFI" secondAttribute="trailing" id="Q3U-ZZ-nRF"/>
+                                                    <constraint firstItem="3BO-DC-JEH" firstAttribute="leading" secondItem="NKV-hh-1cc" secondAttribute="leading" id="Zam-JA-sLM"/>
+                                                    <constraint firstAttribute="trailing" secondItem="EAr-w7-OgI" secondAttribute="trailing" id="b0G-0F-4qw"/>
+                                                    <constraint firstAttribute="trailing" secondItem="aFa-XA-KV3" secondAttribute="trailing" id="mlb-fB-USS"/>
+                                                    <constraint firstItem="aFa-XA-KV3" firstAttribute="leading" secondItem="NKV-hh-1cc" secondAttribute="leading" id="nWN-UP-6DN"/>
+                                                    <constraint firstItem="EAr-w7-OgI" firstAttribute="leading" secondItem="NKV-hh-1cc" secondAttribute="leading" id="tel-Wv-2BT"/>
+                                                </constraints>
                                             </stackView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How is the air quality where you live?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Erv-AI-Kau">
-                                                <rect key="frame" x="8" y="1526" width="359" height="66"/>
-                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="24"/>
-                                                <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="W5s-ai-P90">
-                                                <rect key="frame" x="43" y="1600" width="290" height="151"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="W5s-ai-P90" userLabel="Air Quality Stack View">
+                                                <rect key="frame" x="8" y="1534" width="359" height="225"/>
                                                 <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How is the air quality where you live?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Erv-AI-Kau">
+                                                        <rect key="frame" x="0.0" y="0.0" width="359" height="66"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="24"/>
+                                                        <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rwe-S3-0GS">
-                                                        <rect key="frame" x="0.0" y="0.0" width="290" height="45"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="290" id="VDM-Jq-4H2"/>
-                                                        </constraints>
+                                                        <rect key="frame" x="0.0" y="74" width="359" height="45"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="Extremely clean">
-                                                            <color key="titleColor" red="0.23529411759999999" green="0.66666666669999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <color key="titleColor" red="0.08235294118" green="0.70196078429999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="airQuality:" destination="0kq-ab-HXa" eventType="touchUpInside" id="HdH-zP-jfH"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oxc-HK-dRm">
-                                                        <rect key="frame" x="0.0" y="53" width="290" height="45"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="290" id="hzq-33-MjB"/>
-                                                        </constraints>
+                                                        <rect key="frame" x="0.0" y="127" width="359" height="45"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="Slightly polluted">
-                                                            <color key="titleColor" red="0.23529411759999999" green="0.66666666669999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <color key="titleColor" red="0.08235294118" green="0.70196078429999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="airQuality:" destination="0kq-ab-HXa" eventType="touchUpInside" id="jq9-Xl-BBX"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s5r-ib-qos">
-                                                        <rect key="frame" x="0.0" y="106" width="290" height="45"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="290" id="zZB-rA-7Gr"/>
-                                                        </constraints>
+                                                        <rect key="frame" x="0.0" y="180" width="359" height="45"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="Extremely polluted">
-                                                            <color key="titleColor" red="0.23529411759999999" green="0.66666666669999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <color key="titleColor" red="0.08235294118" green="0.70196078429999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="airQuality:" destination="0kq-ab-HXa" eventType="touchUpInside" id="HYF-aw-D6j"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="Erv-AI-Kau" secondAttribute="trailing" id="36E-3c-Q8w"/>
+                                                    <constraint firstAttribute="trailing" secondItem="s5r-ib-qos" secondAttribute="trailing" id="Ala-eS-1T9"/>
+                                                    <constraint firstItem="oxc-HK-dRm" firstAttribute="leading" secondItem="W5s-ai-P90" secondAttribute="leading" id="F6I-Qw-4d1"/>
+                                                    <constraint firstItem="Erv-AI-Kau" firstAttribute="leading" secondItem="W5s-ai-P90" secondAttribute="leading" id="Ff4-vh-RDE"/>
+                                                    <constraint firstAttribute="trailing" secondItem="oxc-HK-dRm" secondAttribute="trailing" id="HyH-Gp-SQq"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Rwe-S3-0GS" secondAttribute="trailing" id="d9Y-hn-loH"/>
+                                                    <constraint firstItem="s5r-ib-qos" firstAttribute="leading" secondItem="W5s-ai-P90" secondAttribute="leading" id="hP1-lZ-R2A"/>
+                                                    <constraint firstItem="Rwe-S3-0GS" firstAttribute="leading" secondItem="W5s-ai-P90" secondAttribute="leading" id="psB-Dy-Qln"/>
+                                                </constraints>
                                             </stackView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you a pet owner?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C1m-3g-KCu">
-                                                <rect key="frame" x="8" y="1783" width="359" height="33"/>
-                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="24"/>
-                                                <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="FuS-Kk-wKB">
-                                                <rect key="frame" x="33" y="1857" width="310" height="45"/>
-                                            </stackView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="About how many hours of sleep do you get every night?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZhK-Wb-TGM">
-                                                <rect key="frame" x="8" y="2093" width="359" height="66"/>
-                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="24"/>
-                                                <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Y9X-8z-X2q">
-                                                <rect key="frame" x="33" y="2167" width="310" height="204"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="OAY-HV-ydh" userLabel="Pet Stack View">
+                                                <rect key="frame" x="70" y="1791" width="235.5" height="88"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pVm-21-tfC">
-                                                        <rect key="frame" x="0.0" y="0.0" width="310" height="45"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="310" id="phh-BI-4Bm"/>
-                                                        </constraints>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you a pet owner?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C1m-3g-KCu">
+                                                        <rect key="frame" x="0.0" y="0.0" width="235.5" height="33"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="24"/>
+                                                        <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="42s-MK-csb">
+                                                        <rect key="frame" x="20" y="43" width="196" height="45"/>
+                                                        <subviews>
+                                                            <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cad-m4-nqM">
+                                                                <rect key="frame" x="0.0" y="0.0" width="90" height="45"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="90" id="Gph-FM-tU5"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
+                                                                <state key="normal" title="Yes">
+                                                                    <color key="titleColor" red="0.08235294118" green="0.70196078429999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="selectExercse:" destination="0kq-ab-HXa" eventType="touchUpInside" id="dW4-PS-Fne"/>
+                                                                    <action selector="selectPetOwnership:" destination="0kq-ab-HXa" eventType="touchUpInside" id="qmw-Ze-tme"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="200" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hAL-eC-0qQ">
+                                                                <rect key="frame" x="106" y="0.0" width="90" height="45"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="90" id="Pg7-aX-MOW"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
+                                                                <state key="normal" title="No">
+                                                                    <color key="titleColor" red="0.08235294118" green="0.70196078429999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="selectExercse:" destination="0kq-ab-HXa" eventType="touchUpInside" id="ple-zX-uhJ"/>
+                                                                    <action selector="selectPetOwnership:" destination="0kq-ab-HXa" eventType="touchUpInside" id="LT0-xb-D4m"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="C1m-3g-KCu" firstAttribute="leading" secondItem="OAY-HV-ydh" secondAttribute="leading" id="7fs-aG-mjG"/>
+                                                    <constraint firstAttribute="trailing" secondItem="C1m-3g-KCu" secondAttribute="trailing" id="r48-DM-7Cb"/>
+                                                </constraints>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About how many hours of sleep do you get every night?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZhK-Wb-TGM">
+                                                <rect key="frame" x="8" y="1911" width="359" height="66"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="24"/>
+                                                <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Y9X-8z-X2q">
+                                                <rect key="frame" x="8" y="1987" width="359" height="204"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pVm-21-tfC">
+                                                        <rect key="frame" x="0.0" y="0.0" width="359" height="45"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="Less than 5 hours">
-                                                            <color key="titleColor" red="0.23529411759999999" green="0.66666666669999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <color key="titleColor" red="0.08235294118" green="0.70196078429999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="numHoursSleep:" destination="0kq-ab-HXa" eventType="touchUpInside" id="kjy-pu-LB3"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ieE-dP-d1i">
-                                                        <rect key="frame" x="0.0" y="53" width="310" height="45"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="310" id="yN1-O9-nwO"/>
-                                                        </constraints>
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ieE-dP-d1i">
+                                                        <rect key="frame" x="0.0" y="53" width="359" height="45"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="6 to 7 hours">
-                                                            <color key="titleColor" red="0.23529411759999999" green="0.66666666669999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <color key="titleColor" red="0.08235294118" green="0.70196078429999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="numHoursSleep:" destination="0kq-ab-HXa" eventType="touchUpInside" id="5Nf-xg-gjI"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AZa-b3-jIW">
-                                                        <rect key="frame" x="0.0" y="106" width="310" height="45"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="310" id="Tcb-Tc-tPX"/>
-                                                        </constraints>
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AZa-b3-jIW">
+                                                        <rect key="frame" x="0.0" y="106" width="359" height="45"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="7 to 9 hours">
-                                                            <color key="titleColor" red="0.23529411759999999" green="0.66666666669999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <color key="titleColor" red="0.08235294118" green="0.70196078429999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="numHoursSleep:" destination="0kq-ab-HXa" eventType="touchUpInside" id="GPl-fO-YwL"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8kL-eo-vxc">
-                                                        <rect key="frame" x="0.0" y="159" width="310" height="45"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="310" id="Xbv-jG-elV"/>
-                                                        </constraints>
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8kL-eo-vxc">
+                                                        <rect key="frame" x="0.0" y="159" width="359" height="45"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="More than 9 hours">
-                                                            <color key="titleColor" red="0.23529411759999999" green="0.66666666669999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <color key="titleColor" red="0.08235294118" green="0.70196078429999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="numHoursSleep:" destination="0kq-ab-HXa" eventType="touchUpInside" id="7Ek-6r-ulN"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="AZa-b3-jIW" firstAttribute="leading" secondItem="Y9X-8z-X2q" secondAttribute="leading" id="1Jw-yb-BX6"/>
+                                                    <constraint firstItem="ieE-dP-d1i" firstAttribute="leading" secondItem="Y9X-8z-X2q" secondAttribute="leading" id="1ob-Dx-AbR"/>
+                                                    <constraint firstAttribute="trailing" secondItem="8kL-eo-vxc" secondAttribute="trailing" id="34e-nb-MHf"/>
+                                                    <constraint firstItem="pVm-21-tfC" firstAttribute="leading" secondItem="Y9X-8z-X2q" secondAttribute="leading" id="6ca-Hd-CvB"/>
+                                                    <constraint firstItem="8kL-eo-vxc" firstAttribute="leading" secondItem="Y9X-8z-X2q" secondAttribute="leading" id="8ge-uH-dI0"/>
+                                                    <constraint firstAttribute="trailing" secondItem="pVm-21-tfC" secondAttribute="trailing" id="hYt-ss-7Kj"/>
+                                                    <constraint firstAttribute="trailing" secondItem="ieE-dP-d1i" secondAttribute="trailing" id="ti9-wa-WSP"/>
+                                                    <constraint firstAttribute="trailing" secondItem="AZa-b3-jIW" secondAttribute="trailing" id="yVD-Kv-1tU"/>
+                                                </constraints>
                                             </stackView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="How would you rate your stress levels on a daily basis?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ewb-DM-uD0">
-                                                <rect key="frame" x="8" y="2403" width="359" height="66"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How would you rate your stress levels on a daily basis?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ewb-DM-uD0">
+                                                <rect key="frame" x="8" y="2223" width="359" height="66"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="24"/>
                                                 <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="vc4-ty-EWn">
-                                                <rect key="frame" x="123" y="2477" width="130" height="151"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="vc4-ty-EWn">
+                                                <rect key="frame" x="8" y="2299" width="359" height="151"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V4h-lD-u3P">
-                                                        <rect key="frame" x="0.0" y="0.0" width="130" height="45"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="130" id="Kak-op-vw2"/>
-                                                        </constraints>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V4h-lD-u3P">
+                                                        <rect key="frame" x="0.0" y="0.0" width="359" height="45"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="Low">
-                                                            <color key="titleColor" red="0.23529411759999999" green="0.66666666669999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <color key="titleColor" red="0.08235294118" green="0.70196078429999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="stressLevelsInfo:" destination="0kq-ab-HXa" eventType="touchUpInside" id="QBh-z4-md4"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iqL-5w-JNN">
-                                                        <rect key="frame" x="0.0" y="53" width="130" height="45"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="130" id="yEY-n7-KY3"/>
-                                                        </constraints>
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iqL-5w-JNN">
+                                                        <rect key="frame" x="0.0" y="53" width="359" height="45"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="Medium">
-                                                            <color key="titleColor" red="0.23529411759999999" green="0.66666666669999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <color key="titleColor" red="0.08235294118" green="0.70196078429999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="stressLevelsInfo:" destination="0kq-ab-HXa" eventType="touchUpInside" id="RSJ-RS-w9F"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WxF-ua-4kY">
-                                                        <rect key="frame" x="0.0" y="106" width="130" height="45"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="130" id="DIQ-tc-zGr"/>
-                                                        </constraints>
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WxF-ua-4kY">
+                                                        <rect key="frame" x="0.0" y="106" width="359" height="45"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="High">
-                                                            <color key="titleColor" red="0.23529411759999999" green="0.66666666669999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <color key="titleColor" red="0.08235294118" green="0.70196078429999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="stressLevelsInfo:" destination="0kq-ab-HXa" eventType="touchUpInside" id="zJq-G6-4Rr"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
-                                            </stackView>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rme-p3-fTK">
-                                                <rect key="frame" x="93" y="2732" width="190" height="56"/>
-                                                <color key="backgroundColor" red="0.231566146" green="0.66540956500000004" blue="0.90203237530000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="190" id="A9n-dh-JRd"/>
+                                                    <constraint firstItem="iqL-5w-JNN" firstAttribute="leading" secondItem="vc4-ty-EWn" secondAttribute="leading" id="62A-Iw-2n7"/>
+                                                    <constraint firstAttribute="trailing" secondItem="V4h-lD-u3P" secondAttribute="trailing" id="Ch5-vd-FbK"/>
+                                                    <constraint firstAttribute="trailing" secondItem="iqL-5w-JNN" secondAttribute="trailing" id="RtY-Kc-1Uo"/>
+                                                    <constraint firstAttribute="trailing" secondItem="WxF-ua-4kY" secondAttribute="trailing" id="Utu-Xc-g3e"/>
+                                                    <constraint firstItem="WxF-ua-4kY" firstAttribute="leading" secondItem="vc4-ty-EWn" secondAttribute="leading" id="XCM-V1-Ja7"/>
+                                                    <constraint firstItem="V4h-lD-u3P" firstAttribute="leading" secondItem="vc4-ty-EWn" secondAttribute="leading" id="jhQ-33-cLW"/>
+                                                </constraints>
+                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rme-p3-fTK">
+                                                <rect key="frame" x="92" y="2482" width="190" height="56"/>
+                                                <color key="backgroundColor" red="0.08235294118" green="0.70196078429999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="190" id="v4w-fz-7RI"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="32"/>
                                                 <state key="normal" title="Calculate">
@@ -521,86 +540,89 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="calculateButtonTapped:" destination="0kq-ab-HXa" eventType="touchUpInside" id="tvv-55-4oG"/>
-                                                    <segue destination="NfA-oD-g0a" kind="show" identifier="toDeathDate" id="jFv-J1-Ile"/>
+                                                    <segue destination="NfA-oD-g0a" kind="show" identifier="toDeathDate" id="dKE-oa-zu0"/>
                                                 </connections>
                                             </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How many days do you work out of the week?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lph-Vx-ZVQ">
+                                                <rect key="frame" x="8" y="1177" width="359" height="66"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="24"/>
+                                                <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstItem="Ewb-DM-uD0" firstAttribute="top" secondItem="Y9X-8z-X2q" secondAttribute="bottom" constant="32" id="2c1-10-LYu"/>
-                                            <constraint firstItem="vc4-ty-EWn" firstAttribute="centerX" secondItem="nig-3c-IMA" secondAttribute="centerX" id="2vC-Ec-bE0"/>
-                                            <constraint firstItem="C1m-3g-KCu" firstAttribute="leading" secondItem="nig-3c-IMA" secondAttribute="leading" constant="8" id="4V5-Zf-BI6"/>
-                                            <constraint firstAttribute="trailing" secondItem="lph-Vx-ZVQ" secondAttribute="trailing" constant="8" id="5Hv-gT-9jG"/>
-                                            <constraint firstItem="C1m-3g-KCu" firstAttribute="top" secondItem="W5s-ai-P90" secondAttribute="bottom" constant="32" id="5ef-7j-aoe"/>
-                                            <constraint firstItem="Y9X-8z-X2q" firstAttribute="centerX" secondItem="nig-3c-IMA" secondAttribute="centerX" id="6zH-3v-d1S"/>
-                                            <constraint firstAttribute="height" constant="2900" id="883-9U-y8w"/>
-                                            <constraint firstAttribute="trailing" secondItem="Cez-Xg-3Q5" secondAttribute="trailing" constant="8" id="8H0-oQ-vuc"/>
-                                            <constraint firstItem="Cez-Xg-3Q5" firstAttribute="leading" secondItem="nig-3c-IMA" secondAttribute="leading" constant="8" id="CoB-09-IQt"/>
-                                            <constraint firstItem="aIc-ij-n4N" firstAttribute="top" secondItem="Cez-Xg-3Q5" secondAttribute="bottom" constant="8" id="GqY-i1-53E"/>
-                                            <constraint firstItem="PMP-oT-W6d" firstAttribute="top" secondItem="hRb-H4-ZoA" secondAttribute="bottom" constant="32" id="GxA-xH-nXc"/>
-                                            <constraint firstItem="mzY-QI-Lgj" firstAttribute="top" secondItem="aIc-ij-n4N" secondAttribute="bottom" constant="32" id="Ilm-Sr-Qq8"/>
-                                            <constraint firstItem="X68-JQ-Yo9" firstAttribute="centerX" secondItem="nig-3c-IMA" secondAttribute="centerX" id="J6E-2J-5iz"/>
-                                            <constraint firstItem="Ewb-DM-uD0" firstAttribute="centerX" secondItem="nig-3c-IMA" secondAttribute="centerX" id="Llr-HS-fcv"/>
-                                            <constraint firstItem="Cez-Xg-3Q5" firstAttribute="centerX" secondItem="nig-3c-IMA" secondAttribute="centerX" id="M5P-a4-0Mp"/>
-                                            <constraint firstAttribute="trailing" secondItem="PMP-oT-W6d" secondAttribute="trailing" constant="8" id="OrZ-Rm-iIm"/>
-                                            <constraint firstItem="Rme-p3-fTK" firstAttribute="centerX" secondItem="nig-3c-IMA" secondAttribute="centerX" id="RmF-Uz-LcO"/>
-                                            <constraint firstItem="Y9X-8z-X2q" firstAttribute="top" secondItem="ZhK-Wb-TGM" secondAttribute="bottom" constant="8" id="SMd-cZ-FvO"/>
-                                            <constraint firstItem="Ewb-DM-uD0" firstAttribute="leading" secondItem="nig-3c-IMA" secondAttribute="leading" constant="8" id="Uza-3M-luX"/>
-                                            <constraint firstAttribute="trailing" secondItem="Ewb-DM-uD0" secondAttribute="trailing" constant="8" id="WGa-mr-XWc"/>
-                                            <constraint firstItem="FuS-Kk-wKB" firstAttribute="centerX" secondItem="nig-3c-IMA" secondAttribute="centerX" id="X8R-e6-tGv"/>
-                                            <constraint firstAttribute="trailing" secondItem="ZhK-Wb-TGM" secondAttribute="trailing" constant="8" id="XDI-Na-KV5"/>
-                                            <constraint firstItem="Erv-AI-Kau" firstAttribute="leading" secondItem="nig-3c-IMA" secondAttribute="leading" constant="8" id="Xsx-pG-hcz"/>
-                                            <constraint firstItem="W5s-ai-P90" firstAttribute="top" secondItem="Erv-AI-Kau" secondAttribute="bottom" constant="8" id="bNi-lB-Jjs"/>
-                                            <constraint firstItem="ZhK-Wb-TGM" firstAttribute="top" secondItem="FuS-Kk-wKB" secondAttribute="bottom" constant="32" id="chf-wU-VRl"/>
-                                            <constraint firstItem="vc4-ty-EWn" firstAttribute="top" secondItem="Ewb-DM-uD0" secondAttribute="bottom" constant="8" id="cqI-RJ-gDe"/>
-                                            <constraint firstItem="W5s-ai-P90" firstAttribute="centerX" secondItem="nig-3c-IMA" secondAttribute="centerX" id="d4U-7Z-pa5"/>
-                                            <constraint firstItem="aIc-ij-n4N" firstAttribute="centerX" secondItem="nig-3c-IMA" secondAttribute="centerX" id="e8f-eA-p4l"/>
-                                            <constraint firstItem="ZhK-Wb-TGM" firstAttribute="leading" secondItem="nig-3c-IMA" secondAttribute="leading" constant="8" id="fWN-tM-oGG"/>
-                                            <constraint firstItem="PMP-oT-W6d" firstAttribute="leading" secondItem="nig-3c-IMA" secondAttribute="leading" constant="8" id="hHb-7H-ir4"/>
-                                            <constraint firstItem="vBw-6y-YJy" firstAttribute="centerX" secondItem="nig-3c-IMA" secondAttribute="centerX" id="hdt-IO-3ev"/>
-                                            <constraint firstItem="lph-Vx-ZVQ" firstAttribute="leading" secondItem="nig-3c-IMA" secondAttribute="leading" constant="8" id="jpZ-uJ-HPY"/>
-                                            <constraint firstItem="Erv-AI-Kau" firstAttribute="centerX" secondItem="nig-3c-IMA" secondAttribute="centerX" id="k7J-yw-9ZW"/>
-                                            <constraint firstItem="PMP-oT-W6d" firstAttribute="centerX" secondItem="nig-3c-IMA" secondAttribute="centerX" id="pHI-f1-60F"/>
-                                            <constraint firstItem="FuS-Kk-wKB" firstAttribute="top" secondItem="C1m-3g-KCu" secondAttribute="bottom" constant="8" id="poi-eX-6bd"/>
-                                            <constraint firstItem="hRb-H4-ZoA" firstAttribute="top" secondItem="mzY-QI-Lgj" secondAttribute="bottom" constant="8" id="qTO-Ms-IXS"/>
-                                            <constraint firstItem="mzY-QI-Lgj" firstAttribute="centerX" secondItem="nig-3c-IMA" secondAttribute="centerX" id="qdl-VE-IdY"/>
-                                            <constraint firstItem="C1m-3g-KCu" firstAttribute="centerX" secondItem="nig-3c-IMA" secondAttribute="centerX" id="rD1-Wx-wyS"/>
-                                            <constraint firstItem="lph-Vx-ZVQ" firstAttribute="centerX" secondItem="nig-3c-IMA" secondAttribute="centerX" id="rT8-24-5gt"/>
-                                            <constraint firstItem="X68-JQ-Yo9" firstAttribute="top" secondItem="PMP-oT-W6d" secondAttribute="bottom" constant="8" id="rUb-II-0DH"/>
-                                            <constraint firstItem="vBw-6y-YJy" firstAttribute="top" secondItem="nig-3c-IMA" secondAttribute="top" constant="16" id="rX3-e7-6DH"/>
-                                            <constraint firstItem="ZhK-Wb-TGM" firstAttribute="centerX" secondItem="nig-3c-IMA" secondAttribute="centerX" id="s6f-Jb-aMf"/>
-                                            <constraint firstAttribute="trailing" secondItem="C1m-3g-KCu" secondAttribute="trailing" constant="8" id="t3m-bW-ovJ"/>
-                                            <constraint firstItem="Cez-Xg-3Q5" firstAttribute="top" secondItem="vBw-6y-YJy" secondAttribute="bottom" constant="24" id="tWS-F4-46o"/>
-                                            <constraint firstItem="hRb-H4-ZoA" firstAttribute="centerX" secondItem="nig-3c-IMA" secondAttribute="centerX" id="wK9-le-4UO"/>
-                                            <constraint firstItem="lph-Vx-ZVQ" firstAttribute="top" secondItem="X68-JQ-Yo9" secondAttribute="bottom" constant="32" id="wqn-5I-0r9"/>
-                                            <constraint firstItem="NKV-hh-1cc" firstAttribute="centerX" secondItem="nig-3c-IMA" secondAttribute="centerX" id="xf4-Ol-MHI"/>
-                                            <constraint firstAttribute="trailing" secondItem="Erv-AI-Kau" secondAttribute="trailing" constant="8" id="y4h-8o-MCV"/>
-                                            <constraint firstItem="NKV-hh-1cc" firstAttribute="top" secondItem="lph-Vx-ZVQ" secondAttribute="bottom" constant="8" id="z1Q-p2-zs9"/>
-                                            <constraint firstItem="Erv-AI-Kau" firstAttribute="top" secondItem="NKV-hh-1cc" secondAttribute="bottom" constant="32" id="zEe-6i-LiS"/>
+                                            <constraint firstItem="X68-JQ-Yo9" firstAttribute="centerX" secondItem="nig-3c-IMA" secondAttribute="centerX" id="3AV-mA-uIU"/>
+                                            <constraint firstItem="lph-Vx-ZVQ" firstAttribute="top" secondItem="X68-JQ-Yo9" secondAttribute="bottom" constant="32" id="4CR-vu-f2z"/>
+                                            <constraint firstAttribute="trailing" secondItem="Ewb-DM-uD0" secondAttribute="trailing" constant="8" id="58P-DW-0tZ"/>
+                                            <constraint firstItem="X68-JQ-Yo9" firstAttribute="top" secondItem="PMP-oT-W6d" secondAttribute="bottom" constant="10" id="5kd-Qz-cQh"/>
+                                            <constraint firstItem="Cez-Xg-3Q5" firstAttribute="leading" secondItem="nig-3c-IMA" secondAttribute="leading" constant="8" id="6OR-Bu-XY0"/>
+                                            <constraint firstItem="W5s-ai-P90" firstAttribute="leading" secondItem="nig-3c-IMA" secondAttribute="leading" constant="8" id="7d5-dX-H2v"/>
+                                            <constraint firstItem="aIc-ij-n4N" firstAttribute="leading" secondItem="nig-3c-IMA" secondAttribute="leading" constant="8" id="8FH-fl-QZV"/>
+                                            <constraint firstItem="hRb-H4-ZoA" firstAttribute="centerX" secondItem="nig-3c-IMA" secondAttribute="centerX" id="8cQ-dI-Z09"/>
+                                            <constraint firstItem="Rme-p3-fTK" firstAttribute="top" secondItem="vc4-ty-EWn" secondAttribute="bottom" constant="32" id="9XK-iD-fwm"/>
+                                            <constraint firstAttribute="trailing" secondItem="PMP-oT-W6d" secondAttribute="trailing" constant="8" id="BUf-4W-wty"/>
+                                            <constraint firstAttribute="trailing" secondItem="vc4-ty-EWn" secondAttribute="trailing" constant="8" id="Bv4-9p-yQB"/>
+                                            <constraint firstItem="aIc-ij-n4N" firstAttribute="top" secondItem="Cez-Xg-3Q5" secondAttribute="bottom" constant="10" id="DXj-B2-mVF"/>
+                                            <constraint firstItem="Ewb-DM-uD0" firstAttribute="leading" secondItem="nig-3c-IMA" secondAttribute="leading" constant="8" id="Fgr-LQ-1si"/>
+                                            <constraint firstItem="Rme-p3-fTK" firstAttribute="centerX" secondItem="nig-3c-IMA" secondAttribute="centerX" id="HZ1-GW-f7a"/>
+                                            <constraint firstItem="vc4-ty-EWn" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="nig-3c-IMA" secondAttribute="leading" constant="8" id="ICd-ZJ-qKp"/>
+                                            <constraint firstItem="PMP-oT-W6d" firstAttribute="top" secondItem="hRb-H4-ZoA" secondAttribute="bottom" constant="32" id="Ic8-XP-xRR"/>
+                                            <constraint firstItem="Cez-Xg-3Q5" firstAttribute="centerX" secondItem="nig-3c-IMA" secondAttribute="centerX" id="Kjs-Ka-bqm"/>
+                                            <constraint firstItem="lph-Vx-ZVQ" firstAttribute="leading" secondItem="nig-3c-IMA" secondAttribute="leading" constant="8" id="Krh-FY-RY3"/>
+                                            <constraint firstItem="PMP-oT-W6d" firstAttribute="centerX" secondItem="nig-3c-IMA" secondAttribute="centerX" id="M8W-ih-uEA"/>
+                                            <constraint firstItem="Ewb-DM-uD0" firstAttribute="top" secondItem="Y9X-8z-X2q" secondAttribute="bottom" constant="32" id="Mwa-Gx-5bx"/>
+                                            <constraint firstItem="OAY-HV-ydh" firstAttribute="centerX" secondItem="nig-3c-IMA" secondAttribute="centerX" id="O6N-4i-Uaq"/>
+                                            <constraint firstItem="ZhK-Wb-TGM" firstAttribute="top" secondItem="OAY-HV-ydh" secondAttribute="bottom" constant="32" id="Qyi-yG-g46"/>
+                                            <constraint firstAttribute="trailing" secondItem="W5s-ai-P90" secondAttribute="trailing" constant="8" id="Sr0-MX-gkf"/>
+                                            <constraint firstItem="X68-JQ-Yo9" firstAttribute="leading" relation="lessThanOrEqual" secondItem="nig-3c-IMA" secondAttribute="leading" constant="26.5" id="TNL-K6-0Id"/>
+                                            <constraint firstAttribute="trailing" secondItem="aIc-ij-n4N" secondAttribute="trailing" constant="8" id="UbF-zY-K7N"/>
+                                            <constraint firstItem="PMP-oT-W6d" firstAttribute="leading" secondItem="nig-3c-IMA" secondAttribute="leading" constant="8" id="VPl-sa-BBf"/>
+                                            <constraint firstItem="W5s-ai-P90" firstAttribute="top" secondItem="NKV-hh-1cc" secondAttribute="bottom" constant="24" id="W6l-O3-31f"/>
+                                            <constraint firstItem="mzY-QI-Lgj" firstAttribute="centerX" secondItem="nig-3c-IMA" secondAttribute="centerX" id="W74-yq-Pz5"/>
+                                            <constraint firstItem="Cez-Xg-3Q5" firstAttribute="top" secondItem="vBw-6y-YJy" secondAttribute="bottom" constant="32" id="YUe-Dt-bWc"/>
+                                            <constraint firstAttribute="trailing" secondItem="Cez-Xg-3Q5" secondAttribute="trailing" constant="8" id="Ycp-aZ-dsk"/>
+                                            <constraint firstItem="vc4-ty-EWn" firstAttribute="top" secondItem="Ewb-DM-uD0" secondAttribute="bottom" constant="10" id="af5-is-azJ"/>
+                                            <constraint firstAttribute="bottom" secondItem="Rme-p3-fTK" secondAttribute="bottom" constant="20" id="bcJ-HV-F4U"/>
+                                            <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="vBw-6y-YJy" secondAttribute="trailing" constant="55" id="cPd-6I-Nvc"/>
+                                            <constraint firstAttribute="trailing" secondItem="ZhK-Wb-TGM" secondAttribute="trailing" constant="8" id="e7M-iJ-mMd"/>
+                                            <constraint firstAttribute="trailing" secondItem="NKV-hh-1cc" secondAttribute="trailing" constant="8" id="gh9-Lx-cFt"/>
+                                            <constraint firstItem="vc4-ty-EWn" firstAttribute="centerX" secondItem="nig-3c-IMA" secondAttribute="centerX" id="imW-NG-uPm"/>
+                                            <constraint firstItem="Y9X-8z-X2q" firstAttribute="leading" secondItem="nig-3c-IMA" secondAttribute="leading" constant="8" id="jas-36-5Z0"/>
+                                            <constraint firstAttribute="trailing" secondItem="lph-Vx-ZVQ" secondAttribute="trailing" constant="8" id="lp1-mh-YaA"/>
+                                            <constraint firstItem="OAY-HV-ydh" firstAttribute="top" secondItem="W5s-ai-P90" secondAttribute="bottom" constant="32" id="m1g-g5-0AE"/>
+                                            <constraint firstItem="ZhK-Wb-TGM" firstAttribute="leading" secondItem="nig-3c-IMA" secondAttribute="leading" constant="8" id="mGH-oD-5f7"/>
+                                            <constraint firstAttribute="trailing" secondItem="Y9X-8z-X2q" secondAttribute="trailing" constant="8" id="muh-NS-MMs"/>
+                                            <constraint firstItem="Y9X-8z-X2q" firstAttribute="top" secondItem="ZhK-Wb-TGM" secondAttribute="bottom" constant="10" id="oOf-Ya-z5f"/>
+                                            <constraint firstItem="vBw-6y-YJy" firstAttribute="leading" relation="lessThanOrEqual" secondItem="nig-3c-IMA" secondAttribute="leading" constant="55" id="s3J-9n-awA"/>
+                                            <constraint firstItem="hRb-H4-ZoA" firstAttribute="top" secondItem="mzY-QI-Lgj" secondAttribute="bottom" constant="10" id="u6C-oi-eLB"/>
+                                            <constraint firstItem="NKV-hh-1cc" firstAttribute="leading" secondItem="nig-3c-IMA" secondAttribute="leading" constant="8" id="ucb-ai-chB"/>
+                                            <constraint firstItem="vBw-6y-YJy" firstAttribute="top" secondItem="nig-3c-IMA" secondAttribute="top" constant="16" id="xZO-lL-4np"/>
+                                            <constraint firstItem="NKV-hh-1cc" firstAttribute="top" secondItem="lph-Vx-ZVQ" secondAttribute="bottom" constant="10" id="yl2-qM-YrE"/>
+                                            <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="X68-JQ-Yo9" secondAttribute="trailing" constant="8" id="zgn-5g-3DY"/>
+                                            <constraint firstItem="mzY-QI-Lgj" firstAttribute="top" secondItem="aIc-ij-n4N" secondAttribute="bottom" constant="32" id="zxs-Xc-10t"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="nig-3c-IMA" firstAttribute="top" secondItem="WGU-Zp-6SQ" secondAttribute="top" id="EdF-hb-QP8"/>
-                                    <constraint firstAttribute="bottom" secondItem="nig-3c-IMA" secondAttribute="bottom" id="TRs-7J-exZ"/>
-                                    <constraint firstAttribute="trailing" secondItem="nig-3c-IMA" secondAttribute="trailing" id="i4t-wV-qv6"/>
-                                    <constraint firstItem="nig-3c-IMA" firstAttribute="leading" secondItem="WGU-Zp-6SQ" secondAttribute="leading" id="ygA-xN-hgr"/>
+                                    <constraint firstAttribute="bottom" secondItem="nig-3c-IMA" secondAttribute="bottom" id="SRq-Uy-Orn"/>
+                                    <constraint firstAttribute="trailing" secondItem="nig-3c-IMA" secondAttribute="trailing" id="dh1-OW-ICg"/>
+                                    <constraint firstItem="nig-3c-IMA" firstAttribute="leading" secondItem="WGU-Zp-6SQ" secondAttribute="leading" id="jpE-Km-cXH"/>
+                                    <constraint firstItem="nig-3c-IMA" firstAttribute="top" secondItem="WGU-Zp-6SQ" secondAttribute="top" id="lGZ-m4-zAX"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="width" secondItem="nig-3c-IMA" secondAttribute="width" id="QlR-K6-Lo1"/>
-                            <constraint firstItem="d3R-v2-20r" firstAttribute="top" secondItem="WGU-Zp-6SQ" secondAttribute="bottom" id="XTR-9g-iVb"/>
-                            <constraint firstItem="WGU-Zp-6SQ" firstAttribute="top" secondItem="IUp-FF-c3y" secondAttribute="top" id="eTd-Jb-pjZ"/>
-                            <constraint firstItem="WGU-Zp-6SQ" firstAttribute="leading" secondItem="IUp-FF-c3y" secondAttribute="leading" id="gBK-a0-bUU"/>
-                            <constraint firstAttribute="trailing" secondItem="WGU-Zp-6SQ" secondAttribute="trailing" id="uSh-LD-sNF"/>
+                            <constraint firstAttribute="trailing" secondItem="WGU-Zp-6SQ" secondAttribute="trailing" id="WWQ-CN-lAf"/>
+                            <constraint firstItem="d3R-v2-20r" firstAttribute="top" secondItem="WGU-Zp-6SQ" secondAttribute="bottom" id="c67-bT-gXX"/>
+                            <constraint firstItem="WGU-Zp-6SQ" firstAttribute="leading" secondItem="IUp-FF-c3y" secondAttribute="leading" id="gPV-JY-3oX"/>
+                            <constraint firstItem="WGU-Zp-6SQ" firstAttribute="top" secondItem="wyp-4X-WwZ" secondAttribute="bottom" id="hge-2U-gLB"/>
+                            <constraint firstItem="nig-3c-IMA" firstAttribute="width" secondItem="IUp-FF-c3y" secondAttribute="width" id="wX9-4N-IDh"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Gck-YP-WwH"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="375" height="2900"/>
                     <connections>
                         <outlet property="about41to60HoursPerWeek" destination="WPJ-Lo-fQs" id="cnx-iz-DaP"/>
                         <outlet property="about61to80HoursPerWeek" destination="Fjt-nv-PGT" id="Vva-KD-VKq"/>
@@ -616,6 +638,7 @@
                         <outlet property="moreThan80HoursPerWeek" destination="ybG-kI-4uU" id="VGN-e8-nJi"/>
                         <outlet property="moreThanNineHoursSleep" destination="8kL-eo-vxc" id="7KP-sW-KVX"/>
                         <outlet property="noFloss" destination="ZfO-nc-owr" id="PAL-64-5lb"/>
+                        <outlet property="notAPetOwner" destination="hAL-eC-0qQ" id="7Lr-3J-hLt"/>
                         <outlet property="notWorkingAnyDaysPerWeek" destination="dai-w3-0jt" id="4p9-3k-3ss"/>
                         <outlet property="notWorkingAnyHoursPerWeek" destination="zkH-cM-fUj" id="3YO-2i-25I"/>
                         <outlet property="oneExerciseDayPerWeek" destination="3pB-pv-eeB" id="ghF-cq-ggz"/>
@@ -632,12 +655,13 @@
                         <outlet property="veryCleanAir" destination="Rwe-S3-0GS" id="RiN-ue-aCh"/>
                         <outlet property="veryPollutedAir" destination="s5r-ib-qos" id="mJM-TU-Okr"/>
                         <outlet property="yesFloss" destination="owu-Xf-JpG" id="370-aR-5rS"/>
+                        <outlet property="yesPetOwner" destination="Cad-m4-nqM" id="Ft6-5I-RZh"/>
                         <outlet property="zeroExerciseDaysPerWeek" destination="s1T-zO-pDZ" id="kjp-gA-MgA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oa4-hg-KRn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3090.9375" y="-4464.0845070422538"/>
+            <point key="canvasLocation" x="3090.4000000000001" y="-4465.3673163418298"/>
         </scene>
         <!--UIViewController-gV2-Ne-3cN-->
         <scene sceneID="zDG-yf-e8f">
@@ -645,7 +669,7 @@
                 <viewControllerPlaceholder storyboardIdentifier="UIViewController-gV2-Ne-3cN" storyboardName="Main" referencedIdentifier="UIViewController-gV2-Ne-3cN" id="NfA-oD-g0a" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="55D-sF-aVF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4132" y="-3028"/>
+            <point key="canvasLocation" x="4486" y="727"/>
         </scene>
     </scenes>
 </document>

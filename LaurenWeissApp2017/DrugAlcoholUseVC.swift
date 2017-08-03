@@ -53,6 +53,7 @@ class DrugAlcoholUseVC: UIViewController, UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         calculateButton.layer.cornerRadius = 10
+        calculateButton.backgroundColor = UIColor.primaryBlue
 
         //making the buttons have rounded corners
         
@@ -632,7 +633,7 @@ class DrugAlcoholUseVC: UIViewController, UIScrollViewDelegate {
         
     @IBAction func calculateButtonTapped(_ sender: UIButton) {
         LifeExpectancyCalculator.calculateAge(forUser: User.current) { (finalAge) in
-            User.current.finalAge = finalAge
+            User.current.finalAge = Int(finalAge)
         }
     }
     
@@ -641,7 +642,7 @@ class DrugAlcoholUseVC: UIViewController, UIScrollViewDelegate {
                 
                 if let destinationVC = segue.destination as? DeathDateScreenViewController
                 {
-                    destinationVC.deathAgeAsDouble = User.current.finalAge
+                    destinationVC.deathAgeAsInt = User.current.finalAge
                 }
             }
 }

@@ -48,7 +48,7 @@ class LifeExpectancyCalculator {
             
             //education impact
             let agesToAddBasedOnEducation = LifeExpectancyCalculator.educationImpact(lifeSpecs: user.lifeSpecifications)
-            baseAge = baseAge + agesToAddBasedOnEducation
+            baseAge = baseAge - agesToAddBasedOnEducation
             
             //diabetes impact
             let agesToSubtractBasedOnDiabetes = LifeExpectancyCalculator.diabetesImpact(lifeSpecs: user.lifeSpecifications)
@@ -57,24 +57,24 @@ class LifeExpectancyCalculator {
 //YOUR DAILY LIFE VIEW CONTROLLER Functions
             //exercise impact
             let yearsToAddBasedOnExercise = LifeExpectancyCalculator.exerciseImpact(lifeSpecs: user.lifeSpecifications)
-            baseAge = baseAge + yearsToAddBasedOnExercise
+            baseAge = baseAge - yearsToAddBasedOnExercise
 
             //flossing impact
             let yearsToAddBasedOnFlossing = LifeExpectancyCalculator.flossingImpact(lifeSpecs: user.lifeSpecifications)
-            baseAge = baseAge + yearsToAddBasedOnFlossing
+            baseAge = baseAge - yearsToAddBasedOnFlossing
 
             
             //hours of work per week impact
             let yearsToAddBasedOnWorkHours = LifeExpectancyCalculator.numHoursWorkPerWeek(lifeSpecs: user.lifeSpecifications)
-            baseAge = baseAge + yearsToAddBasedOnWorkHours
+            baseAge = baseAge - yearsToAddBasedOnWorkHours
             
             
             //days of work per week impact
             let yearsToAddBasedOnDaysWorkPerWeek = LifeExpectancyCalculator.numDaysWorkPerWeek(lifeSpecs: user.lifeSpecifications)
-            baseAge = baseAge + yearsToAddBasedOnDaysWorkPerWeek
+            baseAge = baseAge - yearsToAddBasedOnDaysWorkPerWeek
             //air quality impact
             let yearsToAddBasedOnAirQuality = LifeExpectancyCalculator.airQuality(lifeSpecs: user.lifeSpecifications)
-            baseAge = baseAge + yearsToAddBasedOnAirQuality
+            baseAge = baseAge - yearsToAddBasedOnAirQuality
             
             //seatbelt impact
 //            let yearsToAddBasedOnSeatbelt = LifeExpectancyCalculator.seatbeltImpact(lifeSpecs: user.lifeSpecifications)
@@ -82,62 +82,67 @@ class LifeExpectancyCalculator {
             
             //sleep impact
             let yearsToAddBasedOnSleep = LifeExpectancyCalculator.sleepImpact(lifeSpecs: user.lifeSpecifications)
-            baseAge = baseAge + yearsToAddBasedOnSleep
+            baseAge = baseAge - yearsToAddBasedOnSleep
             
             //stress levels impact
             let yearsToAddBasedOnStress = LifeExpectancyCalculator.stressLevelsImpact(lifeSpecs: user.lifeSpecifications)
-            baseAge = baseAge + yearsToAddBasedOnStress
+            baseAge = baseAge - yearsToAddBasedOnStress
+            
+            //pet impact
+            
+            let yearsToAddBasedOnPet = LifeExpectancyCalculator.petImpact(lifeSpaces: user.lifeSpecifications)
+            baseAge = baseAge - yearsToAddBasedOnPet
             
 //RELATIONSHIPS VIEW CONTROLLER Functions
             //marital status impact
             let yearsToAddBasedOnMaritalStatus = LifeExpectancyCalculator.maritalStatusImpact(lifeSpecs: user.lifeSpecifications)
-            baseAge = baseAge + yearsToAddBasedOnMaritalStatus
+            baseAge = baseAge - yearsToAddBasedOnMaritalStatus
             
             //personal contact impact
             let yearsToAddBasedOnContact = LifeExpectancyCalculator.personalContactImpact(lifeSpecs: user.lifeSpecifications)
-            baseAge = baseAge + yearsToAddBasedOnContact
+            baseAge = baseAge - yearsToAddBasedOnContact
             
             //heart attack impact
             let yearsToAddBasedOnHeart = LifeExpectancyCalculator.heartAttackImpact(lifeSpecs: user.lifeSpecifications)
-            baseAge = baseAge + yearsToAddBasedOnHeart
+            baseAge = baseAge - yearsToAddBasedOnHeart
             
             //cancer impact
             let yearsToAddBasedOnCancer = LifeExpectancyCalculator.cancerImpact(lifeSpecs: user.lifeSpecifications)
-            baseAge = baseAge + yearsToAddBasedOnCancer
+            baseAge = baseAge - yearsToAddBasedOnCancer
             
             //father impact
             let yearsToAddBasedOnFather = LifeExpectancyCalculator.fatherImpact(lifeSpecs: user.lifeSpecifications)
-            baseAge = baseAge + yearsToAddBasedOnFather
+            baseAge = baseAge - yearsToAddBasedOnFather
             
             //mother impact
             let yearsToAddBAsedOnMother = LifeExpectancyCalculator.motherImpact(lifeSpecs: user.lifeSpecifications)
-            baseAge = baseAge + yearsToAddBAsedOnMother
+            baseAge = baseAge - yearsToAddBAsedOnMother
             
             
 //DIET AND NUTRITION VIEW CONTROLLER Functions
             //coffee impact
             let yearsToAddBasedOnCoffee = LifeExpectancyCalculator.coffeeImpact(lifeSpecs: user.lifeSpecifications)
-            baseAge = baseAge + yearsToAddBasedOnCoffee
+            baseAge = baseAge - yearsToAddBasedOnCoffee
             
             //dairy impact
             let yearsToAddBasedOnDairy = LifeExpectancyCalculator.dairyImpact(lifeSpecs: user.lifeSpecifications)
-            baseAge = baseAge + yearsToAddBasedOnDairy
+            baseAge = baseAge - yearsToAddBasedOnDairy
             
             //sweets impact
             let yearsToAddBasedOnSweets = LifeExpectancyCalculator.sweetsImpact(lifeSpecs: user.lifeSpecifications)
-            baseAge = baseAge + yearsToAddBasedOnSweets
+            baseAge = baseAge - yearsToAddBasedOnSweets
             
             //carbs impact
             let yearsToAddBasedOnCarbs = LifeExpectancyCalculator.carbsImpact(lifeSpecs: user.lifeSpecifications)
-            baseAge = baseAge + yearsToAddBasedOnCarbs
+            baseAge = baseAge - yearsToAddBasedOnCarbs
             
             //red meat impact
             let yearsToAddBasedOnMeat = LifeExpectancyCalculator.redMeatImpact(lifeSpecs: user.lifeSpecifications)
-            baseAge = baseAge + yearsToAddBasedOnMeat
+            baseAge = baseAge - yearsToAddBasedOnMeat
             
             //fast foods impact
             let yearsToAddBasedOnFAstFoods = LifeExpectancyCalculator.fastFoodsImpact(lifeSpecs: user.lifeSpecifications)
-            baseAge = baseAge + yearsToAddBasedOnFAstFoods
+            baseAge = baseAge - yearsToAddBasedOnFAstFoods
             
             
 //DRUGS AND ALCOHOL USE VIEW CONTROLLER Functions
@@ -147,46 +152,48 @@ class LifeExpectancyCalculator {
 //            baseAge = baseAge + yearsToAddBasedOnWhetherSmoking
             
             let yearsToAddBasedOnNumCigs = LifeExpectancyCalculator.smokingImpact(lifeSpecs: user.lifeSpecifications)
-            baseAge = baseAge + Double(yearsToAddBasedOnNumCigs)
+            baseAge = baseAge - Double(yearsToAddBasedOnNumCigs)
             
             
             //second hand smoking impact
-            let yearsToAddBasedOnSecondHandSmoke = LifeExpectancyCalculator.secondHandSmokingImpact(lifeSpecs: user.lifeSpecifications);            baseAge = baseAge + yearsToAddBasedOnSecondHandSmoke
+            let yearsToAddBasedOnSecondHandSmoke = LifeExpectancyCalculator.secondHandSmokingImpact(lifeSpecs: user.lifeSpecifications)
+            baseAge = baseAge - yearsToAddBasedOnSecondHandSmoke
             
             //alcohol impact
 //            let yearsToAddBasedOnWhetherAlcohol = LifeExpectancyCalculator.doYouDrink(lifeSpecs: user.lifeSpecifications)
 //            baseAge = baseAge + yearsToAddBasedOnWhetherAlcohol
             
             let yearsToAddBasedOnNumNightsSpentDrinking = LifeExpectancyCalculator.alcoholImpactNightsSpentDrinking(lifeSpecs: user.lifeSpecifications)
-            baseAge = baseAge + yearsToAddBasedOnNumNightsSpentDrinking
+            baseAge = baseAge - yearsToAddBasedOnNumNightsSpentDrinking
             
-            let yearsToAddBasedOnNumDrinksPerNight = LifeExpectancyCalculator.alcoholImpactNumDrinks(lifeSpecs: user.lifeSpecifications);            baseAge = baseAge + yearsToAddBasedOnNumDrinksPerNight
+            let yearsToAddBasedOnNumDrinksPerNight = LifeExpectancyCalculator.alcoholImpactNumDrinks(lifeSpecs: user.lifeSpecifications)
+            baseAge = baseAge - yearsToAddBasedOnNumDrinksPerNight
             
             //illegal drugs impact
             let yearsToAddBasedOnDrugs = LifeExpectancyCalculator.drugsImpact(lifeSpecs: user.lifeSpecifications)
-            baseAge = baseAge + yearsToAddBasedOnDrugs
+            baseAge = baseAge - yearsToAddBasedOnDrugs
             
             
 //OTHER HEALTH INFO VIEW CONTROLLER Functions
             
             //HDL levels impact
             let yearsToAddBasedonHDL = LifeExpectancyCalculator.hdlImpact(lifeSpecs: user.lifeSpecifications)
-            baseAge = baseAge + yearsToAddBasedonHDL
+            baseAge = baseAge - yearsToAddBasedonHDL
             
             //LDL levels impact
             let yearsToAddBasedOnLDL = LifeExpectancyCalculator.ldlImpact(lifeSpecs: user.lifeSpecifications)
-            baseAge = baseAge + yearsToAddBasedOnLDL
+            baseAge = baseAge - yearsToAddBasedOnLDL
             
             //sunscreen impact
             let yearsToAddBasedOnSunscreen = LifeExpectancyCalculator.sunscreenImpact(lifeSpecs: user.lifeSpecifications)
-            baseAge = baseAge + yearsToAddBasedOnSunscreen
+            baseAge = baseAge - yearsToAddBasedOnSunscreen
             
             //cancer screening impact
-            let yearsToAddBasedOnCAncerScreening = LifeExpectancyCalculator.cancerScreeningImpact(lifeSpecs: user.lifeSpecifications);            baseAge = baseAge + yearsToAddBasedOnCAncerScreening
+            let yearsToAddBasedOnCAncerScreening = LifeExpectancyCalculator.cancerScreeningImpact(lifeSpecs: user.lifeSpecifications);            baseAge = baseAge - yearsToAddBasedOnCAncerScreening
             
             //anxiety about death impact
             let yearsToAddBAsedOnAnxiety = LifeExpectancyCalculator.anxietyAboutDeathImpact(lifeSpecs: user.lifeSpecifications)
-            baseAge = baseAge + yearsToAddBAsedOnAnxiety
+            baseAge = baseAge - yearsToAddBAsedOnAnxiety
             
         
         onCompletion(baseAge)
@@ -207,11 +214,11 @@ class LifeExpectancyCalculator {
         case "normal":
             return 0
         case "pre-obese":
-            return -5
+            return 5
         case "obese":
-            return -8
+            return 8
         case "underweight":
-            return -1
+            return 1
         default:
             return 0
         }
@@ -241,13 +248,13 @@ class LifeExpectancyCalculator {
         
         switch lifeSpecs.educationLevel {
         case "Advanced degree":
-            return 0.5
+            return -0.5
         case "College degree":
-            return 0.5
+            return -0.5
         case "High school degree":
-            return 0.5
+            return -0.5
         case "Some high school":
-             return -0.5
+             return 0.5
         case "Currently in high school":
             return 0
         default:
@@ -261,7 +268,7 @@ class LifeExpectancyCalculator {
      static func diabetesImpact(lifeSpecs: LifeSpecs) -> Double {
         switch lifeSpecs.diabetes {
         case "yes":
-            return -15
+            return 15
         case "no":
             return 0
         default:
@@ -277,19 +284,19 @@ class LifeExpectancyCalculator {
         
         switch lifeSpecs.numExerciseDays {
         case "zero":
-            return -7
+            return 7
         case "one":
             return 0
         case "two":
             return 0
         case "three":
-            return 0.5
+            return -0.5
         case "four":
-            return 1.5
+            return -1.5
         case "five":
-            return 3
+            return -3
         case "six to seven":
-            return 5
+            return -5
         default:
             return 0
         }
@@ -302,9 +309,9 @@ class LifeExpectancyCalculator {
         
         switch lifeSpecs.flossInfo {
         case "yes":
-            return 1
-        case "no":
             return -1
+        case "no":
+            return 1
         default:
             return 0
         }
@@ -317,13 +324,13 @@ class LifeExpectancyCalculator {
         
         switch lifeSpecs.numWorkHours {
         case "lessThanFortyHoursPerWeekOfWorkSelected":
-            return 1
-        case "fortyOneToSixtyHoursPerWeekOfWorkSelected":
-            return -0.5
-        case "sixtyOneToEightyHoursPerWeekOfWorkSelected":
-            return -0.5
-        case "moreThanEightyHoursPerWeekOfWorkSelected":
             return -1
+        case "fortyOneToSixtyHoursPerWeekOfWorkSelected":
+            return 0.5
+        case "sixtyOneToEightyHoursPerWeekOfWorkSelected":
+            return 0.5
+        case "moreThanEightyHoursPerWeekOfWorkSelected":
+            return 1
         case "notWorkingAnyHoursPerWeekSelected":
             return 0
         case "retiredNotWorkingAnyHoursPerWeekSelected":
@@ -339,11 +346,11 @@ class LifeExpectancyCalculator {
         
         switch lifeSpecs.numWorkDays {
         case "fiveDaysOrLessWorkWeekSelected":
-            return 2
-        case "sixDayWorkWeekSelected":
-            return -1
-        case "sevenDayWorkWeekSelected":
             return -2
+        case "sixDayWorkWeekSelected":
+            return 1
+        case "sevenDayWorkWeekSelected":
+            return 2
         case "notWorkingAnyDaysSelected":
             return 0
         case "retiredNotWorkingAnyDaysSelected":
@@ -359,11 +366,11 @@ class LifeExpectancyCalculator {
         
         switch lifeSpecs.airQuality {
         case "veryCleanAirQualitySelected":
-            return 0.5
-        case "slightlyPollutedAirQualitySelected":
-            return -0.25
-        case "veryPollutedAirQualitySelected":
             return -0.5
+        case "slightlyPollutedAirQualitySelected":
+            return 0.25
+        case "veryPollutedAirQualitySelected":
+            return 0.5
         default:
             return 0
         }
@@ -385,21 +392,36 @@ class LifeExpectancyCalculator {
 //        }
 //    }
     
+    
+    //pet ownership impact
+    
+    static func petImpact(lifeSpaces: LifeSpecs) -> Double {
+        switch lifeSpaces.petOwner {
+        case "yes":
+            return -2
+        case "no" :
+            return 0
+        default:
+            return 0
+        }
+    }
+    
+    
     //sleep impact
     //kind of correct calculations
      static func sleepImpact(lifeSpecs: LifeSpecs) -> Double {
         
         switch lifeSpecs.numSleepHours {
         case "lessThanFiveHoursSleepSelected":
-            return -3
+            return 3
         case "sixToSevenHoursSleepSelected":
-            return 1
-        case "sevenToNineHoursSleepSelected":
-            return 2
-        case "moreThanNineHoursSleepSelected":
             return -1
+        case "sevenToNineHoursSleepSelected":
+            return -2
+        case "moreThanNineHoursSleepSelected":
+            return 1
         case "fiveToSixHoursSleepSelected":
-            return -2.5
+            return 2.5
         default:
             return 0
         }
@@ -411,11 +433,11 @@ class LifeExpectancyCalculator {
         
         switch lifeSpecs.stressLevels {
         case "lowStressLevelsSelected":
-            return 0.75
-        case "mediumStressLevelsSelected":
-            return -0.5
-        case "highStressLevelsSelected":
             return -0.75
+        case "mediumStressLevelsSelected":
+            return 0.5
+        case "highStressLevelsSelected":
+            return 0.75
         default:
             return 0
         }
@@ -430,13 +452,13 @@ class LifeExpectancyCalculator {
         
         switch lifeSpecs.maritalStatus {
         case "single":
-            return -2
+            return 2
         case "married":
-            return 7
+            return -7
         case "widowed":
-            return -2
+            return 2
         case "divorced":
-            return -3
+            return 3
         case "too young to be married":
             return 0
         default:
@@ -452,11 +474,11 @@ class LifeExpectancyCalculator {
         
         switch lifeSpecs.personalContact {
         case "rare personal contact":
-            return -0.5
-        case "contact few times per week":
             return 0.5
+        case "contact few times per week":
+            return -0.5
         case "contact more than few times per week":
-            return 1
+            return -1
         default:
             return 0
         }
@@ -529,11 +551,11 @@ class LifeExpectancyCalculator {
         
         switch lifeSpecs.numCoffeeCups {
         case "none":
-            return 0.5
+            return -0.5
         case "one to two cups":
-            return -0.5
+            return 0.5
         case "two to three cups":
-            return -0.5
+            return 0.5
         default:
             return 0
         }
@@ -546,11 +568,11 @@ class LifeExpectancyCalculator {
         
         switch lifeSpecs.numDairy {
         case "zero to one":
-            return -0.5
+            return 0.5
         case "two to three":
-            return 0.5
+            return -0.5
         case "three or more":
-            return 0.5
+            return -0.5
         default:
             return 0
         }
@@ -562,15 +584,15 @@ class LifeExpectancyCalculator {
         
         switch lifeSpecs.sweetsInfo {
         case "rarely":
-            return 2
-        case "onetotwodaysperweek":
-            return 0.5
-        case "threetofivedaysperweek":
-            return -0.5
-        case "onceaday":
-            return -1
-        case "morethanonceaday":
             return -2
+        case "onetotwodaysperweek":
+            return -0.5
+        case "threetofivedaysperweek":
+            return 0.5
+        case "onceaday":
+            return 1
+        case "morethanonceaday":
+            return 2
         default:
             return 0
         }
@@ -603,13 +625,13 @@ class LifeExpectancyCalculator {
         
         switch lifeSpecs.redMeatInfo {
         case "noredmeat":
-            return 1
-        case "oneto2":
-            return 1
-        case "3to5":
             return -1
+        case "oneto2":
+            return -1
+        case "3to5":
+            return 1
         case "6to7":
-            return -3
+            return 3
         default:
             return 0
         }
@@ -621,13 +643,13 @@ class LifeExpectancyCalculator {
         
         switch lifeSpecs.fastFoodsInfo {
         case "none":
-            return 1
-        case "1to2":
             return -1
+        case "1to2":
+            return 1
         case "3to4":
-            return -4
+            return 4
         case "over5":
-            return -8
+            return 8
         default:
             return 0
         }
@@ -641,15 +663,15 @@ class LifeExpectancyCalculator {
         
         switch lifeSpecs.numCigarettesPerDay {
         case "oneCigToHalfAPack":
-            return -10
+            return 10
         case "onePackCigPerDay":
-            return -10
+            return 10
         case "oneAndAHalfPacksPerDay":
-            return -15
+            return 15
         case "twoPacksPerDay":
-            return -17
+            return 17
         case "threeOrMorePacksPerDay":
-            return -22
+            return 22
         default:
             return 0
         }
@@ -661,11 +683,11 @@ class LifeExpectancyCalculator {
         
         switch lifeSpecs.secondHandSmoke {
         case "dailySecondHand":
-            return -7
+            return 7
         case "fewTimesPerWeekExposure":
-            return -4
+            return 4
         case "oncePerWeekExposure":
-            return -2
+            return 2
         case "neverExposure":
             return 0
         default:
@@ -729,17 +751,17 @@ class LifeExpectancyCalculator {
         
         switch lifeSpecs.illegalDrugsInfo {
         case "neverDrugsSelected":
-            return 1
-        case "drugsFewTimesPerYearSelected":
-            return -2
-        case "drugsEveryFewMonthsSelected":
-            return -10
-        case "drugsOnceOrMorePerMonth":
-            return -20
-        case "drugsOncePerYear":
             return -1
+        case "drugsFewTimesPerYearSelected":
+            return 2
+        case "drugsEveryFewMonthsSelected":
+            return 10
+        case "drugsOnceOrMorePerMonth":
+            return 20
+        case "drugsOncePerYear":
+            return 1
         default:
-            return 4
+            return 0
         }
         
     }
@@ -753,15 +775,15 @@ class LifeExpectancyCalculator {
         
         switch lifeSpecs.hdlLevels {
         case "low":
-            return -1
+            return 1
         case "medium":
-            return 1
+            return -1
         case "high":
-            return 1
+            return -1
         case "unknown":
-            return 5
+            return 0
         default:
-            return 4
+            return 0
         }
         
     }
@@ -772,15 +794,15 @@ class LifeExpectancyCalculator {
         
         switch lifeSpecs.ldlLevels {
         case "low":
-            return 1
-        case "medium":
-            return 1
-        case "high":
             return -1
+        case "medium":
+            return -1
+        case "high":
+            return 1
         case "unknown":
-            return 5
+            return 0
         default:
-            return 4
+            return 0
         }
         
     }
@@ -791,15 +813,15 @@ class LifeExpectancyCalculator {
         
         switch lifeSpecs.sunProtectionInfo {
         case "alwaysSunscreenSelected":
-            return 1
-        case "mostOfTheTimeSunscreen":
-            return 0.5
-        case "sometimesSunscreen":
-            return -0.5
-        case "rarelySunscreenSelected":
             return -1
+        case "mostOfTheTimeSunscreen":
+            return -0.5
+        case "sometimesSunscreen":
+            return 0.5
+        case "rarelySunscreenSelected":
+            return 1
         default:
-            return 4
+            return 0
         }
         
     }
@@ -810,9 +832,9 @@ class LifeExpectancyCalculator {
         
         switch lifeSpecs.cancerScreeningInfo {
         case "noCancerScreeningSelected":
-            return -1
-        case "yesCancerScreeningSelected":
             return 1
+        case "yesCancerScreeningSelected":
+            return -1
         default:
             return 0
         }
@@ -825,9 +847,9 @@ class LifeExpectancyCalculator {
         
         switch lifeSpecs.anxietyAboutDying {
         case "yesAnxietyDeath":
-            return -2
+            return 2
         case "noAnxietyDeath":
-            return 1
+            return -1
         default:
             return 0
         }

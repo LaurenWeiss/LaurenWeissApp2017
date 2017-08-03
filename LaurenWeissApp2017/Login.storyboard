@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16D30" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16D30" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="S2V-mq-Ioy">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -60,7 +60,7 @@
                                             <color key="titleColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="TTi-9q-SRT" kind="show" id="LgR-vR-8Pw"/>
+                                            <segue destination="SNa-i7-evZ" kind="show" id="ZZn-3t-hWS"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -92,58 +92,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OMH-i0-LPM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="712.79999999999995" y="62.518740629685162"/>
-        </scene>
-        <!--About-->
-        <scene sceneID="AUa-Df-4ET">
-            <objects>
-                <viewController id="TTi-9q-SRT" userLabel="About" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="cRe-wV-eBh"/>
-                        <viewControllerLayoutGuide type="bottom" id="ZGH-wp-8nR"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8hg-ic-saz">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Socialive (1)" translatesAutoresizingMaskIntoConstraints="NO" id="dPp-Q2-LWM">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="my_logo (2)" translatesAutoresizingMaskIntoConstraints="NO" id="huo-HP-TRN">
-                                <rect key="frame" x="0.0" y="0.0" width="379" height="179"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="About" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PSC-YD-VWg">
-                                <rect key="frame" x="157" y="162" width="64" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="11" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4tK-PC-BC7">
-                                <rect key="frame" x="37" y="213" width="305" height="207"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">Have you ever wondered how many years you have left to live? With the LifExpectancy app, not only will you be able to get your life expectancy, but you will also be given suggestions on how to add years to your life. In addition, LifExpectancy stores all of your information so that you can update and track your progress in maintaining a healthy lifestyle.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="11" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JQz-bc-4lG">
-                                <rect key="frame" x="37" y="428" width="305" height="207"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">LifExpectancy, an app made to promote healthy living with an interseting approach, is based on the collective research of multiple sources, including a physician from Centura Health, the World Health Organization, social security databases, and the work of Boston University School of Medicine.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0ao-FT-ohN" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="713" y="868"/>
         </scene>
         <!--Create Username View Controller-->
         <scene sceneID="lBa-f0-Cii">
@@ -184,7 +132,7 @@
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create Username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AsA-G9-tak">
                                 <rect key="frame" x="24" y="28" width="327" height="48"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-BoldItalic" family="Avenir Next" pointSize="35"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="35"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -212,6 +160,73 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="601-Ig-N7X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1565.5999999999999" y="63.418290854572717"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="B4S-4R-Coo">
+            <objects>
+                <viewController id="SNa-i7-evZ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="W7A-c9-78a"/>
+                        <viewControllerLayoutGuide type="bottom" id="O64-az-raa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iH0-mN-ru4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Socialive (1)" translatesAutoresizingMaskIntoConstraints="NO" id="0Vd-VG-Av7">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="180"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="tdd-aq-8zr"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="13" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="XYO-Fb-ISL">
+                                <rect key="frame" x="8" y="220" width="359" height="432"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="About">
+                                        <attributes>
+                                            <color key="NSColor" red="0.37935057280000001" green="0.69332247970000005" blue="0.73731225730000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" size="28" name="AvenirNext-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">
+
+Have you ever wondered how many years you have left to live? With the LifExpectancy app, not only will you be able to find out your life expectancy, but you will also be given suggestions on how to add years to your life! LifExpectancy is based on the collective research of multiple sources, including a physician from Centura Health, the World Health Organization, numerous databases, and the work of Boston University School of Medicine.</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.37935057280000001" green="0.69332247970000005" blue="0.73731225730000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" size="24" name="AvenirNext-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="my_logo (2)" translatesAutoresizingMaskIntoConstraints="NO" id="ijm-Zx-QC2">
+                                <rect key="frame" x="0.0" y="50" width="375" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="GNC-fq-QaV"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="ijm-Zx-QC2" secondAttribute="trailing" id="2QB-mq-Sw5"/>
+                            <constraint firstAttribute="trailing" secondItem="XYO-Fb-ISL" secondAttribute="trailing" constant="8" id="Mw2-13-qyf"/>
+                            <constraint firstItem="0Vd-VG-Av7" firstAttribute="top" secondItem="iH0-mN-ru4" secondAttribute="top" id="N5X-RV-h0B"/>
+                            <constraint firstItem="XYO-Fb-ISL" firstAttribute="leading" secondItem="iH0-mN-ru4" secondAttribute="leading" constant="8" id="NYi-OY-4DJ"/>
+                            <constraint firstItem="XYO-Fb-ISL" firstAttribute="top" secondItem="ijm-Zx-QC2" secondAttribute="bottom" constant="40" id="ODB-UW-CY4"/>
+                            <constraint firstItem="ijm-Zx-QC2" firstAttribute="top" secondItem="W7A-c9-78a" secondAttribute="bottom" constant="30" id="Toc-Jd-scE"/>
+                            <constraint firstItem="0Vd-VG-Av7" firstAttribute="leading" secondItem="iH0-mN-ru4" secondAttribute="leading" id="bcx-22-wMK"/>
+                            <constraint firstAttribute="trailing" secondItem="0Vd-VG-Av7" secondAttribute="trailing" id="cC7-aZ-gxF"/>
+                            <constraint firstItem="XYO-Fb-ISL" firstAttribute="centerX" secondItem="iH0-mN-ru4" secondAttribute="centerX" id="dCg-lq-eN5"/>
+                            <constraint firstItem="ijm-Zx-QC2" firstAttribute="leading" secondItem="iH0-mN-ru4" secondAttribute="leading" id="poF-BL-85C"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CFL-sp-sYN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="713" y="793"/>
         </scene>
     </scenes>
     <resources>

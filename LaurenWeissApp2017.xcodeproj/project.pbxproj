@@ -12,6 +12,10 @@
 		2E17322F1F3286A80057B610 /* Float+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E17322E1F3286A80057B610 /* Float+Extension.swift */; };
 		2E1732311F3299CB0057B610 /* GeneralInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E1732301F3299CB0057B610 /* GeneralInfo.storyboard */; };
 		2E1732331F329F6A0057B610 /* DailyLife.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E1732321F329F6A0057B610 /* DailyLife.storyboard */; };
+		2E1732351F33DB3E0057B610 /* RelationshipsVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E1732341F33DB3E0057B610 /* RelationshipsVC.storyboard */; };
+		2E1732371F33DD8C0057B610 /* DrugsVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E1732361F33DD8C0057B610 /* DrugsVC.storyboard */; };
+		2E1732391F33DDA00057B610 /* DietVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E1732381F33DDA00057B610 /* DietVC.storyboard */; };
+		2E17323B1F33DDB00057B610 /* OtherVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E17323A1F33DDB00057B610 /* OtherVC.storyboard */; };
 		2E1851BD1F13F2750094F732 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1851BC1F13F2750094F732 /* AppDelegate.swift */; };
 		2E1851C41F13F2750094F732 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E1851C31F13F2750094F732 /* Assets.xcassets */; };
 		2E1851D21F13F2750094F732 /* LaurenWeissApp2017Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1851D11F13F2750094F732 /* LaurenWeissApp2017Tests.swift */; };
@@ -71,6 +75,10 @@
 		2E17322E1F3286A80057B610 /* Float+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Float+Extension.swift"; sourceTree = "<group>"; };
 		2E1732301F3299CB0057B610 /* GeneralInfo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GeneralInfo.storyboard; sourceTree = "<group>"; };
 		2E1732321F329F6A0057B610 /* DailyLife.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DailyLife.storyboard; sourceTree = "<group>"; };
+		2E1732341F33DB3E0057B610 /* RelationshipsVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RelationshipsVC.storyboard; sourceTree = "<group>"; };
+		2E1732361F33DD8C0057B610 /* DrugsVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DrugsVC.storyboard; sourceTree = "<group>"; };
+		2E1732381F33DDA00057B610 /* DietVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DietVC.storyboard; sourceTree = "<group>"; };
+		2E17323A1F33DDB00057B610 /* OtherVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = OtherVC.storyboard; sourceTree = "<group>"; };
 		2E1851B91F13F2750094F732 /* LaurenWeissApp2017.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LaurenWeissApp2017.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E1851BC1F13F2750094F732 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2E1851C31F13F2750094F732 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -208,6 +216,10 @@
 				2EFFB7131F153ABB006BB041 /* LaunchScreen.storyboard */,
 				2E1851EC1F15356C0094F732 /* Login.storyboard */,
 				2EFFB7291F169980006BB041 /* Main.storyboard */,
+				2E17323A1F33DDB00057B610 /* OtherVC.storyboard */,
+				2E1732381F33DDA00057B610 /* DietVC.storyboard */,
+				2E1732361F33DD8C0057B610 /* DrugsVC.storyboard */,
+				2E1732341F33DB3E0057B610 /* RelationshipsVC.storyboard */,
 				2E1732321F329F6A0057B610 /* DailyLife.storyboard */,
 				2E1732301F3299CB0057B610 /* GeneralInfo.storyboard */,
 			);
@@ -433,10 +445,14 @@
 				2EFFB72A1F169980006BB041 /* Main.storyboard in Resources */,
 				2E1732331F329F6A0057B610 /* DailyLife.storyboard in Resources */,
 				2E1851C41F13F2750094F732 /* Assets.xcassets in Resources */,
+				2E17323B1F33DDB00057B610 /* OtherVC.storyboard in Resources */,
 				2EFFB7141F153ABB006BB041 /* LaunchScreen.storyboard in Resources */,
+				2E1732371F33DD8C0057B610 /* DrugsVC.storyboard in Resources */,
 				2E1732311F3299CB0057B610 /* GeneralInfo.storyboard in Resources */,
 				2E1851ED1F15356C0094F732 /* Login.storyboard in Resources */,
+				2E1732391F33DDA00057B610 /* DietVC.storyboard in Resources */,
 				2EFFB7181F153AD2006BB041 /* GoogleService-Info.plist in Resources */,
+				2E1732351F33DB3E0057B610 /* RelationshipsVC.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

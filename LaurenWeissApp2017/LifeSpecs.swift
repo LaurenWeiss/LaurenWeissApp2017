@@ -20,7 +20,7 @@ class LifeSpecs {
     var height: Double = 60.0
     var weight: Double = 150.0
     var BMI: String = "normal"
-    var whyBMI: String = "BMI high because of fat"
+    var whyBMI: String = "not high BMI"
     var educationLevel: String = "Currently in high school"
     var diabetes: String = "no"
     
@@ -34,6 +34,7 @@ class LifeSpecs {
   //  var seatbeltInfo: String = "halfTimeSeatbeltSelected"
     var numSleepHours: String = "sevenToNineHoursSleepSelected"
     var stressLevels: String = "mediumStressLevelsSelected"
+    var petOwner: String = "yes"
     
     
     //RELATIONSHIPS
