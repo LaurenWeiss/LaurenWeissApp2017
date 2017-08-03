@@ -126,13 +126,13 @@ class SuggestionsData {
         
         
         //GIVE SUGGESTIONS BASED ON PET OWNERSHIP
-        switch User.current.lifeSpecifications.seatbeltInfo {
-        case "no":
-            let yearsToAdd = LifeExpectancyCalculator.seatbeltImpact(lifeSpecs: User.current.lifeSpecifications) * -1
-            suggestions["pet"] = "Did you know that owning a pet could add \(yearsToAdd) years to your life? Pets, especially dogs, are not only adorable but they also lead to a longer life by being consistently loving and by being great companions."
-        default:
-            suggestions.removeValue(forKey: "pet")
-        }
+//        switch User.current.lifeSpecifications.seatbeltInfo {
+//        case "no":
+//            let yearsToAdd = LifeExpectancyCalculator.seatbeltImpact(lifeSpecs: User.current.lifeSpecifications) * -1
+//            suggestions["pet"] = "Did you know that owning a pet could add \(yearsToAdd) years to your life? Pets, especially dogs, are not only adorable but they also lead to a longer life by being consistently loving and by being great companions."
+//        default:
+//            suggestions.removeValue(forKey: "pet")
+//        }
         
         
         
