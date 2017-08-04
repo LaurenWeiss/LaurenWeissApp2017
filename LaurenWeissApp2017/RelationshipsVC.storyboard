@@ -182,8 +182,8 @@
                                                 <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="ymi-7g-AtV">
-                                                <rect key="frame" x="81.5" y="862" width="212" height="45"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="ymi-7g-AtV">
+                                                <rect key="frame" x="89.5" y="862" width="196" height="45"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7wV-6r-BqS">
                                                         <rect key="frame" x="0.0" y="0.0" width="90" height="45"/>
@@ -199,7 +199,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Dn-f7-VZO">
-                                                        <rect key="frame" x="122" y="0.0" width="90" height="45"/>
+                                                        <rect key="frame" x="106" y="0.0" width="90" height="45"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="90" id="4v8-bO-iRj"/>
                                                         </constraints>
@@ -219,8 +219,8 @@
                                                 <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="lRT-5W-aCm">
-                                                <rect key="frame" x="81.5" y="1045.5" width="212" height="45"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="lRT-5W-aCm">
+                                                <rect key="frame" x="89.5" y="1045.5" width="196" height="45"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="50P-3J-EUT">
                                                         <rect key="frame" x="0.0" y="0.0" width="90" height="45"/>
@@ -236,7 +236,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tnl-hf-Ysa">
-                                                        <rect key="frame" x="122" y="0.0" width="90" height="45"/>
+                                                        <rect key="frame" x="106" y="0.0" width="90" height="45"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="90" id="msH-Ug-WgH"/>
                                                         </constraints>

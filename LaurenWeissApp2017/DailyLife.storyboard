@@ -136,8 +136,8 @@
                                                 <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="hRb-H4-ZoA">
-                                                <rect key="frame" x="85.5" y="649.5" width="204" height="45"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="hRb-H4-ZoA">
+                                                <rect key="frame" x="89.5" y="649.5" width="196" height="45"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="owu-Xf-JpG">
                                                         <rect key="frame" x="0.0" y="0.0" width="90" height="45"/>
@@ -153,7 +153,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZfO-nc-owr">
-                                                        <rect key="frame" x="114" y="0.0" width="90" height="45"/>
+                                                        <rect key="frame" x="106" y="0.0" width="90" height="45"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="90" id="yXu-0e-sAu"/>
                                                         </constraints>

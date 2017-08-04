@@ -97,6 +97,10 @@ class DietAndNutritionVC: UIViewController, UIScrollViewDelegate {
         threeToFourFastFood.layer.cornerRadius = 10
         overFiveFastFood.layer.cornerRadius = 10
         
+        threeToFourFastFood.titleLabel?.textAlignment = .center
+        threeToFourFastFood.titleLabel?.numberOfLines = 0
+        
+        
         //Calling Functions: SELECT NUM CAFFEINATED CUPS OF COFFEE PER DAY
         
         if User.current.lifeSpecifications.numCoffeeCups == "none" {
@@ -169,7 +173,7 @@ class DietAndNutritionVC: UIViewController, UIScrollViewDelegate {
     
     @IBAction func calculateButtonTapped(_ sender: UIButton) {
         LifeExpectancyCalculator.calculateAge(forUser: User.current) { (finalAge) in
-            User.current.finalAge = Int(finalAge)
+            User.current.finalAge = Double(finalAge)
         }
         
     }
@@ -639,7 +643,7 @@ class DietAndNutritionVC: UIViewController, UIScrollViewDelegate {
             
             if let destinationVC = segue.destination as? DeathDateScreenViewController
             {
-                destinationVC.deathAgeAsInt = User.current.finalAge
+                destinationVC.deathAgeAsDouble = User.current.finalAge
             }
         }
     }

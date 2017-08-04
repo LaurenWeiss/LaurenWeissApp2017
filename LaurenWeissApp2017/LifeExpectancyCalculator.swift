@@ -189,7 +189,8 @@ class LifeExpectancyCalculator {
             baseAge = baseAge - yearsToAddBasedOnSunscreen
             
             //cancer screening impact
-            let yearsToAddBasedOnCAncerScreening = LifeExpectancyCalculator.cancerScreeningImpact(lifeSpecs: user.lifeSpecifications);            baseAge = baseAge - yearsToAddBasedOnCAncerScreening
+            let yearsToAddBasedOnCAncerScreening = LifeExpectancyCalculator.cancerScreeningImpact(lifeSpecs: user.lifeSpecifications)
+            baseAge = baseAge - yearsToAddBasedOnCAncerScreening
             
             //anxiety about death impact
             let yearsToAddBAsedOnAnxiety = LifeExpectancyCalculator.anxietyAboutDeathImpact(lifeSpecs: user.lifeSpecifications)

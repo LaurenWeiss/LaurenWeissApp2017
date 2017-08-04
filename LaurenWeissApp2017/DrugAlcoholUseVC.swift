@@ -53,6 +53,16 @@ class DrugAlcoholUseVC: UIViewController, UIScrollViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        fewTimesWeekSecondHandSmoke.titleLabel?.textAlignment = .center
+        fewTimesWeekSecondHandSmoke.titleLabel?.numberOfLines = 0
+        
+        onceAWeekSecondHandSmoke.titleLabel?.textAlignment = .center
+        onceAWeekSecondHandSmoke.titleLabel?.numberOfLines = 0
+        
+        
+        
         calculateButton.layer.cornerRadius = 10
         calculateButton.backgroundColor = UIColor.primaryBlue
 
@@ -115,9 +125,9 @@ class DrugAlcoholUseVC: UIViewController, UIScrollViewDelegate {
             noSmokeSelected()
             
             
+           // smokingQuestionLabel.textColor = UIColor.gray
+            
             smokingQuestionLabel.textColor = UIColor.gray
-            
-            
             oneCigToHalfPack.isEnabled = false
             onePackSmoke.isEnabled = false
             twoPacksSmoke.isEnabled = false
@@ -663,7 +673,7 @@ class DrugAlcoholUseVC: UIViewController, UIScrollViewDelegate {
         
     @IBAction func calculateButtonTapped(_ sender: UIButton) {
         LifeExpectancyCalculator.calculateAge(forUser: User.current) { (finalAge) in
-            User.current.finalAge = Int(finalAge)
+            User.current.finalAge = Double(finalAge)
         }
     }
     
@@ -672,7 +682,7 @@ class DrugAlcoholUseVC: UIViewController, UIScrollViewDelegate {
                 
                 if let destinationVC = segue.destination as? DeathDateScreenViewController
                 {
-                    destinationVC.deathAgeAsInt = User.current.finalAge
+                    destinationVC.deathAgeAsDouble = User.current.finalAge
                 }
             }
 }

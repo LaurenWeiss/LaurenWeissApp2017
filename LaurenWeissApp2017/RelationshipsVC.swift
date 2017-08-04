@@ -144,7 +144,7 @@ class RelationshipsVC: UIViewController, UIScrollViewDelegate {
     
     @IBAction func calculateButtonTapped(_ sender: UIButton) {
         LifeExpectancyCalculator.calculateAge(forUser: User.current) { (finalAge) in
-            User.current.finalAge = Int(finalAge)
+            User.current.finalAge = Double(finalAge)
         }
         
     }
@@ -465,7 +465,7 @@ class RelationshipsVC: UIViewController, UIScrollViewDelegate {
             
             if let destinationVC = segue.destination as? DeathDateScreenViewController
             {
-                destinationVC.deathAgeAsInt = User.current.finalAge
+                destinationVC.deathAgeAsDouble = User.current.finalAge
             }
         }
     }

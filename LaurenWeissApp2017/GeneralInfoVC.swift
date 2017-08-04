@@ -228,7 +228,7 @@ class GeneralInfoVC: UIViewController, UIScrollViewDelegate {
         lauren.enter()
         
         LifeExpectancyCalculator.calculateAge(forUser: User.current) { (finalAge) in
-            User.current.finalAge = Int(finalAge)
+            User.current.finalAge = Double(finalAge)
             lauren.leave()
         }
         
@@ -470,7 +470,7 @@ class GeneralInfoVC: UIViewController, UIScrollViewDelegate {
             //your destination has a container for that ready
             if let destinationVC = segue.destination as? DeathDateScreenViewController
             {
-                destinationVC.deathAgeAsInt = User.current.finalAge
+                destinationVC.deathAgeAsDouble = User.current.finalAge
             }
         }
     }

@@ -20,8 +20,8 @@ class DeathDateScreenViewController: UIViewController {
     
     @IBOutlet weak var countdownLabel: UILabel!
     
-    //var deathAgeAsDouble: Double?
-    var deathAgeAsInt: Int?
+    var deathAgeAsDouble: Double?
+    //var deathAgeAsInt: Int?
 
     @IBOutlet weak var home: UIButton!
     @IBOutlet weak var update: UIButton!
@@ -47,8 +47,8 @@ class DeathDateScreenViewController: UIViewController {
         //nativeExpressAdView.load(request)
         
         
-        if deathAgeAsInt != nil {
-            deathAgeAsString = String(format: "%.2f", deathAgeAsInt!)
+        if deathAgeAsDouble != nil {
+            deathAgeAsString = String(format: "%.2f", deathAgeAsDouble!)
             
             ageOfDeathLabel.text = deathAgeAsString
             
