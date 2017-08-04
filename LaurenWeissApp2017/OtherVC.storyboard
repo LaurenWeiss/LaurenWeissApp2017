@@ -25,92 +25,25 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="1800"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RVu-kj-8Se" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="64" width="376" height="1636"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1633"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Other Health Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hKr-je-O2d">
-                                                <rect key="frame" x="27.5" y="24" width="322.5" height="55"/>
+                                                <rect key="frame" x="27" y="24" width="322.5" height="55"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="40"/>
                                                 <color key="textColor" red="0.08235294118" green="0.70196078429999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What are your HDL cholesterol levels like? (HDL cholesterol is also known as your &quot;good&quot; cholesterol). " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EPl-Hg-uvN">
-                                                <rect key="frame" x="8" y="111" width="360" height="131.5"/>
+                                                <rect key="frame" x="8" y="111" width="359" height="131.5"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="24"/>
                                                 <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What are your LDL cholesterol levels like? (LDL cholesterol is also known as your &quot;bad&quot; cholesterol). " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bSx-Cx-kM8">
-                                                <rect key="frame" x="8" y="486.5" width="360" height="131.5"/>
-                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="24"/>
-                                                <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How often do you wear protective clothing and/or sunscreen when it's sunny outside?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FNK-FX-f5h">
-                                                <rect key="frame" x="8" y="862" width="360" height="131.5"/>
-                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="24"/>
-                                                <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="r0C-he-tpm">
-                                                <rect key="frame" x="8" y="626" width="360" height="204"/>
-                                                <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3yS-bv-syv">
-                                                        <rect key="frame" x="8" y="0.0" width="344" height="45"/>
-                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
-                                                        <state key="normal" title="Low">
-                                                            <color key="titleColor" red="0.08235294118" green="0.70196078429999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="selectLDLInfo:" destination="BY0-o7-UrF" eventType="touchUpInside" id="U9C-wQ-Eev"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9B2-U9-Drc">
-                                                        <rect key="frame" x="8" y="53" width="344" height="45"/>
-                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
-                                                        <state key="normal" title="Normal">
-                                                            <color key="titleColor" red="0.08235294118" green="0.70196078429999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="selectLDLInfo:" destination="BY0-o7-UrF" eventType="touchUpInside" id="1wM-SF-XdZ"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5KG-8x-cKQ">
-                                                        <rect key="frame" x="8" y="106" width="344" height="45"/>
-                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
-                                                        <state key="normal" title="High">
-                                                            <color key="titleColor" red="0.08235294118" green="0.70196078429999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="selectLDLInfo:" destination="BY0-o7-UrF" eventType="touchUpInside" id="9t1-R5-9sh"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j46-qa-VkF">
-                                                        <rect key="frame" x="8" y="159" width="344" height="45"/>
-                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
-                                                        <state key="normal" title="Don't know/haven't checked">
-                                                            <color key="titleColor" red="0.08235294118" green="0.70196078429999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="selectLDLInfo:" destination="BY0-o7-UrF" eventType="touchUpInside" id="LlA-KD-JAd"/>
-                                                        </connections>
-                                                    </button>
-                                                </subviews>
-                                                <constraints>
-                                                    <constraint firstItem="3yS-bv-syv" firstAttribute="leading" secondItem="r0C-he-tpm" secondAttribute="leading" constant="8" id="6n4-O2-StS"/>
-                                                    <constraint firstAttribute="trailing" secondItem="5KG-8x-cKQ" secondAttribute="trailing" constant="8" id="EtO-6X-peY"/>
-                                                    <constraint firstItem="5KG-8x-cKQ" firstAttribute="leading" secondItem="r0C-he-tpm" secondAttribute="leading" constant="8" id="ZJv-fr-Jt4"/>
-                                                    <constraint firstItem="j46-qa-VkF" firstAttribute="leading" secondItem="r0C-he-tpm" secondAttribute="leading" constant="8" id="dm4-CD-veA"/>
-                                                    <constraint firstAttribute="trailing" secondItem="3yS-bv-syv" secondAttribute="trailing" constant="8" id="nM2-8b-pTb"/>
-                                                    <constraint firstAttribute="trailing" secondItem="j46-qa-VkF" secondAttribute="trailing" constant="8" id="naF-i7-5w3"/>
-                                                    <constraint firstItem="9B2-U9-Drc" firstAttribute="leading" secondItem="r0C-he-tpm" secondAttribute="leading" constant="8" id="rTH-G3-4RH"/>
-                                                    <constraint firstAttribute="trailing" secondItem="9B2-U9-Drc" secondAttribute="trailing" constant="8" id="sw9-Y3-Mn7"/>
-                                                </constraints>
-                                            </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="q0r-ma-dg0">
-                                                <rect key="frame" x="8" y="250.5" width="360" height="204"/>
+                                                <rect key="frame" x="8" y="250" width="359" height="204"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Lu-eU-uNN">
-                                                        <rect key="frame" x="0.0" y="0.0" width="360" height="45"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="359" height="45"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="Low">
                                                             <color key="titleColor" red="0.08235294118" green="0.70196078429999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
@@ -120,7 +53,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hfv-da-yLo">
-                                                        <rect key="frame" x="0.0" y="53" width="360" height="45"/>
+                                                        <rect key="frame" x="0.0" y="53" width="359" height="45"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="Normal">
                                                             <color key="titleColor" red="0.08235294118" green="0.70196078429999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
@@ -130,7 +63,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fYu-Vc-CvP">
-                                                        <rect key="frame" x="0.0" y="106" width="360" height="45"/>
+                                                        <rect key="frame" x="0.0" y="106" width="359" height="45"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="High">
                                                             <color key="titleColor" red="0.08235294118" green="0.70196078429999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
@@ -140,7 +73,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kYx-GG-UVw">
-                                                        <rect key="frame" x="0.0" y="159" width="360" height="45"/>
+                                                        <rect key="frame" x="0.0" y="159" width="359" height="45"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="Don't know/haven't checked">
                                                             <color key="titleColor" red="0.08235294118" green="0.70196078429999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
@@ -161,11 +94,23 @@
                                                     <constraint firstAttribute="trailing" secondItem="kYx-GG-UVw" secondAttribute="trailing" id="wqC-Nx-3gl"/>
                                                 </constraints>
                                             </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What are your LDL cholesterol levels like? (LDL cholesterol is also known as your &quot;bad&quot; cholesterol). " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bSx-Cx-kM8">
+                                                <rect key="frame" x="8" y="462" width="359" height="131.5"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="24"/>
+                                                <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How often do you wear protective clothing and/or sunscreen when it's sunny outside?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FNK-FX-f5h">
+                                                <rect key="frame" x="8" y="847" width="359" height="131.5"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="24"/>
+                                                <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="eqt-w5-HAU">
-                                                <rect key="frame" x="8" y="1001.5" width="360" height="204"/>
+                                                <rect key="frame" x="8" y="986.5" width="359" height="204"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ps-Xs-AJs">
-                                                        <rect key="frame" x="8" y="0.0" width="344" height="45"/>
+                                                        <rect key="frame" x="8" y="0.0" width="343" height="45"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="Always">
                                                             <color key="titleColor" red="0.08235294118" green="0.70196078429999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
@@ -175,7 +120,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s02-PB-i2i">
-                                                        <rect key="frame" x="8" y="53" width="344" height="45"/>
+                                                        <rect key="frame" x="8" y="53" width="343" height="45"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="Most of the time">
                                                             <color key="titleColor" red="0.08235294118" green="0.70196078429999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
@@ -185,7 +130,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aWy-n1-eaR">
-                                                        <rect key="frame" x="8" y="106" width="344" height="45"/>
+                                                        <rect key="frame" x="8" y="106" width="343" height="45"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="Sometimes">
                                                             <color key="titleColor" red="0.08235294118" green="0.70196078429999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
@@ -195,7 +140,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mg8-xg-hVw">
-                                                        <rect key="frame" x="8" y="159" width="344" height="45"/>
+                                                        <rect key="frame" x="8" y="159" width="343" height="45"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="Rarely or never">
                                                             <color key="titleColor" red="0.08235294118" green="0.70196078429999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
@@ -217,13 +162,13 @@
                                                 </constraints>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you regularly screened for breast or testicular and skin cancer?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SML-KU-oqq">
-                                                <rect key="frame" x="8" y="1237.5" width="360" height="98.5"/>
+                                                <rect key="frame" x="8" y="1222.5" width="359" height="98.5"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="24"/>
                                                 <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="AzJ-vW-oVf">
-                                                <rect key="frame" x="94" y="1344" width="188" height="45"/>
+                                                <rect key="frame" x="93.5" y="1329" width="188" height="45"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QSs-p7-ze8">
                                                         <rect key="frame" x="0.0" y="0.0" width="90" height="45"/>
@@ -254,13 +199,13 @@
                                                 </subviews>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Do you feel anxious about dying?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nwx-le-7hk">
-                                                <rect key="frame" x="8" y="1421" width="360" height="66"/>
+                                                <rect key="frame" x="8" y="1406" width="359" height="66"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="24"/>
                                                 <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iPb-nT-nd2">
-                                                <rect key="frame" x="98" y="1495" width="180" height="45"/>
+                                                <rect key="frame" x="97.5" y="1480" width="180" height="45"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ma7-kU-6EZ">
                                                         <rect key="frame" x="0.0" y="0.0" width="90" height="45"/>
@@ -291,10 +236,11 @@
                                                 </subviews>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wzO-nq-Q2c">
-                                                <rect key="frame" x="93" y="1572" width="190" height="56"/>
+                                                <rect key="frame" x="92.5" y="1557" width="190" height="56"/>
                                                 <color key="backgroundColor" red="0.08235294118" green="0.70196078429999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="190" id="QSg-WW-mBQ"/>
+                                                    <constraint firstAttribute="height" constant="56" id="eaR-yv-XYZ"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="32"/>
                                                 <state key="normal" title="Calculate">
@@ -305,15 +251,72 @@
                                                     <segue destination="nrZ-wP-DGx" kind="show" identifier="toDeathDate" id="ifv-IK-ZNZ"/>
                                                 </connections>
                                             </button>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="r0C-he-tpm">
+                                                <rect key="frame" x="8" y="611" width="359" height="204"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3yS-bv-syv">
+                                                        <rect key="frame" x="8" y="0.0" width="343" height="45"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
+                                                        <state key="normal" title="Low">
+                                                            <color key="titleColor" red="0.08235294118" green="0.70196078429999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="selectLDLInfo:" destination="BY0-o7-UrF" eventType="touchUpInside" id="U9C-wQ-Eev"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9B2-U9-Drc">
+                                                        <rect key="frame" x="8" y="53" width="343" height="45"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
+                                                        <state key="normal" title="Normal">
+                                                            <color key="titleColor" red="0.08235294118" green="0.70196078429999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="selectLDLInfo:" destination="BY0-o7-UrF" eventType="touchUpInside" id="1wM-SF-XdZ"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5KG-8x-cKQ">
+                                                        <rect key="frame" x="8" y="106" width="343" height="45"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
+                                                        <state key="normal" title="High">
+                                                            <color key="titleColor" red="0.08235294118" green="0.70196078429999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="selectLDLInfo:" destination="BY0-o7-UrF" eventType="touchUpInside" id="9t1-R5-9sh"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j46-qa-VkF">
+                                                        <rect key="frame" x="8" y="159" width="343" height="45"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
+                                                        <state key="normal" title="Don't know/haven't checked">
+                                                            <color key="titleColor" red="0.08235294118" green="0.70196078429999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="selectLDLInfo:" destination="BY0-o7-UrF" eventType="touchUpInside" id="LlA-KD-JAd"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="3yS-bv-syv" firstAttribute="leading" secondItem="r0C-he-tpm" secondAttribute="leading" constant="8" id="6n4-O2-StS"/>
+                                                    <constraint firstAttribute="trailing" secondItem="5KG-8x-cKQ" secondAttribute="trailing" constant="8" id="EtO-6X-peY"/>
+                                                    <constraint firstItem="5KG-8x-cKQ" firstAttribute="leading" secondItem="r0C-he-tpm" secondAttribute="leading" constant="8" id="ZJv-fr-Jt4"/>
+                                                    <constraint firstItem="j46-qa-VkF" firstAttribute="leading" secondItem="r0C-he-tpm" secondAttribute="leading" constant="8" id="dm4-CD-veA"/>
+                                                    <constraint firstAttribute="trailing" secondItem="3yS-bv-syv" secondAttribute="trailing" constant="8" id="nM2-8b-pTb"/>
+                                                    <constraint firstAttribute="trailing" secondItem="j46-qa-VkF" secondAttribute="trailing" constant="8" id="naF-i7-5w3"/>
+                                                    <constraint firstItem="9B2-U9-Drc" firstAttribute="leading" secondItem="r0C-he-tpm" secondAttribute="leading" constant="8" id="rTH-G3-4RH"/>
+                                                    <constraint firstAttribute="trailing" secondItem="9B2-U9-Drc" secondAttribute="trailing" constant="8" id="sw9-Y3-Mn7"/>
+                                                </constraints>
+                                            </stackView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="1636" id="2Db-oc-aRF"/>
+                                            <constraint firstItem="q0r-ma-dg0" firstAttribute="top" secondItem="EPl-Hg-uvN" secondAttribute="bottom" constant="8" id="1Z7-FJ-Iha"/>
                                             <constraint firstItem="FNK-FX-f5h" firstAttribute="top" secondItem="r0C-he-tpm" secondAttribute="bottom" constant="32" id="3Zc-gQ-fCB"/>
-                                            <constraint firstItem="bSx-Cx-kM8" firstAttribute="top" secondItem="q0r-ma-dg0" secondAttribute="bottom" constant="32" id="47t-e5-2Cc"/>
+                                            <constraint firstItem="bSx-Cx-kM8" firstAttribute="top" secondItem="q0r-ma-dg0" secondAttribute="bottom" constant="8" id="52i-lp-WWX"/>
                                             <constraint firstItem="bSx-Cx-kM8" firstAttribute="centerX" secondItem="RVu-kj-8Se" secondAttribute="centerX" id="7J6-s3-HeO"/>
+                                            <constraint firstItem="q0r-ma-dg0" firstAttribute="top" secondItem="EPl-Hg-uvN" secondAttribute="bottom" constant="8" id="88b-vL-0KP"/>
                                             <constraint firstAttribute="trailing" secondItem="q0r-ma-dg0" secondAttribute="trailing" constant="8" id="Alp-dm-CjV"/>
                                             <constraint firstItem="SML-KU-oqq" firstAttribute="top" secondItem="eqt-w5-HAU" secondAttribute="bottom" constant="32" id="CJr-Vz-OHF"/>
+                                            <constraint firstItem="bSx-Cx-kM8" firstAttribute="top" secondItem="q0r-ma-dg0" secondAttribute="bottom" constant="8" id="IR8-G3-hbW"/>
                                             <constraint firstItem="eqt-w5-HAU" firstAttribute="top" secondItem="FNK-FX-f5h" secondAttribute="bottom" constant="8" id="IbJ-Gq-p9N"/>
                                             <constraint firstItem="eqt-w5-HAU" firstAttribute="leading" secondItem="RVu-kj-8Se" secondAttribute="leading" constant="8" id="IjT-2t-CwM"/>
                                             <constraint firstItem="FNK-FX-f5h" firstAttribute="leading" secondItem="RVu-kj-8Se" secondAttribute="leading" constant="8" id="JB5-bw-bdQ"/>
@@ -331,19 +334,19 @@
                                             <constraint firstItem="SML-KU-oqq" firstAttribute="centerX" secondItem="RVu-kj-8Se" secondAttribute="centerX" id="Woo-N8-g3G"/>
                                             <constraint firstItem="iPb-nT-nd2" firstAttribute="centerX" secondItem="RVu-kj-8Se" secondAttribute="centerX" id="WtH-0L-28E"/>
                                             <constraint firstItem="q0r-ma-dg0" firstAttribute="leading" secondItem="RVu-kj-8Se" secondAttribute="leading" constant="8" id="Zhs-Si-ibf"/>
-                                            <constraint firstItem="q0r-ma-dg0" firstAttribute="top" secondItem="EPl-Hg-uvN" secondAttribute="bottom" constant="8" id="aDb-8j-WCH"/>
                                             <constraint firstAttribute="trailing" secondItem="eqt-w5-HAU" secondAttribute="trailing" constant="8" id="c6B-Zi-Tao"/>
                                             <constraint firstItem="AzJ-vW-oVf" firstAttribute="top" secondItem="SML-KU-oqq" secondAttribute="bottom" constant="8" id="coB-af-yj7"/>
                                             <constraint firstItem="q0r-ma-dg0" firstAttribute="centerX" secondItem="RVu-kj-8Se" secondAttribute="centerX" id="cqu-I7-lCC"/>
                                             <constraint firstItem="hKr-je-O2d" firstAttribute="top" secondItem="RVu-kj-8Se" secondAttribute="top" constant="24" id="cxD-b2-RzH"/>
                                             <constraint firstItem="nwx-le-7hk" firstAttribute="top" secondItem="AzJ-vW-oVf" secondAttribute="bottom" constant="32" id="eCD-u6-sE6"/>
-                                            <constraint firstItem="r0C-he-tpm" firstAttribute="top" secondItem="bSx-Cx-kM8" secondAttribute="bottom" constant="8" id="fet-EU-84y"/>
                                             <constraint firstItem="r0C-he-tpm" firstAttribute="leading" secondItem="RVu-kj-8Se" secondAttribute="leading" constant="8" id="ffo-NY-dkx"/>
                                             <constraint firstItem="nwx-le-7hk" firstAttribute="leading" secondItem="RVu-kj-8Se" secondAttribute="leading" constant="8" id="kBP-HI-V0z"/>
                                             <constraint firstItem="AzJ-vW-oVf" firstAttribute="centerX" secondItem="RVu-kj-8Se" secondAttribute="centerX" id="mWS-XW-foC"/>
                                             <constraint firstItem="EPl-Hg-uvN" firstAttribute="leading" secondItem="RVu-kj-8Se" secondAttribute="leading" constant="8" id="maN-ri-EUZ"/>
                                             <constraint firstAttribute="trailing" secondItem="bSx-Cx-kM8" secondAttribute="trailing" constant="8" id="o1W-Ic-jE8"/>
                                             <constraint firstItem="EPl-Hg-uvN" firstAttribute="centerX" secondItem="RVu-kj-8Se" secondAttribute="centerX" id="o7j-DF-YfQ"/>
+                                            <constraint firstItem="r0C-he-tpm" firstAttribute="top" secondItem="bSx-Cx-kM8" secondAttribute="bottom" constant="17.5" id="o9x-bB-YQY"/>
+                                            <constraint firstAttribute="bottom" secondItem="wzO-nq-Q2c" secondAttribute="bottom" constant="20" id="oMU-Hd-1Pu"/>
                                             <constraint firstItem="bSx-Cx-kM8" firstAttribute="leading" secondItem="RVu-kj-8Se" secondAttribute="leading" constant="8" id="sYw-z3-x5m"/>
                                             <constraint firstItem="wzO-nq-Q2c" firstAttribute="centerX" secondItem="RVu-kj-8Se" secondAttribute="centerX" id="tOG-XU-icy"/>
                                             <constraint firstItem="eqt-w5-HAU" firstAttribute="centerX" secondItem="RVu-kj-8Se" secondAttribute="centerX" id="wf5-lL-81a"/>
@@ -354,20 +357,21 @@
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="RVu-kj-8Se" firstAttribute="centerX" secondItem="fhP-8A-QU0" secondAttribute="centerX" id="CFA-Y8-a4c"/>
+                                    <constraint firstAttribute="bottom" secondItem="RVu-kj-8Se" secondAttribute="bottom" id="KOM-iD-euc"/>
                                     <constraint firstItem="RVu-kj-8Se" firstAttribute="leading" secondItem="fhP-8A-QU0" secondAttribute="leading" id="O5X-FP-DTu"/>
-                                    <constraint firstItem="RVu-kj-8Se" firstAttribute="top" secondItem="fhP-8A-QU0" secondAttribute="top" constant="64" id="bPs-TS-zrT"/>
-                                    <constraint firstAttribute="bottom" secondItem="RVu-kj-8Se" secondAttribute="bottom" id="zK0-Pk-Fvr"/>
-                                    <constraint firstAttribute="trailing" secondItem="RVu-kj-8Se" secondAttribute="trailing" constant="-1" id="zNt-KY-xeX"/>
+                                    <constraint firstItem="RVu-kj-8Se" firstAttribute="top" secondItem="fhP-8A-QU0" secondAttribute="top" id="bPs-TS-zrT"/>
+                                    <constraint firstAttribute="trailing" secondItem="RVu-kj-8Se" secondAttribute="trailing" id="zNt-KY-xeX"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="RVu-kj-8Se" firstAttribute="width" secondItem="o67-sg-knU" secondAttribute="width" id="0JM-sz-zzw"/>
                             <constraint firstAttribute="trailing" secondItem="fhP-8A-QU0" secondAttribute="trailing" id="4TG-hu-8hW"/>
                             <constraint firstItem="fhP-8A-QU0" firstAttribute="top" secondItem="o67-sg-knU" secondAttribute="top" id="MrD-yE-GOd"/>
-                            <constraint firstItem="YR7-P1-JHe" firstAttribute="top" secondItem="fhP-8A-QU0" secondAttribute="bottom" id="Tqc-Ln-L09"/>
+                            <constraint firstItem="fhP-8A-QU0" firstAttribute="top" secondItem="3dY-7L-0lm" secondAttribute="bottom" constant="-64" id="c6q-hc-EQt"/>
                             <constraint firstItem="fhP-8A-QU0" firstAttribute="leading" secondItem="o67-sg-knU" secondAttribute="leading" id="knX-Uy-VoM"/>
+                            <constraint firstItem="YR7-P1-JHe" firstAttribute="top" secondItem="fhP-8A-QU0" secondAttribute="bottom" id="sG7-cp-KnF"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="QXv-zh-1xU"/>
@@ -396,7 +400,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nLQ-GQ-ILj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3092" y="5868.6656671664168"/>
+            <point key="canvasLocation" x="3092" y="5867.7661169415296"/>
         </scene>
         <!--UIViewController-gV2-Ne-3cN-->
         <scene sceneID="h26-RI-Fcx">

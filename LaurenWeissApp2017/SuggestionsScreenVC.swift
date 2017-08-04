@@ -9,6 +9,8 @@
 import UIKit
 
 class SuggestionsScreenVC: UIViewController {
+    var heights = [CGFloat]()
+
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -17,6 +19,7 @@ class SuggestionsScreenVC: UIViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
+        
     }
 }
 
@@ -28,7 +31,10 @@ extension SuggestionsScreenVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "suggestionsCell", for: indexPath) as! SuggestionCell
         cell.suggestionsLabel.text = SuggestionsData.suggestionsArray[indexPath.row]
+        cell.suggestionsLabel.sizeToFit()
+        heights.append(cell.suggestionsLabel.frame.height)
         cell.selectionStyle = .none
+
         return cell
     }
 
@@ -36,4 +42,5 @@ extension SuggestionsScreenVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return SuggestionsData.suggestionsArray.count
     }
+    
 }

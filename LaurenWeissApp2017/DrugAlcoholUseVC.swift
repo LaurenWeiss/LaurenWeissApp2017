@@ -25,6 +25,7 @@ class DrugAlcoholUseVC: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var neverSecondHandSmoke: UIButton!
     @IBOutlet weak var onceAWeekSecondHandSmoke: UIButton!
     @IBOutlet weak var fewTimesWeekSecondHandSmoke: UIButton!
+    @IBOutlet weak var smokingQuestionLabel: UILabel!
     
 //alcohol info
     
@@ -55,6 +56,23 @@ class DrugAlcoholUseVC: UIViewController, UIScrollViewDelegate {
         calculateButton.layer.cornerRadius = 10
         calculateButton.backgroundColor = UIColor.primaryBlue
 
+        
+        oneCigToHalfPack.setTitleColor(UIColor.primaryBlue, for: .normal)
+        oneCigToHalfPack.setTitleColor(UIColor.gray, for: .disabled)
+        
+        
+        onePackSmoke.setTitleColor(UIColor.primaryBlue, for: .normal)
+        onePackSmoke.setTitleColor(UIColor.gray, for: .disabled)
+        
+        twoPacksSmoke.setTitleColor(UIColor.primaryBlue, for: .normal)
+        twoPacksSmoke.setTitleColor(UIColor.gray, for: .disabled)
+        
+        oneAndHalfPacksSmoke.setTitleColor(UIColor.primaryBlue, for: .normal)
+        oneAndHalfPacksSmoke.setTitleColor(UIColor.gray, for: .disabled)
+        
+        threeOrMorePacksSmoke.setTitleColor(UIColor.primaryBlue, for: .normal)
+        threeOrMorePacksSmoke.setTitleColor(UIColor.gray, for: .disabled)
+        
         //making the buttons have rounded corners
         
         yesSmoke.layer.cornerRadius = 10
@@ -95,6 +113,18 @@ class DrugAlcoholUseVC: UIViewController, UIScrollViewDelegate {
             yesSmokeSelected()
         } else if User.current.lifeSpecifications.isSmoking == false {
             noSmokeSelected()
+            
+            
+            smokingQuestionLabel.textColor = UIColor.gray
+            
+            
+            oneCigToHalfPack.isEnabled = false
+            onePackSmoke.isEnabled = false
+            twoPacksSmoke.isEnabled = false
+            oneAndHalfPacksSmoke.isEnabled = false
+            threeOrMorePacksSmoke.isEnabled = false
+            
+
         }
         
         //Calling Functions: SELECT NUMBER OF CIGARETTE PACKS SMOKED PER DAY

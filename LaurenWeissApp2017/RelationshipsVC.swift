@@ -57,6 +57,9 @@ class RelationshipsVC: UIViewController, UIScrollViewDelegate {
 
         calculateButton.layer.cornerRadius = 10
 
+        
+        contactMoreThanFewTimesPerWeek.titleLabel?.textAlignment = .center
+        contactMoreThanFewTimesPerWeek.titleLabel?.numberOfLines = 0
         //making the buttons have rounded corners
         
         single.layer.cornerRadius = 10

@@ -25,22 +25,22 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="2200"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OF8-MA-9WU">
-                                        <rect key="frame" x="0.0" y="0.0" width="376" height="1950"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1973"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drug/Alcohol Use" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wM9-17-cvu">
-                                                <rect key="frame" x="23" y="24" width="330" height="55"/>
+                                                <rect key="frame" x="22.5" y="24" width="330" height="55"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="40"/>
                                                 <color key="textColor" red="0.08235294118" green="0.70196078429999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Do you smoke?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cXK-KO-FGt">
-                                                <rect key="frame" x="103" y="111" width="170.5" height="33"/>
+                                                <rect key="frame" x="102.5" y="111" width="170.5" height="33"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="24"/>
                                                 <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="x26-hJ-KA3">
-                                                <rect key="frame" x="94" y="152" width="188" height="45"/>
+                                                <rect key="frame" x="93.5" y="152" width="188" height="45"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iEm-Fz-x4c">
                                                         <rect key="frame" x="0.0" y="0.0" width="90" height="45"/>
@@ -71,10 +71,10 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="lgp-s4-rys">
-                                                <rect key="frame" x="8" y="303" width="360" height="257"/>
+                                                <rect key="frame" x="8" y="303" width="359" height="257"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MYb-BN-M2j">
-                                                        <rect key="frame" x="0.0" y="0.0" width="360" height="45"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="359" height="45"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="One cigarette to half a pack">
                                                             <color key="titleColor" red="0.08235294118" green="0.70196078429999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
@@ -84,7 +84,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PUQ-oR-Mkn">
-                                                        <rect key="frame" x="0.0" y="53" width="360" height="45"/>
+                                                        <rect key="frame" x="0.0" y="53" width="359" height="45"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="One pack per day">
                                                             <color key="titleColor" red="0.08235294118" green="0.70196078429999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
@@ -94,7 +94,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dsF-Ko-wth">
-                                                        <rect key="frame" x="0.0" y="106" width="360" height="45"/>
+                                                        <rect key="frame" x="0.0" y="106" width="359" height="45"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="One and a half packs per day">
                                                             <color key="titleColor" red="0.08235294118" green="0.70196078429999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
@@ -104,7 +104,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E2Y-W5-af0">
-                                                        <rect key="frame" x="0.0" y="159" width="360" height="45"/>
+                                                        <rect key="frame" x="0.0" y="159" width="359" height="45"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="Two packs per day">
                                                             <color key="titleColor" red="0.08235294118" green="0.70196078429999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
@@ -114,7 +114,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WYc-lP-vQB">
-                                                        <rect key="frame" x="0.0" y="212" width="360" height="45"/>
+                                                        <rect key="frame" x="0.0" y="212" width="359" height="45"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="Three or more packs per day">
                                                             <color key="titleColor" red="0.08235294118" green="0.70196078429999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
@@ -138,23 +138,23 @@
                                                 </constraints>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How many packs of cigarettes do you smoke per day?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GcF-eR-9jX">
-                                                <rect key="frame" x="8" y="229" width="360" height="66"/>
+                                                <rect key="frame" x="8" y="229" width="359" height="66"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="24"/>
                                                 <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How often are you exposed to second-hand smoke?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TQN-V8-SfP">
-                                                <rect key="frame" x="8" y="592" width="360" height="66"/>
+                                                <rect key="frame" x="8" y="592" width="359" height="66"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="24"/>
                                                 <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="BLc-QM-fiU">
-                                                <rect key="frame" x="8" y="666" width="360" height="172"/>
+                                                <rect key="frame" x="8" y="666" width="359" height="204"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WsS-mN-FLS">
-                                                        <rect key="frame" x="0.0" y="0.0" width="360" height="37"/>
-                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="359" height="45"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="Daily and for at least an hour">
                                                             <color key="titleColor" red="0.08235294118" green="0.70196078429999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
@@ -163,8 +163,8 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k7K-rP-dWD">
-                                                        <rect key="frame" x="0.0" y="45" width="360" height="37"/>
-                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
+                                                        <rect key="frame" x="0.0" y="53" width="359" height="45"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="A few times per week for at least an hour">
                                                             <color key="titleColor" red="0.08235294118" green="0.70196078429999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
@@ -173,8 +173,8 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wfl-WU-l48">
-                                                        <rect key="frame" x="0.0" y="90" width="360" height="37"/>
-                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
+                                                        <rect key="frame" x="0.0" y="106" width="359" height="45"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="Once per week for at least an hour">
                                                             <color key="titleColor" red="0.08235294118" green="0.70196078429999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
@@ -183,8 +183,8 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gb3-sP-bcq">
-                                                        <rect key="frame" x="0.0" y="135" width="360" height="37"/>
-                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
+                                                        <rect key="frame" x="0.0" y="159" width="359" height="45"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="Rarely or never">
                                                             <color key="titleColor" red="0.08235294118" green="0.70196078429999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
@@ -205,7 +205,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="GEe-VL-ya6">
-                                                <rect key="frame" x="94" y="911" width="188" height="45"/>
+                                                <rect key="frame" x="93.5" y="943" width="188" height="45"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BXz-ug-2ud">
                                                         <rect key="frame" x="0.0" y="0.0" width="90" height="45"/>
@@ -236,10 +236,10 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="z3n-6g-paW">
-                                                <rect key="frame" x="8" y="1319" width="360" height="151"/>
+                                                <rect key="frame" x="8" y="1351" width="359" height="151"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="akM-2f-pRC">
-                                                        <rect key="frame" x="0.0" y="0.0" width="360" height="45"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="359" height="45"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="One to two drinks">
                                                             <color key="titleColor" red="0.08235294118" green="0.70196078429999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
@@ -249,7 +249,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N8Z-Ic-cHj">
-                                                        <rect key="frame" x="0.0" y="53" width="360" height="45"/>
+                                                        <rect key="frame" x="0.0" y="53" width="359" height="45"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="About three drinks">
                                                             <color key="titleColor" red="0.08235294118" green="0.70196078429999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
@@ -259,7 +259,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b7J-ju-d4x">
-                                                        <rect key="frame" x="0.0" y="106" width="360" height="45"/>
+                                                        <rect key="frame" x="0.0" y="106" width="359" height="45"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="At least three drinks">
                                                             <color key="titleColor" red="0.08235294118" green="0.70196078429999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
@@ -279,10 +279,10 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dmQ-iI-RME">
-                                                <rect key="frame" x="8" y="1062" width="360" height="151"/>
+                                                <rect key="frame" x="8" y="1094" width="359" height="151"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YIu-V1-vbK">
-                                                        <rect key="frame" x="0.0" y="0.0" width="360" height="45"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="359" height="45"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="One to two days per week">
                                                             <color key="titleColor" red="0.08235294118" green="0.70196078429999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
@@ -292,7 +292,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P18-YJ-8Rt">
-                                                        <rect key="frame" x="0.0" y="53" width="360" height="45"/>
+                                                        <rect key="frame" x="0.0" y="53" width="359" height="45"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="Three to five days per week">
                                                             <color key="titleColor" red="0.08235294118" green="0.70196078429999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
@@ -302,7 +302,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eSi-wE-gfR">
-                                                        <rect key="frame" x="0.0" y="106" width="360" height="45"/>
+                                                        <rect key="frame" x="0.0" y="106" width="359" height="45"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="Six to seven days per week">
                                                             <color key="titleColor" red="0.08235294118" green="0.70196078429999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
@@ -322,34 +322,34 @@
                                                 </constraints>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Do you drink alcohol?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T2J-qv-E2r">
-                                                <rect key="frame" x="67.5" y="870" width="241.5" height="33"/>
+                                                <rect key="frame" x="67" y="902" width="241.5" height="33"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="24"/>
                                                 <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How many nights per week do you drink alcohol?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ii-q6-dHo">
-                                                <rect key="frame" x="8" y="988" width="360" height="66"/>
+                                                <rect key="frame" x="8" y="1020" width="359" height="66"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="24"/>
                                                 <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How many drinks do you have in one night of drinking alcohol?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jit-E8-RCn">
-                                                <rect key="frame" x="8" y="1245" width="360" height="66"/>
+                                                <rect key="frame" x="8" y="1277" width="359" height="66"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="24"/>
                                                 <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How often do you take illegal drugs?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="78J-fL-on4">
-                                                <rect key="frame" x="8" y="1502" width="360" height="66"/>
+                                                <rect key="frame" x="8" y="1534" width="359" height="66"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="24"/>
                                                 <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="n6Z-Zg-KGo">
-                                                <rect key="frame" x="8" y="1576" width="360" height="257"/>
+                                                <rect key="frame" x="8" y="1608" width="359" height="257"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wWu-sU-UuU">
-                                                        <rect key="frame" x="0.0" y="0.0" width="360" height="45"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="359" height="45"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="Never">
                                                             <color key="titleColor" red="0.08235294118" green="0.70196078429999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
@@ -359,7 +359,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="72b-3s-fq1">
-                                                        <rect key="frame" x="0.0" y="53" width="360" height="45"/>
+                                                        <rect key="frame" x="0.0" y="53" width="359" height="45"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="About once per year">
                                                             <color key="titleColor" red="0.08235294118" green="0.70196078429999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
@@ -369,7 +369,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NRR-jv-YcB">
-                                                        <rect key="frame" x="0.0" y="106" width="360" height="45"/>
+                                                        <rect key="frame" x="0.0" y="106" width="359" height="45"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="A few times per year">
                                                             <color key="titleColor" red="0.08235294118" green="0.70196078429999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
@@ -379,7 +379,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i4e-Bg-2dh">
-                                                        <rect key="frame" x="0.0" y="159" width="360" height="45"/>
+                                                        <rect key="frame" x="0.0" y="159" width="359" height="45"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="Every few months">
                                                             <color key="titleColor" red="0.08235294118" green="0.70196078429999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
@@ -389,7 +389,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R7U-hZ-PAn">
-                                                        <rect key="frame" x="0.0" y="212" width="360" height="45"/>
+                                                        <rect key="frame" x="0.0" y="212" width="359" height="45"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                         <state key="normal" title="Once or more per month">
                                                             <color key="titleColor" red="0.08235294118" green="0.70196078429999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
@@ -413,9 +413,10 @@
                                                 </constraints>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ICu-gs-7Wv">
-                                                <rect key="frame" x="93" y="1865" width="190" height="56"/>
+                                                <rect key="frame" x="92.5" y="1897" width="190" height="56"/>
                                                 <color key="backgroundColor" red="0.08235294118" green="0.70196078429999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
+                                                    <constraint firstAttribute="height" constant="56" id="950-4a-fJ7"/>
                                                     <constraint firstAttribute="width" constant="190" id="bpn-RG-9l4"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="32"/>
@@ -431,6 +432,7 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="TQN-V8-SfP" firstAttribute="centerX" secondItem="OF8-MA-9WU" secondAttribute="centerX" id="2lH-7J-JEG"/>
+                                            <constraint firstAttribute="bottom" secondItem="ICu-gs-7Wv" secondAttribute="bottom" constant="20" id="3Re-bH-8Gc"/>
                                             <constraint firstItem="dmQ-iI-RME" firstAttribute="centerX" secondItem="OF8-MA-9WU" secondAttribute="centerX" id="3eD-WI-IIO"/>
                                             <constraint firstItem="dmQ-iI-RME" firstAttribute="leading" secondItem="OF8-MA-9WU" secondAttribute="leading" constant="8" id="46s-ld-pxz"/>
                                             <constraint firstItem="lgp-s4-rys" firstAttribute="leading" secondItem="OF8-MA-9WU" secondAttribute="leading" constant="8" id="4R5-v5-DdD"/>
@@ -482,22 +484,21 @@
                                             <constraint firstAttribute="trailing" secondItem="dmQ-iI-RME" secondAttribute="trailing" constant="8" id="ugf-I4-wn7"/>
                                             <constraint firstItem="GEe-VL-ya6" firstAttribute="top" secondItem="T2J-qv-E2r" secondAttribute="bottom" constant="8" id="voq-3f-SjV"/>
                                             <constraint firstItem="jit-E8-RCn" firstAttribute="leading" secondItem="OF8-MA-9WU" secondAttribute="leading" constant="8" id="wSd-hm-qXu"/>
-                                            <constraint firstAttribute="height" constant="1950" id="x9c-nr-Cnl"/>
                                             <constraint firstItem="TQN-V8-SfP" firstAttribute="leading" secondItem="OF8-MA-9WU" secondAttribute="leading" constant="8" id="xz4-Uc-rQK"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="OF8-MA-9WU" firstAttribute="top" secondItem="maV-pz-la5" secondAttribute="top" id="1eg-4R-Zdk"/>
-                                    <constraint firstAttribute="trailing" secondItem="OF8-MA-9WU" secondAttribute="trailing" constant="-1" id="Byt-kO-qgw"/>
+                                    <constraint firstAttribute="trailing" secondItem="OF8-MA-9WU" secondAttribute="trailing" id="Byt-kO-qgw"/>
                                     <constraint firstAttribute="bottom" secondItem="OF8-MA-9WU" secondAttribute="bottom" id="cTF-Ta-qOB"/>
                                     <constraint firstItem="OF8-MA-9WU" firstAttribute="leading" secondItem="maV-pz-la5" secondAttribute="leading" id="r7s-Sz-0IK"/>
-                                    <constraint firstItem="OF8-MA-9WU" firstAttribute="centerX" secondItem="maV-pz-la5" secondAttribute="centerX" id="xS8-Wg-1RC"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="OF8-MA-9WU" firstAttribute="width" secondItem="JnI-kJ-hWg" secondAttribute="width" id="2hd-wK-kCR"/>
                             <constraint firstItem="35i-jf-xzO" firstAttribute="top" secondItem="maV-pz-la5" secondAttribute="bottom" id="9Fw-Fl-5HQ"/>
                             <constraint firstItem="maV-pz-la5" firstAttribute="leading" secondItem="JnI-kJ-hWg" secondAttribute="leading" id="BDI-5Q-8zT"/>
                             <constraint firstItem="maV-pz-la5" firstAttribute="top" secondItem="JnI-kJ-hWg" secondAttribute="top" id="DmQ-gx-9Z8"/>
@@ -529,6 +530,7 @@
                         <outlet property="oneToTwoDaysDrinkingPerWeek" destination="YIu-V1-vbK" id="7JE-1w-T9q"/>
                         <outlet property="oneToTwoDrinksPerNight" destination="akM-2f-pRC" id="tjy-aU-P2y"/>
                         <outlet property="sixToSevenDaysDrinkingPerWeek" destination="eSi-wE-gfR" id="tNA-R9-ROF"/>
+                        <outlet property="smokingQuestionLabel" destination="GcF-eR-9jX" id="zZf-Yk-E8i"/>
                         <outlet property="threeOrMorePacksSmoke" destination="WYc-lP-vQB" id="kOJ-wb-sO8"/>
                         <outlet property="threeToFiveDaysDrinkingPerWeek" destination="P18-YJ-8Rt" id="hrn-bb-XD7"/>
                         <outlet property="twoPacksSmoke" destination="E2Y-W5-af0" id="7sr-Nk-fh0"/>
