@@ -17,6 +17,19 @@ class InstructionsVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        UINavigationBar.appearance().barTintColor = UIColor.primaryBlue
+        UINavigationBar.appearance().tintColor = UIColor.white
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+        UINavigationBar.appearance().isTranslucent = false
+        UINavigationBar.appearance().setBackgroundImage(UIImage(), for:.default)
+        UINavigationBar.appearance().shadowImage = UIImage()
+        
+        
         gotIt.layer.cornerRadius = 10
+        
+        //self.navigationController?.navigationBar.backgroundColor = UIColor.clear
+        //self.navigationController?.navigationBar.isTranslucent = true
+
     }
 }

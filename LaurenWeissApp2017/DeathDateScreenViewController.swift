@@ -23,7 +23,7 @@ class DeathDateScreenViewController: UIViewController {
     var deathAgeAsDouble: Double?
     //var deathAgeAsInt: Int?
 
-    @IBOutlet weak var home: UIButton!
+//    @IBOutlet weak var home: UIButton!
     @IBOutlet weak var update: UIButton!
     var deathAgeAsString: String = ""
     
@@ -37,13 +37,12 @@ class DeathDateScreenViewController: UIViewController {
         ageOfDeathLabel.layer.cornerRadius = 10
         suggestionsButton.layer.cornerRadius = 10
         update.layer.cornerRadius = 10
-        home.layer.cornerRadius = 10
         
         
 //        nativeExpressAdView.adUnitID = "ca-app-pub-2458339528814864~5497031975"
 //        nativeExpressAdView.rootViewController = self
         
-        let request = GADRequest()
+//        let request = GADRequest()
         //nativeExpressAdView.load(request)
         
         

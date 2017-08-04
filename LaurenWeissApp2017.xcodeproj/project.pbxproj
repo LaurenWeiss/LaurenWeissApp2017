@@ -16,6 +16,8 @@
 		2E1732371F33DD8C0057B610 /* DrugsVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E1732361F33DD8C0057B610 /* DrugsVC.storyboard */; };
 		2E1732391F33DDA00057B610 /* DietVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E1732381F33DDA00057B610 /* DietVC.storyboard */; };
 		2E17323B1F33DDB00057B610 /* OtherVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E17323A1F33DDB00057B610 /* OtherVC.storyboard */; };
+		2E17323D1F34E7BB0057B610 /* AboutScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E17323C1F34E7BB0057B610 /* AboutScreenVC.swift */; };
+		2E17323F1F34EEE30057B610 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E17323E1F34EEE30057B610 /* CategoryCell.swift */; };
 		2E1851BD1F13F2750094F732 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1851BC1F13F2750094F732 /* AppDelegate.swift */; };
 		2E1851C41F13F2750094F732 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E1851C31F13F2750094F732 /* Assets.xcassets */; };
 		2E1851D21F13F2750094F732 /* LaurenWeissApp2017Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1851D11F13F2750094F732 /* LaurenWeissApp2017Tests.swift */; };
@@ -79,6 +81,8 @@
 		2E1732361F33DD8C0057B610 /* DrugsVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DrugsVC.storyboard; sourceTree = "<group>"; };
 		2E1732381F33DDA00057B610 /* DietVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DietVC.storyboard; sourceTree = "<group>"; };
 		2E17323A1F33DDB00057B610 /* OtherVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = OtherVC.storyboard; sourceTree = "<group>"; };
+		2E17323C1F34E7BB0057B610 /* AboutScreenVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutScreenVC.swift; sourceTree = "<group>"; };
+		2E17323E1F34EEE30057B610 /* CategoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		2E1851B91F13F2750094F732 /* LaurenWeissApp2017.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LaurenWeissApp2017.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E1851BC1F13F2750094F732 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2E1851C31F13F2750094F732 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -237,6 +241,7 @@
 		2E44ACE81F2131F000167BE5 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				2E17323C1F34E7BB0057B610 /* AboutScreenVC.swift */,
 				2EFFB71E1F1549CA006BB041 /* CreateUsernameViewController.swift */,
 				2E1851EF1F1536F70094F732 /* LoginViewController.swift */,
 			);
@@ -270,6 +275,7 @@
 				2E6FB8EC1F28FE4500B9A44A /* CustomSideMenuController.swift */,
 				2E6FB8F01F29100000B9A44A /* MenuController.swift */,
 				2EFE557D1F2A913A005CD33E /* UIColorExtension.swift */,
+				2E17323E1F34EEE30057B610 /* CategoryCell.swift */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -618,6 +624,7 @@
 				2E3AB3981F2FADD300BE6050 /* SuggestionsData.swift in Sources */,
 				2EFFB71D1F15482E006BB041 /* User.swift in Sources */,
 				2EFFB7301F16B875006BB041 /* SuggestionsScreenVC.swift in Sources */,
+				2E17323F1F34EEE30057B610 /* CategoryCell.swift in Sources */,
 				2EFFB7211F154C72006BB041 /* UserService.swift in Sources */,
 				2E6FB8F91F29183400B9A44A /* DietAndNutritionVC.swift in Sources */,
 				2E17322B1F327B0A0057B610 /* InstructionsVC.swift in Sources */,
@@ -629,6 +636,7 @@
 				2E17322D1F3285520057B610 /* Double+Extension.swift in Sources */,
 				2E6FB8ED1F28FE4500B9A44A /* CustomSideMenuController.swift in Sources */,
 				2E6FB8F11F29100000B9A44A /* MenuController.swift in Sources */,
+				2E17323D1F34E7BB0057B610 /* AboutScreenVC.swift in Sources */,
 				2EFFB7321F16B8AA006BB041 /* DeathDateScreenViewController.swift in Sources */,
 				2E6FB8FD1F293A9400B9A44A /* LifeExpectancyCalculator.swift in Sources */,
 				2E6FB8F31F29180600B9A44A /* YourDailyLifeVC.swift in Sources */,

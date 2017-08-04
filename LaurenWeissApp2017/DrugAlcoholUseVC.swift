@@ -119,9 +119,9 @@ class DrugAlcoholUseVC: UIViewController, UIScrollViewDelegate {
         
         //Calling Functions: SELECT WHETHER OR NOT YOU SMOKE
         
-        if User.current.lifeSpecifications.isSmoking == true {
+        if LifeSpecs.lifeSpecifications.isSmoking == true {
             yesSmokeSelected()
-        } else if User.current.lifeSpecifications.isSmoking == false {
+        } else if LifeSpecs.lifeSpecifications.isSmoking == false {
             noSmokeSelected()
             
             
@@ -141,62 +141,62 @@ class DrugAlcoholUseVC: UIViewController, UIScrollViewDelegate {
         
         
         
-        if User.current.lifeSpecifications.numCigarettesPerDay == "oneCigToHalfAPack" {
+        if LifeSpecs.lifeSpecifications.numCigarettesPerDay == "oneCigToHalfAPack" {
             oneCigToHalfAPack()
-        } else if User.current.lifeSpecifications.numCigarettesPerDay == "onePackCigPerDay" {
+        } else if LifeSpecs.lifeSpecifications.numCigarettesPerDay == "onePackCigPerDay" {
             onePackCigPerDay()
-        } else if User.current.lifeSpecifications.numCigarettesPerDay == "oneAndAHalfPacksPerDay" {
+        } else if LifeSpecs.lifeSpecifications.numCigarettesPerDay == "oneAndAHalfPacksPerDay" {
             oneAndAHalfPacksPerDay()
-        } else if User.current.lifeSpecifications.numCigarettesPerDay == "twoPacksPerDay" {
+        } else if LifeSpecs.lifeSpecifications.numCigarettesPerDay == "twoPacksPerDay" {
             twoPacksPerDay()
-        } else if User.current.lifeSpecifications.numCigarettesPerDay == "threeOrMorePacksPerDay" {
+        } else if LifeSpecs.lifeSpecifications.numCigarettesPerDay == "threeOrMorePacksPerDay" {
             threeOrMorePacksPerDay()
         }
         
         
         //Calling Functions: SELECT SECOND-HAND SMOKING EXPOSURE
-        if User.current.lifeSpecifications.secondHandSmoke == "dailySecondHand" {
+        if LifeSpecs.lifeSpecifications.secondHandSmoke == "dailySecondHand" {
             dailySecondHand()
-        } else if User.current.lifeSpecifications.secondHandSmoke == "fewTimesPerWeekExposure" {
+        } else if LifeSpecs.lifeSpecifications.secondHandSmoke == "fewTimesPerWeekExposure" {
             fewTimesPerWeekExposure()
-        } else if User.current.lifeSpecifications.secondHandSmoke == "oncePerWeekExposure" {
+        } else if LifeSpecs.lifeSpecifications.secondHandSmoke == "oncePerWeekExposure" {
             oncePerWeekExposure()
-        } else if User.current.lifeSpecifications.secondHandSmoke == "neverExposure" {
+        } else if LifeSpecs.lifeSpecifications.secondHandSmoke == "neverExposure" {
             neverExposure()
         }
         //Calling Functions: SELECT WHETHER OR NOT YOU DRINK ALCOHOL
-        if User.current.lifeSpecifications.drinkAlcohol == true {
+        if LifeSpecs.lifeSpecifications.drinkAlcohol == true {
             yesAlcoholSelected()
-        } else if User.current.lifeSpecifications.drinkAlcohol == false {
+        } else if LifeSpecs.lifeSpecifications.drinkAlcohol == false {
             noAlcoholSelected()
         }
         //Calling Functions: SELECT NUM NIGHTS SPENT DRINKING
-        if User.current.lifeSpecifications.numNightsSpentDrinking == "oneToTwoDaysDrinkingPerWeekSelected" {
+        if LifeSpecs.lifeSpecifications.numNightsSpentDrinking == "oneToTwoDaysDrinkingPerWeekSelected" {
             oneToTwoDaysDrinkingPerWeekSelected()
-        } else if User.current.lifeSpecifications.numNightsSpentDrinking == "threeToFiveDaysDrinkingPerWeekSelected" {
+        } else if LifeSpecs.lifeSpecifications.numNightsSpentDrinking == "threeToFiveDaysDrinkingPerWeekSelected" {
             threeToFiveDaysDrinkingPerWeekSelected()
-        }  else if User.current.lifeSpecifications.numNightsSpentDrinking == "sixToSevenDaysDrinkningPerWeek" {
+        }  else if LifeSpecs.lifeSpecifications.numNightsSpentDrinking == "sixToSevenDaysDrinkningPerWeek" {
             sixToSevenDaysDrinkningPerWeek()
         }
         
         //Calling Functions: SELECT HOW NUM DRINKS YOU HAVE IN ONE NIGHT OF DRINKING ALCOHOL
-        if User.current.lifeSpecifications.numDrinksPerNight == "oneToTwoDrinksPerNightSelected" {
+        if LifeSpecs.lifeSpecifications.numDrinksPerNight == "oneToTwoDrinksPerNightSelected" {
             oneToTwoDrinksPerNightSelected()
-        } else if User.current.lifeSpecifications.numDrinksPerNight == "aboutThreeDrinksPerNightSelected" {
+        } else if LifeSpecs.lifeSpecifications.numDrinksPerNight == "aboutThreeDrinksPerNightSelected" {
             aboutThreeDrinksPerNightSelected()
-        }  else if User.current.lifeSpecifications.numDrinksPerNight == "atLeastThreeDrinksPerNightSelected" {
+        }  else if LifeSpecs.lifeSpecifications.numDrinksPerNight == "atLeastThreeDrinksPerNightSelected" {
             atLeastThreeDrinksPerNightSelected()
         }
         //Calling Functions: SELECT WHETHER OR NOT YOU TAKE ILLEGAL DRUGS
-        if User.current.lifeSpecifications.illegalDrugsInfo == "neverDrugsSelected" {
+        if LifeSpecs.lifeSpecifications.illegalDrugsInfo == "neverDrugsSelected" {
             neverDrugsSelected()
-        } else if User.current.lifeSpecifications.illegalDrugsInfo == "drugsFewTimesPerYearSelected" {
+        } else if LifeSpecs.lifeSpecifications.illegalDrugsInfo == "drugsFewTimesPerYearSelected" {
             drugsFewTimesPerYearSelected()
-        }  else if User.current.lifeSpecifications.illegalDrugsInfo == "drugsEveryFewMonthsSelected" {
+        }  else if LifeSpecs.lifeSpecifications.illegalDrugsInfo == "drugsEveryFewMonthsSelected" {
             drugsEveryFewMonthsSelected()
-        } else if User.current.lifeSpecifications.illegalDrugsInfo == "drugsOnceOrMorePerMonth" {
+        } else if LifeSpecs.lifeSpecifications.illegalDrugsInfo == "drugsOnceOrMorePerMonth" {
             drugsOnceOrMorePerMonth()
-        } else if User.current.lifeSpecifications.illegalDrugsInfo == "drugsOncePerYear" {
+        } else if LifeSpecs.lifeSpecifications.illegalDrugsInfo == "drugsOncePerYear" {
             drugsOncePerYearS()
         }
     }
@@ -226,7 +226,7 @@ class DrugAlcoholUseVC: UIViewController, UIScrollViewDelegate {
     func yesSmokeSelected() {
         yesSmoke.backgroundColor = UIColor.primaryBlue
         yesSmoke.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.isSmoking = true
+        LifeSpecs.lifeSpecifications.isSmoking = true
         
         noSmoke.setTitleColor(UIColor.primaryBlue, for: .normal)
         noSmoke.backgroundColor = UIColor.clear
@@ -234,7 +234,7 @@ class DrugAlcoholUseVC: UIViewController, UIScrollViewDelegate {
     func noSmokeSelected() {
         noSmoke.backgroundColor = UIColor.primaryBlue
         noSmoke.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.isSmoking = false
+        LifeSpecs.lifeSpecifications.isSmoking = false
         
         yesSmoke.setTitleColor(UIColor.primaryBlue, for: .normal)
         yesSmoke.backgroundColor = UIColor.clear
@@ -260,7 +260,7 @@ class DrugAlcoholUseVC: UIViewController, UIScrollViewDelegate {
     func oneCigToHalfAPack() {
         oneCigToHalfPack.backgroundColor = UIColor.primaryBlue
         oneCigToHalfPack.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.numCigarettesPerDay = "oneCigToHalfAPack"
+        LifeSpecs.lifeSpecifications.numCigarettesPerDay = "oneCigToHalfAPack"
         
         onePackSmoke.setTitleColor(UIColor.primaryBlue, for: .normal)
         onePackSmoke.backgroundColor = UIColor.clear
@@ -279,7 +279,7 @@ class DrugAlcoholUseVC: UIViewController, UIScrollViewDelegate {
         
         onePackSmoke.backgroundColor = UIColor.primaryBlue
         onePackSmoke.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.numCigarettesPerDay = "onePackCigPerDay"
+        LifeSpecs.lifeSpecifications.numCigarettesPerDay = "onePackCigPerDay"
         
         oneCigToHalfPack.setTitleColor(UIColor.primaryBlue, for: .normal)
         oneCigToHalfPack.backgroundColor = UIColor.clear
@@ -298,7 +298,7 @@ class DrugAlcoholUseVC: UIViewController, UIScrollViewDelegate {
         
         oneAndHalfPacksSmoke.backgroundColor = UIColor.primaryBlue
         oneAndHalfPacksSmoke.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.numCigarettesPerDay = "oneAndAHalfPacksPerDay"
+        LifeSpecs.lifeSpecifications.numCigarettesPerDay = "oneAndAHalfPacksPerDay"
         
         onePackSmoke.setTitleColor(UIColor.primaryBlue, for: .normal)
         onePackSmoke.backgroundColor = UIColor.clear
@@ -317,7 +317,7 @@ class DrugAlcoholUseVC: UIViewController, UIScrollViewDelegate {
         
         twoPacksSmoke.backgroundColor = UIColor.primaryBlue
         twoPacksSmoke.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.numCigarettesPerDay = "twoPacksPerDay"
+        LifeSpecs.lifeSpecifications.numCigarettesPerDay = "twoPacksPerDay"
         
         onePackSmoke.setTitleColor(UIColor.primaryBlue, for: .normal)
         onePackSmoke.backgroundColor = UIColor.clear
@@ -336,7 +336,7 @@ class DrugAlcoholUseVC: UIViewController, UIScrollViewDelegate {
         
         threeOrMorePacksSmoke.backgroundColor = UIColor.primaryBlue
         threeOrMorePacksSmoke.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.numCigarettesPerDay = "threeOrMorePacksPerDay"
+        LifeSpecs.lifeSpecifications.numCigarettesPerDay = "threeOrMorePacksPerDay"
         
         onePackSmoke.setTitleColor(UIColor.primaryBlue, for: .normal)
         onePackSmoke.backgroundColor = UIColor.clear
@@ -371,7 +371,7 @@ class DrugAlcoholUseVC: UIViewController, UIScrollViewDelegate {
     func dailySecondHand() {
         dailySecondHandSmoke.backgroundColor = UIColor.primaryBlue
         dailySecondHandSmoke.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.secondHandSmoke = "dailySecondHand"
+        LifeSpecs.lifeSpecifications.secondHandSmoke = "dailySecondHand"
         
         fewTimesWeekSecondHandSmoke.setTitleColor(UIColor.primaryBlue, for: .normal)
         fewTimesWeekSecondHandSmoke.backgroundColor = UIColor.clear
@@ -385,7 +385,7 @@ class DrugAlcoholUseVC: UIViewController, UIScrollViewDelegate {
     func fewTimesPerWeekExposure() {
         fewTimesWeekSecondHandSmoke.backgroundColor = UIColor.primaryBlue
         fewTimesWeekSecondHandSmoke.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.secondHandSmoke = "fewTimesPerWeekExposure"
+        LifeSpecs.lifeSpecifications.secondHandSmoke = "fewTimesPerWeekExposure"
         
         dailySecondHandSmoke.setTitleColor(UIColor.primaryBlue, for: .normal)
         dailySecondHandSmoke.backgroundColor = UIColor.clear
@@ -399,7 +399,7 @@ class DrugAlcoholUseVC: UIViewController, UIScrollViewDelegate {
     func oncePerWeekExposure() {
         onceAWeekSecondHandSmoke.backgroundColor = UIColor.primaryBlue
         onceAWeekSecondHandSmoke.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.secondHandSmoke = "oncePerWeekExposure"
+        LifeSpecs.lifeSpecifications.secondHandSmoke = "oncePerWeekExposure"
         
         fewTimesWeekSecondHandSmoke.setTitleColor(UIColor.primaryBlue, for: .normal)
         fewTimesWeekSecondHandSmoke.backgroundColor = UIColor.clear
@@ -413,7 +413,7 @@ class DrugAlcoholUseVC: UIViewController, UIScrollViewDelegate {
     func neverExposure() {
         neverSecondHandSmoke.backgroundColor = UIColor.primaryBlue
         neverSecondHandSmoke.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.secondHandSmoke = "neverExposure"
+        LifeSpecs.lifeSpecifications.secondHandSmoke = "neverExposure"
         
         fewTimesWeekSecondHandSmoke.setTitleColor(UIColor.primaryBlue, for: .normal)
         fewTimesWeekSecondHandSmoke.backgroundColor = UIColor.clear
@@ -452,7 +452,7 @@ class DrugAlcoholUseVC: UIViewController, UIScrollViewDelegate {
     func yesAlcoholSelected() {
         yesAlcohol.backgroundColor = UIColor.primaryBlue
         yesAlcohol.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.drinkAlcohol = true
+        LifeSpecs.lifeSpecifications.drinkAlcohol = true
         
         noAlcohol.setTitleColor(UIColor.primaryBlue, for: .normal)
         noAlcohol.backgroundColor = UIColor.clear
@@ -461,7 +461,7 @@ class DrugAlcoholUseVC: UIViewController, UIScrollViewDelegate {
     func noAlcoholSelected() {
         noAlcohol.backgroundColor = UIColor.primaryBlue
         noAlcohol.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.drinkAlcohol = false
+        LifeSpecs.lifeSpecifications.drinkAlcohol = false
         
         yesAlcohol.setTitleColor(UIColor.primaryBlue, for: .normal)
         yesAlcohol.backgroundColor = UIColor.clear
@@ -482,7 +482,7 @@ class DrugAlcoholUseVC: UIViewController, UIScrollViewDelegate {
     func oneToTwoDaysDrinkingPerWeekSelected() {
         oneToTwoDaysDrinkingPerWeek.backgroundColor = UIColor.primaryBlue
         oneToTwoDaysDrinkingPerWeek.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.numNightsSpentDrinking = "oneToTwoDaysDrinkingPerWeekSelected"
+        LifeSpecs.lifeSpecifications.numNightsSpentDrinking = "oneToTwoDaysDrinkingPerWeekSelected"
         
         threeToFiveDaysDrinkingPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
         threeToFiveDaysDrinkingPerWeek.backgroundColor = UIColor.clear
@@ -493,7 +493,7 @@ class DrugAlcoholUseVC: UIViewController, UIScrollViewDelegate {
     func threeToFiveDaysDrinkingPerWeekSelected() {
         threeToFiveDaysDrinkingPerWeek.backgroundColor = UIColor.primaryBlue
         threeToFiveDaysDrinkingPerWeek.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.numNightsSpentDrinking = "threeToFiveDaysDrinkingPerWeekSelected"
+        LifeSpecs.lifeSpecifications.numNightsSpentDrinking = "threeToFiveDaysDrinkingPerWeekSelected"
         
         oneToTwoDaysDrinkingPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
         oneToTwoDaysDrinkingPerWeek.backgroundColor = UIColor.clear
@@ -504,7 +504,7 @@ class DrugAlcoholUseVC: UIViewController, UIScrollViewDelegate {
     func sixToSevenDaysDrinkningPerWeek() {
         sixToSevenDaysDrinkingPerWeek.backgroundColor = UIColor.primaryBlue
         sixToSevenDaysDrinkingPerWeek.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.numNightsSpentDrinking = "sixToSevenDaysDrinkningPerWeek"
+        LifeSpecs.lifeSpecifications.numNightsSpentDrinking = "sixToSevenDaysDrinkningPerWeek"
         
         threeToFiveDaysDrinkingPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
         threeToFiveDaysDrinkingPerWeek.backgroundColor = UIColor.clear
@@ -529,7 +529,7 @@ class DrugAlcoholUseVC: UIViewController, UIScrollViewDelegate {
     func oneToTwoDrinksPerNightSelected() {
         oneToTwoDrinksPerNight.backgroundColor = UIColor.primaryBlue
         oneToTwoDrinksPerNight.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.numDrinksPerNight = "oneToTwoDrinksPerNightSelected"
+        LifeSpecs.lifeSpecifications.numDrinksPerNight = "oneToTwoDrinksPerNightSelected"
         
         aboutThreeDrinksPerNight.setTitleColor(UIColor.primaryBlue, for: .normal)
         aboutThreeDrinksPerNight.backgroundColor = UIColor.clear
@@ -541,7 +541,7 @@ class DrugAlcoholUseVC: UIViewController, UIScrollViewDelegate {
     func aboutThreeDrinksPerNightSelected() {
         aboutThreeDrinksPerNight.backgroundColor = UIColor.primaryBlue
         aboutThreeDrinksPerNight.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.numDrinksPerNight = "aboutThreeDrinksPerNightSelected"
+        LifeSpecs.lifeSpecifications.numDrinksPerNight = "aboutThreeDrinksPerNightSelected"
         
         oneToTwoDrinksPerNight.setTitleColor(UIColor.primaryBlue, for: .normal)
         oneToTwoDrinksPerNight.backgroundColor = UIColor.clear
@@ -554,7 +554,7 @@ class DrugAlcoholUseVC: UIViewController, UIScrollViewDelegate {
     func atLeastThreeDrinksPerNightSelected() {
         atLeastThreeDrinksPerNight.backgroundColor = UIColor.primaryBlue
         atLeastThreeDrinksPerNight.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.numDrinksPerNight = "atLeastThreeDrinksPerNightSelected"
+        LifeSpecs.lifeSpecifications.numDrinksPerNight = "atLeastThreeDrinksPerNightSelected"
         
         aboutThreeDrinksPerNight.setTitleColor(UIColor.primaryBlue, for: .normal)
         aboutThreeDrinksPerNight.backgroundColor = UIColor.clear
@@ -584,7 +584,7 @@ class DrugAlcoholUseVC: UIViewController, UIScrollViewDelegate {
     func neverDrugsSelected() {
         neverDrugs.backgroundColor = UIColor.primaryBlue
         neverDrugs.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.illegalDrugsInfo = "neverDrugsSelected"
+        LifeSpecs.lifeSpecifications.illegalDrugsInfo = "neverDrugsSelected"
         
         drugsFewTimesPerYear.setTitleColor(UIColor.primaryBlue, for: .normal)
         drugsFewTimesPerYear.backgroundColor = UIColor.clear
@@ -601,7 +601,7 @@ class DrugAlcoholUseVC: UIViewController, UIScrollViewDelegate {
     func drugsFewTimesPerYearSelected() {
         drugsFewTimesPerYear.backgroundColor = UIColor.primaryBlue
         drugsFewTimesPerYear.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.illegalDrugsInfo = "drugsFewTimesPerYearSelected"
+        LifeSpecs.lifeSpecifications.illegalDrugsInfo = "drugsFewTimesPerYearSelected"
         
         neverDrugs.setTitleColor(UIColor.primaryBlue, for: .normal)
         neverDrugs.backgroundColor = UIColor.clear
@@ -619,7 +619,7 @@ class DrugAlcoholUseVC: UIViewController, UIScrollViewDelegate {
     func drugsEveryFewMonthsSelected() {
         drugsEveryFewMonths.backgroundColor = UIColor.primaryBlue
         drugsEveryFewMonths.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.illegalDrugsInfo = "drugsEveryFewMonthsSelected"
+        LifeSpecs.lifeSpecifications.illegalDrugsInfo = "drugsEveryFewMonthsSelected"
         
         drugsFewTimesPerYear.setTitleColor(UIColor.primaryBlue, for: .normal)
         drugsFewTimesPerYear.backgroundColor = UIColor.clear
@@ -637,7 +637,7 @@ class DrugAlcoholUseVC: UIViewController, UIScrollViewDelegate {
     func drugsOnceOrMorePerMonth() {
         drugsOnceMorePerMonth.backgroundColor = UIColor.primaryBlue
         drugsOnceMorePerMonth.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.illegalDrugsInfo = "drugsOnceOrMorePerMonth"
+        LifeSpecs.lifeSpecifications.illegalDrugsInfo = "drugsOnceOrMorePerMonth"
         
         drugsFewTimesPerYear.setTitleColor(UIColor.primaryBlue, for: .normal)
         drugsFewTimesPerYear.backgroundColor = UIColor.clear
@@ -655,7 +655,7 @@ class DrugAlcoholUseVC: UIViewController, UIScrollViewDelegate {
     func drugsOncePerYearS() {
         drugsOncePerYear.backgroundColor = UIColor.primaryBlue
         drugsOncePerYear.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.illegalDrugsInfo = "drugsOncePerYear"
+        LifeSpecs.lifeSpecifications.illegalDrugsInfo = "drugsOncePerYear"
         
         drugsFewTimesPerYear.setTitleColor(UIColor.primaryBlue, for: .normal)
         drugsFewTimesPerYear.backgroundColor = UIColor.clear
@@ -671,10 +671,27 @@ class DrugAlcoholUseVC: UIViewController, UIScrollViewDelegate {
         
     }
         
+//    @IBAction func calculateButtonTapped(_ sender: UIButton) {
+//        LifeExpectancyCalculator.calculateAge(forUser: User.current) { (finalAge) in
+//            LifeSpecs.finalAge = Double(finalAge)
+//        }
+//    }
+    
     @IBAction func calculateButtonTapped(_ sender: UIButton) {
-        LifeExpectancyCalculator.calculateAge(forUser: User.current) { (finalAge) in
-            User.current.finalAge = Double(finalAge)
+        
+        let lauren = DispatchGroup()
+        lauren.enter()
+        
+        LifeExpectancyCalculator.calculateAge() { (finalAge) in
+            LifeSpecs.lifeSpecifications.finalAge = Double(finalAge)
+            lauren.leave()
         }
+        
+        lauren.notify(queue: .main) {
+            print("done")
+            self.performSegue(withIdentifier: "toDeathDate", sender: nil)
+        }
+        
     }
     
         override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -682,7 +699,7 @@ class DrugAlcoholUseVC: UIViewController, UIScrollViewDelegate {
                 
                 if let destinationVC = segue.destination as? DeathDateScreenViewController
                 {
-                    destinationVC.deathAgeAsDouble = User.current.finalAge
+                    destinationVC.deathAgeAsDouble = LifeSpecs.lifeSpecifications.finalAge
                 }
             }
 }

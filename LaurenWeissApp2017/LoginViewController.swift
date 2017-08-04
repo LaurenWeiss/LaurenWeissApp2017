@@ -31,6 +31,9 @@ class LoginViewController: UIViewController {
         
         loginButton.layer.cornerRadius = 10
         aboutButton.layer.cornerRadius = 10
+        
+        self.navigationController?.navigationBar.backgroundColor = UIColor.clear
+        self.navigationController?.navigationBar.isTranslucent = true
     }
     
     // MARK: - VC Lifecycle
@@ -57,21 +60,22 @@ class LoginViewController: UIViewController {
     
     // MARK: - IBActions
     
-    @IBAction func loginButtonTapped(_ sender: UIButton) {
-        print("log in button tapped")
-        
-        guard let authUI = FUIAuth.defaultAuthUI()
-            else { return }
-        
-        // 2
-        authUI.delegate = self
-        
-        // 3
-        let authViewController = authUI.authViewController()
-        present(authViewController, animated: true)
-    }
+//    @IBAction func loginButtonTapped(_ sender: UIButton) {
+//        print("log in button tapped")
+//        
+//        guard let authUI = FUIAuth.defaultAuthUI()
+//            else { return }
+//        
+//        // 2
+//        authUI.delegate = self
+//        
+//        // 3
+//        let authViewController = authUI.authViewController()
+//        present(authViewController, animated: true)
+//    }
 }
 
+/*
 extension LoginViewController: FUIAuthDelegate {
     func authUI(_ authUI: FUIAuth, didSignInWith user: FIRUser?, error: Error?) {
         if let _ = error {
@@ -96,3 +100,4 @@ extension LoginViewController: FUIAuthDelegate {
         }
     }
 }
+ */

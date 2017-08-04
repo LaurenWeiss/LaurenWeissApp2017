@@ -11,16 +11,16 @@ import Foundation
 class LifeExpectancyCalculator {
     var totalAge = 0.0
     
-    static func calculateAge(forUser user: User, onCompletion: @escaping (Double) -> Void) {
+    static func calculateAge(onCompletion: @escaping (Double) -> Void) {
         
         var baseAge = 0.0
         
         let formatter = DateFormatter()
         formatter.dateFormat = "YYYY-MM-dd"
         
-        let dobString = formatter.string(from: (user.lifeSpecifications.dob))
-        let gender = user.lifeSpecifications.sex
-        let country = user.lifeSpecifications.country
+        let dobString = formatter.string(from: (LifeSpecs.lifeSpecifications.dob))
+        let gender = LifeSpecs.lifeSpecifications.sex
+        let country = LifeSpecs.lifeSpecifications.country
         let dispatchGroup = DispatchGroup()
         
         dispatchGroup.enter()
@@ -38,162 +38,162 @@ class LifeExpectancyCalculator {
 //MARK: - GENERAL VIEW CONTROLLER Functions (that are not part of the "base" age)
     
             //bmi impact
-            let agesToSubtractBasedOnBMI = LifeExpectancyCalculator.bmiImpact(lifeSpecs: user.lifeSpecifications)
+            let agesToSubtractBasedOnBMI = LifeExpectancyCalculator.bmiImpact(lifeSpecs: LifeSpecs.lifeSpecifications)
             baseAge = baseAge - agesToSubtractBasedOnBMI
 
             
             //bmi high because of muscle or fat impact
-            let agesToSubstractBasedOnMuscleFatBMI = LifeExpectancyCalculator.bmiBasedOnWhat(lifeSpecs: user.lifeSpecifications)
+            let agesToSubstractBasedOnMuscleFatBMI = LifeExpectancyCalculator.bmiBasedOnWhat(lifeSpecs: LifeSpecs.lifeSpecifications)
             baseAge = baseAge - agesToSubstractBasedOnMuscleFatBMI
             
             //education impact
-            let agesToAddBasedOnEducation = LifeExpectancyCalculator.educationImpact(lifeSpecs: user.lifeSpecifications)
+            let agesToAddBasedOnEducation = LifeExpectancyCalculator.educationImpact(lifeSpecs: LifeSpecs.lifeSpecifications)
             baseAge = baseAge - agesToAddBasedOnEducation
             
             //diabetes impact
-            let agesToSubtractBasedOnDiabetes = LifeExpectancyCalculator.diabetesImpact(lifeSpecs: user.lifeSpecifications)
+            let agesToSubtractBasedOnDiabetes = LifeExpectancyCalculator.diabetesImpact(lifeSpecs: LifeSpecs.lifeSpecifications)
             baseAge = baseAge - agesToSubtractBasedOnDiabetes
             
 //YOUR DAILY LIFE VIEW CONTROLLER Functions
             //exercise impact
-            let yearsToAddBasedOnExercise = LifeExpectancyCalculator.exerciseImpact(lifeSpecs: user.lifeSpecifications)
+            let yearsToAddBasedOnExercise = LifeExpectancyCalculator.exerciseImpact(lifeSpecs: LifeSpecs.lifeSpecifications)
             baseAge = baseAge - yearsToAddBasedOnExercise
 
             //flossing impact
-            let yearsToAddBasedOnFlossing = LifeExpectancyCalculator.flossingImpact(lifeSpecs: user.lifeSpecifications)
+            let yearsToAddBasedOnFlossing = LifeExpectancyCalculator.flossingImpact(lifeSpecs: LifeSpecs.lifeSpecifications)
             baseAge = baseAge - yearsToAddBasedOnFlossing
 
             
             //hours of work per week impact
-            let yearsToAddBasedOnWorkHours = LifeExpectancyCalculator.numHoursWorkPerWeek(lifeSpecs: user.lifeSpecifications)
+            let yearsToAddBasedOnWorkHours = LifeExpectancyCalculator.numHoursWorkPerWeek(lifeSpecs: LifeSpecs.lifeSpecifications)
             baseAge = baseAge - yearsToAddBasedOnWorkHours
             
             
             //days of work per week impact
-            let yearsToAddBasedOnDaysWorkPerWeek = LifeExpectancyCalculator.numDaysWorkPerWeek(lifeSpecs: user.lifeSpecifications)
+            let yearsToAddBasedOnDaysWorkPerWeek = LifeExpectancyCalculator.numDaysWorkPerWeek(lifeSpecs: LifeSpecs.lifeSpecifications)
             baseAge = baseAge - yearsToAddBasedOnDaysWorkPerWeek
             //air quality impact
-            let yearsToAddBasedOnAirQuality = LifeExpectancyCalculator.airQuality(lifeSpecs: user.lifeSpecifications)
+            let yearsToAddBasedOnAirQuality = LifeExpectancyCalculator.airQuality(lifeSpecs: LifeSpecs.lifeSpecifications)
             baseAge = baseAge - yearsToAddBasedOnAirQuality
             
             //seatbelt impact
-//            let yearsToAddBasedOnSeatbelt = LifeExpectancyCalculator.seatbeltImpact(lifeSpecs: user.lifeSpecifications)
+//            let yearsToAddBasedOnSeatbelt = LifeExpectancyCalculator.seatbeltImpact(lifeSpecs: LifeSpecs.lifeSpecifications)
 //            baseAge = baseAge + yearsToAddBasedOnSeatbelt
             
             //sleep impact
-            let yearsToAddBasedOnSleep = LifeExpectancyCalculator.sleepImpact(lifeSpecs: user.lifeSpecifications)
+            let yearsToAddBasedOnSleep = LifeExpectancyCalculator.sleepImpact(lifeSpecs: LifeSpecs.lifeSpecifications)
             baseAge = baseAge - yearsToAddBasedOnSleep
             
             //stress levels impact
-            let yearsToAddBasedOnStress = LifeExpectancyCalculator.stressLevelsImpact(lifeSpecs: user.lifeSpecifications)
+            let yearsToAddBasedOnStress = LifeExpectancyCalculator.stressLevelsImpact(lifeSpecs: LifeSpecs.lifeSpecifications)
             baseAge = baseAge - yearsToAddBasedOnStress
             
             //pet impact
             
-            let yearsToAddBasedOnPet = LifeExpectancyCalculator.petImpact(lifeSpaces: user.lifeSpecifications)
+            let yearsToAddBasedOnPet = LifeExpectancyCalculator.petImpact(lifeSpaces: LifeSpecs.lifeSpecifications)
             baseAge = baseAge - yearsToAddBasedOnPet
             
 //RELATIONSHIPS VIEW CONTROLLER Functions
             //marital status impact
-            let yearsToAddBasedOnMaritalStatus = LifeExpectancyCalculator.maritalStatusImpact(lifeSpecs: user.lifeSpecifications)
+            let yearsToAddBasedOnMaritalStatus = LifeExpectancyCalculator.maritalStatusImpact(lifeSpecs: LifeSpecs.lifeSpecifications)
             baseAge = baseAge - yearsToAddBasedOnMaritalStatus
             
             //personal contact impact
-            let yearsToAddBasedOnContact = LifeExpectancyCalculator.personalContactImpact(lifeSpecs: user.lifeSpecifications)
+            let yearsToAddBasedOnContact = LifeExpectancyCalculator.personalContactImpact(lifeSpecs: LifeSpecs.lifeSpecifications)
             baseAge = baseAge - yearsToAddBasedOnContact
             
             //heart attack impact
-            let yearsToAddBasedOnHeart = LifeExpectancyCalculator.heartAttackImpact(lifeSpecs: user.lifeSpecifications)
+            let yearsToAddBasedOnHeart = LifeExpectancyCalculator.heartAttackImpact(lifeSpecs: LifeSpecs.lifeSpecifications)
             baseAge = baseAge - yearsToAddBasedOnHeart
             
             //cancer impact
-            let yearsToAddBasedOnCancer = LifeExpectancyCalculator.cancerImpact(lifeSpecs: user.lifeSpecifications)
+            let yearsToAddBasedOnCancer = LifeExpectancyCalculator.cancerImpact(lifeSpecs: LifeSpecs.lifeSpecifications)
             baseAge = baseAge - yearsToAddBasedOnCancer
             
             //father impact
-            let yearsToAddBasedOnFather = LifeExpectancyCalculator.fatherImpact(lifeSpecs: user.lifeSpecifications)
+            let yearsToAddBasedOnFather = LifeExpectancyCalculator.fatherImpact(lifeSpecs: LifeSpecs.lifeSpecifications)
             baseAge = baseAge - yearsToAddBasedOnFather
             
             //mother impact
-            let yearsToAddBAsedOnMother = LifeExpectancyCalculator.motherImpact(lifeSpecs: user.lifeSpecifications)
+            let yearsToAddBAsedOnMother = LifeExpectancyCalculator.motherImpact(lifeSpecs: LifeSpecs.lifeSpecifications)
             baseAge = baseAge - yearsToAddBAsedOnMother
             
             
 //DIET AND NUTRITION VIEW CONTROLLER Functions
             //coffee impact
-            let yearsToAddBasedOnCoffee = LifeExpectancyCalculator.coffeeImpact(lifeSpecs: user.lifeSpecifications)
+            let yearsToAddBasedOnCoffee = LifeExpectancyCalculator.coffeeImpact(lifeSpecs: LifeSpecs.lifeSpecifications)
             baseAge = baseAge - yearsToAddBasedOnCoffee
             
             //dairy impact
-            let yearsToAddBasedOnDairy = LifeExpectancyCalculator.dairyImpact(lifeSpecs: user.lifeSpecifications)
+            let yearsToAddBasedOnDairy = LifeExpectancyCalculator.dairyImpact(lifeSpecs: LifeSpecs.lifeSpecifications)
             baseAge = baseAge - yearsToAddBasedOnDairy
             
             //sweets impact
-            let yearsToAddBasedOnSweets = LifeExpectancyCalculator.sweetsImpact(lifeSpecs: user.lifeSpecifications)
+            let yearsToAddBasedOnSweets = LifeExpectancyCalculator.sweetsImpact(lifeSpecs: LifeSpecs.lifeSpecifications)
             baseAge = baseAge - yearsToAddBasedOnSweets
             
             //carbs impact
-            let yearsToAddBasedOnCarbs = LifeExpectancyCalculator.carbsImpact(lifeSpecs: user.lifeSpecifications)
+            let yearsToAddBasedOnCarbs = LifeExpectancyCalculator.carbsImpact(lifeSpecs: LifeSpecs.lifeSpecifications)
             baseAge = baseAge - yearsToAddBasedOnCarbs
             
             //red meat impact
-            let yearsToAddBasedOnMeat = LifeExpectancyCalculator.redMeatImpact(lifeSpecs: user.lifeSpecifications)
+            let yearsToAddBasedOnMeat = LifeExpectancyCalculator.redMeatImpact(lifeSpecs: LifeSpecs.lifeSpecifications)
             baseAge = baseAge - yearsToAddBasedOnMeat
             
             //fast foods impact
-            let yearsToAddBasedOnFAstFoods = LifeExpectancyCalculator.fastFoodsImpact(lifeSpecs: user.lifeSpecifications)
+            let yearsToAddBasedOnFAstFoods = LifeExpectancyCalculator.fastFoodsImpact(lifeSpecs: LifeSpecs.lifeSpecifications)
             baseAge = baseAge - yearsToAddBasedOnFAstFoods
             
             
 //DRUGS AND ALCOHOL USE VIEW CONTROLLER Functions
             
             //smoking impact
-//            let yearsToAddBasedOnWhetherSmoking = LifeExpectancyCalculator.doYouSmoke(lifeSpecs: user.lifeSpecifications)
+//            let yearsToAddBasedOnWhetherSmoking = LifeExpectancyCalculator.doYouSmoke(lifeSpecs: LifeSpecs.lifeSpecifications)
 //            baseAge = baseAge + yearsToAddBasedOnWhetherSmoking
             
-            let yearsToAddBasedOnNumCigs = LifeExpectancyCalculator.smokingImpact(lifeSpecs: user.lifeSpecifications)
+            let yearsToAddBasedOnNumCigs = LifeExpectancyCalculator.smokingImpact(lifeSpecs: LifeSpecs.lifeSpecifications)
             baseAge = baseAge - Double(yearsToAddBasedOnNumCigs)
             
             
             //second hand smoking impact
-            let yearsToAddBasedOnSecondHandSmoke = LifeExpectancyCalculator.secondHandSmokingImpact(lifeSpecs: user.lifeSpecifications)
+            let yearsToAddBasedOnSecondHandSmoke = LifeExpectancyCalculator.secondHandSmokingImpact(lifeSpecs: LifeSpecs.lifeSpecifications)
             baseAge = baseAge - yearsToAddBasedOnSecondHandSmoke
             
             //alcohol impact
-//            let yearsToAddBasedOnWhetherAlcohol = LifeExpectancyCalculator.doYouDrink(lifeSpecs: user.lifeSpecifications)
+//            let yearsToAddBasedOnWhetherAlcohol = LifeExpectancyCalculator.doYouDrink(lifeSpecs: LifeSpecs.lifeSpecifications)
 //            baseAge = baseAge + yearsToAddBasedOnWhetherAlcohol
             
-            let yearsToAddBasedOnNumNightsSpentDrinking = LifeExpectancyCalculator.alcoholImpactNightsSpentDrinking(lifeSpecs: user.lifeSpecifications)
-            baseAge = baseAge - yearsToAddBasedOnNumNightsSpentDrinking
+//            let yearsToAddBasedOnNumNightsSpentDrinking = LifeExpectancyCalculator.alcoholImpactNightsSpentDrinking(lifeSpecs: LifeSpecs.lifeSpecifications)
+//            baseAge = baseAge - yearsToAddBasedOnNumNightsSpentDrinking
             
-            let yearsToAddBasedOnNumDrinksPerNight = LifeExpectancyCalculator.alcoholImpactNumDrinks(lifeSpecs: user.lifeSpecifications)
+            let yearsToAddBasedOnNumDrinksPerNight = LifeExpectancyCalculator.alcoholImpactNumDrinks(lifeSpecs: LifeSpecs.lifeSpecifications)
             baseAge = baseAge - yearsToAddBasedOnNumDrinksPerNight
             
             //illegal drugs impact
-            let yearsToAddBasedOnDrugs = LifeExpectancyCalculator.drugsImpact(lifeSpecs: user.lifeSpecifications)
+            let yearsToAddBasedOnDrugs = LifeExpectancyCalculator.drugsImpact(lifeSpecs: LifeSpecs.lifeSpecifications)
             baseAge = baseAge - yearsToAddBasedOnDrugs
             
             
 //OTHER HEALTH INFO VIEW CONTROLLER Functions
             
             //HDL levels impact
-            let yearsToAddBasedonHDL = LifeExpectancyCalculator.hdlImpact(lifeSpecs: user.lifeSpecifications)
+            let yearsToAddBasedonHDL = LifeExpectancyCalculator.hdlImpact(lifeSpecs: LifeSpecs.lifeSpecifications)
             baseAge = baseAge - yearsToAddBasedonHDL
             
             //LDL levels impact
-            let yearsToAddBasedOnLDL = LifeExpectancyCalculator.ldlImpact(lifeSpecs: user.lifeSpecifications)
+            let yearsToAddBasedOnLDL = LifeExpectancyCalculator.ldlImpact(lifeSpecs: LifeSpecs.lifeSpecifications)
             baseAge = baseAge - yearsToAddBasedOnLDL
             
             //sunscreen impact
-            let yearsToAddBasedOnSunscreen = LifeExpectancyCalculator.sunscreenImpact(lifeSpecs: user.lifeSpecifications)
+            let yearsToAddBasedOnSunscreen = LifeExpectancyCalculator.sunscreenImpact(lifeSpecs: LifeSpecs.lifeSpecifications)
             baseAge = baseAge - yearsToAddBasedOnSunscreen
             
             //cancer screening impact
-            let yearsToAddBasedOnCAncerScreening = LifeExpectancyCalculator.cancerScreeningImpact(lifeSpecs: user.lifeSpecifications)
+            let yearsToAddBasedOnCAncerScreening = LifeExpectancyCalculator.cancerScreeningImpact(lifeSpecs: LifeSpecs.lifeSpecifications)
             baseAge = baseAge - yearsToAddBasedOnCAncerScreening
             
             //anxiety about death impact
-            let yearsToAddBAsedOnAnxiety = LifeExpectancyCalculator.anxietyAboutDeathImpact(lifeSpecs: user.lifeSpecifications)
+            let yearsToAddBAsedOnAnxiety = LifeExpectancyCalculator.anxietyAboutDeathImpact(lifeSpecs: LifeSpecs.lifeSpecifications)
             baseAge = baseAge - yearsToAddBAsedOnAnxiety
             
         
@@ -713,20 +713,20 @@ class LifeExpectancyCalculator {
     
     //Work on these calculations
     //HELP -depends on answer to next question
-     static func alcoholImpactNightsSpentDrinking(lifeSpecs: LifeSpecs) -> Double {
-        
-        switch lifeSpecs.numNightsSpentDrinking {
-        case "oneToTwoDaysDrinkingPerWeekSelected":
-            return 0
-        case "threeToFiveDaysDrinkingPerWeekSelected":
-            return 0
-        case "sixToSevenDaysDrinkningPerWeek":
-            return 0
-        default:
-            return 0
-        }
-        
-    }
+//     static func alcoholImpactNightsSpentDrinking(lifeSpecs: LifeSpecs) -> Double {
+//        
+//        switch lifeSpecs.numNightsSpentDrinking {
+//        case "oneToTwoDaysDrinkingPerWeekSelected":
+//            return 0
+//        case "threeToFiveDaysDrinkingPerWeekSelected":
+//            return 0
+//        case "sixToSevenDaysDrinkningPerWeek":
+//            return 0
+//        default:
+//            return 0
+//        }
+//        
+//    }
     
     //Work on these calculations
     //HELP -depends on answer to previous question
@@ -734,14 +734,50 @@ class LifeExpectancyCalculator {
      static func alcoholImpactNumDrinks(lifeSpecs: LifeSpecs) -> Double {
         
         switch lifeSpecs.numNightsSpentDrinking {
-        case "oneToTwoDrinksPerNightSelected":
-            return 0
-        case "aboutThreeDrinksPerNightSelected":
-            return 0
-        case "atLeastThreeDrinksPerNightSelected":
-            return 0
+        case "oneToTwoDaysDrinkingPerWeekSelected":
+            switch lifeSpecs.numDrinksPerNight {
+                case "oneToTwoDrinksPerNightSelected":
+                    return 0
+                case "aboutThreeDrinksPerNightSelected":
+                    return 1
+                case "atLeastThreeDrinksPerNightSelected":
+                    return 1
+                default:
+                    return 0
+            }
+        case "threeToFiveDaysDrinkingPerWeekSelected":
+            switch lifeSpecs.numDrinksPerNight {
+            case "oneToTwoDrinksPerNightSelected":
+                return 0
+            case "aboutThreeDrinksPerNightSelected":
+                return 2
+            case "atLeastThreeDrinksPerNightSelected":
+                return 3
+            default:
+                return 0
+            }
+        case "sixToSevenDaysDrinkningPerWeek":
+            switch lifeSpecs.numDrinksPerNight {
+            case "oneToTwoDrinksPerNightSelected":
+                return 0
+            case "aboutThreeDrinksPerNightSelected":
+                return 3
+            case "atLeastThreeDrinksPerNightSelected":
+                return 5
+            default:
+                return 0
+            }
         default:
-            return 0
+            switch lifeSpecs.numDrinksPerNight {
+            case "oneToTwoDrinksPerNightSelected":
+                return 0
+            case "aboutThreeDrinksPerNightSelected":
+                return 0
+            case "atLeastThreeDrinksPerNightSelected":
+                return 0
+            default:
+                return 0
+            }
         }
         
     }

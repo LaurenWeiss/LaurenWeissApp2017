@@ -103,77 +103,94 @@ class DietAndNutritionVC: UIViewController, UIScrollViewDelegate {
         
         //Calling Functions: SELECT NUM CAFFEINATED CUPS OF COFFEE PER DAY
         
-        if User.current.lifeSpecifications.numCoffeeCups == "none" {
+        if LifeSpecs.lifeSpecifications.numCoffeeCups == "none" {
             noCoffeeSelected()
-        } else if User.current.lifeSpecifications.numCoffeeCups == "one to two cups" {
+        } else if LifeSpecs.lifeSpecifications.numCoffeeCups == "one to two cups" {
             oneToTwoCupsCoffeeSelected()
-        } else if User.current.lifeSpecifications.numCoffeeCups == "two to three cups" {
+        } else if LifeSpecs.lifeSpecifications.numCoffeeCups == "two to three cups" {
             twoToThreeCupsCoffeeSelected()
         }
         
         //Calling Functions: SELECT NUM SERVINGS OF DAIRY PER DAY
-        if User.current.lifeSpecifications.numDairy == "zero to one" {
+        if LifeSpecs.lifeSpecifications.numDairy == "zero to one" {
             zeroToOneServingsDairySelected()
-        } else if User.current.lifeSpecifications.numDairy == "two to three" {
+        } else if LifeSpecs.lifeSpecifications.numDairy == "two to three" {
             twoToThreeServingsDairySelected()
-        } else if User.current.lifeSpecifications.numDairy == "three or more" {
+        } else if LifeSpecs.lifeSpecifications.numDairy == "three or more" {
             threeOrMoreServingsDairySelected()
         }
         
         //Calling Functions: SELECT HOW OFTEN YOU EAT SWEETS
-        if User.current.lifeSpecifications.sweetsInfo == "rarely" {
+        if LifeSpecs.lifeSpecifications.sweetsInfo == "rarely" {
             rarelyHaveCandy()
-        } else if User.current.lifeSpecifications.sweetsInfo == "onetotwodaysperweek" {
+        } else if LifeSpecs.lifeSpecifications.sweetsInfo == "onetotwodaysperweek" {
             oneToTwoDaysCandy()
-        } else if User.current.lifeSpecifications.sweetsInfo == "threetofivedaysperweek" {
+        } else if LifeSpecs.lifeSpecifications.sweetsInfo == "threetofivedaysperweek" {
             threeToFiveDaysCandy()
-        } else if User.current.lifeSpecifications.sweetsInfo == "onceaday" {
+        } else if LifeSpecs.lifeSpecifications.sweetsInfo == "onceaday" {
             onceADayCandy()
-        } else if User.current.lifeSpecifications.sweetsInfo == "morethanonceaday" {
+        } else if LifeSpecs.lifeSpecifications.sweetsInfo == "morethanonceaday" {
             moreThanOnceADayCandy()
         }
         
         //Calling Functions: SELECT HOW OFTEN YOU EAT CARBS
-        if User.current.lifeSpecifications.carbsInfo == "oneorfewerservings" {
+        if LifeSpecs.lifeSpecifications.carbsInfo == "oneorfewerservings" {
             oneOrFewerCarbsPerWeek()
-        } else if User.current.lifeSpecifications.carbsInfo == "oneservingtwicepereek" {
+        } else if LifeSpecs.lifeSpecifications.carbsInfo == "oneservingtwicepereek" {
             oneServingCarbsTwicePerWeek()
-        } else if User.current.lifeSpecifications.carbsInfo == "everyotherday" {
+        } else if LifeSpecs.lifeSpecifications.carbsInfo == "everyotherday" {
             oneServingCarbsEveryOtherDay()
-        } else if User.current.lifeSpecifications.carbsInfo == "onetotwoservings" {
+        } else if LifeSpecs.lifeSpecifications.carbsInfo == "onetotwoservings" {
             oneToTwoServingsCarbsEveryDay()
-        } else if User.current.lifeSpecifications.carbsInfo == "threeormore" {
+        } else if LifeSpecs.lifeSpecifications.carbsInfo == "threeormore" {
             threeOrMoreServingsCarbsPerDay()
         }
         
         //Calling Functions: SELECT HOW OFTEN YOU EAT RED MEAT
-        if User.current.lifeSpecifications.redMeatInfo == "noredmeat" {
+        if LifeSpecs.lifeSpecifications.redMeatInfo == "noredmeat" {
             noRedMeat()
-        } else if User.current.lifeSpecifications.redMeatInfo == "oneto2" {
+        } else if LifeSpecs.lifeSpecifications.redMeatInfo == "oneto2" {
             oneToTwoDaysRedMeat()
-        } else if User.current.lifeSpecifications.redMeatInfo == "3to5" {
+        } else if LifeSpecs.lifeSpecifications.redMeatInfo == "3to5" {
             threeToFiveDaysRedMeat()
-        } else if User.current.lifeSpecifications.redMeatInfo == "6to7" {
+        } else if LifeSpecs.lifeSpecifications.redMeatInfo == "6to7" {
             sixToSevenDaysRedMeat()
         }
         
         //Calling Functions: SELECT HOW OFTEN YOU EAT FAST FOODS
-        if User.current.lifeSpecifications.fastFoodsInfo == "none" {
+        if LifeSpecs.lifeSpecifications.fastFoodsInfo == "none" {
             noFastFoods()
-        } else if User.current.lifeSpecifications.fastFoodsInfo == "1to2" {
+        } else if LifeSpecs.lifeSpecifications.fastFoodsInfo == "1to2" {
             oneToTwoServingsFastFood()
-        } else if User.current.lifeSpecifications.fastFoodsInfo == "3to4" {
+        } else if LifeSpecs.lifeSpecifications.fastFoodsInfo == "3to4" {
             threeToFourServingsFastFood()
-        } else if User.current.lifeSpecifications.fastFoodsInfo == "over5" {
+        } else if LifeSpecs.lifeSpecifications.fastFoodsInfo == "over5" {
             overFiveServingsPerWeekFastFood()
         }
         
     }
     
     
+//    @IBAction func calculateButtonTapped(_ sender: UIButton) {
+//        LifeExpectancyCalculator.calculateAge(forUser: User.current) { (finalAge) in
+//            LifeSpecs.finalAge = Double(finalAge)
+//        }
+//        
+//    }
+    
     @IBAction func calculateButtonTapped(_ sender: UIButton) {
-        LifeExpectancyCalculator.calculateAge(forUser: User.current) { (finalAge) in
-            User.current.finalAge = Double(finalAge)
+        
+        let lauren = DispatchGroup()
+        lauren.enter()
+        
+        LifeExpectancyCalculator.calculateAge() { (finalAge) in
+            LifeSpecs.lifeSpecifications.finalAge = Double(finalAge)
+            lauren.leave()
+        }
+        
+        lauren.notify(queue: .main) {
+            print("done")
+            self.performSegue(withIdentifier: "toDeathDate", sender: nil)
         }
         
     }
@@ -192,7 +209,7 @@ class DietAndNutritionVC: UIViewController, UIScrollViewDelegate {
     func noCoffeeSelected() {
         zeroCupsCoffee.backgroundColor = UIColor.primaryBlue
         zeroCupsCoffee.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.numCoffeeCups = "none"
+        LifeSpecs.lifeSpecifications.numCoffeeCups = "none"
         
         oneToTwoCupsCoffee.setTitleColor(UIColor.primaryBlue, for: .normal)
         oneToTwoCupsCoffee.backgroundColor = UIColor.clear
@@ -203,7 +220,7 @@ class DietAndNutritionVC: UIViewController, UIScrollViewDelegate {
     func oneToTwoCupsCoffeeSelected() {
         oneToTwoCupsCoffee.backgroundColor = UIColor.primaryBlue
         oneToTwoCupsCoffee.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.numCoffeeCups = "one to two cups"
+        LifeSpecs.lifeSpecifications.numCoffeeCups = "one to two cups"
         
         zeroCupsCoffee.setTitleColor(UIColor.primaryBlue, for: .normal)
         zeroCupsCoffee.backgroundColor = UIColor.clear
@@ -215,7 +232,7 @@ class DietAndNutritionVC: UIViewController, UIScrollViewDelegate {
     func twoToThreeCupsCoffeeSelected() {
         twoToThreeCupsCoffee.backgroundColor = UIColor.primaryBlue
         twoToThreeCupsCoffee.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.numCoffeeCups = "two to three cups"
+        LifeSpecs.lifeSpecifications.numCoffeeCups = "two to three cups"
         
         zeroCupsCoffee.setTitleColor(UIColor.primaryBlue, for: .normal)
         zeroCupsCoffee.backgroundColor = UIColor.clear
@@ -239,7 +256,7 @@ class DietAndNutritionVC: UIViewController, UIScrollViewDelegate {
     func zeroToOneServingsDairySelected() {
         zeroToOneDairy.backgroundColor = UIColor.primaryBlue
         zeroToOneDairy.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.numDairy = "zero to one"
+        LifeSpecs.lifeSpecifications.numDairy = "zero to one"
         
         twoToThreeDairy.setTitleColor(UIColor.primaryBlue, for: .normal)
         twoToThreeDairy.backgroundColor = UIColor.clear
@@ -250,7 +267,7 @@ class DietAndNutritionVC: UIViewController, UIScrollViewDelegate {
     func twoToThreeServingsDairySelected() {
         twoToThreeDairy.backgroundColor = UIColor.primaryBlue
         twoToThreeDairy.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.numDairy = "two to three"
+        LifeSpecs.lifeSpecifications.numDairy = "two to three"
         
         zeroToOneDairy.setTitleColor(UIColor.primaryBlue, for: .normal)
         zeroToOneDairy.backgroundColor = UIColor.clear
@@ -262,7 +279,7 @@ class DietAndNutritionVC: UIViewController, UIScrollViewDelegate {
     func threeOrMoreServingsDairySelected() {
         threeOrMoreDairy.backgroundColor = UIColor.primaryBlue
         threeOrMoreDairy.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.numDairy = "three or more"
+        LifeSpecs.lifeSpecifications.numDairy = "three or more"
         
         zeroToOneDairy.setTitleColor(UIColor.primaryBlue, for: .normal)
         zeroToOneDairy.backgroundColor = UIColor.clear
@@ -291,7 +308,7 @@ class DietAndNutritionVC: UIViewController, UIScrollViewDelegate {
     func rarelyHaveCandy() {
         rarelyCandy.backgroundColor = UIColor.primaryBlue
         rarelyCandy.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.sweetsInfo = "rarely"
+        LifeSpecs.lifeSpecifications.sweetsInfo = "rarely"
         
         oneToTwoCandy.setTitleColor(UIColor.primaryBlue, for: .normal)
         oneToTwoCandy.backgroundColor = UIColor.clear
@@ -308,7 +325,7 @@ class DietAndNutritionVC: UIViewController, UIScrollViewDelegate {
     func oneToTwoDaysCandy() {
         oneToTwoCandy.backgroundColor = UIColor.primaryBlue
         oneToTwoCandy.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.sweetsInfo = "onetotwodaysperweek"
+        LifeSpecs.lifeSpecifications.sweetsInfo = "onetotwodaysperweek"
         
         rarelyCandy.setTitleColor(UIColor.primaryBlue, for: .normal)
         rarelyCandy.backgroundColor = UIColor.clear
@@ -326,7 +343,7 @@ class DietAndNutritionVC: UIViewController, UIScrollViewDelegate {
     func threeToFiveDaysCandy() {
         threeToFiveCandy.backgroundColor = UIColor.primaryBlue
         threeToFiveCandy.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.sweetsInfo = "threetofivedaysperweek"
+        LifeSpecs.lifeSpecifications.sweetsInfo = "threetofivedaysperweek"
         
         oneToTwoCandy.setTitleColor(UIColor.primaryBlue, for: .normal)
         oneToTwoCandy.backgroundColor = UIColor.clear
@@ -345,7 +362,7 @@ class DietAndNutritionVC: UIViewController, UIScrollViewDelegate {
     func onceADayCandy() {
         OnceADayCandy.backgroundColor = UIColor.primaryBlue
         OnceADayCandy.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.sweetsInfo = "onceaday"
+        LifeSpecs.lifeSpecifications.sweetsInfo = "onceaday"
         
         oneToTwoCandy.setTitleColor(UIColor.primaryBlue, for: .normal)
         oneToTwoCandy.backgroundColor = UIColor.clear
@@ -364,7 +381,7 @@ class DietAndNutritionVC: UIViewController, UIScrollViewDelegate {
     func moreThanOnceADayCandy() {
         moreThanonceADayCandy.backgroundColor = UIColor.primaryBlue
         moreThanonceADayCandy.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.sweetsInfo = "morethanonceaday"
+        LifeSpecs.lifeSpecifications.sweetsInfo = "morethanonceaday"
         
         oneToTwoCandy.setTitleColor(UIColor.primaryBlue, for: .normal)
         oneToTwoCandy.backgroundColor = UIColor.clear
@@ -402,7 +419,7 @@ class DietAndNutritionVC: UIViewController, UIScrollViewDelegate {
     func oneOrFewerCarbsPerWeek() {
         oneOrFewerCarbs.backgroundColor = UIColor.primaryBlue
         oneOrFewerCarbs.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.carbsInfo = "oneorfewerservings"
+        LifeSpecs.lifeSpecifications.carbsInfo = "oneorfewerservings"
         
         oneTwicePerWeekCarbs.setTitleColor(UIColor.primaryBlue, for: .normal)
         oneTwicePerWeekCarbs.backgroundColor = UIColor.clear
@@ -420,7 +437,7 @@ class DietAndNutritionVC: UIViewController, UIScrollViewDelegate {
     func oneServingCarbsTwicePerWeek() {
         oneTwicePerWeekCarbs.backgroundColor = UIColor.primaryBlue
         oneTwicePerWeekCarbs.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.carbsInfo = "oneservingtwicepereek"
+        LifeSpecs.lifeSpecifications.carbsInfo = "oneservingtwicepereek"
         
         oneOrFewerCarbs.setTitleColor(UIColor.primaryBlue, for: .normal)
         oneOrFewerCarbs.backgroundColor = UIColor.clear
@@ -438,7 +455,7 @@ class DietAndNutritionVC: UIViewController, UIScrollViewDelegate {
     func oneServingCarbsEveryOtherDay() {
         oneEveryOtherDayCarbs.backgroundColor = UIColor.primaryBlue
         oneEveryOtherDayCarbs.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.carbsInfo = "everyotherday"
+        LifeSpecs.lifeSpecifications.carbsInfo = "everyotherday"
         
         oneTwicePerWeekCarbs.setTitleColor(UIColor.primaryBlue, for: .normal)
         oneTwicePerWeekCarbs.backgroundColor = UIColor.clear
@@ -455,7 +472,7 @@ class DietAndNutritionVC: UIViewController, UIScrollViewDelegate {
     func oneToTwoServingsCarbsEveryDay() {
         oneToTwoADayCarbs.backgroundColor = UIColor.primaryBlue
         oneToTwoADayCarbs.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.carbsInfo = "onetotwoservings"
+        LifeSpecs.lifeSpecifications.carbsInfo = "onetotwoservings"
         
         oneTwicePerWeekCarbs.setTitleColor(UIColor.primaryBlue, for: .normal)
         oneTwicePerWeekCarbs.backgroundColor = UIColor.clear
@@ -472,7 +489,7 @@ class DietAndNutritionVC: UIViewController, UIScrollViewDelegate {
     func threeOrMoreServingsCarbsPerDay() {
         threeOrMorePerDayCarbs.backgroundColor = UIColor.primaryBlue
         threeOrMorePerDayCarbs.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.carbsInfo = "threeormore"
+        LifeSpecs.lifeSpecifications.carbsInfo = "threeormore"
         
         oneTwicePerWeekCarbs.setTitleColor(UIColor.primaryBlue, for: .normal)
         oneTwicePerWeekCarbs.backgroundColor = UIColor.clear
@@ -504,7 +521,7 @@ class DietAndNutritionVC: UIViewController, UIScrollViewDelegate {
     func noRedMeat() {
         noMeat.backgroundColor = UIColor.primaryBlue
         noMeat.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.redMeatInfo = "noredmeat"
+        LifeSpecs.lifeSpecifications.redMeatInfo = "noredmeat"
         
         oneToTwoMeat.setTitleColor(UIColor.primaryBlue, for: .normal)
         oneToTwoMeat.backgroundColor = UIColor.clear
@@ -519,7 +536,7 @@ class DietAndNutritionVC: UIViewController, UIScrollViewDelegate {
     func oneToTwoDaysRedMeat() {
         oneToTwoMeat.backgroundColor = UIColor.primaryBlue
         oneToTwoMeat.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.redMeatInfo = "oneto2"
+        LifeSpecs.lifeSpecifications.redMeatInfo = "oneto2"
         
         noMeat.setTitleColor(UIColor.primaryBlue, for: .normal)
         noMeat.backgroundColor = UIColor.clear
@@ -535,7 +552,7 @@ class DietAndNutritionVC: UIViewController, UIScrollViewDelegate {
     func threeToFiveDaysRedMeat() {
         threeToFiveMeat.backgroundColor = UIColor.primaryBlue
         threeToFiveMeat.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.redMeatInfo = "3to5"
+        LifeSpecs.lifeSpecifications.redMeatInfo = "3to5"
         
         oneToTwoMeat.setTitleColor(UIColor.primaryBlue, for: .normal)
         oneToTwoMeat.backgroundColor = UIColor.clear
@@ -551,7 +568,7 @@ class DietAndNutritionVC: UIViewController, UIScrollViewDelegate {
     func sixToSevenDaysRedMeat() {
         sixToSevenMeat.backgroundColor = UIColor.primaryBlue
         sixToSevenMeat.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.redMeatInfo = "6to7"
+        LifeSpecs.lifeSpecifications.redMeatInfo = "6to7"
         
         oneToTwoMeat.setTitleColor(UIColor.primaryBlue, for: .normal)
         oneToTwoMeat.backgroundColor = UIColor.clear
@@ -582,7 +599,7 @@ class DietAndNutritionVC: UIViewController, UIScrollViewDelegate {
     func noFastFoods() {
         noFastFood.backgroundColor = UIColor.primaryBlue
         noFastFood.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.fastFoodsInfo = "none"
+        LifeSpecs.lifeSpecifications.fastFoodsInfo = "none"
         
         oneToTwoFastfood.setTitleColor(UIColor.primaryBlue, for: .normal)
         oneToTwoFastfood.backgroundColor = UIColor.clear
@@ -596,7 +613,7 @@ class DietAndNutritionVC: UIViewController, UIScrollViewDelegate {
     func oneToTwoServingsFastFood() {
         oneToTwoFastfood.backgroundColor = UIColor.primaryBlue
         oneToTwoFastfood.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.fastFoodsInfo = "1to2"
+        LifeSpecs.lifeSpecifications.fastFoodsInfo = "1to2"
         
         noFastFood.setTitleColor(UIColor.primaryBlue, for: .normal)
         noFastFood.backgroundColor = UIColor.clear
@@ -610,7 +627,7 @@ class DietAndNutritionVC: UIViewController, UIScrollViewDelegate {
     func threeToFourServingsFastFood() {
         threeToFourFastFood.backgroundColor = UIColor.primaryBlue
         threeToFourFastFood.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.fastFoodsInfo = "3to4"
+        LifeSpecs.lifeSpecifications.fastFoodsInfo = "3to4"
         
         oneToTwoFastfood.setTitleColor(UIColor.primaryBlue, for: .normal)
         oneToTwoFastfood.backgroundColor = UIColor.clear
@@ -625,7 +642,7 @@ class DietAndNutritionVC: UIViewController, UIScrollViewDelegate {
     func overFiveServingsPerWeekFastFood() {
         overFiveFastFood.backgroundColor = UIColor.primaryBlue
         overFiveFastFood.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.fastFoodsInfo = "over5"
+        LifeSpecs.lifeSpecifications.fastFoodsInfo = "over5"
         
         oneToTwoFastfood.setTitleColor(UIColor.primaryBlue, for: .normal)
         oneToTwoFastfood.backgroundColor = UIColor.clear
@@ -643,7 +660,7 @@ class DietAndNutritionVC: UIViewController, UIScrollViewDelegate {
             
             if let destinationVC = segue.destination as? DeathDateScreenViewController
             {
-                destinationVC.deathAgeAsDouble = User.current.finalAge
+                destinationVC.deathAgeAsDouble = LifeSpecs.lifeSpecifications.finalAge
             }
         }
     }

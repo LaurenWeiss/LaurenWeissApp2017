@@ -69,61 +69,76 @@ class OtherHealthInfoVC: UIViewController, UIScrollViewDelegate {
         noAnxiousDying.layer.cornerRadius = 10
         
         //Calling Functions: SELECT HDL LEVELS
-        if User.current.lifeSpecifications.hdlLevels == "low" {
+        if LifeSpecs.lifeSpecifications.hdlLevels == "low" {
             lowHDLSelected()
-        } else if User.current.lifeSpecifications.hdlLevels == "medium" {
+        } else if LifeSpecs.lifeSpecifications.hdlLevels == "medium" {
             mediumHDLSelected()
-        } else if User.current.lifeSpecifications.hdlLevels == "high" {
+        } else if LifeSpecs.lifeSpecifications.hdlLevels == "high" {
             highHDLSelected()
-        } else if User.current.lifeSpecifications.hdlLevels == "unknown" {
+        } else if LifeSpecs.lifeSpecifications.hdlLevels == "unknown" {
             unknownHDLSelected()
         }
 
         //Calling Functions: SELECT LDL LEVELS
-        if User.current.lifeSpecifications.ldlLevels == "low" {
+        if LifeSpecs.lifeSpecifications.ldlLevels == "low" {
             lowLDLSelected()
-        } else if User.current.lifeSpecifications.ldlLevels == "medium" {
+        } else if LifeSpecs.lifeSpecifications.ldlLevels == "medium" {
             mediumLDLSelected()
-        } else if User.current.lifeSpecifications.ldlLevels == "high" {
+        } else if LifeSpecs.lifeSpecifications.ldlLevels == "high" {
             highLDLSelected()
-        } else if User.current.lifeSpecifications.ldlLevels == "unknown" {
+        } else if LifeSpecs.lifeSpecifications.ldlLevels == "unknown" {
             unknownLDLSelected()
         }
         
         //Calling Functions: SELECT SUN PROTECTION
-        if User.current.lifeSpecifications.sunProtectionInfo == "alwaysSunscreenSelected" {
+        if LifeSpecs.lifeSpecifications.sunProtectionInfo == "alwaysSunscreenSelected" {
             alwaysSunscreenSelected()
-        } else if User.current.lifeSpecifications.sunProtectionInfo == "mostOfTheTimeSunscreen" {
+        } else if LifeSpecs.lifeSpecifications.sunProtectionInfo == "mostOfTheTimeSunscreen" {
             mostOfTheTimeSunscreen()
-        } else if User.current.lifeSpecifications.sunProtectionInfo == "sometimesSunscreen" {
+        } else if LifeSpecs.lifeSpecifications.sunProtectionInfo == "sometimesSunscreen" {
             sometimesSunscreen()
-        } else if User.current.lifeSpecifications.sunProtectionInfo == "rarelySunscreenSelected" {
+        } else if LifeSpecs.lifeSpecifications.sunProtectionInfo == "rarelySunscreenSelected" {
         rarelySunscreenSelected()
         }
             
         //Calling Functions: SELECT HOW OFTEN SCREENED FOR CANCER
-        if User.current.lifeSpecifications.cancerScreeningInfo == "noCancerScreeningSelected" {
+        if LifeSpecs.lifeSpecifications.cancerScreeningInfo == "noCancerScreeningSelected" {
             noCancerScreeningSelected()
-        } else if User.current.lifeSpecifications.cancerScreeningInfo == "yesCancerScreeningSelected" {
+        } else if LifeSpecs.lifeSpecifications.cancerScreeningInfo == "yesCancerScreeningSelected" {
             yesCancerScreeningSelected()
         }
         
         //Calling Functions: SELECT ANXIETY ABOUT DYING
-        if User.current.lifeSpecifications.anxietyAboutDying == "yesAnxietyDeath" {
+        if LifeSpecs.lifeSpecifications.anxietyAboutDying == "yesAnxietyDeath" {
             yesAnxietyDeath()
-        } else if User.current.lifeSpecifications.anxietyAboutDying == "noAnxietyDeath" {
+        } else if LifeSpecs.lifeSpecifications.anxietyAboutDying == "noAnxietyDeath" {
             noAnxietyDeath()
         }
     }
     
     
+//    @IBAction func calculateButtonTapped(_ sender: UIButton) {
+//        LifeExpectancyCalculator.calculateAge(forUser: User.current) { (finalAge) in
+//            LifeSpecs.finalAge = Double(finalAge)
+//        }
+//        
+//    }
     @IBAction func calculateButtonTapped(_ sender: UIButton) {
-        LifeExpectancyCalculator.calculateAge(forUser: User.current) { (finalAge) in
-            User.current.finalAge = Double(finalAge)
+        
+        let lauren = DispatchGroup()
+        lauren.enter()
+        
+        LifeExpectancyCalculator.calculateAge() { (finalAge) in
+            LifeSpecs.lifeSpecifications.finalAge = Double(finalAge)
+            lauren.leave()
         }
         
-    }
-    
+        lauren.notify(queue: .main) {
+            print("done")
+            self.performSegue(withIdentifier: "toDeathDate", sender: nil)
+        }
+        
+    }    
     //HDL info
     
     @IBAction func selectHDLInfo(_ sender: UIButton) {
@@ -142,7 +157,7 @@ class OtherHealthInfoVC: UIViewController, UIScrollViewDelegate {
     func lowHDLSelected(){
         lowHDL.backgroundColor = UIColor.primaryBlue
         lowHDL.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.hdlLevels = "low"
+        LifeSpecs.lifeSpecifications.hdlLevels = "low"
         
         mediumHDL.setTitleColor(UIColor.primaryBlue, for: .normal)
         mediumHDL.backgroundColor = UIColor.clear
@@ -156,7 +171,7 @@ class OtherHealthInfoVC: UIViewController, UIScrollViewDelegate {
     func mediumHDLSelected(){
         mediumHDL.backgroundColor = UIColor.primaryBlue
         mediumHDL.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.hdlLevels = "medium"
+        LifeSpecs.lifeSpecifications.hdlLevels = "medium"
         
         lowHDL.setTitleColor(UIColor.primaryBlue, for: .normal)
         lowHDL.backgroundColor = UIColor.clear
@@ -171,7 +186,7 @@ class OtherHealthInfoVC: UIViewController, UIScrollViewDelegate {
     func highHDLSelected() {
         highHDL.backgroundColor = UIColor.primaryBlue
         highHDL.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.hdlLevels = "high"
+        LifeSpecs.lifeSpecifications.hdlLevels = "high"
         
         mediumHDL.setTitleColor(UIColor.primaryBlue, for: .normal)
         mediumHDL.backgroundColor = UIColor.clear
@@ -185,7 +200,7 @@ class OtherHealthInfoVC: UIViewController, UIScrollViewDelegate {
     func unknownHDLSelected() {
         unknownHDL.backgroundColor = UIColor.primaryBlue
         unknownHDL.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.hdlLevels = "unknown"
+        LifeSpecs.lifeSpecifications.hdlLevels = "unknown"
         
         mediumHDL.setTitleColor(UIColor.primaryBlue, for: .normal)
         mediumHDL.backgroundColor = UIColor.clear
@@ -217,7 +232,7 @@ class OtherHealthInfoVC: UIViewController, UIScrollViewDelegate {
     func lowLDLSelected(){
         lowLDL.backgroundColor = UIColor.primaryBlue
         lowLDL.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.ldlLevels = "low"
+        LifeSpecs.lifeSpecifications.ldlLevels = "low"
         
         mediumLDL.setTitleColor(UIColor.primaryBlue, for: .normal)
         mediumLDL.backgroundColor = UIColor.clear
@@ -231,7 +246,7 @@ class OtherHealthInfoVC: UIViewController, UIScrollViewDelegate {
     func mediumLDLSelected() {
         mediumLDL.backgroundColor = UIColor.primaryBlue
         mediumLDL.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.ldlLevels = "medium"
+        LifeSpecs.lifeSpecifications.ldlLevels = "medium"
         
         lowLDL.setTitleColor(UIColor.primaryBlue, for: .normal)
         lowLDL.backgroundColor = UIColor.clear
@@ -247,7 +262,7 @@ class OtherHealthInfoVC: UIViewController, UIScrollViewDelegate {
     func highLDLSelected() {
         highLDL.backgroundColor = UIColor.primaryBlue
         highLDL.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.ldlLevels = "high"
+        LifeSpecs.lifeSpecifications.ldlLevels = "high"
         
         mediumLDL.setTitleColor(UIColor.primaryBlue, for: .normal)
         mediumLDL.backgroundColor = UIColor.clear
@@ -261,7 +276,7 @@ class OtherHealthInfoVC: UIViewController, UIScrollViewDelegate {
     func unknownLDLSelected() {
         unknownLDL.backgroundColor = UIColor.primaryBlue
         unknownLDL.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.ldlLevels = "unknown"
+        LifeSpecs.lifeSpecifications.ldlLevels = "unknown"
         
         mediumLDL.setTitleColor(UIColor.primaryBlue, for: .normal)
         mediumLDL.backgroundColor = UIColor.clear
@@ -292,7 +307,7 @@ class OtherHealthInfoVC: UIViewController, UIScrollViewDelegate {
     func alwaysSunscreenSelected(){
         alwaysSunscreen.backgroundColor = UIColor.primaryBlue
         alwaysSunscreen.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.sunProtectionInfo = "alwaysSunscreenSelected"
+        LifeSpecs.lifeSpecifications.sunProtectionInfo = "alwaysSunscreenSelected"
         
         mostlyWearSunscreen.setTitleColor(UIColor.primaryBlue, for: .normal)
         mostlyWearSunscreen.backgroundColor = UIColor.clear
@@ -307,7 +322,7 @@ class OtherHealthInfoVC: UIViewController, UIScrollViewDelegate {
     func mostOfTheTimeSunscreen(){
         mostlyWearSunscreen.backgroundColor = UIColor.primaryBlue
         mostlyWearSunscreen.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.sunProtectionInfo = "mostOfTheTimeSunscreen"
+        LifeSpecs.lifeSpecifications.sunProtectionInfo = "mostOfTheTimeSunscreen"
         
         alwaysSunscreen.setTitleColor(UIColor.primaryBlue, for: .normal)
         alwaysSunscreen.backgroundColor = UIColor.clear
@@ -321,7 +336,7 @@ class OtherHealthInfoVC: UIViewController, UIScrollViewDelegate {
     func sometimesSunscreen() {
         sometimesWearSunscreen.backgroundColor = UIColor.primaryBlue
         sometimesWearSunscreen.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.sunProtectionInfo = "sometimesSunscreen"
+        LifeSpecs.lifeSpecifications.sunProtectionInfo = "sometimesSunscreen"
         
         mostlyWearSunscreen.setTitleColor(UIColor.primaryBlue, for: .normal)
         mostlyWearSunscreen.backgroundColor = UIColor.clear
@@ -335,7 +350,7 @@ class OtherHealthInfoVC: UIViewController, UIScrollViewDelegate {
     func rarelySunscreenSelected() {
         rarelySunscreen.backgroundColor = UIColor.primaryBlue
         rarelySunscreen.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.sunProtectionInfo = "rarelySunscreenSelected"
+        LifeSpecs.lifeSpecifications.sunProtectionInfo = "rarelySunscreenSelected"
         
         mostlyWearSunscreen.setTitleColor(UIColor.primaryBlue, for: .normal)
         mostlyWearSunscreen.backgroundColor = UIColor.clear
@@ -360,7 +375,7 @@ class OtherHealthInfoVC: UIViewController, UIScrollViewDelegate {
     func noCancerScreeningSelected(){
         noScreenedCancer.backgroundColor = UIColor.primaryBlue
         noScreenedCancer.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.cancerScreeningInfo = "noCancerScreeningSelected"
+        LifeSpecs.lifeSpecifications.cancerScreeningInfo = "noCancerScreeningSelected"
         
         yesScreenedCancer.setTitleColor(UIColor.primaryBlue, for: .normal)
         yesScreenedCancer.backgroundColor = UIColor.clear
@@ -368,7 +383,7 @@ class OtherHealthInfoVC: UIViewController, UIScrollViewDelegate {
     func yesCancerScreeningSelected() {
         yesScreenedCancer.backgroundColor = UIColor.primaryBlue
         yesScreenedCancer.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.cancerScreeningInfo = "yesCancerScreeningSelected"
+        LifeSpecs.lifeSpecifications.cancerScreeningInfo = "yesCancerScreeningSelected"
         
         noScreenedCancer.setTitleColor(UIColor.primaryBlue, for: .normal)
         noScreenedCancer.backgroundColor = UIColor.clear
@@ -386,7 +401,7 @@ class OtherHealthInfoVC: UIViewController, UIScrollViewDelegate {
     func yesAnxietyDeath(){
         yesAnxiousDying.backgroundColor = UIColor.primaryBlue
         yesAnxiousDying.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.anxietyAboutDying = "yesAnxietyDeath"
+        LifeSpecs.lifeSpecifications.anxietyAboutDying = "yesAnxietyDeath"
         
         noAnxiousDying.setTitleColor(UIColor.primaryBlue, for: .normal)
         noAnxiousDying.backgroundColor = UIColor.clear
@@ -394,7 +409,7 @@ class OtherHealthInfoVC: UIViewController, UIScrollViewDelegate {
     func noAnxietyDeath() {
         noAnxiousDying.backgroundColor = UIColor.primaryBlue
         noAnxiousDying.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.anxietyAboutDying = "noAnxietyDeath"
+        LifeSpecs.lifeSpecifications.anxietyAboutDying = "noAnxietyDeath"
         
         yesAnxiousDying.setTitleColor(UIColor.primaryBlue, for: .normal)
         yesAnxiousDying.backgroundColor = UIColor.clear
@@ -405,7 +420,7 @@ class OtherHealthInfoVC: UIViewController, UIScrollViewDelegate {
             
             if let destinationVC = segue.destination as? DeathDateScreenViewController
             {
-                destinationVC.deathAgeAsDouble = User.current.finalAge
+                destinationVC.deathAgeAsDouble = LifeSpecs.lifeSpecifications.finalAge
             }
         }
     }

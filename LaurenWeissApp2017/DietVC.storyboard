@@ -415,7 +415,6 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="calculateButtonTapped:" destination="Mir-04-P5D" eventType="touchUpInside" id="cpb-mH-vrd"/>
-                                                    <segue destination="c5K-yo-QLz" kind="show" identifier="toDeathDate" id="3dN-ur-BTd"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -524,6 +523,7 @@
                         <outlet property="twoToThreeDairy" destination="ghl-Wc-ga9" id="fUw-9X-m6s"/>
                         <outlet property="zeroCupsCoffee" destination="Gjf-Xs-VmH" id="28U-2e-VEx"/>
                         <outlet property="zeroToOneDairy" destination="d1F-WP-VdH" id="4Ix-TA-kLt"/>
+                        <segue destination="c5K-yo-QLz" kind="show" identifier="toDeathDate" id="GNx-m7-cxO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="02T-vu-cZ0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -536,7 +536,7 @@
                 <viewControllerPlaceholder storyboardIdentifier="UIViewController-gV2-Ne-3cN" storyboardName="Main" referencedIdentifier="UIViewController-gV2-Ne-3cN" id="c5K-yo-QLz" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z3q-jI-1rv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9188.4375" y="-760.03521126760563"/>
+            <point key="canvasLocation" x="4048" y="3784"/>
         </scene>
     </scenes>
 </document>

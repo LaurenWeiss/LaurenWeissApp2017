@@ -540,7 +540,6 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="calculateButtonTapped:" destination="0kq-ab-HXa" eventType="touchUpInside" id="tvv-55-4oG"/>
-                                                    <segue destination="NfA-oD-g0a" kind="show" identifier="toDeathDate" id="dKE-oa-zu0"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How many days do you work out of the week?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lph-Vx-ZVQ">
@@ -657,6 +656,7 @@
                         <outlet property="yesFloss" destination="owu-Xf-JpG" id="370-aR-5rS"/>
                         <outlet property="yesPetOwner" destination="Cad-m4-nqM" id="Ft6-5I-RZh"/>
                         <outlet property="zeroExerciseDaysPerWeek" destination="s1T-zO-pDZ" id="kjp-gA-MgA"/>
+                        <segue destination="NfA-oD-g0a" kind="show" identifier="toDeathDate" id="4d7-bI-K23"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oa4-hg-KRn" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -669,7 +669,7 @@
                 <viewControllerPlaceholder storyboardIdentifier="UIViewController-gV2-Ne-3cN" storyboardName="Main" referencedIdentifier="UIViewController-gV2-Ne-3cN" id="NfA-oD-g0a" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="55D-sF-aVF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4486" y="727"/>
+            <point key="canvasLocation" x="4718" y="-4466"/>
         </scene>
     </scenes>
 </document>

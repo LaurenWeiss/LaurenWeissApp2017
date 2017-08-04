@@ -431,7 +431,6 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="calculateButtonTapped:" destination="PeN-2T-1n8" eventType="touchUpInside" id="ANL-Io-iQA"/>
-                                                    <segue destination="5fO-3L-y4z" kind="show" identifier="toDeathDate" id="7Fn-ci-7ci"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -542,6 +541,7 @@
                         <outlet property="twoPacksSmoke" destination="E2Y-W5-af0" id="7sr-Nk-fh0"/>
                         <outlet property="yesAlcohol" destination="BXz-ug-2ud" id="IhQ-a1-qeT"/>
                         <outlet property="yesSmoke" destination="iEm-Fz-x4c" id="qBF-Nb-4bh"/>
+                        <segue destination="5fO-3L-y4z" kind="show" identifier="toDeathDate" id="Fp9-ME-hWj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oHF-pO-UIg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -554,7 +554,7 @@
                 <viewControllerPlaceholder storyboardIdentifier="UIViewController-gV2-Ne-3cN" storyboardName="Main" referencedIdentifier="UIViewController-gV2-Ne-3cN" id="5fO-3L-y4z" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G4h-MK-rpv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9188.4375" y="-760.03521126760563"/>
+            <point key="canvasLocation" x="4217" y="1463"/>
         </scene>
     </scenes>
 </document>

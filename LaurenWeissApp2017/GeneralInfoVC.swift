@@ -58,7 +58,7 @@ class GeneralInfoVC: UIViewController, UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        countryLabel.text = User.current.lifeSpecifications.country
+        countryLabel.text = "United States"
         
         calculateButton.layer.cornerRadius = 10
         calculateButton.backgroundColor = UIColor.primaryBlue
@@ -77,8 +77,12 @@ class GeneralInfoVC: UIViewController, UIScrollViewDelegate {
         bmiStatusLabel.layer.masksToBounds = true
         bmiStatusLabel.layer.cornerRadius = 5
         
+        let lifeSpecs = LifeSpecs()
+        LifeSpecs.setGlobalLifeSpecs(lifeSpecs: lifeSpecs)
+        
+        
         //Calling Functions: SELECT GENDER
-        if User.current.lifeSpecifications.sex == "male" {
+        if LifeSpecs.lifeSpecifications.sex == "male" {
             maleButtonSelected()
         } else {
             femaleButtonSelected()
@@ -92,11 +96,11 @@ class GeneralInfoVC: UIViewController, UIScrollViewDelegate {
         
         
         //Calling Functions: SELECT WHY BMI IS HIGH
-        if User.current.lifeSpecifications.whyBMI == "BMI high because of fat" {
+        if lifeSpecs.whyBMI == "BMI high because of fat" {
             highBMIBecauseOfFatSelected()
-        } else if User.current.lifeSpecifications.whyBMI == "BMI high because of muscle" {
+        } else if LifeSpecs.lifeSpecifications.whyBMI == "BMI high because of muscle" {
             highBMIBecauseOfMuscleSelected()
-        } else if User.current.lifeSpecifications.whyBMI == "not high BMI" {
+        } else if LifeSpecs.lifeSpecifications.whyBMI == "not high BMI" {
             notHighBMISelected()
             whyBMILabel.textColor = UIColor.gray
         }
@@ -116,17 +120,19 @@ class GeneralInfoVC: UIViewController, UIScrollViewDelegate {
 //        notHighBMI.setTitleColor(UIColor.gray, for: .disabled)
         
         //Calling Functions: Select education level
-        if User.current.lifeSpecifications.educationLevel == "Advanced degree" {
+        if LifeSpecs.lifeSpecifications.educationLevel == "Advanced degree" {
             hasAdvancedDegreeSelected()
-        } else if User.current.lifeSpecifications.educationLevel == "College degree" {
+        } else if LifeSpecs.lifeSpecifications.educationLevel == "College degree" {
             hasCollegeDegreeSelected()
-        } else if User.current.lifeSpecifications.educationLevel == "High school degree" {
+        } else if LifeSpecs.lifeSpecifications.educationLevel == "High school degree" {
             hasHighSchoolDegreeSelected()
-        } else if User.current.lifeSpecifications.educationLevel == "Currently in high school" {
+        } else if LifeSpecs.lifeSpecifications.educationLevel == "Currently in high school" {
             currentlyInHighSchoolSelected()
-        } else if User.current.lifeSpecifications.educationLevel == "Some high school" {
+        } else if LifeSpecs.lifeSpecifications.educationLevel == "Some high school" {
             someHighSchoolSelected()
         }
+        
+        
         advancedDegree.layer.cornerRadius = 10
         collegeDegree.layer.cornerRadius = 10
         highSchoolDegree.layer.cornerRadius = 10
@@ -134,19 +140,19 @@ class GeneralInfoVC: UIViewController, UIScrollViewDelegate {
         didntFinishHighSchool.layer.cornerRadius = 10
         
         //Calling Functions: Select whether or not you have diabetes
-        if User.current.lifeSpecifications.diabetes == "no" {
+        if LifeSpecs.lifeSpecifications.diabetes == "no" {
             noDiabetesSelected()
-        } else if User.current.lifeSpecifications.diabetes == "yes" {
+        } else if LifeSpecs.lifeSpecifications.diabetes == "yes" {
             yesDiabetesSelected()
         }
         
         yesDiabetes.layer.cornerRadius = 10
         noDiabetes.layer.cornerRadius = 10
         
-        heightLabel.text = String(User.current.lifeSpecifications.height.rounded()) + " inches"
-        weightLabel.text = String(User.current.lifeSpecifications.weight.rounded()) + " pounds"
-        heightSlider.value = Float(User.current.lifeSpecifications.height.rounded())
-        weightSlider.value = Float(User.current.lifeSpecifications.weight.rounded())
+        heightLabel.text = String(LifeSpecs.lifeSpecifications.height.rounded()) + " inches"
+        weightLabel.text = String(LifeSpecs.lifeSpecifications.weight.rounded()) + " pounds"
+        heightSlider.value = Float(LifeSpecs.lifeSpecifications.height.rounded())
+        weightSlider.value = Float(LifeSpecs.lifeSpecifications.weight.rounded())
         
         calculateBMI()
     }
@@ -156,14 +162,14 @@ class GeneralInfoVC: UIViewController, UIScrollViewDelegate {
     @IBAction func heightValueDidChange(_ sender: UISlider) {
         let currentValue = sender.value.rounded()
         heightLabel.text = "\(currentValue) inches"
-        User.current.lifeSpecifications.height = Double(sender.value.rounded())
+        LifeSpecs.lifeSpecifications.height = Double(sender.value.rounded())
         self.calculateBMI()
     }
     
     @IBAction func weightValueDidChange(_ sender: UISlider) {
         let currentValue = sender.value.rounded()
         weightLabel.text = "\(currentValue) pounds"
-        User.current.lifeSpecifications.weight = Double(sender.value.rounded())
+        LifeSpecs.lifeSpecifications.weight = Double(sender.value.rounded())
         self.calculateBMI()
     }
     
@@ -181,7 +187,7 @@ class GeneralInfoVC: UIViewController, UIScrollViewDelegate {
     fileprivate func changeStatus(_ bmi: Float) {
         if (bmi < 18) {
             bmiStatusLabel.text = "Underweight"
-            User.current.lifeSpecifications.BMI = "underweight"
+            LifeSpecs.lifeSpecifications.BMI = "underweight"
             bmiStatusLabel.textColor = UIColor.primaryBlue
             notHighBMISelected()
             whyBMILabel.textColor = UIColor.gray
@@ -190,7 +196,7 @@ class GeneralInfoVC: UIViewController, UIScrollViewDelegate {
             highBMIDueToFat.isEnabled = false
         } else if (bmi >= 18 && bmi < 25) {
             bmiStatusLabel.text = "Normal"
-            User.current.lifeSpecifications.BMI = "normal"
+            LifeSpecs.lifeSpecifications.BMI = "normal"
             bmiStatusLabel.textColor = UIColor.primaryBlue
             notHighBMISelected()
             whyBMILabel.textColor = UIColor.gray
@@ -199,7 +205,7 @@ class GeneralInfoVC: UIViewController, UIScrollViewDelegate {
             highBMIDueToFat.isEnabled = false
         } else if (bmi >= 25 && bmi < 30) {
             bmiStatusLabel.text = "Pre-obese"
-            User.current.lifeSpecifications.BMI = "pre-obese"
+            LifeSpecs.lifeSpecifications.BMI = "pre-obese"
             bmiStatusLabel.textColor = UIColor.primaryBlue
             notHighBMISelected()
             whyBMILabel.textColor = UIColor.gray
@@ -208,7 +214,7 @@ class GeneralInfoVC: UIViewController, UIScrollViewDelegate {
             highBMIDueToFat.isEnabled = false
         } else {
             bmiStatusLabel.text = "Obese"
-            User.current.lifeSpecifications.BMI = "obese"
+            LifeSpecs.lifeSpecifications.BMI = "obese"
             bmiStatusLabel.textColor = UIColor.primaryBlue
             whyBMILabel.textColor = UIColor.primaryTextDark
 
@@ -227,8 +233,8 @@ class GeneralInfoVC: UIViewController, UIScrollViewDelegate {
         let lauren = DispatchGroup()
         lauren.enter()
         
-        LifeExpectancyCalculator.calculateAge(forUser: User.current) { (finalAge) in
-            User.current.finalAge = Double(finalAge)
+        LifeExpectancyCalculator.calculateAge() { (finalAge) in
+            LifeSpecs.lifeSpecifications.finalAge = Double(finalAge)
             lauren.leave()
         }
         
@@ -254,7 +260,7 @@ class GeneralInfoVC: UIViewController, UIScrollViewDelegate {
     func maleButtonSelected(){
         maleButton.backgroundColor = UIColor.primaryBlue
         maleButton.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.sex = "male"
+        LifeSpecs.lifeSpecifications.sex = "male"
         
         femaleButton.setTitleColor(UIColor.primaryBlue, for: .normal)
         femaleButton.backgroundColor = UIColor.clear
@@ -263,7 +269,7 @@ class GeneralInfoVC: UIViewController, UIScrollViewDelegate {
     func femaleButtonSelected() {
         femaleButton.backgroundColor = UIColor.primaryBlue
         femaleButton.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.sex = "female"
+        LifeSpecs.lifeSpecifications.sex = "female"
         
         maleButton.setTitleColor(UIColor.primaryBlue, for: .normal)
         maleButton.backgroundColor = UIColor.clear
@@ -286,7 +292,7 @@ class GeneralInfoVC: UIViewController, UIScrollViewDelegate {
     func highBMIBecauseOfFatSelected() {
         highBMIDueToFat.backgroundColor = UIColor.primaryBlue
         highBMIDueToFat.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.whyBMI = "BMI high because of fat"
+        LifeSpecs.lifeSpecifications.whyBMI = "BMI high because of fat"
         
         highBMIDueToMuscle.setTitleColor(UIColor.primaryBlue, for: .normal)
         highBMIDueToMuscle.backgroundColor = UIColor.clear
@@ -299,7 +305,7 @@ class GeneralInfoVC: UIViewController, UIScrollViewDelegate {
     func highBMIBecauseOfMuscleSelected() {
         highBMIDueToMuscle.backgroundColor = UIColor.primaryBlue
         highBMIDueToMuscle.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.whyBMI = "BMI high because of muscle"
+        LifeSpecs.lifeSpecifications.whyBMI = "BMI high because of muscle"
         
         highBMIDueToFat.setTitleColor(UIColor.primaryBlue, for: .normal)
         highBMIDueToFat.backgroundColor = UIColor.clear
@@ -311,7 +317,7 @@ class GeneralInfoVC: UIViewController, UIScrollViewDelegate {
     func notHighBMISelected() {
 //        notHighBMI.backgroundColor = UIColor.primaryBlue
 //        notHighBMI.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.whyBMI = "not high BMI"
+        LifeSpecs.lifeSpecifications.whyBMI = "not high BMI"
         
         highBMIDueToMuscle.setTitleColor(UIColor.primaryBlue, for: .normal)
         highBMIDueToMuscle.backgroundColor = UIColor.clear
@@ -343,7 +349,7 @@ class GeneralInfoVC: UIViewController, UIScrollViewDelegate {
     func hasAdvancedDegreeSelected() {
         advancedDegree.backgroundColor = UIColor.primaryBlue
         advancedDegree.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.educationLevel = "Advanced degree"
+        LifeSpecs.lifeSpecifications.educationLevel = "Advanced degree"
         
         collegeDegree.setTitleColor(UIColor.primaryBlue, for: .normal)
         collegeDegree.backgroundColor = UIColor.clear
@@ -361,7 +367,7 @@ class GeneralInfoVC: UIViewController, UIScrollViewDelegate {
     func hasCollegeDegreeSelected() {
         collegeDegree.backgroundColor = UIColor.primaryBlue
         collegeDegree.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.educationLevel = "College degree"
+        LifeSpecs.lifeSpecifications.educationLevel = "College degree"
         
         advancedDegree.setTitleColor(UIColor.primaryBlue, for: .normal)
         advancedDegree.backgroundColor = UIColor.clear
@@ -379,7 +385,7 @@ class GeneralInfoVC: UIViewController, UIScrollViewDelegate {
     func hasHighSchoolDegreeSelected() {
         highSchoolDegree.backgroundColor = UIColor.primaryBlue
         highSchoolDegree.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.educationLevel = "High school degree"
+        LifeSpecs.lifeSpecifications.educationLevel = "High school degree"
         
         advancedDegree.setTitleColor(UIColor.primaryBlue, for: .normal)
         advancedDegree.backgroundColor = UIColor.clear
@@ -397,7 +403,7 @@ class GeneralInfoVC: UIViewController, UIScrollViewDelegate {
     func currentlyInHighSchoolSelected() {
         currentlyInHighSchool.backgroundColor = UIColor.primaryBlue
         currentlyInHighSchool.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.educationLevel = "Currently in high school"
+        LifeSpecs.lifeSpecifications.educationLevel = "Currently in high school"
         
         advancedDegree.setTitleColor(UIColor.primaryBlue, for: .normal)
         advancedDegree.backgroundColor = UIColor.clear
@@ -414,7 +420,7 @@ class GeneralInfoVC: UIViewController, UIScrollViewDelegate {
     func someHighSchoolSelected() {
         didntFinishHighSchool.backgroundColor = UIColor.primaryBlue
         didntFinishHighSchool.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.educationLevel = "Some high school"
+        LifeSpecs.lifeSpecifications.educationLevel = "Some high school"
         
         advancedDegree.setTitleColor(UIColor.primaryBlue, for: .normal)
         advancedDegree.backgroundColor = UIColor.clear
@@ -442,7 +448,7 @@ class GeneralInfoVC: UIViewController, UIScrollViewDelegate {
     func yesDiabetesSelected() {
         yesDiabetes.backgroundColor = UIColor.primaryBlue
         yesDiabetes.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.diabetes = "yes"
+        LifeSpecs.lifeSpecifications.diabetes = "yes"
         
         noDiabetes.setTitleColor(UIColor.primaryBlue, for: .normal)
         noDiabetes.backgroundColor = UIColor.clear
@@ -451,7 +457,7 @@ class GeneralInfoVC: UIViewController, UIScrollViewDelegate {
     func noDiabetesSelected() {
         noDiabetes.backgroundColor = UIColor.primaryBlue
         noDiabetes.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.diabetes = "no"
+        LifeSpecs.lifeSpecifications.diabetes = "no"
         
         yesDiabetes.setTitleColor(UIColor.primaryBlue, for: .normal)
         yesDiabetes.backgroundColor = UIColor.clear
@@ -465,12 +471,12 @@ class GeneralInfoVC: UIViewController, UIScrollViewDelegate {
                 destinationVC.countryDelegate = self
             }
         } else if segue.identifier == "toDeathDate" {
-            User.current.lifeSpecifications.dob = datePicker.date
+            LifeSpecs.lifeSpecifications.dob = datePicker.date
             //pass your age from lifeSpecs to destination
             //your destination has a container for that ready
             if let destinationVC = segue.destination as? DeathDateScreenViewController
             {
-                destinationVC.deathAgeAsDouble = User.current.finalAge
+                destinationVC.deathAgeAsDouble = LifeSpecs.lifeSpecifications.finalAge
             }
         }
     }
@@ -480,7 +486,7 @@ extension GeneralInfoVC: EMCCountryDelegate {
    
     //SELECT COUNTRY
     func countryController(_ sender: Any!, didSelect chosenCountry: EMCCountry!) {
-        User.current.lifeSpecifications.country = chosenCountry.countryName()
+        LifeSpecs.lifeSpecifications.country = chosenCountry.countryName()
         countryLabel.text = chosenCountry.countryName()
         self.chosenCountry = chosenCountry.countryName()
         //dismiss(animated: true, completion: nil)

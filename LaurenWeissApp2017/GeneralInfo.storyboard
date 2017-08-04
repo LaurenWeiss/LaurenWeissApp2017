@@ -489,12 +489,12 @@
                         <outlet property="weightSlider" destination="K9Z-Py-vc2" id="fV2-gE-NcV"/>
                         <outlet property="whyBMILabel" destination="P4g-mE-SK3" id="oH3-0C-ob8"/>
                         <outlet property="yesDiabetes" destination="0Me-3m-Ffy" id="Q96-pR-mhb"/>
-                        <segue destination="bwo-mL-edI" kind="show" identifier="toDeathDate" id="6SI-P8-LGL"/>
+                        <segue destination="bwo-mL-edI" kind="show" identifier="toDeathDate" id="BBG-q1-ImX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gzd-mn-0zU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3092" y="-7297.1514242878566"/>
+            <point key="canvasLocation" x="3123" y="-7849"/>
         </scene>
         <!--UIViewController-gV2-Ne-3cN-->
         <scene sceneID="z23-WK-TjH">
@@ -502,7 +502,7 @@
                 <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="UIViewController-gV2-Ne-3cN" id="bwo-mL-edI" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Is-bT-YqU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3092" y="-6747"/>
+            <point key="canvasLocation" x="3113" y="-6539"/>
         </scene>
     </scenes>
 </document>

@@ -87,64 +87,81 @@ class RelationshipsVC: UIViewController, UIScrollViewDelegate {
         motherDependent.layer.cornerRadius = 10
         
         //Calling Functions: SELECT MARITAL STATUS
-        if User.current.lifeSpecifications.maritalStatus == "single" {
+        if LifeSpecs.lifeSpecifications.maritalStatus == "single" {
             singleSelected()
-        } else if User.current.lifeSpecifications.maritalStatus == "married" {
+        } else if LifeSpecs.lifeSpecifications.maritalStatus == "married" {
             marriedSelected()
-        } else if User.current.lifeSpecifications.maritalStatus == "widowed" {
+        } else if LifeSpecs.lifeSpecifications.maritalStatus == "widowed" {
             widowedSelected()
-        } else if User.current.lifeSpecifications.maritalStatus == "divorced" {
+        } else if LifeSpecs.lifeSpecifications.maritalStatus == "divorced" {
             divorcedSelected()
-        } else if User.current.lifeSpecifications.maritalStatus == "too young to be married" {
+        } else if LifeSpecs.lifeSpecifications.maritalStatus == "too young to be married" {
             tooYoungForMarriageSelected()
         }
        
         //Calling Functions: SELECT PERSONAL CONTACT FROM FAMILY AND FRIENDS
-        if User.current.lifeSpecifications.personalContact == "rare personal contact" {
+        if LifeSpecs.lifeSpecifications.personalContact == "rare personal contact" {
             noPersonalContactSelected()
-        } else if User.current.lifeSpecifications.personalContact == "contact few times per week" {
+        } else if LifeSpecs.lifeSpecifications.personalContact == "contact few times per week" {
             contactFewTimesPerWeekSelected()
-        } else if User.current.lifeSpecifications.personalContact == "contact more than few times per week" {
+        } else if LifeSpecs.lifeSpecifications.personalContact == "contact more than few times per week" {
             contactMoreThanFewTimesPerWeekSelected()
         }
         
         //Calling Functions: SELECT HEART ATTACK 
-        if User.current.lifeSpecifications.heartAttack == "yes" {
+        if LifeSpecs.lifeSpecifications.heartAttack == "yes" {
             yesHeartAttackSelected()
-        } else if User.current.lifeSpecifications.heartAttack == "no" {
+        } else if LifeSpecs.lifeSpecifications.heartAttack == "no" {
             noHeartAttackSelected()
         }
         
         //Calling Functions: SELECT IF CANCER RUNS IN FAMILY
-        if User.current.lifeSpecifications.cancerRun == "yes" {
+        if LifeSpecs.lifeSpecifications.cancerRun == "yes" {
             yesCancerSelected()
-        } else if User.current.lifeSpecifications.cancerRun == "no" {
+        } else if LifeSpecs.lifeSpecifications.cancerRun == "no" {
             noCancerSelected()
         }
         
         //Calling Functions: SELECT FATHER DEPENDENCY
-        if User.current.lifeSpecifications.fatherDependency == "dependent" {
+        if LifeSpecs.lifeSpecifications.fatherDependency == "dependent" {
             fatherDepedentSelected()
-        } else if User.current.lifeSpecifications.fatherDependency == "deceased" {
+        } else if LifeSpecs.lifeSpecifications.fatherDependency == "deceased" {
             fatherDeceasedSelected()
-        } else if User.current.lifeSpecifications.fatherDependency == "independent" {
+        } else if LifeSpecs.lifeSpecifications.fatherDependency == "independent" {
             fatherIndependentSelected()
         }
         
         //Calling Functions: SELECT MOTHER DEPENDENCY
-        if User.current.lifeSpecifications.motherDependency == "dependent" {
+        if LifeSpecs.lifeSpecifications.motherDependency == "dependent" {
             motherDependentSelected()
-        } else if User.current.lifeSpecifications.motherDependency == "independent" {
+        } else if LifeSpecs.lifeSpecifications.motherDependency == "independent" {
             motherIndependentSelected()
-        } else if User.current.lifeSpecifications.motherDependency == "deceased" {
+        } else if LifeSpecs.lifeSpecifications.motherDependency == "deceased" {
             motherDeceasedSelected()
         }
     }
     
     
+//    @IBAction func calculateButtonTapped(_ sender: UIButton) {
+//        LifeExpectancyCalculator.calculateAge(forUser: User.current) { (finalAge) in
+//            LifeSpecs.finalAge = Double(finalAge)
+//        }
+//        
+//    }
+//    
     @IBAction func calculateButtonTapped(_ sender: UIButton) {
-        LifeExpectancyCalculator.calculateAge(forUser: User.current) { (finalAge) in
-            User.current.finalAge = Double(finalAge)
+        
+        let lauren = DispatchGroup()
+        lauren.enter()
+        
+        LifeExpectancyCalculator.calculateAge() { (finalAge) in
+            LifeSpecs.lifeSpecifications.finalAge = Double(finalAge)
+            lauren.leave()
+        }
+        
+        lauren.notify(queue: .main) {
+            print("done")
+            self.performSegue(withIdentifier: "toDeathDate", sender: nil)
         }
         
     }
@@ -169,7 +186,7 @@ class RelationshipsVC: UIViewController, UIScrollViewDelegate {
     func singleSelected() {
         single.backgroundColor = UIColor.primaryBlue
         single.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.maritalStatus = "single"
+        LifeSpecs.lifeSpecifications.maritalStatus = "single"
         
         married.setTitleColor(UIColor.primaryBlue, for: .normal)
         married.backgroundColor = UIColor.clear
@@ -188,7 +205,7 @@ class RelationshipsVC: UIViewController, UIScrollViewDelegate {
     func marriedSelected() {
         married.backgroundColor = UIColor.primaryBlue
         married.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.maritalStatus = "married"
+        LifeSpecs.lifeSpecifications.maritalStatus = "married"
         
         single.setTitleColor(UIColor.primaryBlue, for: .normal)
         single.backgroundColor = UIColor.clear
@@ -207,7 +224,7 @@ class RelationshipsVC: UIViewController, UIScrollViewDelegate {
     func widowedSelected() {
         widowed.backgroundColor = UIColor.primaryBlue
         widowed.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.maritalStatus = "widowed"
+        LifeSpecs.lifeSpecifications.maritalStatus = "widowed"
         
         single.setTitleColor(UIColor.primaryBlue, for: .normal)
         single.backgroundColor = UIColor.clear
@@ -224,7 +241,7 @@ class RelationshipsVC: UIViewController, UIScrollViewDelegate {
     func divorcedSelected() {
         divorced.backgroundColor = UIColor.primaryBlue
         divorced.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.maritalStatus = "divorced"
+        LifeSpecs.lifeSpecifications.maritalStatus = "divorced"
         
         single.setTitleColor(UIColor.primaryBlue, for: .normal)
         single.backgroundColor = UIColor.clear
@@ -242,7 +259,7 @@ class RelationshipsVC: UIViewController, UIScrollViewDelegate {
     func tooYoungForMarriageSelected() {
         tooYoungForMarriage.backgroundColor = UIColor.primaryBlue
         tooYoungForMarriage.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.maritalStatus = "too young to be married"
+        LifeSpecs.lifeSpecifications.maritalStatus = "too young to be married"
         
         single.setTitleColor(UIColor.primaryBlue, for: .normal)
         single.backgroundColor = UIColor.clear
@@ -275,7 +292,7 @@ class RelationshipsVC: UIViewController, UIScrollViewDelegate {
     func noPersonalContactSelected() {
         noContact.backgroundColor = UIColor.primaryBlue
         noContact.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.personalContact = "rare personal contact"
+        LifeSpecs.lifeSpecifications.personalContact = "rare personal contact"
         
         contactFewTimesPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
         contactFewTimesPerWeek.backgroundColor = UIColor.clear
@@ -287,7 +304,7 @@ class RelationshipsVC: UIViewController, UIScrollViewDelegate {
     func contactFewTimesPerWeekSelected() {
         contactFewTimesPerWeek.backgroundColor = UIColor.primaryBlue
         contactFewTimesPerWeek.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.personalContact = "contact few times per week"
+        LifeSpecs.lifeSpecifications.personalContact = "contact few times per week"
         
         contactMoreThanFewTimesPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
         contactMoreThanFewTimesPerWeek.backgroundColor = UIColor.clear
@@ -299,7 +316,7 @@ class RelationshipsVC: UIViewController, UIScrollViewDelegate {
     func contactMoreThanFewTimesPerWeekSelected() {
         contactMoreThanFewTimesPerWeek.backgroundColor = UIColor.primaryBlue
         contactMoreThanFewTimesPerWeek.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.personalContact = "contact more than few times per week"
+        LifeSpecs.lifeSpecifications.personalContact = "contact more than few times per week"
         
         contactFewTimesPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
         contactFewTimesPerWeek.backgroundColor = UIColor.clear
@@ -321,7 +338,7 @@ class RelationshipsVC: UIViewController, UIScrollViewDelegate {
     func yesHeartAttackSelected() {
         yesHeartAttack.backgroundColor = UIColor.primaryBlue
         yesHeartAttack.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.heartAttack = "yes"
+        LifeSpecs.lifeSpecifications.heartAttack = "yes"
         
         noHeartAttack.setTitleColor(UIColor.primaryBlue, for: .normal)
         noHeartAttack.backgroundColor = UIColor.clear
@@ -330,7 +347,7 @@ class RelationshipsVC: UIViewController, UIScrollViewDelegate {
     func noHeartAttackSelected() {
         noHeartAttack.backgroundColor = UIColor.primaryBlue
         noHeartAttack.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.heartAttack = "no"
+        LifeSpecs.lifeSpecifications.heartAttack = "no"
         
         yesHeartAttack.setTitleColor(UIColor.primaryBlue, for: .normal)
         yesHeartAttack.backgroundColor = UIColor.clear
@@ -350,7 +367,7 @@ class RelationshipsVC: UIViewController, UIScrollViewDelegate {
     func yesCancerSelected() {
         yesCancer.backgroundColor = UIColor.primaryBlue
         yesCancer.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.cancerRun = "yes"
+        LifeSpecs.lifeSpecifications.cancerRun = "yes"
         
         noCancer.setTitleColor(UIColor.primaryBlue, for: .normal)
         noCancer.backgroundColor = UIColor.clear
@@ -358,7 +375,7 @@ class RelationshipsVC: UIViewController, UIScrollViewDelegate {
     func noCancerSelected() {
         noCancer.backgroundColor = UIColor.primaryBlue
         noCancer.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.cancerRun = "no"
+        LifeSpecs.lifeSpecifications.cancerRun = "no"
         
         yesCancer.setTitleColor(UIColor.primaryBlue, for: .normal)
         yesCancer.backgroundColor = UIColor.clear
@@ -382,7 +399,7 @@ class RelationshipsVC: UIViewController, UIScrollViewDelegate {
     func fatherDepedentSelected() {
         fatherDependent.backgroundColor = UIColor.primaryBlue
         fatherDependent.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.fatherDependency = "dependent"
+        LifeSpecs.lifeSpecifications.fatherDependency = "dependent"
         
         fatherDeceased.setTitleColor(UIColor.primaryBlue, for: .normal)
         fatherDeceased.backgroundColor = UIColor.clear
@@ -393,7 +410,7 @@ class RelationshipsVC: UIViewController, UIScrollViewDelegate {
     func fatherIndependentSelected() {
         fatherIndependent.backgroundColor = UIColor.primaryBlue
         fatherIndependent.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.fatherDependency = "independent"
+        LifeSpecs.lifeSpecifications.fatherDependency = "independent"
         
         fatherDeceased.setTitleColor(UIColor.primaryBlue, for: .normal)
         fatherDeceased.backgroundColor = UIColor.clear
@@ -405,7 +422,7 @@ class RelationshipsVC: UIViewController, UIScrollViewDelegate {
     func fatherDeceasedSelected() {
         fatherDeceased.backgroundColor = UIColor.primaryBlue
         fatherDeceased.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.fatherDependency = "deceased"
+        LifeSpecs.lifeSpecifications.fatherDependency = "deceased"
         
         fatherIndependent.setTitleColor(UIColor.primaryBlue, for: .normal)
         fatherIndependent.backgroundColor = UIColor.clear
@@ -428,7 +445,7 @@ class RelationshipsVC: UIViewController, UIScrollViewDelegate {
     func motherDependentSelected() {
         motherDependent.backgroundColor = UIColor.primaryBlue
         motherDependent.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.motherDependency = "dependent"
+        LifeSpecs.lifeSpecifications.motherDependency = "dependent"
         
         motherDeceased.setTitleColor(UIColor.primaryBlue, for: .normal)
         motherDeceased.backgroundColor = UIColor.clear
@@ -439,7 +456,7 @@ class RelationshipsVC: UIViewController, UIScrollViewDelegate {
     func motherIndependentSelected() {
         motherIndependent.backgroundColor = UIColor.primaryBlue
         motherIndependent.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.motherDependency = "independent"
+        LifeSpecs.lifeSpecifications.motherDependency = "independent"
         
         motherDeceased.setTitleColor(UIColor.primaryBlue, for: .normal)
         motherDeceased.backgroundColor = UIColor.clear
@@ -451,7 +468,7 @@ class RelationshipsVC: UIViewController, UIScrollViewDelegate {
     func motherDeceasedSelected() {
         motherDeceased.backgroundColor = UIColor.primaryBlue
         motherDeceased.setTitleColor(UIColor.white, for: .normal)
-        User.current.lifeSpecifications.motherDependency = "deceased"
+        LifeSpecs.lifeSpecifications.motherDependency = "deceased"
         
         motherIndependent.setTitleColor(UIColor.primaryBlue, for: .normal)
         motherIndependent.backgroundColor = UIColor.clear
@@ -465,7 +482,7 @@ class RelationshipsVC: UIViewController, UIScrollViewDelegate {
             
             if let destinationVC = segue.destination as? DeathDateScreenViewController
             {
-                destinationVC.deathAgeAsDouble = User.current.finalAge
+                destinationVC.deathAgeAsDouble = LifeSpecs.lifeSpecifications.finalAge
             }
         }
     }

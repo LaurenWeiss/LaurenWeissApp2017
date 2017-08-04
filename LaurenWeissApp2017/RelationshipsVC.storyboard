@@ -48,7 +48,6 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="calculateButtonTapped:" destination="roM-qs-EoR" eventType="touchUpInside" id="FdV-Rt-cAR"/>
-                                                    <segue destination="bF0-qR-Bjw" kind="show" identifier="toDeathDate" id="gco-TV-H0X"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is your marital status?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YDX-rT-iwh">
@@ -439,6 +438,7 @@
                         <outlet property="widowed" destination="S9f-h6-LPA" id="ES2-mO-LtT"/>
                         <outlet property="yesCancer" destination="50P-3J-EUT" id="47c-oc-njg"/>
                         <outlet property="yesHeartAttack" destination="7wV-6r-BqS" id="5dc-dg-QPr"/>
+                        <segue destination="bF0-qR-Bjw" kind="show" identifier="toDeathDate" id="Zs5-un-hfA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uvy-K6-ext" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -451,7 +451,7 @@
                 <viewControllerPlaceholder storyboardIdentifier="UIViewController-gV2-Ne-3cN" storyboardName="Main" referencedIdentifier="UIViewController-gV2-Ne-3cN" id="bF0-qR-Bjw" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="11J-db-Isx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9188.4375" y="-760.03521126760563"/>
+            <point key="canvasLocation" x="5158" y="-1495"/>
         </scene>
     </scenes>
 </document>

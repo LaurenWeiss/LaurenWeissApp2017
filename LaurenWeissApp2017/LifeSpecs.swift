@@ -11,6 +11,8 @@ import SwiftyJSON
 
 class LifeSpecs {
     
+    var finalAge = 0.0
+    
 //set default values here
     
     //GENERAL
@@ -70,5 +72,19 @@ class LifeSpecs {
     var cancerScreeningInfo: String = ""
     var anxietyAboutDying: String = ""
     
+
+    private static var singleton: LifeSpecs?
+
+    static var lifeSpecifications: LifeSpecs {
+        guard let singleton = singleton else {
+            fatalError("Error: current user doesn't exist")
+        }
+
+        return singleton
+    }
+    
+    static func setGlobalLifeSpecs(lifeSpecs: LifeSpecs) {
+        singleton = lifeSpecs
+    }
 
 }
