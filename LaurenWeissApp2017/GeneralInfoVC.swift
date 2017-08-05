@@ -57,7 +57,7 @@ class GeneralInfoVC: UIViewController, UIScrollViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         countryLabel.text = "United States"
         
         calculateButton.layer.cornerRadius = 10
@@ -155,7 +155,21 @@ class GeneralInfoVC: UIViewController, UIScrollViewDelegate {
         weightSlider.value = Float(LifeSpecs.lifeSpecifications.weight.rounded())
         
         calculateBMI()
+        
+        
+        
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        self.navigationController?.navigationBar.isHidden = false
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
+
+        
+    }
+    
+
     
     //BMI Info functions
     

@@ -61,6 +61,8 @@ class DietAndNutritionVC: UIViewController, UIScrollViewDelegate {
         
         super.viewDidLoad()
         
+
+        
         calculateButton.backgroundColor = UIColor.primaryBlue
 
         calculateButton.layer.cornerRadius = 10

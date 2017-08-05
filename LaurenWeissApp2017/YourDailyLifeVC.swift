@@ -79,6 +79,8 @@ class YourDailyLifeVC: UIViewController, UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+
+        
         calculateButton.backgroundColor = UIColor.primaryBlue
 
         

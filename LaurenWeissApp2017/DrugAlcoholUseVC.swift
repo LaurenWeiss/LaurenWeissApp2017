@@ -54,7 +54,7 @@ class DrugAlcoholUseVC: UIViewController, UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+
         fewTimesWeekSecondHandSmoke.titleLabel?.textAlignment = .center
         fewTimesWeekSecondHandSmoke.titleLabel?.numberOfLines = 0
         

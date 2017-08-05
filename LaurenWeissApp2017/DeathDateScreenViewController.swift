@@ -33,7 +33,14 @@ class DeathDateScreenViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
- 
+        
+//        self.navigationController?.navigationBar.backgroundColor = UIColor.clear
+//        self.navigationController?.navigationBar.isTranslucent = true
+//        self.navigationController?.navigationItem.backBarButtonItem?.isEnabled = false
+        
+
+        
+        
         ageOfDeathLabel.layer.cornerRadius = 10
         suggestionsButton.layer.cornerRadius = 10
         update.layer.cornerRadius = 10
@@ -57,6 +64,17 @@ class DeathDateScreenViewController: UIViewController {
 
         SuggestionsData.prepareSuggestions()
     }
+    
+
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        self.navigationController?.navigationBar.isHidden = true
+        self.navigationController?.navigationItem.backBarButtonItem?.isEnabled = false
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
+    }
+
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -67,6 +85,10 @@ class DeathDateScreenViewController: UIViewController {
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: Selector("updateTimer"), userInfo: nil, repeats: true)
     }
     
+    @IBAction func onUpdate(_ sender: Any) {
+        
+        self.navigationController?.popViewController(animated: true)
+    }
     func updateTimer () {
         
         counter -= 1

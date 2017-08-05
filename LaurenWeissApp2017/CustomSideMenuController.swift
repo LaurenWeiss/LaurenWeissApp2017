@@ -9,11 +9,14 @@
 import Foundation
 import UIKit
 import SideMenuController
+
 class CustomSideMenuController: SideMenuController {
     override func viewDidLoad() {
         super.viewDidLoad()
         performSegue(withIdentifier: "ShowCenterGeneral", sender: nil)
         performSegue(withIdentifier: "ShowSide", sender: nil)
+        
+        self.navigationController?.navigationItem.backBarButtonItem?.isEnabled = false
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -23,7 +26,6 @@ class CustomSideMenuController: SideMenuController {
         SideMenuController.preferences.drawing.centerPanelShadow = true
         SideMenuController.preferences.animating.statusBarBehaviour = .showUnderlay
         SideMenuController.preferences.animating.transitionAnimator = FadeAnimator.self
-
         super.init(coder: aDecoder)
     }
 }
