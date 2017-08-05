@@ -18,6 +18,7 @@
 		2E17323B1F33DDB00057B610 /* OtherVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E17323A1F33DDB00057B610 /* OtherVC.storyboard */; };
 		2E17323D1F34E7BB0057B610 /* AboutScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E17323C1F34E7BB0057B610 /* AboutScreenVC.swift */; };
 		2E17323F1F34EEE30057B610 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E17323E1F34EEE30057B610 /* CategoryCell.swift */; };
+		2E1732451F359CEA0057B610 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E1732441F359CEA0057B610 /* LaunchScreen.storyboard */; };
 		2E1851BD1F13F2750094F732 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1851BC1F13F2750094F732 /* AppDelegate.swift */; };
 		2E1851C41F13F2750094F732 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E1851C31F13F2750094F732 /* Assets.xcassets */; };
 		2E1851D21F13F2750094F732 /* LaurenWeissApp2017Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1851D11F13F2750094F732 /* LaurenWeissApp2017Tests.swift */; };
@@ -37,7 +38,6 @@
 		2E97D5D31F1FD59D00B065CE /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E97D5D21F1FD59D00B065CE /* APIManager.swift */; };
 		2E97D5D51F1FD6C800B065CE /* LifeSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E97D5D41F1FD6C800B065CE /* LifeSpecs.swift */; };
 		2EFE557E1F2A913A005CD33E /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFE557D1F2A913A005CD33E /* UIColorExtension.swift */; };
-		2EFFB7141F153ABB006BB041 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EFFB7131F153ABB006BB041 /* LaunchScreen.storyboard */; };
 		2EFFB7181F153AD2006BB041 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2EFFB7171F153AD2006BB041 /* GoogleService-Info.plist */; };
 		2EFFB71D1F15482E006BB041 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFFB71C1F15482E006BB041 /* User.swift */; };
 		2EFFB71F1F1549CA006BB041 /* CreateUsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFFB71E1F1549CA006BB041 /* CreateUsernameViewController.swift */; };
@@ -83,6 +83,7 @@
 		2E17323A1F33DDB00057B610 /* OtherVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = OtherVC.storyboard; sourceTree = "<group>"; };
 		2E17323C1F34E7BB0057B610 /* AboutScreenVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutScreenVC.swift; sourceTree = "<group>"; };
 		2E17323E1F34EEE30057B610 /* CategoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		2E1732441F359CEA0057B610 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2E1851B91F13F2750094F732 /* LaurenWeissApp2017.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LaurenWeissApp2017.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E1851BC1F13F2750094F732 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2E1851C31F13F2750094F732 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -108,7 +109,6 @@
 		2E97D5D41F1FD6C800B065CE /* LifeSpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LifeSpecs.swift; sourceTree = "<group>"; };
 		2EFE557D1F2A913A005CD33E /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		2EFFB7111F153AA6006BB041 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2EFFB7131F153ABB006BB041 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2EFFB7171F153AD2006BB041 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2EFFB71C1F15482E006BB041 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		2EFFB71E1F1549CA006BB041 /* CreateUsernameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateUsernameViewController.swift; sourceTree = "<group>"; };
@@ -217,8 +217,8 @@
 		2E1851EE1F1535850094F732 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				2EFFB7131F153ABB006BB041 /* LaunchScreen.storyboard */,
 				2E1851EC1F15356C0094F732 /* Login.storyboard */,
+				2E1732441F359CEA0057B610 /* LaunchScreen.storyboard */,
 				2EFFB7291F169980006BB041 /* Main.storyboard */,
 				2E17323A1F33DDB00057B610 /* OtherVC.storyboard */,
 				2E1732381F33DDA00057B610 /* DietVC.storyboard */,
@@ -452,12 +452,12 @@
 				2E1732331F329F6A0057B610 /* DailyLife.storyboard in Resources */,
 				2E1851C41F13F2750094F732 /* Assets.xcassets in Resources */,
 				2E17323B1F33DDB00057B610 /* OtherVC.storyboard in Resources */,
-				2EFFB7141F153ABB006BB041 /* LaunchScreen.storyboard in Resources */,
 				2E1732371F33DD8C0057B610 /* DrugsVC.storyboard in Resources */,
 				2E1732311F3299CB0057B610 /* GeneralInfo.storyboard in Resources */,
 				2E1851ED1F15356C0094F732 /* Login.storyboard in Resources */,
 				2E1732391F33DDA00057B610 /* DietVC.storyboard in Resources */,
 				2EFFB7181F153AD2006BB041 /* GoogleService-Info.plist in Resources */,
+				2E1732451F359CEA0057B610 /* LaunchScreen.storyboard in Resources */,
 				2E1732351F33DB3E0057B610 /* RelationshipsVC.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
