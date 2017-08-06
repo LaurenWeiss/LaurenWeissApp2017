@@ -16,15 +16,23 @@ class SuggestionsScreenVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 140
+
         tableView.delegate = self
         tableView.dataSource = self
         
     }
+
+override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+    
+    NotificationCenter.default.addObserver(forName: .UIContentSizeCategoryDidChange, object: .none, queue: OperationQueue.main) { [weak self] _ in
+        self?.tableView.reloadData()
+    }
 }
 
-
-
+}
 extension SuggestionsScreenVC: UITableViewDelegate, UITableViewDataSource {
 
     
