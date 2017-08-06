@@ -31,6 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().setBackgroundImage(UIImage(), for:.default)
         UINavigationBar.appearance().shadowImage = UIImage()
         
+        self.window?.backgroundColor = UIColor.primaryBlue
         return true
     }
     func applicationWillResignActive(_ application: UIApplication) {

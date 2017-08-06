@@ -180,6 +180,24 @@ class DietAndNutritionVC: UIViewController, UIScrollViewDelegate {
 //        
 //    }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        self.navigationController?.navigationBar.isHidden = false
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
+        self.navigationController?.navigationBar.isTranslucent = false
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        self.navigationController?.navigationBar.isTranslucent = false
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        self.navigationController?.navigationBar.isTranslucent = false
+        
+    }
     @IBAction func calculateButtonTapped(_ sender: UIButton) {
         
         let lauren = DispatchGroup()

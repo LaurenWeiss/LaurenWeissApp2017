@@ -185,6 +185,7 @@ open class SideMenuController: UIViewController, UIGestureRecognizerDelegate {
     open override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         NotificationCenter.default.addObserver(self, selector: #selector(SideMenuController.repositionViews), name: .UIApplicationWillChangeStatusBarFrame, object: UIApplication.shared)
+       // self.navigationController?.navigationBar.isTranslucent = true
     }
     
     override open func viewWillDisappear(_ animated: Bool) {
@@ -192,6 +193,8 @@ open class SideMenuController: UIViewController, UIGestureRecognizerDelegate {
         NotificationCenter.default.removeObserver(self)
         if sidePanelVisible {
             toggle()
+          //  self.navigationController?.navigationBar.isTranslucent = false
+
         }
     }
     

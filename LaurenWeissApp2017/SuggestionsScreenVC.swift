@@ -23,6 +23,24 @@ class SuggestionsScreenVC: UIViewController {
         tableView.dataSource = self
         
     }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        self.navigationController?.navigationBar.isHidden = false
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
+        self.navigationController?.navigationBar.isTranslucent = false
+        
+    }
+    
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        self.navigationController?.navigationBar.isTranslucent = false
+        
+    }
+
 
 override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
@@ -30,6 +48,10 @@ override func viewDidAppear(_ animated: Bool) {
     NotificationCenter.default.addObserver(forName: .UIContentSizeCategoryDidChange, object: .none, queue: OperationQueue.main) { [weak self] _ in
         self?.tableView.reloadData()
     }
+    
+    self.navigationController?.navigationBar.isTranslucent = false
+
+    
 }
 
 }

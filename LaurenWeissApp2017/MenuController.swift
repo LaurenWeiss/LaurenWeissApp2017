@@ -30,6 +30,8 @@ class MenuController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         
+       // self.navigationController.navigationBar.translucent = false
+
         
         tableView.dataSource = self
         tableView.delegate = self

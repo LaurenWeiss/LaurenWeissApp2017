@@ -165,10 +165,19 @@ class GeneralInfoVC: UIViewController, UIScrollViewDelegate {
         
         self.navigationController?.navigationBar.isHidden = false
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
-
+self.navigationController?.navigationBar.isTranslucent = false
         
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        self.navigationController?.navigationBar.isTranslucent = false
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        self.navigationController?.navigationBar.isTranslucent = false
+        
+    }
 
     
     //BMI Info functions
