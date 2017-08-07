@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
 //        configureInitialRootViewController(for: window)
         
-        GADMobileAds.configure(withApplicationID: "ca-app-pub-2458339528814864~5497031975")
+        GADMobileAds.configure(withApplicationID: "ca-app-pub-2458339528814864~2645852364")
 
         //configure navigation bar style
         UINavigationBar.appearance().barTintColor = UIColor.primaryBlue

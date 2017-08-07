@@ -516,6 +516,8 @@
                     <size key="freeformSize" width="375" height="2200"/>
                     <connections>
                         <outlet property="aboutThreeDrinksPerNight" destination="N8Z-Ic-cHj" id="xsP-gd-Kxk"/>
+                        <outlet property="alcoholQuestionLabel1" destination="9ii-q6-dHo" id="pnG-uX-Mlw"/>
+                        <outlet property="alcoholQuestionLabel2" destination="jit-E8-RCn" id="OuZ-Sr-4Pv"/>
                         <outlet property="atLeastThreeDrinksPerNight" destination="b7J-ju-d4x" id="qcm-tT-BfC"/>
                         <outlet property="calculateButton" destination="ICu-gs-7Wv" id="Vbq-hK-EO6"/>
                         <outlet property="dailySecondHandSmoke" destination="WsS-mN-FLS" id="7qq-PJ-CBe"/>

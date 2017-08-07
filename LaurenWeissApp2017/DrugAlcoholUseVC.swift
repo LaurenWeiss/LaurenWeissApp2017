@@ -42,6 +42,12 @@ class DrugAlcoholUseVC: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var atLeastThreeDrinksPerNight: UIButton!
     @IBOutlet weak var aboutThreeDrinksPerNight: UIButton!
     
+    
+    @IBOutlet weak var alcoholQuestionLabel1: UILabel!
+    
+    @IBOutlet weak var alcoholQuestionLabel2: UILabel!
+    
+    
 //drugs info
     @IBOutlet weak var neverDrugs: UIButton!
     @IBOutlet weak var drugsOncePerYear: UIButton!
@@ -117,6 +123,8 @@ class DrugAlcoholUseVC: UIViewController, UIScrollViewDelegate {
         drugsEveryFewMonths.layer.cornerRadius = 10
         
         
+        
+        
         //Calling Functions: SELECT WHETHER OR NOT YOU SMOKE
         
         if LifeSpecs.lifeSpecifications.isSmoking == true {
@@ -124,18 +132,44 @@ class DrugAlcoholUseVC: UIViewController, UIScrollViewDelegate {
         } else if LifeSpecs.lifeSpecifications.isSmoking == false {
             noSmokeSelected()
             
-            
-           // smokingQuestionLabel.textColor = UIColor.gray
-            
             smokingQuestionLabel.textColor = UIColor.gray
-            oneCigToHalfPack.isEnabled = false
-            onePackSmoke.isEnabled = false
-            twoPacksSmoke.isEnabled = false
-            oneAndHalfPacksSmoke.isEnabled = false
-            threeOrMorePacksSmoke.isEnabled = false
-            
+
+        
 
         }
+        oneCigToHalfPack.setTitleColor(UIColor.primaryBlue, for: .normal)
+        oneCigToHalfPack.setTitleColor(UIColor.gray, for: .disabled)
+        onePackSmoke.setTitleColor(UIColor.primaryBlue, for: .normal)
+        onePackSmoke.setTitleColor(UIColor.gray, for: .disabled)
+        twoPacksSmoke.setTitleColor(UIColor.primaryBlue, for: .normal)
+        twoPacksSmoke.setTitleColor(UIColor.gray, for: .disabled)
+        oneAndHalfPacksSmoke.setTitleColor(UIColor.primaryBlue, for: .normal)
+        oneAndHalfPacksSmoke.setTitleColor(UIColor.gray, for: .disabled)
+        threeOrMorePacksSmoke.setTitleColor(UIColor.primaryBlue, for: .normal)
+        threeOrMorePacksSmoke.setTitleColor(UIColor.gray, for: .disabled)
+        
+        
+        
+        if LifeSpecs.lifeSpecifications.drinkAlcohol == true {
+            yesAlcoholSelected()
+        } else if LifeSpecs.lifeSpecifications.isSmoking == false {
+            noAlcoholSelected()
+            alcoholQuestionLabel1.textColor = UIColor.gray
+            alcoholQuestionLabel2.textColor = UIColor.gray
+                    }
+        oneToTwoDaysDrinkingPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        oneToTwoDaysDrinkingPerWeek.setTitleColor(UIColor.gray, for: .disabled)
+        threeToFiveDaysDrinkingPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        threeToFiveDaysDrinkingPerWeek.setTitleColor(UIColor.gray, for: .disabled)
+        sixToSevenDaysDrinkingPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+        sixToSevenDaysDrinkingPerWeek.setTitleColor(UIColor.gray, for: .disabled)
+        oneToTwoDrinksPerNight.setTitleColor(UIColor.primaryBlue, for: .normal)
+        oneToTwoDrinksPerNight.setTitleColor(UIColor.gray, for: .disabled)
+        aboutThreeDrinksPerNight.setTitleColor(UIColor.primaryBlue, for: .normal)
+        aboutThreeDrinksPerNight.setTitleColor(UIColor.gray, for: .disabled)
+        atLeastThreeDrinksPerNight.setTitleColor(UIColor.primaryBlue, for: .normal)
+        atLeastThreeDrinksPerNight.setTitleColor(UIColor.gray, for: .disabled)
+        
         
         //Calling Functions: SELECT NUMBER OF CIGARETTE PACKS SMOKED PER DAY
         
@@ -228,6 +262,15 @@ class DrugAlcoholUseVC: UIViewController, UIScrollViewDelegate {
             threeOrMorePacksSmoke.isEnabled = true
             onePackSmoke.isEnabled = true
             twoPacksSmoke.isEnabled = true
+            smokingQuestionLabel.textColor = UIColor.primaryTextDark
+            
+            oneCigToHalfPack.setTitleColor(UIColor.primaryBlue, for: .normal)
+            oneAndHalfPacksSmoke.setTitleColor(UIColor.primaryBlue, for: .normal)
+            threeOrMorePacksSmoke.setTitleColor(UIColor.primaryBlue, for: .normal)
+            onePackSmoke.setTitleColor(UIColor.primaryBlue, for: .normal)
+            twoPacksSmoke.setTitleColor(UIColor.primaryBlue, for: .normal)
+
+            
             
         } else if sender.tag == 1 {
             noSmokeSelected()
@@ -236,7 +279,14 @@ class DrugAlcoholUseVC: UIViewController, UIScrollViewDelegate {
             threeOrMorePacksSmoke.isEnabled = false
             twoPacksSmoke.isEnabled = false
             onePackSmoke.isEnabled = false
-
+            smokingQuestionLabel.textColor = UIColor.gray
+          //  oneCigToHalfPack.textColor = UIColor.primaryTextDark
+            oneCigToHalfPack.backgroundColor = UIColor.white
+            oneAndHalfPacksSmoke.backgroundColor = UIColor.white
+            threeOrMorePacksSmoke.backgroundColor = UIColor.white
+            twoPacksSmoke.backgroundColor = UIColor.white
+            onePackSmoke.backgroundColor = UIColor.white
+            
             
         }
     }
@@ -448,21 +498,45 @@ class DrugAlcoholUseVC: UIViewController, UIScrollViewDelegate {
     @IBAction func selectDoYouDrink(_ sender: UIButton) {
         if sender.tag == 0 {
             yesAlcoholSelected()
-            oneToTwoDrinksPerNight.isEnabled = true
+
+            
+            oneToTwoDaysDrinkingPerWeek.isEnabled = true
             threeToFiveDaysDrinkingPerWeek.isEnabled = true
             sixToSevenDaysDrinkingPerWeek.isEnabled = true
+            
             oneToTwoDrinksPerNight.isEnabled = true
             aboutThreeDrinksPerNight.isEnabled = true
             atLeastThreeDrinksPerNight.isEnabled = true
             
+            alcoholQuestionLabel1.textColor = UIColor.primaryTextDark
+            alcoholQuestionLabel2.textColor = UIColor.primaryTextDark
+
+            oneToTwoDaysDrinkingPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+            threeToFiveDaysDrinkingPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+            sixToSevenDaysDrinkingPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
+            oneToTwoDrinksPerNight.setTitleColor(UIColor.primaryBlue, for: .normal)
+            aboutThreeDrinksPerNight.setTitleColor(UIColor.primaryBlue, for: .normal)
+            atLeastThreeDrinksPerNight.setTitleColor(UIColor.primaryBlue, for: .normal)
+            
         } else if sender.tag == 1 {
             noAlcoholSelected()
-            oneToTwoDrinksPerNight.isEnabled = false
+            oneToTwoDaysDrinkingPerWeek.isEnabled = false
             threeToFiveDaysDrinkingPerWeek.isEnabled = false
             sixToSevenDaysDrinkingPerWeek.isEnabled = false
             oneToTwoDrinksPerNight.isEnabled = false
             aboutThreeDrinksPerNight.isEnabled = false
             atLeastThreeDrinksPerNight.isEnabled = false
+            
+            alcoholQuestionLabel1.textColor = UIColor.gray
+            alcoholQuestionLabel2.textColor = UIColor.gray
+            
+            oneToTwoDaysDrinkingPerWeek.backgroundColor = UIColor.white
+            threeToFiveDaysDrinkingPerWeek.backgroundColor = UIColor.white
+            sixToSevenDaysDrinkingPerWeek.backgroundColor = UIColor.white
+            oneToTwoDrinksPerNight.backgroundColor = UIColor.white
+            aboutThreeDrinksPerNight.backgroundColor = UIColor.white
+            atLeastThreeDrinksPerNight.backgroundColor = UIColor.white
+            
         }
         
     }

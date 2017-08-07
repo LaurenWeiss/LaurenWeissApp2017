@@ -8,12 +8,11 @@
 
 import UIKit
 import GoogleMobileAds
-
+import AudioToolbox
 
 class DeathDateScreenViewController: UIViewController {
-    
-    //@IBOutlet weak var nativeExpressAdView: GADNativeExpressAdView!
-    
+   // var testDevices: [Any]! { get set }
+
     @IBOutlet weak var suggestionsButton: UIButton!
     
     @IBOutlet weak var ageOfDeathLabel: UILabel!
@@ -21,36 +20,30 @@ class DeathDateScreenViewController: UIViewController {
     @IBOutlet weak var countdownLabel: UILabel!
     
     var deathAgeAsDouble: Double?
-    //var deathAgeAsInt: Int?
 
-//    @IBOutlet weak var home: UIButton!
     @IBOutlet weak var update: UIButton!
     var deathAgeAsString: String = ""
     
     var currentSpec: LifeSpecs?
     var timer = Timer()
     var counter = 0
+    
+    
+    
+    @IBOutlet weak var bannerView: GADBannerView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        self.navigationController?.navigationBar.backgroundColor = UIColor.clear
-//        self.navigationController?.navigationBar.isTranslucent = true
-//        self.navigationController?.navigationItem.backBarButtonItem?.isEnabled = false
         
-
-        
+        print("Google Mobile Ads SDK version: \(GADRequest.sdkVersion())")
+        bannerView.adUnitID = "ca-app-pub-2458339528814864/3542155153"
+        bannerView.rootViewController = self
+        bannerView.load(GADRequest())
         
         ageOfDeathLabel.layer.cornerRadius = 10
         suggestionsButton.layer.cornerRadius = 10
         update.layer.cornerRadius = 10
-        
-        
-//        nativeExpressAdView.adUnitID = "ca-app-pub-2458339528814864~5497031975"
-//        nativeExpressAdView.rootViewController = self
-        
-//        let request = GADRequest()
-        //nativeExpressAdView.load(request)
         
         
         if deathAgeAsDouble != nil {
@@ -63,10 +56,15 @@ class DeathDateScreenViewController: UIViewController {
         }
 
         SuggestionsData.prepareSuggestions()
+        
+        
+//        let request = GADRequest()
+//        request.testDevices = [ kGADSimulatorID,
+//            "2077ef9a63d2b398840261c8221a0c9b"]
+        
+        
     }
-    
-
-    
+        
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         self.navigationController?.navigationBar.isHidden = true
@@ -111,5 +109,5 @@ class DeathDateScreenViewController: UIViewController {
         self.performSegue(withIdentifier: Constants.Segue.toSuggsetionsScreenViewController, sender: self)
         
     }
-    
+
 }
