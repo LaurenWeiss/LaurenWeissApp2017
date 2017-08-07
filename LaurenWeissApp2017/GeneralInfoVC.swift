@@ -72,13 +72,16 @@ class GeneralInfoVC: UIViewController, UIScrollViewDelegate {
 
         datePicker.minimumDate = Calendar.current.date(from: dateComponents)
         
-        
+        datePicker.date = LifeSpecs.lifeSpecifications.dob
+
         //BMI status label
         bmiStatusLabel.layer.masksToBounds = true
         bmiStatusLabel.layer.cornerRadius = 5
         
-        let lifeSpecs = LifeSpecs()
-        LifeSpecs.setGlobalLifeSpecs(lifeSpecs: lifeSpecs)
+
+        
+        
+        
         
         
         //Calling Functions: SELECT GENDER
@@ -96,7 +99,7 @@ class GeneralInfoVC: UIViewController, UIScrollViewDelegate {
         
         
         //Calling Functions: SELECT WHY BMI IS HIGH
-        if lifeSpecs.whyBMI == "BMI high because of fat" {
+        if LifeSpecs.lifeSpecifications.whyBMI == "BMI high because of fat" {
             highBMIBecauseOfFatSelected()
         } else if LifeSpecs.lifeSpecifications.whyBMI == "BMI high because of muscle" {
             highBMIBecauseOfMuscleSelected()
@@ -165,7 +168,10 @@ class GeneralInfoVC: UIViewController, UIScrollViewDelegate {
         
         self.navigationController?.navigationBar.isHidden = false
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
-self.navigationController?.navigationBar.isTranslucent = false
+        self.navigationController?.navigationBar.isTranslucent = false
+        
+
+        
         
     }
     

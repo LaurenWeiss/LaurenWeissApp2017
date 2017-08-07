@@ -31,7 +31,7 @@ class SuggestionsData {
         switch LifeSpecs.lifeSpecifications.BMI {
         case "pre-obese":
             let yearsToAdd = LifeExpectancyCalculator.bmiImpact(lifeSpecs: LifeSpecs.lifeSpecifications)
-            suggestions["BMI"] = "Obesity has severe effects. It can lead to high blood pressure, diabetes, and heart disease, which are all factors that shorten life span. If you strive to maintain a healthier weight, you could add \(yearsToAdd) years to your life. Source: https://www.nih.gov/news-events/news-releases/nih-study-finds-extreme-obesity-may-shorten-life-expectancy-14-years"
+            suggestions["BMI"] = "Being overweight has severe effects. It can lead to high blood pressure, diabetes, and heart disease, which are all factors that shorten life span. If you strive to maintain a healthier weight, you could add \(yearsToAdd) years to your life. Source: https://www.nih.gov/news-events/news-releases/nih-study-finds-extreme-obesity-may-shorten-life-expectancy-14-years"
         case "obese":
             let yearsToAdd = LifeExpectancyCalculator.bmiImpact(lifeSpecs: LifeSpecs.lifeSpecifications)
             suggestions["BMI"] = "Obesity has severe effects. It can lead to high blood pressure, diabetes, and heart disease, which are all factors that shorten life span. If you strive to maintain a healthier weight, you could add \(yearsToAdd) years to your life. Source: https://www.nih.gov/news-events/news-releases/nih-study-finds-extreme-obesity-may-shorten-life-expectancy-14-years"
@@ -424,7 +424,7 @@ class SuggestionsData {
         switch LifeSpecs.lifeSpecifications.petOwner {
             case "no":
             let yearsToAdd = LifeExpectancyCalculator.petImpact(lifeSpaces: LifeSpecs.lifeSpecifications)
-            suggestions["pet"] = "Did you know that owning a pet could add \(yearsToAdd) years to your life? Pets, especially dogs, are not only adorable but they also lead to a longer life by being consistently loving and by being great companions. Source: http://www.health.harvard.edu/blog/a-dog-could-be-your-hearts-best-friend-201305226291"
+            suggestions["pet"] = "Did you know that owning a pet could add 2 years to your life? Pets, especially dogs, are not only adorable but they also lead to a longer life by being consistently loving and by being great companions. Source: http://www.health.harvard.edu/blog/a-dog-could-be-your-hearts-best-friend-201305226291"
         default:
             suggestions.removeValue(forKey: "pet")
         }

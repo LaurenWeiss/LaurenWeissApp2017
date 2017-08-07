@@ -39,7 +39,7 @@ class DeathDateScreenViewController: UIViewController {
         print("Google Mobile Ads SDK version: \(GADRequest.sdkVersion())")
         bannerView.adUnitID = "ca-app-pub-2458339528814864/3542155153"
         bannerView.rootViewController = self
-        bannerView.load(GADRequest())
+
         
         ageOfDeathLabel.layer.cornerRadius = 10
         suggestionsButton.layer.cornerRadius = 10
@@ -58,9 +58,9 @@ class DeathDateScreenViewController: UIViewController {
         SuggestionsData.prepareSuggestions()
         
         
-//        let request = GADRequest()
-//        request.testDevices = [ kGADSimulatorID,
-//            "2077ef9a63d2b398840261c8221a0c9b"]
+        let request = GADRequest()
+        request.testDevices = [ kGADSimulatorID]
+        bannerView.load(request)
         
         
     }

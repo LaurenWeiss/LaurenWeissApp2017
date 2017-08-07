@@ -213,7 +213,7 @@ class LifeExpectancyCalculator {
         
         switch lifeSpecs.BMI {
         case "normal":
-            return 0
+            return -4
         case "pre-obese":
             return 5
         case "obese":
@@ -234,7 +234,7 @@ class LifeExpectancyCalculator {
         case "BMI high because of fat":
             return 0
         case "BMI high because of muscle":
-            return 5
+            return -5
         case "not high BMI":
             return 0
         default:
@@ -269,7 +269,7 @@ class LifeExpectancyCalculator {
      static func diabetesImpact(lifeSpecs: LifeSpecs) -> Double {
         switch lifeSpecs.diabetes {
         case "yes":
-            return 15
+            return 3
         case "no":
             return 0
         default:

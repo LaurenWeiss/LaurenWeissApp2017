@@ -59,12 +59,20 @@ extension SuggestionsScreenVC: UITableViewDelegate, UITableViewDataSource {
 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "suggestionsCell", for: indexPath) as! SuggestionCell
+        var cell = tableView.dequeueReusableCell(withIdentifier: "greenCell", for: indexPath) as! SuggestionCell
+        cell.suggestionsLabel.textAlignment = .left
+        if indexPath.row % 2 == 1 {
+            cell = tableView.dequeueReusableCell(withIdentifier: "darkCell", for: indexPath) as! SuggestionCell
+        }
+        
         cell.suggestionsLabel.text = SuggestionsData.suggestionsArray[indexPath.row]
         cell.suggestionsLabel.sizeToFit()
         heights.append(cell.suggestionsLabel.frame.height)
         cell.selectionStyle = .none
+        
 
+        
+        
         return cell
     }
 
