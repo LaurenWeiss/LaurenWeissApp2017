@@ -23,27 +23,27 @@ class LifeSpecs {
     var weight: Double = 150.0
     var BMI: String = "normal"
     var whyBMI: String = "not high BMI"
-    var educationLevel: String = "Currently in high school"
-    var diabetes: String = "no"
+    var educationLevel: String = ""
+    var diabetes: String = ""
     
     //DAILY LIFE
     
-    var numExerciseDays: String = "three"
-    var flossInfo: String = "no"
-    var numWorkHours: String = "lessThanFortyHoursPerWeekOfWorkSelected"
-    var numWorkDays: String = "fiveDaysOrLessWorkWeekSelected"
-    var airQuality: String = "slightlyPollutedAirQualitySelected"
+    var numExerciseDays: String = ""
+    var flossInfo: String = ""
+    var numWorkHours: String = ""
+    var numWorkDays: String = ""
+    var airQuality: String = ""
   //  var seatbeltInfo: String = "halfTimeSeatbeltSelected"
-    var numSleepHours: String = "sevenToNineHoursSleepSelected"
-    var stressLevels: String = "mediumStressLevelsSelected"
-    var petOwner: String = "yes"
+    var numSleepHours: String = ""
+    var stressLevels: String = ""
+    var petOwner: String = ""
     
     
     //RELATIONSHIPS
     var maritalStatus: String = ""
     var personalContact: String = ""
-    var heartAttack: String = "no"
-    var cancerRun: String = "no"
+    var heartAttack: String = ""
+    var cancerRun: String = ""
     var fatherDependency: String = ""
     var motherDependency: String = ""
     
@@ -57,10 +57,10 @@ class LifeSpecs {
     
     //DRUGS/ALCOHOL
     
-    var isSmoking: Bool = true
+    var isSmoking: Bool?
     var numCigarettesPerDay: String = ""
     var secondHandSmoke: String = ""
-    var drinkAlcohol: Bool = true
+    var drinkAlcohol: Bool?
     var numNightsSpentDrinking: String = ""
     var numDrinksPerNight: String = ""
     var illegalDrugsInfo: String = ""

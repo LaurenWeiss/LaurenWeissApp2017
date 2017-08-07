@@ -156,7 +156,7 @@ class DrugAlcoholUseVC: UIViewController, UIScrollViewDelegate {
             noAlcoholSelected()
             alcoholQuestionLabel1.textColor = UIColor.gray
             alcoholQuestionLabel2.textColor = UIColor.gray
-                    }
+            }
         oneToTwoDaysDrinkingPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
         oneToTwoDaysDrinkingPerWeek.setTitleColor(UIColor.gray, for: .disabled)
         threeToFiveDaysDrinkingPerWeek.setTitleColor(UIColor.primaryBlue, for: .normal)
