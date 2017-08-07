@@ -400,7 +400,7 @@ class SuggestionsData {
         //GIVE SUGGESTIONS BASED ON HOW OFTEN USER IS SCREENED FOR CANCER
         switch LifeSpecs.lifeSpecifications.cancerScreeningInfo {
         case "noCancerScreeningSelected":
-            let yearsToAdd = LifeExpectancyCalculator.educationImpact(lifeSpecs: LifeSpecs.lifeSpecifications)
+            let yearsToAdd = LifeExpectancyCalculator.cancerScreeningImpact(lifeSpecs: LifeSpecs.lifeSpecifications)
             suggestions["cancer screening"] = "Being regularly screened for cancer is extremely important to your health. Just by checking in with the doctor yearly, you could add \(yearsToAdd) year to your life. Source: http://www.bumc.bu.edu/centenarian/the-living-to-100-life-expectancy-calculator/"
         default:
             suggestions.removeValue(forKey: "cancer screening")

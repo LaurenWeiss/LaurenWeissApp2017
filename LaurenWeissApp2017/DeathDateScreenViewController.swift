@@ -37,6 +37,7 @@ class DeathDateScreenViewController: UIViewController {
         
         
         print("Google Mobile Ads SDK version: \(GADRequest.sdkVersion())")
+        
         bannerView.adUnitID = "ca-app-pub-2458339528814864/3542155153"
         bannerView.rootViewController = self
 
@@ -59,7 +60,7 @@ class DeathDateScreenViewController: UIViewController {
         
         
         let request = GADRequest()
-        request.testDevices = [ kGADSimulatorID]
+      //  request.testDevices = [ kGADSimulatorID]
         bannerView.load(request)
         
         
