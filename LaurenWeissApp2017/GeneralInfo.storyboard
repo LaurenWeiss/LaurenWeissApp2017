@@ -126,7 +126,7 @@
                                                         <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="60" minValue="12" maxValue="108" translatesAutoresizingMaskIntoConstraints="NO" id="jle-ab-mPP">
+                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="48" minValue="12" maxValue="84" translatesAutoresizingMaskIntoConstraints="NO" id="jle-ab-mPP">
                                                         <rect key="frame" x="-2" y="66" width="328" height="31"/>
                                                         <color key="tintColor" red="0.08235294118" green="0.70196078429999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
                                                         <connections>
@@ -150,7 +150,7 @@
                                                         <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="150" minValue="10" maxValue="600" translatesAutoresizingMaskIntoConstraints="NO" id="K9Z-Py-vc2">
+                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="155" minValue="10" maxValue="300" translatesAutoresizingMaskIntoConstraints="NO" id="K9Z-Py-vc2">
                                                         <rect key="frame" x="-2" y="66" width="324" height="31"/>
                                                         <color key="tintColor" red="0.08235294118" green="0.70196078429999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>

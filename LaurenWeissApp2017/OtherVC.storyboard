@@ -395,7 +395,7 @@
                         <outlet property="unknownLDL" destination="j46-qa-VkF" id="nPQ-b5-Vqv"/>
                         <outlet property="yesAnxiousDying" destination="Ma7-kU-6EZ" id="7kF-co-tQK"/>
                         <outlet property="yesScreenedCancer" destination="QSs-p7-ze8" id="wet-cS-ll7"/>
-                        <segue destination="nrZ-wP-DGx" kind="show" identifier="toDeathDate" id="chy-gC-r46"/>
+                        <segue destination="nrZ-wP-DGx" kind="show" identifier="toDeathDate" id="uLD-TD-C3m"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nLQ-GQ-ILj" userLabel="First Responder" sceneMemberID="firstResponder"/>
